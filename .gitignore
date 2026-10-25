@@ -1,0 +1,7 @@
+# Временное и служебное — не коммитим
+/.tmp/
+
+# OS-мусор
+Thumbs.db
+desktop.ini
+.DS_Store

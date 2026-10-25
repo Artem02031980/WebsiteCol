@@ -1,0 +1,94 @@
+{
+  "_comment": "Веса разделов чемпионата по профилям категорий. Сумма весов внутри профиля = 100. Конкурс идёт по 30 критериям: вес каждого критерия = вес его раздела, делённый на число критериев в разделе. Итог = сумма (вес критерия × балл) / сумма весов оценённых критериев, то есть 0–100.",
+  "version": 3,
+  "scale": { "min": 1, "max": 10, "step": 0.5 },
+
+  "profiles": {
+    "service": {
+      "title": "Сервис, банк, образование",
+      "why": "Главное — решить задачу пользователя: навигация, функциональность, техника.",
+      "weights": { "ux": 21, "design": 14, "content": 14, "tech": 16, "func": 18, "trust": 9, "innovation": 6, "fit": 2 }
+    },
+    "shop": {
+      "title": "Магазин и e-commerce",
+      "why": "Главное — довести до покупки: функциональность, доверие, удобство интерфейса.",
+      "weights": { "ux": 19, "design": 13, "content": 10, "tech": 15, "func": 22, "trust": 13, "innovation": 4, "fit": 4 }
+    },
+    "media": {
+      "title": "Медиа и издательство",
+      "why": "Главное — контент и скорость его доставки.",
+      "weights": { "ux": 16, "design": 14, "content": 26, "tech": 18, "func": 9, "trust": 9, "innovation": 5, "fit": 3 }
+    },
+    "portfolio": {
+      "title": "Портфолио и агентство",
+      "why": "Главное — показать работы и уровень исполнения: дизайн, инновации, аккуратность.",
+      "weights": { "ux": 13, "design": 26, "content": 13, "tech": 11, "func": 9, "trust": 9, "innovation": 15, "fit": 4 }
+    },
+    "showcase": {
+      "title": "Промо, культура, иммерсив",
+      "why": "Главное — впечатление и запоминаемость: дизайн, инновации, техника исполнения.",
+      "weights": { "ux": 13, "design": 23, "content": 9, "tech": 15, "func": 11, "trust": 7, "innovation": 20, "fit": 2 }
+    }
+  },
+
+  "criteria": {
+    "ux": [
+      { "id": "nav",        "title": "Интуитивность навигации",      "measured": "expert" },
+      { "id": "interface",  "title": "Удобство интерфейса",          "measured": "expert" },
+      { "id": "responsive", "title": "Адаптивность",                 "measured": "partial" },
+      { "id": "a11y",       "title": "Доступность (a11y)",           "measured": "partial" }
+    ],
+    "design": [
+      { "id": "aesthetics",  "title": "Эстетика и оригинальность",   "measured": "expert" },
+      { "id": "brand_fit",   "title": "Соответствие бренду и ЦА",    "measured": "expert" },
+      { "id": "readability", "title": "Читабельность",               "measured": "expert" },
+      { "id": "consistency", "title": "Целостность",                 "measured": "expert" },
+      { "id": "originality", "title": "Инновационность в дизайне",   "measured": "expert" }
+    ],
+    "content": [
+      { "id": "relevance",   "title": "Релевантность и полнота",     "measured": "expert" },
+      { "id": "freshness",   "title": "Актуальность",                "measured": "expert" },
+      { "id": "expertise",   "title": "Уникальность и экспертность", "measured": "expert" },
+      { "id": "grammar",     "title": "Грамотность",                 "measured": "expert" },
+      { "id": "multimedia",  "title": "Мультимедийность",            "measured": "expert" }
+    ],
+    "tech": [
+      { "id": "security",     "title": "Безопасность",               "measured": "auto" },
+      { "id": "seo",          "title": "SEO-оптимизация",            "measured": "auto" },
+      { "id": "stability",    "title": "Стабильность",               "measured": "auto" }
+    ],
+    "func": [
+      { "id": "forms_search", "title": "Работа форм и поиска",       "measured": "partial" },
+      { "id": "integrations", "title": "Интеграции",                 "measured": "partial" },
+      { "id": "interactive",  "title": "Интерактивные элементы",     "measured": "expert" },
+      { "id": "promises",     "title": "Соответствие заявленному",   "measured": "expert" }
+    ],
+    "trust": [
+      { "id": "transparency", "title": "Прозрачность",               "measured": "auto" },
+      { "id": "reviews",      "title": "Отзывы и рейтинги",          "measured": "partial" },
+      { "id": "expertise",    "title": "Экспертность",               "measured": "partial" },
+      { "id": "social",       "title": "Социальная ответственность", "measured": "partial" }
+    ],
+    "innovation": [
+      { "id": "modern_tech",  "title": "Современные технологии",     "measured": "auto" },
+      { "id": "creativity",   "title": "Креативность в решении задач","measured": "expert" }
+    ],
+    "fit": [
+      { "id": "nomination_fit", "title": "Попадание в номинацию",    "measured": "expert" },
+      { "id": "usp",            "title": "Уникальность предложения", "measured": "expert" },
+      { "id": "completeness",   "title": "Полнота реализации",       "measured": "expert" }
+    ]
+  },
+
+  "nomination_profiles": {
+    "_comment": "Профиль весов, назначаемый сайту. Берётся у основной (первой) категории сайта; можно переопределить полем champ.profile в sites.json.",
+    "by_category": {
+      "saas": "service", "finance": "service", "education": "service", "health": "service",
+      "shop": "shop", "fashion": "shop",
+      "media": "media", "nonprofit": "media",
+      "agency": "portfolio", "portfolio": "portfolio",
+      "culture": "showcase", "food": "showcase", "travel": "showcase", "realty": "showcase",
+      "games": "showcase", "auto": "showcase", "events": "showcase", "archive": "showcase"
+    }
+  }
+}

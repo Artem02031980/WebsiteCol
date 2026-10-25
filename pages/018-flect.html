@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flect — разбор сайта в коллекции</title>
+<meta name="description" content="Flect — промо-сайт велнес-приложения, которое помогает понять, что влияет на ощущение счастья, и выстроить привычки. Одна длинная страница: метод из т">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Flect — разбор сайта в коллекции">
+<meta property="og:description" content="Flect — промо-сайт велнес-приложения, которое помогает понять, что влияет на ощущение счастья, и выстроить привычки. Одна длинная страница: метод из т">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="../index.html">
+      Коллекция сайтов
+      <span class="logo__count">31 сайт</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html">Коллекция</a></li>
+        <li><a class="nav__link" href="../champ.html">Чемпионат</a></li>
+        <li><a class="nav__link" href="../categories.html">Категории</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Коллекция</a></li>
+    <li><a href="../categories.html">Здоровье и медицина</a></li>
+    <li>Flect</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <p class="eyebrow">Сайт 018 · Лендинг · Здоровье и медицина</p>
+    <div class="site-head__row">
+      <h1 style="margin:0">Flect</h1>
+      <span class="rank rank--23"><span class="rank__dot" aria-hidden="true"></span>23 место в чемпионате · 72.2 / 100</span>
+    </div>
+    <p class="site-head__url"><a href="https://www.getflect.app/" target="_blank" rel="noopener noreferrer">https://www.getflect.app/</a></p>
+    <div class="site-head__actions">
+      <a class="btn btn--accent" href="https://www.getflect.app/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+      <a class="btn btn--ghost" href="../champ.html">Чемпионат целиком</a>
+      <button class="btn btn--ghost" type="button" id="copy-link">Скопировать ссылку на страницу</button>
+    </div>
+    <div class="card__meta">
+      <span class="tag">Здоровье и медицина</span>
+      <span class="tag tag--muted">Wellness</span>
+      <span class="tag tag--muted">Минимализм</span><span class="tag tag--muted">Редакционный</span><span class="tag tag--muted">Игривый</span>
+      <span class="tag">Работает</span>
+    </div>
+  </header>
+
+  <div class="site-grid section section--tight">
+    <div>
+      <figure class="shot">
+      <img src="../Screens/018.png" alt="Скриншот главной страницы Flect"
+           width="1685" height="1118" decoding="async" fetchpriority="high">
+      <figcaption>Скриншот из <code>Screens/018.png</code>, доминирующий цвет занимает 57% кадра.</figcaption>
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Flect — промо-сайт велнес-приложения, которое помогает понять, что влияет на ощущение счастья, и выстроить привычки. Одна длинная страница: метод из трёх шагов, индекс Happiness Lifestyle Index, сравнение «вместо этого — Flect даёт» и форма запроса раннего доступа по почте. Сделан как статический сайт на чистом HTML, CSS и JavaScript — без фреймворков, сборщиков и анимационных библиотек: проявление текста по словам, закреплённая сцена с шагами метода, параллакс фотографий, карусель преимуществ, счётчик индекса и состояния формы написаны вручную на requestAnimationFrame и IntersectionObserver, а на страницах-заглушках фон рисует собственный шейдер на чистом WebGL. Хостинг — Vercel, шрифты Pangram Pangram подключены самохостом.</p>
+        <blockquote class="small muted" style="margin:0;padding-left:var(--space-2);border-left:3px solid var(--border-subtle)">Описание владельца коллекции: Светлый дружелюбный сайт велнес-приложения для «построения счастья».</blockquote>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>Сайт собран вообще без зависимостей: ни фреймворка, ни сборщика, ни анимационных библиотек — вся моторика на requestAnimationFrame и IntersectionObserver, а на страницах-заглушках фон рисует собственный шейдер вместо three.js.</li><li>О сознательном отказе от библиотек говорит след в разметке: версия скриптов помечена как no-lenis, а в коде остался комментарий про нативный скролл — плавный скролл удалили, оставив его только для переходов по якорям.</li><li>Фотографии обрезаны по суперэллипсу: вместо скругления углов используется polygon примерно из ста двадцати точек, поэтому снимки выглядят «сквошами», а не прямоугольниками со скруглением.</li><li>Заголовок и лид проявляются не целиком, а по словам: скрипт режет текст на фрагменты, и каждый всплывает из размытия со своей задержкой.</li><li>SEO проработано заметно выше среднего для рукописного сайта — карта сайта с приоритетами, robots с директивой Sitemap, канонический адрес, полные карточки для соцсетей и микроразметка; при этом в карте лежат две страницы-лендинга, на которые с сайта не ведёт ни одной ссылки.</li><li>Часть обещаний не выполнена: страницы блога и партнёров выложены заглушками с надписью «This part is still settling», кнопки скачивания в подвале ведут на якорь той же страницы, а не в магазины приложений, и контактов в подвале нет вовсе — единственная почта спрятана на юридических страницах.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Все 30 номинаций сайта</h2>
+        <p class="small muted">Итог: <strong>72.2 / 100</strong> по профилю «Сервис, банк, образование».
+        Первых мест в критериях: <strong>5</strong> (единолично 0, разделено 5),
+        призовых мест: <strong>6</strong>.
+        Строки отсортированы по месту в номинации, ссылка ведёт к номинации в чемпионате.</p>
+        <ol class="criterion-list">
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-brand_fit">Соответствие бренду и ЦА</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-freshness">Актуальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-grammar">Грамотность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-seo">SEO-оптимизация</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-readability">Читабельность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-transparency">Прозрачность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>3</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-interface">Удобство интерфейса</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-stability">Стабильность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-forms_search">Работа форм и поиска</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-relevance">Релевантность и полнота</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>7</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-a11y">Доступность (a11y)</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>9</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-responsive">Адаптивность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>10</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-security">Безопасность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>10</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-nav">Интуитивность навигации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>11</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-integrations">Интеграции</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>16</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-consistency">Целостность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>19</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-interactive">Интерактивные элементы</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>20</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-nomination_fit">Попадание в номинацию</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>20</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-aesthetics">Эстетика и оригинальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>21</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-completeness">Полнота реализации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>23</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-originality">Инновационность в дизайне</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-expertise">Уникальность и экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-modern_tech">Современные технологии</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 3 %</span>
+            <span>Инновации и технологичность</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-usp">Уникальность предложения</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-promises">Соответствие заявленному</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-creativity">Креативность в решении задач</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>25</strong> из 31</span>
+            <span>вес 3 %</span>
+            <span>Инновации и технологичность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-social">Социальная ответственность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>3</strong></span>
+            <span>место <strong>27</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-multimedia">Мультимедийность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>28</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-expertise">Экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>29</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-reviews">Отзывы и рейтинги</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>3</strong></span>
+            <span>место <strong>29</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Обоснования по разделам</h2>
+        <dl class="specs">
+        <div><dt>Юзабилити и UX</dt><dd>Плавающая шапка с якорями и аккуратная форма запроса работают предсказуемо, но кнопки скачивания в подвале ведут на якорь той же страницы вместо магазинов приложений, а контактов в подвале нет вовсе.</dd></div>
+        <div><dt>Дизайн и визуальное восприятие</dt><dd>Тёплый свет: бежево-лаймовый градиент вверху, тёмно-коричневый текст вместо чёрного, лаймовые пилюли и фотографии, обрезанные по суперэллипсу, а не по скруглению.</dd></div>
+        <div><dt>Контент</dt><dd>Метод из трёх шагов, индекс с семью измерениями и сравнение «вместо этого — Flect» объясняют продукт; при этом страницы блога и партнёров выложены заглушками.</dd></div>
+        <div><dt>Техническое качество</dt><dd>Рукописная статика с картой сайта, robots и микроразметкой уровня продуктовой команды, но две страницы в карте не слинкованы с сайтом, а форма зависит от отдельного домена API.</dd></div>
+        <div><dt>Функциональность и интерактивность</dt><dd>Форма раннего доступа проходит состояния загрузки, ошибки и успеха с рисованной галочкой; поиска нет, а обещанные ссылки на магазины приложений не работают.</dd></div>
+        <div><dt>Доверие и репутация</dt><dd>Есть условия версии 1.1 с датой, политика и страница про cookie, названо юрлицо с адресом и оговоркой об отсутствии медицинских услуг; отзывов и имён команды нет.</dd></div>
+        <div><dt>Инновации и технологичность</dt><dd>Ни одной библиотеки: собственная моторика на requestAnimationFrame и IntersectionObserver плюс шейдер на чистом WebGL вместо three.js — редкая аккуратность при таком объёме эффектов.</dd></div>
+        <div><dt>Соответствие категории и целям</dt><dd>Промо-страница велнес-приложения честно объясняет метод и собирает заявки, но практическая часть — контакты, магазины и блог — не доведена.</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Что не проверено</h2>
+        <ul class="small"><li>Браузер не запускался: анимации, поведение скролла и WebGL-фон описаны по исходникам CSS и JavaScript, вживую не наблюдались.</li><li>Работает ли шейдерная волна на страницах блога и партнёров в реальном браузере — не подтверждено: холст создаётся в рантайме, живой рендер не снимался.</li><li>Отправка формы не проверялась: адрес отвечает 405 на GET, тестовую заявку не отправляли, поэтому успешный путь, письмо и содержимое страницы благодарности не подтверждены.</li><li>Аналитика не исполнялась: подтверждено только присутствие тегов и скриптов в разметке, реальных запросов не наблюдалось.</li><li>Лицензии коммерческих шрифтов Pangram Pangram не проверялись, легитимность самохостинга по разметке не определяется.</li><li>Автор, дизайнер и студия не определены — в разметке и комментариях кредитов нет.</li><li>Год запуска продукта и дата основания компании не установлены: 2026 в подвале, условия от 2025 года и дата в карте сайта — это даты документов, а не история продукта.</li><li>Как выглядит сайт ниже первого экрана и на узких ширинах, не проверено: скриншот 018.png — это кадр 1685×1118.</li><li>Соответствие скриншота 018.png текущему состоянию сайта не проверялось, дата снимка неизвестна.</li></ul>
+      </section>
+    </div>
+
+    <div>
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">getflect.app</dd></div>
+          <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+          <div><dt>Категории</dt><dd>Здоровье и медицина</dd></div>
+          <div><dt>Подкатегории</dt><dd>Wellness</dd></div>
+          <div><dt>Для кого</dt><dd>Обычным пользователям, Дизайнерам, Продуктовым командам</dd></div>
+          <div><dt>Стиль</dt><dd>Минимализм, Редакционный, Игривый</dd></div>
+          <div><dt>Приёмы</dt><dd>Скроллителлинг, Липкие секции, Параллакс, Анимация типографики, Микроанимации, Генеративная графика</dd></div>
+          <div><dt>Технологии</dt><dd>Статический сайт на чистом HTML, CSS и JavaScript, Vercel, Собственный WebGL-шейдер без three.js, Анимации на requestAnimationFrame и IntersectionObserver, Отказ от библиотеки плавного скролла, Шрифты Pangram Pangram самохостом, Токены дизайна из Figma в CSS-переменных, Бэкенд формы на отдельном поддомене, Микроразметка JSON-LD, Ленивая загрузка изображений, Аналитика</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd>США, Нью-Джерси — в условиях использования указано юрлицо Flect App Inc. с адресом в Howell Township и разрешение пользоваться сервисом только совершеннолетним гражданам США</dd></div>
+          <div><dt>Автор</dt><dd>не определено: ни кредитов студии, ни ссылки «сделано кем-то», ни тега generator; в комментариях к стилям есть только указание, что токены взяты из макета Figma</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Добавлен</dt><dd>2026-10-02</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FCFFEF"></span><span class="swatch" style="background:#F4FAC6"></span><span class="swatch" style="background:#98774D"></span><span class="swatch" style="background:#281913"></span><span class="swatch" style="background:#B5A483"></span></div>
+       <ul class="small mono" style="list-style:none;padding:0;margin:var(--space-2) 0 0">
+       <li>#FCFFEF — 57% кадра</li><li>#F4FAC6 — 22% кадра</li><li>#98774D — 5% кадра</li><li>#281913 — 3% кадра</li><li>#B5A483 — 3% кадра</li>
+       </ul>
+       <p class="small muted" style="margin-top:var(--space-2)">измерено из Screens/018.png (светло-кремовый занимает 57% кадра, лаймовый 22%); токены сайта: текст #2E1919, лайм #ECF7BD, бежевый герой #F3DFC6, подвал #38430A</p>
+        <dl class="specs" style="margin-top:var(--space-2)">
+          <div><dt>Режим</dt><dd>Светлая</dd></div>
+          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Чемпионат</h2>
+        <p class="small muted">23 место из 31 · 72.2 / 100 ·
+        первых мест 5 из 30 · сильнее всего: Соответствие бренду и ЦА (1 место)</p>
+        <ul class="small" style="margin:0;padding-left:var(--space-3)">
+          <li>Соответствие бренду и ЦА — 1 место, 9 баллов</li>
+          <li>Читабельность — 1 место, 8 баллов</li>
+          <li>Актуальность — 1 место, 9 баллов</li>
+          <li>Грамотность — 1 место, 9 баллов</li>
+          <li>SEO-оптимизация — 1 место, 9 баллов</li>
+        </ul>
+        <p style="margin:var(--space-2) 0 0"><a class="btn btn--ghost btn--small" href="../champ.html">Все 30 номинаций</a></p>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>Flect — Build your happiness <span class="small muted">(28 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd>Flect helps people with busy, demanding lifestyles understand what affects their happiness, and build habits that improve it over time. <span class="small muted">(135 симв.)</span></dd></div>
+          <div><dt>Open Graph</dt><dd>да</dd></div>
+          <div><dt>Структурированные данные</dt><dd>да</dd></div>
+          <div><dt>Sitemap</dt><dd>есть: /sitemap.xml на восемь адресов с приоритетами и датами; две страницы в карте не слинкованы с сайта</dd></div>
+          <div><dt>Robots</dt><dd>User-agent: * / Allow: / и директива Sitemap</dd></div>
+          <div><dt>Аналитика</dt><dd>Google Tag Manager (GTM-P9D5BFCL), Google Analytics 4 (G-PCT2PKP296), Vercel Web Analytics, Vercel Speed Insights</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>15</dd></div>
+          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
+          <div><dt>Контакты</dt><dd>в подвале контактов нет — только четыре колонки ссылок; единственная почта support@getflect.app указана на страницах условий, приватности и cookie</dd></div>
+          <div><dt>Юридическая информация</dt><dd>юрлицо Flect App Inc. с адресом в Нью-Джерси, условия версии 1.1 от 28 мая 2025 года, отдельные страницы политики конфиденциальности и cookie; в условиях прямо сказано, что сервис не оказывает медицинских услуг</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong> — ни одного признака Next, Nuxt, Astro, Svelte, Vue, WordPress, Webflow, Framer или Tilda; в разметке только свои стили и свои скрипты main.js, header.js, partials.js, lazyload.js, buttons.js без сборщика</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, HSTS на два года, скрипты /_vercel/insights и /_vercel/speed-insights</li><li><strong>Собственный WebGL-шейдер без three.js</strong> — файл wave-bg.js с комментарием «Pure WebGL (no three.js)»: холст создаётся в рантайме, шейдер на инлайновом GLSL, value-noise и три октавы fbm с доменным искажением, ограничение 30 кадров в секунду и пауза вне экрана</li><li><strong>Анимации на requestAnimationFrame и IntersectionObserver</strong> — в main.js свыше тридцати вызовов requestAnimationFrame и около десяти конструкторов IntersectionObserver, собственный планировщик подписчиков; поиск по всем скриптам не нашёл ни GSAP, ни Lenis, ни three.js, ни anime.js, ни Swiper, ни Lottie</li><li><strong>Отказ от библиотеки плавного скролла</strong> — версия скриптов в разметке помечена как no-lenis, в шапке main.js стоит комментарий про нативный скролл; плавность осталась только у переходов по якорям через ручной твининг в requestAnimationFrame</li><li><strong>Шрифты Pangram Pangram самохостом</strong> — правила @font-face на PP Neue Montreal и PP Editorial New с локальными файлами и font-display: swap; Google Fonts не подключён, иконки — собственные SVG</li><li><strong>Токены дизайна из Figma в CSS-переменных</strong> — комментарий в стилях «Colour tokens are pulled directly from Figma — do not eyeball» и корневые переменные цвета, шрифтов, ширины контента и кривых анимации</li><li><strong>Бэкенд формы на отдельном поддомене</strong> — запрос POST на api.getflect.app/p/early-access с полем почты и адресом страницы; проверка показала, что адрес жив и отвечает 405 на GET; при успехе переход на страницу благодарности</li><li><strong>Микроразметка JSON-LD</strong> — граф из Organization, WebSite, WebPage с частями, SoftwareApplication с категорией health, нулевой ценой и доступностью PreOrder, а также SiteNavigationElement</li><li><strong>Ленивая загрузка изображений</strong> — отдельный lazyload.js на IntersectionObserver с классами плавного появления; в первом экране, наоборот, высокий приоритет загрузки</li><li><strong>Аналитика</strong> — Google Tag Manager, Google Analytics 4 и Vercel Web Analytics со Speed Insights — подтверждено тегами и скриптами в разметке</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Смотреть как пример сайта, собранного вообще без библиотек: проявление текста по словам, закреплённая сцена с шагами метода, параллакс, счётчик индекса и состояния формы — всё на requestAnimationFrame и IntersectionObserver, плюс собственный WebGL-шейдер там, где обычно берут three.js.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Похожие в коллекции</h2>
+        <ul class="small">
+          <li><a href="001-weeksync.html">WeekSync</a>
+            <span class="muted">— общее: Минимализм, Игривый, Скроллителлинг, Анимация типографики, Микроанимации</span></li><li><a href="012-prand.html">Prand</a>
+            <span class="muted">— общее: Игривый, Скроллителлинг, Липкие секции, Анимация типографики, Микроанимации</span></li><li><a href="025-dabbit.html">Dabbit</a>
+            <span class="muted">— общее: Минимализм, Игривый, Скроллителлинг, Микроанимации, Генеративная графика</span></li><li><a href="026-ploy.html">Ploy</a>
+            <span class="muted">— общее: Игривый, Минимализм, Анимация типографики, Микроанимации, Скроллителлинг</span></li>
+        </ul>
+      </section>
+
+      <nav class="panel" aria-label="Соседние сайты коллекции">
+        <h2>Рядом в коллекции</h2>
+        <p class="small">← <a href="017-leo-parpeix.html">Leo Parpeix</a></p>
+        <p class="small">→ <a href="019-screentune.html">ScreenTune</a></p>
+      </nav>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <h2>Коллекция</h2>
+      <p>31 сайт в подборке. Данные лежат в <code>data/sites.json</code>,
+      страницы собираются командой <code>node tools/build.mjs</code>.</p>
+    </div>
+    <div>
+      <h2>Разделы</h2>
+      <p><a href="../index.html">Каталог с поиском</a></p>
+      <p><a href="../champ.html">Чемпионат сайтов</a></p>
+      <p><a href="../categories.html">Категории и аудитории</a></p>
+    </div>
+    <div>
+      <h2>Как это устроено</h2>
+      <p>Оценки чемпионата выставляются по 30 критериям: каждый критерий — отдельная номинация, вес зависит от категории сайта.</p>
+      <p>Чего не измерили — помечено как <span class="placeholder">не измерено</span>, а не выдумано.</p>
+    </div>
+  </div>
+  <div class="container footer__note">
+    <p>Собранный вручную каталог референсов. Скриншоты — в папке <code>Screens/</code>, схемы данных — в <code>data/SCHEMA.md</code>.</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

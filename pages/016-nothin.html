@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nothin&#39; — разбор сайта в коллекции</title>
+<meta name="description" content="Сайт парижской креативной студии: страницы на Webflow с CMS-коллекцией работ, но вся выразительность вынесена в отдельный бандл, собранный Vite и разд">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nothin&#39; — разбор сайта в коллекции">
+<meta property="og:description" content="Сайт парижской креативной студии: страницы на Webflow с CMS-коллекцией работ, но вся выразительность вынесена в отдельный бандл, собранный Vite и разд">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="../index.html">
+      Коллекция сайтов
+      <span class="logo__count">31 сайт</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html">Коллекция</a></li>
+        <li><a class="nav__link" href="../champ.html">Чемпионат</a></li>
+        <li><a class="nav__link" href="../categories.html">Категории</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Коллекция</a></li>
+    <li><a href="../categories.html">Агентства и студии</a></li>
+    <li>Nothin&#39;</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <p class="eyebrow">Сайт 016 · Многостраничный · Агентства и студии</p>
+    <div class="site-head__row">
+      <h1 style="margin:0">Nothin&#39;</h1>
+      <span class="rank rank--11"><span class="rank__dot" aria-hidden="true"></span>11 место в чемпионате · 77.5 / 100</span>
+    </div>
+    <p class="site-head__url"><a href="https://www.noth.in/" target="_blank" rel="noopener noreferrer">https://www.noth.in/</a></p>
+    <div class="site-head__actions">
+      <a class="btn btn--accent" href="https://www.noth.in/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+      <a class="btn btn--ghost" href="../champ.html">Чемпионат целиком</a>
+      <button class="btn btn--ghost" type="button" id="copy-link">Скопировать ссылку на страницу</button>
+    </div>
+    <div class="card__meta">
+      <span class="tag">Агентства и студии</span>
+      <span class="tag tag--muted">Дизайн-студия</span><span class="tag tag--muted">Брендинг</span>
+      <span class="tag tag--muted">Брутализм</span><span class="tag tag--muted">Монохром</span><span class="tag tag--muted">Редакционный</span>
+      <span class="tag">Работает</span>
+    </div>
+  </header>
+
+  <div class="site-grid section section--tight">
+    <div>
+      <figure class="shot">
+      <img src="../Screens/016.webp" alt="Скриншот главной страницы Nothin&#39;"
+           width="1626" height="1181" decoding="async" fetchpriority="high">
+      <figcaption>Скриншот из <code>Screens/016.webp</code>, доминирующий цвет занимает 74% кадра.</figcaption>
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Сайт парижской креативной студии: страницы на Webflow с CMS-коллекцией работ, но вся выразительность вынесена в отдельный бандл, собранный Vite и раздаваемый с Netlify. В первом экране белая SVG-надпись служит маской, которую разъедает GPU-симуляция жидкости на three.js — под ней проявляется видео. Поверх этого работают Lenis, GSAP со ScrollTrigger, переходы между страницами на Taxi.js и собственный сплиттер текста; оформление радикально чёрно-белое, с полноэкранными видео и единственным розово-малиновым акцентом.</p>
+        <blockquote class="small muted" style="margin:0;padding-left:var(--space-2);border-left:3px solid var(--border-subtle)">Описание владельца коллекции: Впечатляющий сайт парижской креативной студии. Нетривиальный ховер-эффект, сочные анимации и крупные слайды.</blockquote>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>Первый экран сделан инверсией: не эффект поверх контента, а полноценный GPU-солвер жидкости на three.js, чей канал красителя работает маской смешивания двух слоёв — мышь разъедает надпись и проявляет видео.</li><li>Ховер карточек работ — магнитная пилюля «explore →»: системный курсор у ссылки отключается, а пилюля догоняет мышь с инерцией и появляется с пружинным изингом.</li><li>Переход между проектами — это FLIP на клонах: заголовок и номер следующего проекта клонируются, фиксируются поверх страницы и улетают в целевые позиции на новой странице.</li><li>Часть метаданных спрятана в alt-текст картинок: ширина карточки в сетке и адрес видео вычисляются в скрипте разбором содержимого этого атрибута.</li><li>При сильной инженерии есть семантические пробелы: на главной нет ни одного h1, нет юридических страниц и cookie-баннера, а prefers-reduced-motion не обрабатывается ни в стилях, ни в скрипте — при трёх автовоспроизводящихся видео и постоянном WebGL-рендере.</li><li>Контент и режиссура живут отдельно: Webflow отвечает за страницы, CMS и разметку, а вся анимационная логика приезжает одним минифицированным бандлом с чужого домена.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Все 30 номинаций сайта</h2>
+        <p class="small muted">Итог: <strong>77.5 / 100</strong> по профилю «Портфолио и агентство».
+        Первых мест в критериях: <strong>5</strong> (единолично 0, разделено 5),
+        призовых мест: <strong>6</strong>.
+        Строки отсортированы по месту в номинации, ссылка ведёт к номинации в чемпионате.</p>
+        <ol class="criterion-list">
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-multimedia">Мультимедийность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>10</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,6 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-interactive">Интерактивные элементы</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>10</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-modern_tech">Современные технологии</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>10</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 7,5 %</span>
+            <span>Инновации и технологичность</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-creativity">Креативность в решении задач</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>10</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 7,5 %</span>
+            <span>Инновации и технологичность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-brand_fit">Соответствие бренду и ЦА</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 5,2 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-nomination_fit">Попадание в номинацию</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>2</strong> из 31</span>
+            <span>вес 1,33 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-aesthetics">Эстетика и оригинальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 5,2 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-usp">Уникальность предложения</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 1,33 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-interface">Удобство интерфейса</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 3,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-originality">Инновационность в дизайне</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 5,2 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-stability">Стабильность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 3,67 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-forms_search">Работа форм и поиска</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-expertise">Уникальность и экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>8</strong> из 31</span>
+            <span>вес 2,6 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-grammar">Грамотность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>8</strong> из 31</span>
+            <span>вес 2,6 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-social">Социальная ответственность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>4</strong></span>
+            <span>место <strong>8</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-nav">Интуитивность навигации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>11</strong> из 31</span>
+            <span>вес 3,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-expertise">Экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>12</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-promises">Соответствие заявленному</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>12</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-readability">Читабельность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>14</strong> из 31</span>
+            <span>вес 5,2 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-completeness">Полнота реализации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>15</strong> из 31</span>
+            <span>вес 1,33 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-reviews">Отзывы и рейтинги</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>4</strong></span>
+            <span>место <strong>15</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-freshness">Актуальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>16</strong> из 31</span>
+            <span>вес 2,6 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-integrations">Интеграции</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>16</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-seo">SEO-оптимизация</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>17</strong> из 31</span>
+            <span>вес 3,67 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-consistency">Целостность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>19</strong> из 31</span>
+            <span>вес 5,2 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-relevance">Релевантность и полнота</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>23</strong> из 31</span>
+            <span>вес 2,6 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-security">Безопасность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>23</strong> из 31</span>
+            <span>вес 3,67 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-responsive">Адаптивность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 3,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-a11y">Доступность (a11y)</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>4</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 3,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-transparency">Прозрачность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>4</strong></span>
+            <span>место <strong>26</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Обоснования по разделам</h2>
+        <dl class="specs">
+        <div><dt>Юзабилити и UX</dt><dd>Меню, часы с локацией и переходы между проектами сделаны аккуратно, но на главной нет ни одного h1, а весь контент требует загрузки кастомного бандла с чужого домена.</dd></div>
+        <div><dt>Дизайн и визуальное восприятие</dt><dd>Радикальный чёрно-белый контраст с гигантскими SVG-надписями во всю ширину, полноэкранными видео и единственным розово-малиновым акцентом.</dd></div>
+        <div><dt>Контент</dt><dd>Восемь проектов в CMS, манифест студии, список услуг и команда с ролями; страниц с ценами и юридических документов нет.</dd></div>
+        <div><dt>Техническое качество</dt><dd>Webflow с CMS за Cloudflare, живой sitemap и микроразметка организации; из минусов — кастомный бандл раздаётся с отдельного домена и в нём же лежит вся логика.</dd></div>
+        <div><dt>Функциональность и интерактивность</dt><dd>Запись на звонок через Calendly, почта в подвале, видео с CDN; форм обратной связи и поиска нет.</dd></div>
+        <div><dt>Доверие и репутация</dt><dd>Основатель и команда названы поимённо, есть микроразметка организации с адресом в Париже; при этом нет ни политики конфиденциальности, ни cookie-баннера.</dd></div>
+        <div><dt>Инновации и технологичность</dt><dd>WebGL-симуляция жидкости как маска hero, FLIP-переходы между проектами на клонах и переходы страниц через Taxi.js — редкий уровень инженерии.</dd></div>
+        <div><dt>Соответствие категории и целям</dt><dd>Для креативной студии сайт работает как витрина уровня и характера, но практической части — юридической и контактной — не хватает.</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Что не проверено</h2>
+        <ul class="small"><li>Поведение анимаций в браузере не воспроизводилось: выводы о ховере, переходах и WebGL-эффекте сделаны из чтения минифицированного бандла и разметки, а не из наблюдения.</li><li>ScrollSmoother присутствует в бандле, но вызов создания не найден — используется ли он фактически, не определено; плавный скролл реализован через Lenis.</li><li>Переключатель языка EN ведёт на заглушку, других языковых версий и разметки hreflang нет — работает ли переключение, не проверено.</li><li>Производительность не измерялась: нет данных о весе видео, числе запросов и метриках загрузки.</li><li>Полный перебор страниц не делался: проверены главная, список работ, два проекта, robots и sitemap.</li><li>Наличие юридической информации вне проверенных страниц не исключено, хотя ни на одной из четырёх проверенных её нет.</li><li>Дата и разрешение съёмки скриншота 016.webp не определены.</li></ul>
+      </section>
+    </div>
+
+    <div>
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">noth.in</dd></div>
+          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+          <div><dt>Категории</dt><dd>Агентства и студии</dd></div>
+          <div><dt>Подкатегории</dt><dd>Дизайн-студия, Брендинг</dd></div>
+          <div><dt>Для кого</dt><dd>Дизайнерам, Маркетологам, Агентствам</dd></div>
+          <div><dt>Стиль</dt><dd>Брутализм, Монохром, Редакционный</dd></div>
+          <div><dt>Приёмы</dt><dd>WebGL и 3D, Кастомный курсор, Переходы между страницами, Видео-фон, Параллакс, Липкие секции</dd></div>
+          <div><dt>Технологии</dt><dd>Webflow (конструктор, CMS и хостинг), Cloudflare перед Webflow, Собственный JS-бандл на Netlify, three.js r184, Симуляция жидкости Navier–Stokes как маска, GSAP 3.13.0 со ScrollTrigger, Lenis, Taxi.js (переходы между страницами), Bunny CDN для видео, PP Neue Montreal и IBM Plex Mono, JSON-LD Organization</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd>Франция, Париж — адрес в микроразметке и подпись «Creative studio in Paris»</dd></div>
+          <div><dt>Автор</dt><dd>студия Nothin&#39;, основатель Sara Guedj; сайт сделали Pierre Patrault и Thomas Carré</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Добавлен</dt><dd>2026-10-01</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#401116"></span><span class="swatch" style="background:#751A2D"></span><span class="swatch" style="background:#AE264C"></span></div>
+       <ul class="small mono" style="list-style:none;padding:0;margin:var(--space-2) 0 0">
+       <li>#FFFFFF — 74% кадра</li><li>#000000 — 18% кадра</li><li>#401116 — 4% кадра</li><li>#751A2D — 1% кадра</li><li>#AE264C — 1% кадра</li>
+       </ul>
+       <p class="small muted" style="margin-top:var(--space-2)">измерено из Screens/016.webp (белый фон занимает 74% кадра, чёрный 18%); токены сайта: чёрный #000000, серый #8E8E8E, розово-малиновые #D13065 и #FF2A78</p>
+        <dl class="specs" style="margin-top:var(--space-2)">
+          <div><dt>Режим</dt><dd>Светлая</dd></div>
+          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Чемпионат</h2>
+        <p class="small muted">11 место из 31 · 77.5 / 100 ·
+        первых мест 5 из 30 · сильнее всего: Мультимедийность (1 место)</p>
+        <ul class="small" style="margin:0;padding-left:var(--space-3)">
+          <li>Соответствие бренду и ЦА — 1 место, 9 баллов</li>
+          <li>Мультимедийность — 1 место, 10 баллов</li>
+          <li>Интерактивные элементы — 1 место, 10 баллов</li>
+          <li>Современные технологии — 1 место, 10 баллов</li>
+          <li>Креативность в решении задач — 1 место, 10 баллов</li>
+        </ul>
+        <p style="margin:var(--space-2) 0 0"><a class="btn btn--ghost btn--small" href="../champ.html">Все 30 номинаций</a></p>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>Nothin&#39; | Home <span class="small muted">(14 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd>Nothin&#39; A protean augmented-creative studio in Paris. Branding, editorial, art direction &amp; AI for fashion &amp; luxury strategists who refuse the generic. <span class="small muted">(150 симв.)</span></dd></div>
+          <div><dt>Open Graph</dt><dd>да</dd></div>
+          <div><dt>Структурированные данные</dt><dd>да</dd></div>
+          <div><dt>Sitemap</dt><dd>https://www.noth.in/sitemap.xml — 9 адресов с датами обновления</dd></div>
+          <div><dt>Robots</dt><dd>есть: директив запрета нет, указана карта сайта</dd></div>
+          <div><dt>Аналитика</dt><dd>Google Tag Manager (GTM-TXXTT3WJ), Google Analytics 4 (G-HHTL91GJ73), Metricool, подтверждение домена для Pinterest</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>21</dd></div>
+          <div><dt>Битые ссылки</dt><dd>битых среди слинкованных адресов нет; проверенные как гипотеза /studio, /contact и /privacy-policy отдают 404 — юридических страниц на сайте нет вовсе</dd></div>
+          <div><dt>Контакты</dt><dd>hello@noth.in, запись на звонок через Calendly, ссылки на LinkedIn, Instagram и Behance; телефона и почтового адреса нет</dd></div>
+          <div><dt>Юридическая информация</dt><dd>юридических страниц нет: ни политики конфиденциальности, ни cookie-баннера, ни реквизитов; только строка «©2026 — Founded by Sara Guedj» и кредиты разработчиков</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>Webflow (конструктор, CMS и хостинг)</strong> — атрибуты data-wf-domain и data-wf-site на html, комментарий Last Published, ассеты с cdn.prod.website-files.com, CMS-классы w-dyn-list и w-dyn-item</li><li><strong>Cloudflare перед Webflow</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, x-wf-region: us-east-1</li><li><strong>Собственный JS-бандл на Netlify</strong> — инлайн-скрипт подключает nothinv1.netlify.app/main.js (752 КБ), рядом ветка разработки на localhost:3000</li><li><strong>three.js r184</strong> — в бандле строка &quot;184&quot;, canvas получает атрибут data-engine с ревизией; используются WebGLRenderer, ShaderMaterial, WebGLRenderTarget</li><li><strong>Симуляция жидкости Navier–Stokes как маска</strong> — функция _initFluid создаёт FBO для скорости, давления и красителя с проходами curl, vorticity, advection, splat, divergence, pressure; в шейдере mask = smoothstep(edgeSoftness, edgeSoftness + edgeWidth, dye * revealSize)</li><li><strong>GSAP 3.13.0 со ScrollTrigger</strong> — строки version:&quot;3.13.0&quot; и registerPlugin в бандле, API ScrollTrigger (getById, isScrolling, normalizeScroll)</li><li><strong>Lenis</strong> — класс с window.lenisVersion и параметрами duration 1.2, smooth, touchMultiplier 2</li><li><strong>Taxi.js (переходы между страницами)</strong> — конструктор с transitions default и flip, селектор ссылок, атрибуты data-taxi в разметке</li><li><strong>Bunny CDN для видео</strong> — все видео с домена noth-in.b-cdn.net</li><li><strong>PP Neue Montreal и IBM Plex Mono</strong> — @font-face с woff2 в семи начертаниях на Webflow CDN и WebFont.load для IBM Plex Mono с Google Fonts</li><li><strong>JSON-LD Organization</strong> — блок application/ld+json с адресом в Париже, основателем Sara Guedj и ссылками на соцсети</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Смотреть как пример смелой инженерии поверх конструктора: Webflow отвечает за контент и разметку, а вся режиссура живёт в отдельном бандле — с GPU-симуляцией жидкости, FLIP-переходами и магнитным курсором.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Похожие в коллекции</h2>
+        <ul class="small">
+          <li><a href="011-ironhill.html">Ironhill</a>
+            <span class="muted">— общее: Редакционный, Липкие секции, WebGL и 3D, Кастомный курсор, Переходы между страницами</span></li><li><a href="028-locomotive.html">Locomotive</a>
+            <span class="muted">— общее: Агентства и студии, Редакционный, Переходы между страницами, Видео-фон, Параллакс</span></li><li><a href="005-joshuabaker.html">Joshua Baker</a>
+            <span class="muted">— общее: Редакционный, Монохром, Переходы между страницами, Видео-фон</span></li><li><a href="002-tinloof.html">Tinloof</a>
+            <span class="muted">— общее: Агентства и студии, Переходы между страницами, Липкие секции</span></li>
+        </ul>
+      </section>
+
+      <nav class="panel" aria-label="Соседние сайты коллекции">
+        <h2>Рядом в коллекции</h2>
+        <p class="small">← <a href="015-sharplink.html">SharpLink</a></p>
+        <p class="small">→ <a href="017-leo-parpeix.html">Leo Parpeix</a></p>
+      </nav>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <h2>Коллекция</h2>
+      <p>31 сайт в подборке. Данные лежат в <code>data/sites.json</code>,
+      страницы собираются командой <code>node tools/build.mjs</code>.</p>
+    </div>
+    <div>
+      <h2>Разделы</h2>
+      <p><a href="../index.html">Каталог с поиском</a></p>
+      <p><a href="../champ.html">Чемпионат сайтов</a></p>
+      <p><a href="../categories.html">Категории и аудитории</a></p>
+    </div>
+    <div>
+      <h2>Как это устроено</h2>
+      <p>Оценки чемпионата выставляются по 30 критериям: каждый критерий — отдельная номинация, вес зависит от категории сайта.</p>
+      <p>Чего не измерили — помечено как <span class="placeholder">не измерено</span>, а не выдумано.</p>
+    </div>
+  </div>
+  <div class="container footer__note">
+    <p>Собранный вручную каталог референсов. Скриншоты — в папке <code>Screens/</code>, схемы данных — в <code>data/SCHEMA.md</code>.</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

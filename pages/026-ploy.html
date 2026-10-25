@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ploy — разбор сайта в коллекции</title>
+<meta name="description" content="Ploy — сайт маркетинговой ИИ-платформы, которая продаётся как «двигатель роста» корпоративного сайта: сборка страниц, аналитика, идентификация посетит">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ploy — разбор сайта в коллекции">
+<meta property="og:description" content="Ploy — сайт маркетинговой ИИ-платформы, которая продаётся как «двигатель роста» корпоративного сайта: сборка страниц, аналитика, идентификация посетит">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="../index.html">
+      Коллекция сайтов
+      <span class="logo__count">31 сайт</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html">Коллекция</a></li>
+        <li><a class="nav__link" href="../champ.html">Чемпионат</a></li>
+        <li><a class="nav__link" href="../categories.html">Категории</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Коллекция</a></li>
+    <li><a href="../categories.html">Сервисы и приложения</a></li>
+    <li>Ploy</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <p class="eyebrow">Сайт 026 · Многостраничный · Сервисы и приложения</p>
+    <div class="site-head__row">
+      <h1 style="margin:0">Ploy</h1>
+      <span class="rank rank--6"><span class="rank__dot" aria-hidden="true"></span>6 место в чемпионате · 79.7 / 100</span>
+    </div>
+    <p class="site-head__url"><a href="https://ploy.ai/" target="_blank" rel="noopener noreferrer">https://ploy.ai/</a></p>
+    <div class="site-head__actions">
+      <a class="btn btn--accent" href="https://ploy.ai/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+      <a class="btn btn--ghost" href="../champ.html">Чемпионат целиком</a>
+      <button class="btn btn--ghost" type="button" id="copy-link">Скопировать ссылку на страницу</button>
+    </div>
+    <div class="card__meta">
+      <span class="tag">Сервисы и приложения</span>
+      <span class="tag tag--muted">AI-сервисы</span>
+      <span class="tag tag--muted">Игривый</span><span class="tag tag--muted">Минимализм</span>
+      <span class="tag">Работает</span>
+    </div>
+  </header>
+
+  <div class="site-grid section section--tight">
+    <div>
+      <figure class="shot">
+      <img src="../Screens/026.webp" alt="Скриншот главной страницы Ploy"
+           width="1760" height="1076" decoding="async" fetchpriority="high">
+      <figcaption>Скриншот из <code>Screens/026.webp</code>, доминирующий цвет занимает 61% кадра.</figcaption>
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Ploy — сайт маркетинговой ИИ-платформы, которая продаётся как «двигатель роста» корпоративного сайта: сборка страниц, аналитика, идентификация посетителей, оптимизация под ответы ИИ-поисковиков и автоматизация SEO-задач. Технически это статический сайт на Astro с островками React, Tailwind с собственной системой токенов, кастомным дисплейным шрифтом и вариативным Geist. Графика построена на глянцевых трёхмерных шариках в пастельной палитре — это предрендеренные изображения с анимацией масштаба и поворота, а не WebGL-сцена; видео первого экрана хостится самостоятельно. Примечательно, что сайт собран и обслуживается на собственном продукте компании.</p>
+        <blockquote class="small muted" style="margin:0;padding-left:var(--space-2);border-left:3px solid var(--border-subtle)">Описание владельца коллекции: Выразительный яркий сайт маркетинговой ИИ-платформы для продвижения сайтов.</blockquote>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>Сайт работает на самом себе: в исходнике видны слоты экспериментов с вариантами control, трекер движка с шиной показа эксперимента и конфигурация интеграций с пикселями — то есть платформа служит себе витриной, а подпись в подвале ведёт на студию-подрядчика.</li><li>Анимации сделаны без WebGL: ни three.js, ни единого канваса, ни Lottie с Rive — вместо этого GSAP с разбором текста на символы в кнопках и навигации, декларативные атрибуты появления по скроллу, библиотека из двадцати восьми CSS-анимаций и Framer Motion с явной проверкой «уменьшения движения».</li><li>Обнаружен слой оптимизации под ИИ-ответы, ровно соответствующий продаваемой услуге: файл llms.txt на 32 килобайта, каталог API, описание OpenAPI, запрет обучения в Content-Signal и футерные ссылки «спросить у ИИ» в ChatGPT, Claude, Google AI Mode, Grok и Perplexity с заранее написанным промптом.</li><li>Аналитика собрана плотно и полностью на первом лице: PostHog, Tag Manager, GA4, пиксели Google Ads, Meta, TikTok, LinkedIn, Snapchat и X, плюс собственная атрибуционная cookie на 90 дней по принципу первого касания и собственный менеджер согласия.</li><li>Заметный дефект: адрес документации, на который ведёт пункт в подвале, недоступен по HTTPS — рукопожатие обрывается, при этом HTTP отвечает перенаправлением на тот же неработающий адрес, а DNS и вышестоящий сервер живы.</li><li>Скриншот из коллекции не совпадает с текущим первым экраном: на снимке статичная трёхмерная композиция с крупной надписью, а в живом сайте стоит автовоспроизводящееся видео с другим заголовком; родственная разметка в коде есть, но именно такой композиции нет.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Все 30 номинаций сайта</h2>
+        <p class="small muted">Итог: <strong>79.7 / 100</strong> по профилю «Сервис, банк, образование».
+        Первых мест в критериях: <strong>9</strong> (единолично 0, разделено 9),
+        призовых мест: <strong>14</strong>.
+        Строки отсортированы по месту в номинации, ссылка ведёт к номинации в чемпионате.</p>
+        <ol class="criterion-list">
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-brand_fit">Соответствие бренду и ЦА</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-consistency">Целостность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-relevance">Релевантность и полнота</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-freshness">Актуальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-grammar">Грамотность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-seo">SEO-оптимизация</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-integrations">Интеграции</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-responsive">Адаптивность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-security">Безопасность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-nomination_fit">Попадание в номинацию</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>2</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-completeness">Полнота реализации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>2</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-transparency">Прозрачность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>3</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-a11y">Доступность (a11y)</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>3</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-social">Социальная ответственность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>5</strong></span>
+            <span>место <strong>3</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-aesthetics">Эстетика и оригинальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-usp">Уникальность предложения</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-interface">Удобство интерфейса</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-reviews">Отзывы и рейтинги</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>4</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-modern_tech">Современные технологии</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>5</strong> из 31</span>
+            <span>вес 3 %</span>
+            <span>Инновации и технологичность</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-multimedia">Мультимедийность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-forms_search">Работа форм и поиска</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-expertise">Уникальность и экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>8</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-interactive">Интерактивные элементы</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>10</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-nav">Интуитивность навигации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>11</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-expertise">Экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>12</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-promises">Соответствие заявленному</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>12</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-readability">Читабельность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>14</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-originality">Инновационность в дизайне</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>15</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-creativity">Креативность в решении задач</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>17</strong> из 31</span>
+            <span>вес 3 %</span>
+            <span>Инновации и технологичность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-stability">Стабильность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Обоснования по разделам</h2>
+        <dl class="specs">
+        <div><dt>Юзабилити и UX</dt><dd>Липкое меню с группами разделов, живые вкладки и аккордеон работают предсказуемо, но ссылка на документацию в подвале ведёт на неработающий адрес, а почты и телефона на сайте нет вовсе — только форма.</dd></div>
+        <div><dt>Дизайн и визуальное восприятие</dt><dd>Нейтральная светлая основа, на которой вся энергия отдана пастельным трёхмерным шарикам, и намеренно раздавленная типографика: заголовки капсом в 144 пикселя с межстрочным 0,86.</dd></div>
+        <div><dt>Контент</dt><dd>Продукт, три движка, двадцать семь страниц интеграций, сравнения, блог и тарифы с ответами на частые вопросы; цены на странице тарифов есть, а вот демо-доступа без регистрации нет.</dd></div>
+        <div><dt>Техническое качество</dt><dd>Astro с островками React на Cloudflare, собственный CDN, самохостинг видео и мощный машиночитаемый слой: файл для языковых моделей, каталог API, описание OpenAPI и директива о запрете обучения в robots.</dd></div>
+        <div><dt>Функциональность и интерактивность</dt><dd>Форма контактов с полями, двадцать семь заявленных интеграций, аналитика со всех каналов и собственная атрибуция; поиска по сайту нет.</dd></div>
+        <div><dt>Доверие и репутация</dt><dd>Условия и политика с датами, компания из Делавэра, адрес в Сан-Франциско, арбитражная оговорка, страницы доверия и статуса; но юридическое имя в микроразметке расходится с юридическими страницами.</dd></div>
+        <div><dt>Инновации и технологичность</dt><dd>Сайт собран на собственном продукте — в разметке видны его слоты экспериментов и трекер; при этом вся графика сделана предрендеренными картинками и CSS без WebGL и канваса.</dd></div>
+        <div><dt>Соответствие категории и целям</dt><dd>Платформа для роста сайтов объяснена и подкреплена доказательствами, интеграциями и ценами; мешают битая документация и расхождение в юридическом имени.</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Что не проверено</h2>
+        <ul class="small"><li>Браузер не запускался: цвета взяты из токенов стилей, а не из вычисленных значений; поведение анимаций и реальные размеры отрисовки не измерялись.</li><li>Реализация трёх маленьких анимаций-ячеек (helix, waverows, rain) не установлена: контейнеры в разметке есть, кода отрисовки нет ни в одном из скачанных чанков.</li><li>Живые эксперименты не наблюдались: массив экспериментов на момент запроса пуст, какие варианты существуют, из статики не видно.</li><li>Отсутствие кастомного курсора и звука установлено только по разметке и стилям, без интерактивного взаимодействия со страницей.</li><li>Совпадение скриншота 026.webp с какой-либо версией сайта не подтверждено: живой первый экран — видео с другим заголовком, а композиция со снимка в коде отсутствует; родственная разметка есть только как заголовок второго уровня для узких экранов.</li><li>Собственные замеры времени ответа не делались: сервер отдаёт свой заголовок времени и состояние кэша, но это данные сервера.</li><li>Содержимое за авторизацией и интерактивные демо внутри приложения не проверялись.</li><li>Точная роль студии tonik.com (полная сборка или только бренд и дизайн) в исходниках не указана.</li><li>Выборочно проверены 34 ссылки из 373 адресов в картах сайта; доступность и содержание остальных, а также аудит доступности и метрики загрузки не проверялись.</li><li>Соответствие скриншота 026.webp текущему состоянию сайта не подтверждено, дата снимка неизвестна.</li></ul>
+      </section>
+    </div>
+
+    <div>
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">ploy.ai</dd></div>
+          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+          <div><dt>Подкатегории</dt><dd>AI-сервисы</dd></div>
+          <div><dt>Для кого</dt><dd>Маркетологам, Агентствам, Продуктовым командам</dd></div>
+          <div><dt>Стиль</dt><dd>Игривый, Минимализм</dd></div>
+          <div><dt>Приёмы</dt><dd>Видео-фон, Анимация типографики, Бегущая строка, Микроанимации, Скроллителлинг</dd></div>
+          <div><dt>Технологии</dt><dd>Astro, React 18 в островах, Framer Motion (Motion), GSAP, Tailwind CSS, Swiper, FK Screamer и Geist, Cloudflare, Собственный CDN, Собственный продукт на самом сайте, Видео на своём хостинге, Слой для ИИ-агентов, Микроразметка, Чего нет</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd>США — компания зарегистрирована в Делавэре, адрес офиса в Сан-Франциско указан в политике конфиденциальности; весь контент на английском без языковых альтернатив</dd></div>
+          <div><dt>Автор</dt><dd>не указано: кредита автора, дизайнера или студии в разметке нет; единственная подпись — значок «Made on Ploy by» со ссылкой на студию tonik.com, при этом объём её работы в исходниках не определён</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Добавлен</dt><dd>2026-10-05</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F5F5F5"></span><span class="swatch" style="background:#B2C6DC"></span><span class="swatch" style="background:#D0D99D"></span><span class="swatch" style="background:#B2C97D"></span><span class="swatch" style="background:#D399C7"></span></div>
+       <ul class="small mono" style="list-style:none;padding:0;margin:var(--space-2) 0 0">
+       <li>#F5F5F5 — 61% кадра</li><li>#B2C6DC — 11% кадра</li><li>#D0D99D — 9% кадра</li><li>#B2C97D — 5% кадра</li><li>#D399C7 — 4% кадра</li>
+       </ul>
+       <p class="small muted" style="margin-top:var(--space-2)">измерено из Screens/026.webp (светло-серая основа 61%, голубой шарик 11%, лаймовые 9% и 5%, розовый 4%); токены сайта заданы ярче: фон #f4f4f4, жёлтый #fffa64, розовый #ffb8fc, голубой #c3dbff, зелёный #d1f48c — пастель на снимке приглушённее, потому что снят другой вариант первого экрана</p>
+        <dl class="specs" style="margin-top:var(--space-2)">
+          <div><dt>Режим</dt><dd>Светлая</dd></div>
+          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Чемпионат</h2>
+        <p class="small muted">6 место из 31 · 79.7 / 100 ·
+        первых мест 9 из 30 · сильнее всего: Соответствие бренду и ЦА (1 место)</p>
+        <ul class="small" style="margin:0;padding-left:var(--space-3)">
+          <li>Адаптивность — 1 место, 8 баллов</li>
+          <li>Соответствие бренду и ЦА — 1 место, 9 баллов</li>
+          <li>Целостность — 1 место, 9 баллов</li>
+          <li>Релевантность и полнота — 1 место, 9 баллов</li>
+          <li>Актуальность — 1 место, 9 баллов</li>
+          <li>Грамотность — 1 место, 9 баллов</li>
+          <li>Безопасность — 1 место, 8 баллов</li>
+          <li>SEO-оптимизация — 1 место, 9 баллов</li>
+          <li>Интеграции — 1 место, 9 баллов</li>
+        </ul>
+        <p style="margin:var(--space-2) 0 0"><a class="btn btn--ghost btn--small" href="../champ.html">Все 30 номинаций</a></p>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>AI Marketing Platform for Website Growth | Ploy <span class="small muted">(49 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd>Ploy is an AI marketing platform for website growth. Build on-brand pages, identify visitors, automate SEO and outreach, and improve conversion. <span class="small muted">(142 симв.)</span></dd></div>
+          <div><dt>Open Graph</dt><dd>да</dd></div>
+          <div><dt>Структурированные данные</dt><dd>да</dd></div>
+          <div><dt>Sitemap</dt><dd>индекс /sitemap-index.xml на две карты — 223 и 150 адресов; привычный /sitemap.xml отвечает 404 и в разметке не заявлен</dd></div>
+          <div><dt>Robots</dt><dd>есть: отдельные правила для восьми ботов, директива Content-Signal с запретом обучения ИИ и указание карты сайта</dd></div>
+          <div><dt>Аналитика</dt><dd>PostHog, Google Tag Manager (GTM-PF7R2RX2), Google Analytics 4, Google Ads, Meta Pixel, TikTok Pixel, LinkedIn Insight Tag, Snapchat Pixel, X/Twitter Pixel, собственная атрибуционная cookie на 90 дней, собственный менеджер согласия</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>34</dd></div>
+          <div><dt>Битые ссылки</dt><dd>docs.ploy.ai — рукопожатие TLS обрывается, HTTP перенаправляет на тот же неработающий HTTPS; при этом ссылка «Docs» стоит в подвале</dd></div>
+          <div><dt>Контакты</dt><dd>формы на странице контактов с полями имени, рабочей почты, должности и компании; почта legal@ploy.ai указана только в политике конфиденциальности, там же почтовый адрес в Сан-Франциско; в подвале также ссылки на страницы доверия и статуса</dd></div>
+          <div><dt>Юридическая информация</dt><dd>условия обслуживания и политика конфиденциальности с датами обновления, компания Ploy, Inc. (Делавэр), право штата Делавэр и обязательный арбитраж по правилам Американской арбитражной ассоциации после тридцати дней переговоров; политика покрывает GDPR и CCPA; в микроразметке юридическое имя указано иначе, чем на юридических страницах</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>Astro</strong> — статическая сборка с хешированными путями и литералом astro в именах файлов, элементы-острова и слоты, встроенный рантайм, инициализирующий загрузку</li><li><strong>React 18 в островах</strong> — модуль клиентского рендерера на 182 килобайта с внутренностями React; острова объявляют компонент, рендерер и стратегию загрузки</li><li><strong>Framer Motion (Motion)</strong> — в коде острова анимация с возможностью прерывания через kill и явная проверка «уменьшения движения» через matchMedia</li><li><strong>GSAP</strong> — свыше сотни декларативных хуков в разметке, включая пять кнопок с побайтовым разбором подписи на символы</li><li><strong>Tailwind CSS</strong> — утилитарная разметка, собственное пространство токенов и переменные шрифтов, сотни классов скруглений и трекинга</li><li><strong>Swiper</strong> — встроенный блок стилей карусели с переменными навигации и элементами кнопок, плюс разметка с хуками переключения</li><li><strong>FK Screamer и Geist</strong> — правила @font-face на кастомный дисплейный шрифт с CDN и вариативный Geist с локальными подмножествами latin и latin-ext, оба предзагружены</li><li><strong>Cloudflare</strong> — заголовки сервера, состояние кэша и служебная cookie управления ботами</li><li><strong>Собственный CDN</strong> — все медиа и кастомный шрифт отдаются с отдельного поддомена, в пути зашит идентификатор арендатора и пользовательское пространство загрузок</li><li><strong>Собственный продукт на самом сайте</strong> — в разметке видны слоты экспериментов с вариантами control, трекер движка с шиной событий показа эксперимента и конфигурация интеграций с пикселями Meta и Google Ads</li><li><strong>Видео на своём хостинге</strong> — тег video с автозапуском, отключённым звуком и зацикливанием, источники mp4 и webm плюс постер, все файлы отдаются с основного домена</li><li><strong>Слой для ИИ-агентов</strong> — файл llms.txt на 32 килобайта, каталог API, описание OpenAPI, ссылки service-desc и api-catalog в разметке, директива Content-Signal в robots и диплинки «Ask AI» в пять сервисов</li><li><strong>Микроразметка</strong> — четыре блока JSON-LD на главной, отдельные типы на страницах тарифов, возможностей, контактов, блога и эффекта платформы</li><li><strong>Чего нет</strong> — three.js и WebGL, Lottie, Rive, Spline, Matter.js — ноль совпадений в разметке и тринадцати скачанных чанках; ни одного канваса, ни звуковой библиотеки</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Смотреть ради двух слоёв: первый — машиночитаемый, с файлом llms.txt, каталогом API, описанием OpenAPI и директивой Content-Signal, ровно под продаваемую услугу; второй — визуальный, где пастельные трёхмерные шарики и «раздавленная» типографика сделаны предрендеренными картинками и CSS, без WebGL.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Похожие в коллекции</h2>
+        <ul class="small">
+          <li><a href="001-weeksync.html">WeekSync</a>
+            <span class="muted">— общее: Сервисы и приложения, Минимализм, Игривый, Скроллителлинг, Анимация типографики, Микроанимации</span></li><li><a href="014-dia.html">Dia</a>
+            <span class="muted">— общее: Сервисы и приложения, Минимализм, Скроллителлинг, Микроанимации, Видео-фон</span></li><li><a href="018-flect.html">Flect</a>
+            <span class="muted">— общее: Минимализм, Игривый, Скроллителлинг, Анимация типографики, Микроанимации</span></li><li><a href="019-screentune.html">ScreenTune</a>
+            <span class="muted">— общее: Сервисы и приложения, Минимализм, Скроллителлинг, Микроанимации, Видео-фон</span></li>
+        </ul>
+      </section>
+
+      <nav class="panel" aria-label="Соседние сайты коллекции">
+        <h2>Рядом в коллекции</h2>
+        <p class="small">← <a href="025-dabbit.html">Dabbit</a></p>
+        <p class="small">→ <a href="027-marble.html">Marble</a></p>
+      </nav>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <h2>Коллекция</h2>
+      <p>31 сайт в подборке. Данные лежат в <code>data/sites.json</code>,
+      страницы собираются командой <code>node tools/build.mjs</code>.</p>
+    </div>
+    <div>
+      <h2>Разделы</h2>
+      <p><a href="../index.html">Каталог с поиском</a></p>
+      <p><a href="../champ.html">Чемпионат сайтов</a></p>
+      <p><a href="../categories.html">Категории и аудитории</a></p>
+    </div>
+    <div>
+      <h2>Как это устроено</h2>
+      <p>Оценки чемпионата выставляются по 30 критериям: каждый критерий — отдельная номинация, вес зависит от категории сайта.</p>
+      <p>Чего не измерили — помечено как <span class="placeholder">не измерено</span>, а не выдумано.</p>
+    </div>
+  </div>
+  <div class="container footer__note">
+    <p>Собранный вручную каталог референсов. Скриншоты — в папке <code>Screens/</code>, схемы данных — в <code>data/SCHEMA.md</code>.</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

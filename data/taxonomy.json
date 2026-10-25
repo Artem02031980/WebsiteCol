@@ -1,0 +1,230 @@
+{
+  "_comment": "Справочник значений для поиска и фильтров. Меняешь здесь — меняется интерфейс. Профиль весов берётся из data/weights.json по полю profile у категории.",
+  "version": 1,
+
+  "categories": [
+    { "id": "saas",      "title": "Сервисы и приложения",   "profile": "service",  "subs": [
+      { "id": "team-tools",   "title": "Командная работа" },
+      { "id": "productivity", "title": "Продуктивность" },
+      { "id": "ai",           "title": "AI-сервисы" },
+      { "id": "dev-tools",    "title": "Инструменты разработчика" },
+      { "id": "analytics",    "title": "Аналитика и данные" }
+    ] },
+    { "id": "agency",    "title": "Агентства и студии",     "profile": "portfolio", "subs": [
+      { "id": "design-studio", "title": "Дизайн-студия" },
+      { "id": "dev-studio",    "title": "Студия разработки" },
+      { "id": "branding",      "title": "Брендинг" },
+      { "id": "production",    "title": "Продакн и моушн" }
+    ] },
+    { "id": "portfolio", "title": "Личные сайты и портфолио", "profile": "portfolio", "subs": [
+      { "id": "developer",    "title": "Разработчик" },
+      { "id": "designer",     "title": "Дизайнер" },
+      { "id": "photographer", "title": "Фотограф" },
+      { "id": "illustrator",  "title": "Иллюстратор" },
+      { "id": "personal-other", "title": "Другое личное" }
+    ] },
+    { "id": "media",     "title": "Медиа и издательства",   "profile": "media",    "subs": [
+      { "id": "magazine", "title": "Журнал" },
+      { "id": "blog",     "title": "Блог" },
+      { "id": "news",     "title": "Новости" },
+      { "id": "podcast",  "title": "Подкаст" }
+    ] },
+    { "id": "culture",   "title": "Культура и искусство",   "profile": "showcase", "subs": [
+      { "id": "museum",       "title": "Музей" },
+      { "id": "theatre",      "title": "Театр" },
+      { "id": "music",        "title": "Музыка" },
+      { "id": "festival",     "title": "Фестиваль" },
+      { "id": "art-project",  "title": "Арт-проект" }
+    ] },
+    { "id": "shop",      "title": "Магазины и e-commerce",  "profile": "shop",     "subs": [
+      { "id": "fashion",    "title": "Одежда" },
+      { "id": "electronics","title": "Электроника" },
+      { "id": "handmade",   "title": "Хендмейд" },
+      { "id": "food-shop",  "title": "Продукты" }
+    ] },
+    { "id": "finance",   "title": "Финансы и банки",        "profile": "service",  "subs": [
+      { "id": "bank",      "title": "Банк" },
+      { "id": "fintech",   "title": "Финтех" },
+      { "id": "insurance", "title": "Страхование" },
+      { "id": "crypto",    "title": "Крипто" }
+    ] },
+    { "id": "food",      "title": "Еда и HoReCa",           "profile": "showcase", "subs": [
+      { "id": "restaurant", "title": "Ресторан" },
+      { "id": "coffee",     "title": "Кофейня" },
+      { "id": "delivery",   "title": "Доставка" },
+      { "id": "winery",     "title": "Винодельня" },
+      { "id": "spirits",    "title": "Крепкий алкоголь" }
+    ] },
+    { "id": "travel",    "title": "Путешествия и отели",    "profile": "showcase", "subs": [
+      { "id": "hotel",   "title": "Отель" },
+      { "id": "tour",    "title": "Туроператор" },
+      { "id": "airline", "title": "Авиакомпания" }
+    ] },
+    { "id": "realty",    "title": "Недвижимость и архитектура", "profile": "showcase", "subs": [
+      { "id": "estate",      "title": "Застройщик" },
+      { "id": "architecture","title": "Архбюро" },
+      { "id": "interior",    "title": "Интерьеры" }
+    ] },
+    { "id": "education", "title": "Образование",            "profile": "service",  "subs": [
+      { "id": "course",     "title": "Курсы" },
+      { "id": "university", "title": "Университет" },
+      { "id": "school",     "title": "Школа" }
+    ] },
+    { "id": "health",    "title": "Здоровье и медицина",    "profile": "service",  "subs": [
+      { "id": "clinic",   "title": "Клиника" },
+      { "id": "pharma",   "title": "Фарма" },
+      { "id": "wellness", "title": "Wellness" }
+    ] },
+    { "id": "fashion",   "title": "Мода и красота",         "profile": "shop",     "subs": [
+      { "id": "brand",  "title": "Бренд" },
+      { "id": "beauty", "title": "Красота" }
+    ] },
+    { "id": "games",     "title": "Игры и развлечения",     "profile": "showcase", "subs": [
+      { "id": "game",        "title": "Игра" },
+      { "id": "game-studio", "title": "Игровая студия" },
+      { "id": "esports",     "title": "Киберспорт" }
+    ] },
+    { "id": "auto",      "title": "Авто и техника",         "profile": "showcase", "subs": [
+      { "id": "car-brand", "title": "Автобренд" },
+      { "id": "moto",      "title": "Мото" }
+    ] },
+    { "id": "nonprofit", "title": "НКО и социальные проекты", "profile": "media",  "subs": [
+      { "id": "charity", "title": "Благотворительность" },
+      { "id": "ecology", "title": "Экология" },
+      { "id": "gov",     "title": "Госпроект" }
+    ] },
+    { "id": "events",    "title": "События и конференции",  "profile": "showcase", "subs": [
+      { "id": "conference", "title": "Конференция" },
+      { "id": "meetup",     "title": "Сообщество" }
+    ] },
+    { "id": "archive",   "title": "Эксперименты и спецпроекты", "profile": "showcase", "subs": [
+      { "id": "promo",       "title": "Промо" },
+      { "id": "interactive", "title": "Интерактив" },
+      { "id": "webgl",       "title": "WebGL и 3D" },
+      { "id": "award",       "title": "Наградной проект" }
+    ] }
+  ],
+
+  "audiences": [
+    { "id": "photographers", "title": "Фотографам" },
+    { "id": "designers",     "title": "Дизайнерам" },
+    { "id": "developers",    "title": "Разработчикам" },
+    { "id": "product-teams", "title": "Продуктовым командам" },
+    { "id": "agencies",      "title": "Агентствам" },
+    { "id": "marketers",     "title": "Маркетологам" },
+    { "id": "banks",         "title": "Банкам" },
+    { "id": "fintech",       "title": "Финтеху" },
+    { "id": "retail",        "title": "Ритейлу" },
+    { "id": "restaurants",   "title": "Ресторанам" },
+    { "id": "hotels",        "title": "Отелям" },
+    { "id": "museums",       "title": "Музеям" },
+    { "id": "musicians",     "title": "Музыкантам" },
+    { "id": "gamers",        "title": "Геймерам" },
+    { "id": "educators",     "title": "Преподавателям" },
+    { "id": "students",      "title": "Студентам" },
+    { "id": "doctors",       "title": "Клиникам" },
+    { "id": "architects",    "title": "Архитекторам" },
+    { "id": "ngos",          "title": "НКО" },
+    { "id": "hr",            "title": "HR и найму" },
+    { "id": "lawyers",       "title": "Юристам" },
+    { "id": "consumers",     "title": "Обычным пользователям" },
+    { "id": "investors",     "title": "Инвесторам" },
+    { "id": "automotive",    "title": "Автопрому и транспорту" }
+  ],
+
+  "site_types": [
+    { "id": "landing",     "title": "Лендинг" },
+    { "id": "multipage",   "title": "Многостраничный" },
+    { "id": "portfolio",   "title": "Портфолио" },
+    { "id": "promo",       "title": "Промо-сайт" },
+    { "id": "shop",        "title": "Интернет-магазин" },
+    { "id": "corporate",   "title": "Корпоративный" },
+    { "id": "media-blog",  "title": "Медиа и блог" },
+    { "id": "webapp",      "title": "Веб-приложение" },
+    { "id": "interactive", "title": "Интерактив и игра" },
+    { "id": "catalog",     "title": "Каталог" },
+    { "id": "campaign",    "title": "Кампейн" },
+    { "id": "event",       "title": "Страница события" }
+  ],
+
+  "styles": [
+    { "id": "minimal",        "title": "Минимализм" },
+    { "id": "utility-tech",   "title": "Утилитарный техно" },
+    { "id": "immersive-3d",   "title": "Иммерсивный 3D" },
+    { "id": "cyberpunk",      "title": "Киберпанк" },
+    { "id": "brutalist",      "title": "Брутализм" },
+    { "id": "swiss-type",     "title": "Швейцарская типографика" },
+    { "id": "editorial",      "title": "Редакционный" },
+    { "id": "retro",          "title": "Ретро" },
+    { "id": "monochrome",     "title": "Монохром" },
+    { "id": "neon",           "title": "Неон" },
+    { "id": "collage",        "title": "Коллаж и иллюстрация" },
+    { "id": "luxury",         "title": "Люкс" },
+    { "id": "strict-b2b",     "title": "Строгий B2B" },
+    { "id": "playful",        "title": "Игривый" }
+  ],
+
+  "techniques": [
+    { "id": "scroll-telling",     "title": "Скроллителлинг" },
+    { "id": "sticky-sections",    "title": "Липкие секции" },
+    { "id": "parallax",           "title": "Параллакс" },
+    { "id": "horizontal-scroll",  "title": "Горизонтальный скролл" },
+    { "id": "webgl3d",            "title": "WebGL и 3D" },
+    { "id": "custom-cursor",      "title": "Кастомный курсор" },
+    { "id": "preloader",          "title": "Прелоадер" },
+    { "id": "page-transitions",   "title": "Переходы между страницами" },
+    { "id": "sound",              "title": "Звук" },
+    { "id": "video-bg",           "title": "Видео-фон" },
+    { "id": "type-animation",     "title": "Анимация типографики" },
+    { "id": "broken-grid",        "title": "Ломаная сетка" },
+    { "id": "game",               "title": "Встроенная игра" },
+    { "id": "drag-interaction",   "title": "Drag-взаимодействие" },
+    { "id": "marquee",            "title": "Бегущая строка" },
+    { "id": "micro-interactions", "title": "Микроанимации" },
+    { "id": "dark-default",       "title": "Тёмная тема по умолчанию" },
+    { "id": "generative",         "title": "Генеративная графика" },
+    { "id": "chat-ui",            "title": "Интерфейс-диалог" },
+    { "id": "illustration-hand",  "title": "Рисованная графика" },
+    { "id": "data-viz",           "title": "Визуализация данных" },
+    { "id": "click-reveal",       "title": "Раскрытие работ кликом" },
+    { "id": "shader-text",        "title": "Шейдеры и текст" },
+    { "id": "vector-animation",   "title": "Векторная анимация (Lottie, Rive)" }
+  ],
+
+  "languages": [
+    { "id": "en",    "title": "Английский" },
+    { "id": "ru",    "title": "Русский" },
+    { "id": "de",    "title": "Немецкий" },
+    { "id": "it",    "title": "Итальянский" },
+    { "id": "ja",    "title": "Японский" },
+    { "id": "multi", "title": "Мультиязычный" }
+  ],
+
+  "palette_modes": [
+    { "id": "light",    "title": "Светлая" },
+    { "id": "dark",     "title": "Тёмная" },
+    { "id": "contrast", "title": "Контрастная" },
+    { "id": "colorful", "title": "Цветная" }
+  ],
+
+  "link_states": [
+    { "id": "alive",   "title": "Работает" },
+    { "id": "moved",   "title": "Переехал" },
+    { "id": "dead",    "title": "Недоступен" },
+    { "id": "unknown", "title": "Не проверялся" }
+  ],
+
+  "champ_sections": {
+    "_comment": "Разделы, по которым сгруппированы критерии чемпионата. Это не номинации: конкурс идёт по каждому критерию отдельно, раздел — только подпись и способ уложить список. Вес раздела делится поровну между его критериями (data/weights.json).",
+    "list": [
+      { "id": "ux",         "title": "Юзабилити и UX" },
+      { "id": "design",     "title": "Дизайн и визуальное восприятие" },
+      { "id": "content",    "title": "Контент" },
+      { "id": "tech",       "title": "Техническое качество" },
+      { "id": "func",       "title": "Функциональность и интерактивность" },
+      { "id": "trust",      "title": "Доверие и репутация" },
+      { "id": "innovation", "title": "Инновации и технологичность" },
+      { "id": "fit",        "title": "Соответствие категории и целям" }
+    ]
+  }
+}

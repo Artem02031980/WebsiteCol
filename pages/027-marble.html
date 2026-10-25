@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marble — разбор сайта в коллекции</title>
+<meta name="description" content="Marble — сайт интерактивной обучающей вселенной для детей 6–12 лет от компании Generative Spark. Продукт раньше назывался Pebble и теперь распространя">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marble — разбор сайта в коллекции">
+<meta property="og:description" content="Marble — сайт интерактивной обучающей вселенной для детей 6–12 лет от компании Generative Spark. Продукт раньше назывался Pebble и теперь распространя">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="../index.html">
+      Коллекция сайтов
+      <span class="logo__count">31 сайт</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="../index.html">Коллекция</a></li>
+        <li><a class="nav__link" href="../champ.html">Чемпионат</a></li>
+        <li><a class="nav__link" href="../categories.html">Категории</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Коллекция</a></li>
+    <li><a href="../categories.html">Образование</a></li>
+    <li>Marble</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <p class="eyebrow">Сайт 027 · Многостраничный · Образование</p>
+    <div class="site-head__row">
+      <h1 style="margin:0">Marble</h1>
+      <span class="rank rank--25"><span class="rank__dot" aria-hidden="true"></span>25 место в чемпионате · 71 / 100</span>
+    </div>
+    <p class="site-head__url"><a href="https://withmarble.com/" target="_blank" rel="noopener noreferrer">https://withmarble.com/</a></p>
+    <div class="site-head__actions">
+      <a class="btn btn--accent" href="https://withmarble.com/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
+      <a class="btn btn--ghost" href="../champ.html">Чемпионат целиком</a>
+      <button class="btn btn--ghost" type="button" id="copy-link">Скопировать ссылку на страницу</button>
+    </div>
+    <div class="card__meta">
+      <span class="tag">Образование</span><span class="tag">Игры и развлечения</span>
+      <span class="tag tag--muted">Курсы</span><span class="tag tag--muted">Игра</span>
+      <span class="tag tag--muted">Игривый</span><span class="tag tag--muted">Иммерсивный 3D</span>
+      <span class="tag">Работает</span>
+    </div>
+  </header>
+
+  <div class="site-grid section section--tight">
+    <div>
+      <figure class="shot">
+      <img src="../Screens/027.webp" alt="Скриншот главной страницы Marble"
+           width="1668" height="1044" decoding="async" fetchpriority="high">
+      <figcaption>Скриншот из <code>Screens/027.webp</code>, доминирующий цвет занимает 30% кадра.</figcaption>
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Marble — сайт интерактивной обучающей вселенной для детей 6–12 лет от компании Generative Spark. Продукт раньше назывался Pebble и теперь распространяется через магазин приложений, а сайт остаётся витриной закрытой беты. Главная сделана вручную — один HTML-файл со встроенными стилями и скриптами, без фронтенд-фреймворка, и держится на SVG-масках, CSS-анимациях и IntersectionObserver; хостинг — Netlify. При этом на том же домене живут три отдельных приложения на разных стеках: лаборатория воды на Next.js с three.js, симулятор экосистемы на Next.js и сборка Unity WebGL объёмом около 116 мегабайт, а учебный граф из 1590 концептов отрисован самописным canvas-рендерером и выложен в открытый доступ.</p>
+        <blockquote class="small muted" style="margin:0;padding-left:var(--space-2);border-left:3px solid var(--border-subtle)">Описание владельца коллекции: Увлекательный сайт интерактивной обучающей вселенной для детей 6–12 лет.</blockquote>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>На одном домене живут четыре разных стека: рукописный статический сайт, лаборатория воды на Next.js с three.js, симулятор экосистемы на Next.js и сборка Unity WebGL с файлами на 49 и 66,5 мегабайта.</li><li>Продукт переименован из Pebble: старый домен перенаправляет на новый, в исходниках сайта остался комментарий о переносе, а в живой сборке Unity до сих пор указано прежнее имя компании.</li><li>Аналитика сознательно вырезана из всего, что видит ребёнок: в коде прямо написано, что счётчики допустимы только на главной для родителей и никогда на страницах детского опыта; пиксель Meta стоит только на главной, а на страницах учебного плана и трёх приложений счётчиков нет вовсе.</li><li>У главной нет ни одного заголовка первого уровня, а в блоке принципов иерархия прыгает со второго уровня сразу на четвёртый — при том что на остальных проверенных страницах заголовок первого уровня ровно один.</li><li>Открытый учебный план: страница курса отдаёт 1590 концептов и 3221 связь одним встроенным JSON и рисует их самописным рендерером с собственной проекцией из трёх измерений в два, а сам граф опубликован в открытом репозитории.</li><li>Скриншот зафиксировал более раннюю версию: тэглайн и красный бейдж беты совпадают, но формы ожидания с именем и почтой в разметке больше нет — её заменили кнопки магазина приложений, хотя классы формы в стилях остались.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Все 30 номинаций сайта</h2>
+        <p class="small muted">Итог: <strong>71 / 100</strong> по профилю «Сервис, банк, образование».
+        Первых мест в критериях: <strong>2</strong> (единолично 1, разделено 1),
+        призовых мест: <strong>4</strong>.
+        Строки отсортированы по месту в номинации, ссылка ведёт к номинации в чемпионате.</p>
+        <ol class="criterion-list">
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-brand_fit">Соответствие бренду и ЦА</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-social">Социальная ответственность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>1</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-expertise">Уникальность и экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>2</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-transparency">Прозрачность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>3</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-modern_tech">Современные технологии</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>5</strong> из 31</span>
+            <span>вес 3 %</span>
+            <span>Инновации и технологичность</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-multimedia">Мультимедийность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>6</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-relevance">Релевантность и полнота</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>7</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-grammar">Грамотность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>8</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-a11y">Доступность (a11y)</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>9</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-interactive">Интерактивные элементы</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>9</strong></span>
+            <span>место <strong>10</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-nav">Интуитивность навигации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>11</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-expertise">Экспертность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>12</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-usp">Уникальность предложения</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>13</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-readability">Читабельность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>14</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-originality">Инновационность в дизайне</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>15</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-completeness">Полнота реализации</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>15</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-trust-reviews">Отзывы и рейтинги</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>4</strong></span>
+            <span>место <strong>15</strong> из 31</span>
+            <span>вес 2,25 %</span>
+            <span>Доверие и репутация</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-content-freshness">Актуальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>16</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Контент</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-integrations">Интеграции</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>16</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-forms_search">Работа форм и поиска</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>5</strong></span>
+            <span>место <strong>16</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-innovation-creativity">Креативность в решении задач</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>17</strong> из 31</span>
+            <span>вес 3 %</span>
+            <span>Инновации и технологичность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-seo">SEO-оптимизация</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>17</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-fit-nomination_fit">Попадание в номинацию</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>20</strong> из 31</span>
+            <span>вес 0,67 %</span>
+            <span>Соответствие категории и целям</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-aesthetics">Эстетика и оригинальность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>8</strong></span>
+            <span>место <strong>21</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-interface">Удобство интерфейса</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>7</strong></span>
+            <span>место <strong>23</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-security">Безопасность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>23</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-ux-responsive">Адаптивность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 5,25 %</span>
+            <span>Юзабилити и UX</span>
+            <span>частично измеряется</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-func-promises">Соответствие заявленному</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>24</strong> из 31</span>
+            <span>вес 4,5 %</span>
+            <span>Функциональность и интерактивность</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-tech-stability">Стабильность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>28</strong> из 31</span>
+            <span>вес 5,33 %</span>
+            <span>Техническое качество</span>
+            <span>измеряется автоматически</span>
+          </span>
+        </li>
+        <li class="criterion">
+          <span class="criterion__title"><a href="../champ.html#crit-design-consistency">Целостность</a></span>
+          <span class="criterion__meta">
+            <span>балл <strong>6</strong></span>
+            <span>место <strong>31</strong> из 31</span>
+            <span>вес 2,8 %</span>
+            <span>Дизайн и визуальное восприятие</span>
+            <span>экспертная оценка</span>
+          </span>
+        </li>
+        </ol>
+      </section>
+
+      <section class="panel">
+        <h2>Обоснования по разделам</h2>
+        <dl class="specs">
+        <div><dt>Юзабилити и UX</dt><dd>Структура понятная, но на главной нет ни одного заголовка первого уровня, иерархия в блоке принципов прыгает через уровень, а форма ожидания из прежней версии удалена вместе с точкой входа — остались только ссылки в магазин приложений.</dd></div>
+        <div><dt>Дизайн и визуальное восприятие</dt><dd>Две актёрские сцены по вертикали: светлый океан с каяком и знаком во всю ширину, затем тёмная глубоководная зона с бумажным листом и перевёрнутый светлый блок; палитра строгая — один красный, три синих, кремовый и чернильный.</dd></div>
+        <div><dt>Контент</dt><dd>Продукт, честные ответы на вопросы, вакансии, открытый учебный план и отдельный манифест; материал плотный, но три приложения на подстраницах живут своей жизнью и слабо связаны с витриной.</dd></div>
+        <div><dt>Техническое качество</dt><dd>Рукописная статика на Netlify без фреймворка, а рядом три приложения на Next.js, three.js и Unity WebGL весом 116 мегабайт; карта сайта на шесть адресов не включает ни учебный план, ни лабораторию воды.</dd></div>
+        <div><dt>Функциональность и интерактивность</dt><dd>Видео, интерактивные сцены, перетаскивание стикеров и открытый граф учебного плана; форм и поиска на сайте нет, а сборка Unity грузится десятками мегабайт.</dd></div>
+        <div><dt>Доверие и репутация</dt><dd>Идентификация компании в Делавэре, отдельные политики и условия с пересказом для детей, согласие родителей по схеме «почта плюс», контакт по безопасности и отказ от продажи данных; телефона и адреса нет.</dd></div>
+        <div><dt>Инновации и технологичность</dt><dd>Четыре разных стека на одном домене, маски SVG как основа вёрстки, самописный canvas-рендерер графа из 1590 концептов и сознательный отказ от аналитики на детских страницах.</dd></div>
+        <div><dt>Соответствие категории и целям</dt><dd>Для детского продукта сайт закрывает и продажу, и доверие родителей: приватность объяснена, учебный план опубликован и открыт; не хватает заголовков для поисковиков и полноценной карты сайта.</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Что не проверено</h2>
+        <ul class="small"><li>Браузер не запускался: цвета взяты из объявлений стилей, а не из пикселей; реальная отрисовка, анимации, ошибки в консоли, метрики загрузки и поведение на узких экранах не проверялись.</li><li>Внешние архивы недоступны из этой сети, поэтому историю версий главной подтвердить не удалось: расхождение со скриншотом установлено только чтением текущей разметки и стилей.</li><li>Наличие счётчиков доказано разметкой, но реальная отправка событий и работа режима согласия не проверялись; в исходнике есть закомментированные строки про выдачу и отзыв согласия для Европы.</li><li>Сцена three.js и сборка Unity не запускались: подтверждены только ревизия библиотеки, файлы сборки и загрузчик.</li><li>Внутренние якоря не прокручивались, редиректы вручную не обходились, другие шаблоны мягких ошибок не исключены.</li><li>Юридические утверждения взяты из текста самого сайта и по реестру не проверялись; других контактных данных для перекрёстной проверки на сайте нет.</li><li>Список ИИ-партнёров и упоминание отраслевого бенчмарка взяты из ответов на вопросы и политики, фактическое использование сервисов не проверялось.</li><li>Палитра взята из переменных стилей, а не измерена пипеткой по скриншоту.</li><li>Соответствие скриншота 027.webp текущему состоянию сайта не подтверждено: форма ожидания из него на живом сайте уже удалена, дата снимка неизвестна.</li></ul>
+      </section>
+    </div>
+
+    <div>
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">withmarble.com</dd></div>
+          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+          <div><dt>Категории</dt><dd>Образование, Игры и развлечения</dd></div>
+          <div><dt>Подкатегории</dt><dd>Курсы, Игра</dd></div>
+          <div><dt>Для кого</dt><dd>Преподавателям, Студентам, Обычным пользователям</dd></div>
+          <div><dt>Стиль</dt><dd>Игривый, Иммерсивный 3D</dd></div>
+          <div><dt>Приёмы</dt><dd>WebGL и 3D, Встроенная игра, Визуализация данных</dd></div>
+          <div><dt>Технологии</dt><dd>Рукописная статика без фреймворка, Netlify, Next.js с React и Turbopack в подприложении, three.js r184, Unity WebGL, Самописный canvas-рендерер графа, Шрифты, SVG-маска как основной приём вёрстки, Видео на своём хостинге, Библиотек анимации нет, Аналитика</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd>США — Generative Spark, Inc., зарегистрирована в Делавэре; почтового адреса и телефона на сайте нет вовсе</dd></div>
+          <div><dt>Автор</dt><dd>Generative Spark, Inc. — соучредители названы на странице: Lionel (исполнительный директор) и Guillaume (технический директор), плюс ещё двое в команде; прежнее имя продукта — Pebble</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Добавлен</dt><dd>2026-10-08</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#033160"></span><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#025FB2"></span><span class="swatch" style="background:#89B5D4"></span><span class="swatch" style="background:#1F87CE"></span></div>
+       <ul class="small mono" style="list-style:none;padding:0;margin:var(--space-2) 0 0">
+       <li>#033160 — 30% кадра</li><li>#FFFFFF — 21% кадра</li><li>#025FB2 — 20% кадра</li><li>#89B5D4 — 10% кадра</li><li>#1F87CE — 4% кадра</li>
+       </ul>
+       <p class="small muted" style="margin-top:var(--space-2)">измерено из Screens/027.webp: кадр занимает сцена океана — глубокий синий 30%, белый 21%, яркий синий 20%; токены сайта при этом светлые: кремовый #FAF6EC и чернильный #2B2B28 плюс единственный акцент красный #FA0E1C</p>
+        <dl class="specs" style="margin-top:var(--space-2)">
+          <div><dt>Режим</dt><dd>Тёмная</dd></div>
+          <div><dt>Цвет фона</dt><dd>Синий</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Чемпионат</h2>
+        <p class="small muted">25 место из 31 · 71 / 100 ·
+        первых мест 2 из 30 · сильнее всего: Соответствие бренду и ЦА (1 место)</p>
+        <ul class="small" style="margin:0;padding-left:var(--space-3)">
+          <li>Соответствие бренду и ЦА — 1 место, 9 баллов</li>
+          <li>Социальная ответственность — 1 место, 9 баллов</li>
+        </ul>
+        <p style="margin:var(--space-2) 0 0"><a class="btn btn--ghost btn--small" href="../champ.html">Все 30 номинаций</a></p>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>Marble: the interactive learning world for curious kids, ages 6-12 <span class="small muted">(66 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd>Marble is an interactive learning world for curious kids aged 6-12: 100 kids&#39; apps in one game, from drawing and homework help to languages, storytelling and quizzes. Built to grow curiosity, confidence and creativity, not passive screen time. Join the beta. <span class="small muted">(258 симв.)</span></dd></div>
+          <div><dt>Open Graph</dt><dd>да</dd></div>
+          <div><dt>Структурированные данные</dt><dd>да</dd></div>
+          <div><dt>Sitemap</dt><dd>есть: шесть адресов с частотой и приоритетами; страницы учебного плана и лаборатории воды в карту не попали</dd></div>
+          <div><dt>Robots</dt><dd>две строки: разрешение всем и указание карты сайта, ничего не закрыто</dd></div>
+          <div><dt>Аналитика</dt><dd>Google Analytics 4 (G-028J9XTRD0), PostHog, Customer.io, Meta Pixel (только на главной)</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>25</dd></div>
+          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
+          <div><dt>Контакты</dt><dd>только почта: support@, privacy@, jobs@ и safety@ на своём домене; телефона, адреса и профилей в соцсетях нет нигде на сайте</dd></div>
+          <div><dt>Юридическая информация</dt><dd>Generative Spark, Inc. с регистрацией в Делавэре как контролёр данных; право Делавэра и обязательный арбитраж с отказом от коллективных исков; явно названы COPPA, GDPR и UK GDPR, согласие родителей по схеме «почта плюс», аккаунт ребёнка создаёт только родитель, данные детей не продаются и не используются для рекламы, обучение ИИ на данных ребёнка — только с явного согласия; у каждой секции условий есть пересказ «для детей»</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>Рукописная статика без фреймворка</strong> — главная — один документ на 380 килобайт со встроенными стилями и скриптами, единственный внешний файл это app-store.js; следов Next, Nuxt, Astro, Svelte, webpack и Vite нет</li><li><strong>Netlify</strong> — заголовки ответа сервера, состояние кэша и идентификатор запроса</li><li><strong>Next.js с React и Turbopack в подприложении</strong> — раздел лаборатории воды грузит чанки служебного каталога сборки, включая чанк Turbopack, и клиентский корень React</li><li><strong>three.js r184</strong> — в чанке размером 388 килобайт таблица ревизии со значением 184 и классы рендерера, буферной геометрии и материалов</li><li><strong>Unity WebGL</strong> — страница солнечной системы содержит канвас с идентификатором unity-canvas, вызов создания инстанса и конфигурацию сборки; файлы сборки весят 49 и 66,5 мегабайта, а в конфигурации до сих пор указано прежнее имя компании</li><li><strong>Самописный canvas-рендерер графа</strong> — на странице учебного плана собственный двумерный контекст с ограничением плотности пикселей, а данные приходят встроенным JSON на 528 тысяч символов: 1590 узлов и 3221 связь с предвычисленными координатами</li><li><strong>Шрифты</strong> — подключение EB Garamond и Inter через сервис Google плюс собственный шрифт Merel тремя файлами, с комментарием что запасной Inter используется до предоставления файла</li><li><strong>SVG-маска как основной приём вёрстки</strong> — словесный знак, логотип в липкой панели и логотип в подвале — это сплошные слои, обрезанные одной и той же SVG-маской, благодаря чему остров рисуется поверх букв</li><li><strong>Видео на своём хостинге</strong> — три тега видео с автозапуском, зацикливанием и отключённым звуком: ролик с каяком на 6,3 мегабайта и два клипа про рисование и поделки, плюс размытый постер-заглушка</li><li><strong>Библиотек анимации нет</strong> — ни GSAP, ни Lenis, ни Lottie, ни Rive, ни Swiper, ни Barba — всё движение сделано CSS-анимациями, наблюдателями, медиазапросами и кадрами анимации</li><li><strong>Аналитика</strong> — GA4, PostHog, Customer.io и пиксель Meta только на страницах для родителей; в комментарии исходника прямо сказано, что на страницах детского опыта счётчиков быть не должно</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Смотреть ради того, как одна компания держит на одном домене четыре разных технологии: рукописную статику, Next.js с three.js, симулятор на серверных компонентах и сборку Unity WebGL на 116 мегабайт — и при этом сознательно отключает всю аналитику на страницах, которыми пользуется ребёнок.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Похожие в коллекции</h2>
+        <ul class="small">
+          <li><a href="004-basement-studio.html">basement.studio</a>
+            <span class="muted">— общее: Игры и развлечения, Иммерсивный 3D, WebGL и 3D, Встроенная игра</span></li><li><a href="003-utopia-tokyo.html">Utopia Tokyo</a>
+            <span class="muted">— общее: Иммерсивный 3D, WebGL и 3D</span></li><li><a href="007-grundini.html">Grundini</a>
+            <span class="muted">— общее: Игривый, Визуализация данных</span></li><li><a href="010-aevion.html">Aevion</a>
+            <span class="muted">— общее: Иммерсивный 3D, WebGL и 3D</span></li>
+        </ul>
+      </section>
+
+      <nav class="panel" aria-label="Соседние сайты коллекции">
+        <h2>Рядом в коллекции</h2>
+        <p class="small">← <a href="026-ploy.html">Ploy</a></p>
+        <p class="small">→ <a href="028-locomotive.html">Locomotive</a></p>
+      </nav>
+    </div>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <h2>Коллекция</h2>
+      <p>31 сайт в подборке. Данные лежат в <code>data/sites.json</code>,
+      страницы собираются командой <code>node tools/build.mjs</code>.</p>
+    </div>
+    <div>
+      <h2>Разделы</h2>
+      <p><a href="../index.html">Каталог с поиском</a></p>
+      <p><a href="../champ.html">Чемпионат сайтов</a></p>
+      <p><a href="../categories.html">Категории и аудитории</a></p>
+    </div>
+    <div>
+      <h2>Как это устроено</h2>
+      <p>Оценки чемпионата выставляются по 30 критериям: каждый критерий — отдельная номинация, вес зависит от категории сайта.</p>
+      <p>Чего не измерили — помечено как <span class="placeholder">не измерено</span>, а не выдумано.</p>
+    </div>
+  </div>
+  <div class="container footer__note">
+    <p>Собранный вручную каталог референсов. Скриншоты — в папке <code>Screens/</code>, схемы данных — в <code>data/SCHEMA.md</code>.</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

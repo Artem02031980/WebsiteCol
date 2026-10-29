@@ -298,7 +298,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   display: grid; gap: var(--space-3);
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
-.grid--list { grid-template-columns: 1fr; gap: var(--space-2); }
+.grid--list { grid-template-columns: 1fr; gap: var(--space-4); }
 
 .card {
   display: flex; flex-direction: column;

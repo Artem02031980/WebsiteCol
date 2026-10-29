@@ -552,20 +552,6 @@ function renderSite(site) {
        </dl>`
     : '<p class="placeholder">палитра не измерена</p>';
 
-  const similar = sites
-    .filter((other) => other.slot !== site.slot)
-    .map((other) => {
-      const shared = [
-        ...(other.categories || []).filter((id) => (site.categories || []).includes(id)),
-        ...(other.styles || []).filter((id) => (site.styles || []).includes(id)),
-        ...(other.techniques || []).filter((id) => (site.techniques || []).includes(id))
-      ];
-      return { site: other, shared };
-    })
-    .filter((item) => item.shared.length)
-    .sort((a, b) => b.shared.length - a.shared.length)
-    .slice(0, 4);
-
   const body = `<nav class="breadcrumbs container" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
@@ -650,18 +636,6 @@ function renderSite(site) {
         <h2>Что смотреть в первую очередь</h2>
         <p class="small">${notes ? esc(notes) : '<span class="placeholder">заметок пока нет</span>'}</p>
       </section>
-
-      ${similar.length ? `<section class="panel">
-        <h2>Похожие в коллекции</h2>
-        <ul class="small">
-          ${similar.map((item) => `<li><a href="${item.site.slot}-${item.site.slug}.html">${esc(item.site.name)}</a>
-            <span class="muted">— общее: ${esc([
-              ...titles(CATS, item.shared.filter((id) => CATS.has(id))),
-              ...titles(STYLES, item.shared.filter((id) => STYLES.has(id))),
-              ...titles(TECHS, item.shared.filter((id) => TECHS.has(id)))
-            ].join(', '))}</span></li>`).join('')}
-        </ul>
-      </section>` : ''}
   </div>
 </article>`;
 

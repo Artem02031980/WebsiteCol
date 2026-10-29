@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 import os from 'node:os';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SCREENS = join(ROOT, 'Screens');
+const SCREENS = join(ROOT, 'screens');
 const DATA = join(ROOT, 'data');
 const PAGES = join(ROOT, 'pages');
 
@@ -106,7 +106,7 @@ try {
 /* ---------- Скриншоты и страницы ---------- */
 
 const screens = existsSync(SCREENS) ? readdirSync(SCREENS).filter((n) => /\.(webp|png|jpe?g|avif)$/i.test(n)) : [];
-if (!screens.length) fail('Screens/', 'нет изображений');
+if (!screens.length) fail('screens/', 'нет изображений');
 else ok('скриншоты', `${screens.length} файлов`);
 
 const referenced = new Set(sites.map((s) => s.screenshot).filter(Boolean));

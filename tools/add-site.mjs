@@ -5,7 +5,7 @@
  * Запуск: node tools/add-site.mjs <url> [--slot 006] [--name "Название"] [--slug slug]
  *
  * Скрипт намеренно ничего не выдумывает: он создаёт каркас с null и подсказывает,
- * что заполнить. Скриншот нужно положить в Screens/NNN.webp самому —
+ * что заполнить. Скриншот нужно положить в screens/NNN.webp самому —
  * автоматическая съёмка не делается. Чемпионата в проекте больше нет:
  * оценок и баллов в данных нет.
  */
@@ -39,8 +39,8 @@ const readJson = (rel) => JSON.parse(readFileSync(join(ROOT, rel), 'utf8'));
 const writeJson = (rel, data) => writeFileSync(join(ROOT, rel), JSON.stringify(data, null, 2) + '\n', 'utf8');
 
 const sitesDoc = readJson('data/sites.json');
-const screens = existsSync(join(ROOT, 'Screens'))
-  ? readdirSync(join(ROOT, 'Screens')).filter((name) => /\.(webp|png|jpe?g|avif)$/i.test(name))
+const screens = existsSync(join(ROOT, 'screens'))
+  ? readdirSync(join(ROOT, 'screens')).filter((name) => /\.(webp|png|jpe?g|avif)$/i.test(name))
   : [];
 
 const maxSlot = sitesDoc.sites.reduce((max, site) => Math.max(max, Number(site.slot) || 0), 0);
@@ -110,7 +110,7 @@ sitesDoc.updated = new Date().toISOString().slice(0, 10);
 writeJson('data/sites.json', sitesDoc);
 
 console.log('Добавлен черновик ' + slot + ' — ' + name + ' (' + draft.domain + ')');
-console.log('Скриншот: ' + (screenshot ? 'Screens/' + screenshot : 'НЕ НАЙДЕН — положи файл Screens/' + slot + '.webp'));
+console.log('Скриншот: ' + (screenshot ? 'screens/' + screenshot : 'НЕ НАЙДЕН — положи файл screens/' + slot + '.webp'));
 console.log('');
 console.log('Что заполнить в data/sites.json (правила — data/SCHEMA.md):');
 console.log('  description_own — что это, одним абзацем, человеческим языком; description_user — словами владельца');

@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Извлекает палитру и реальные размеры скриншотов из Screens/*.webp.
+ * Извлекает палитру и реальные размеры скриншотов из screens/*.webp.
  *
  * Как это работает: генерируется временная HTML-страница, которая рисует каждое изображение
  * в canvas, считает доминирующие цвета (квантование 4 бита на канал + слияние близких),
  * среднюю яркость и насыщенность. Результат кодируется в base64 и складывается в <pre>,
  * откуда его забирает Node через `chrome --headless --dump-dom`. Node-зависимостей нет.
  *
- * Запуск: node tools/palette.mjs            — обойти Screens/ и обновить data/palette.json
+ * Запуск: node tools/palette.mjs            — обойти screens/ и обновить data/palette.json
  *         node tools/palette.mjs --dry-run  — показать результат, файл не писать
  */
 import { execFileSync } from 'node:child_process';
@@ -16,7 +16,7 @@ import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const SCREENS = join(ROOT, 'Screens');
+const SCREENS = join(ROOT, 'screens');
 const OUT = join(ROOT, 'data', 'palette.json');
 const TMP = join(ROOT, '.tmp');
 const DRY = process.argv.includes('--dry-run');
@@ -40,7 +40,7 @@ if (!chrome) {
 }
 
 if (!existsSync(SCREENS)) {
-  console.error('Нет папки Screens/: ' + SCREENS);
+  console.error('Нет папки screens/: ' + SCREENS);
   process.exit(2);
 }
 
@@ -49,7 +49,7 @@ const images = readdirSync(SCREENS)
   .sort();
 
 if (!images.length) {
-  console.error('В Screens/ нет изображений.');
+  console.error('В screens/ нет изображений.');
   process.exit(2);
 }
 
@@ -254,8 +254,8 @@ if (DRY) {
   console.log('\n--dry-run: файл не записан.');
 } else {
   writeFileSync(OUT, JSON.stringify({
-    _comment: 'Сгенерировано tools/palette.mjs из Screens/. Руками не править — перезапишется.',
-    generated_from: 'Screens/',
+    _comment: 'Сгенерировано tools/palette.mjs из screens/. Руками не править — перезапишется.',
+    generated_from: 'screens/',
     images: result
   }, null, 2) + '\n', 'utf8');
   console.log('\nЗаписано: data/palette.json');

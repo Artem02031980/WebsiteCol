@@ -1,6 +1,6 @@
 {
-  "_comment": "Сгенерировано tools/palette.mjs из Screens/. Руками не править — перезапишется.",
-  "generated_from": "Screens/",
+  "_comment": "Сгенерировано tools/palette.mjs из screens/. Руками не править — перезапишется.",
+  "generated_from": "screens/",
   "images": {
     "001.webp": {
       "width": 1776,

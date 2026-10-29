@@ -15,12 +15,12 @@
 
 | Поле | Тип | Что это | Обязательное |
 |---|---|---|---|
-| `slot` | string | Номер вида `"001"` — совпадает с именем скрина в `Screens/` | да |
+| `slot` | string | Номер вида `"001"` — совпадает с именем скрина в `screens/` | да |
 | `slug` | string | Латиница, kebab-case — попадает в имя страницы `pages/001-weeksync.html` | да |
 | `name` | string | Название сайта | да |
 | `url` | string | Точный адрес, который открываем | да |
 | `domain` | string | Домен без www | да |
-| `screenshot` | string \| null | Имя файла в `Screens/`, например `"001.webp"`. `null` — скрин ещё не прислан | да |
+| `screenshot` | string \| null | Имя файла в `screens/`, например `"001.webp"`. `null` — скрин ещё не прислан | да |
 | `added` | string \| null | Дата добавления `YYYY-MM-DD`; на странице показывается как ДД.ММ.ГГГГ | нет |
 | `link_state` | string | id из `taxonomy.link_states` | да |
 | `description_user` | string \| null | Описание от владельца коллекции, дословно | нет |
@@ -33,7 +33,7 @@
 | `styles` | string[] | id из `taxonomy.styles` | да |
 | `techniques` | string[] | id из `taxonomy.techniques` — то, ради чего сайт сохранён (в фильтрах, но не в паспорте) | да |
 | `palette` | object | `{ "mode": "light\|dark\|contrast\|colorful", "colors": ["#RRGGBB"] }` | да |
-| `tech` | array | `[{ "name": "Next.js", "evidence": "файл /_next/static/…" }]` — без доказательства не пишем. Имена пакетов можно писать как есть (`@react-three/drei`): в фильтрах build.mjs сам преобразует их к виду «React (@react-three/drei)» | нет |
+| `tech` | array | `[{ "name": "Next.js", "evidence": "файл /_next/static/…" }]` — без доказательства не пишем. Имена пакетов можно писать как есть (`@react-three/drei`): в фильтрах build.mjs сам преобразует их к виду «React (@react-three/drei)». Версии и хвостовые уточнения в фильтре схлопываются: «Astro v6.1.6» и «Astro» — один пункт, на странице название остаётся полным | нет |
 | `observations` | string[] | 3–7 наблюдений, чем сайт интересен технически или визуально | да |
 | `notes` | string | Заметка: что смотреть в этом сайте в первую очередь | да |
 | `facts` | object | См. ниже | да |
@@ -66,7 +66,7 @@
 
 ## Как добавить сайт
 
-1. Положить скрин в `Screens/` с номером = текущий максимум + 1 (`032.webp`). Скриншоты снимает владелец.
+1. Положить скрин в `screens/` с номером = текущий максимум + 1 (`032.webp`). Скриншоты снимает владелец.
 2. `node tools/add-site.mjs <url> --slot 032 --name "Название"` — создаст черновик записи.
 3. Разбор сайта субагентом по шаблону `RESEARCH_PROMPT.md` (один агент на сайт).
 4. Заполнить поля в `data/sites.json` (таблица выше).

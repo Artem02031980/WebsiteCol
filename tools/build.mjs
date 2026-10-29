@@ -123,6 +123,62 @@ function displayTechName(name) {
   });
 }
 
+/* Фильтр «Технологии»: версии и описательные хвосты не должны плодить
+   отдельные пункты. «Astro v6.1.6» и «Astro» — один пункт, «GSAP со
+   ScrollTrigger» — тоже GSAP. На странице сайта при этом остаются полные
+   названия с версиями и плагинами, это только ключ фильтра. */
+function techFilterName(name) {
+  let value = String(name || '').trim();
+  value = value.replace(/\s+v?\d+(?:\.\d+){1,3}(?:[-+][0-9A-Za-z.]+)?\b/gi, '');
+  value = value.replace(/\s+r\d+\b/gi, '');
+  value = value.replace(/\s*\([^)]*\)\s*$/g, '');
+
+  const families = [
+    [/^GSAP\b/i, 'GSAP'],
+    [/^Next\.js\b/i, 'Next.js'],
+    [/^next\/(?:font|image)\b/i, 'Next.js'],
+    [/^Nuxt\b/i, 'Nuxt'],
+    [/^React Three Fiber\b/i, 'React Three Fiber'],
+    [/^@react-three\/(?:fiber|drei)\b/i, 'React Three Fiber'],
+    [/^React\b/i, 'React'],
+    [/^Vue\b/i, 'Vue'],
+    [/^Astro\b/i, 'Astro'],
+    [/^SvelteKit\b/i, 'SvelteKit'],
+    [/^(Framer Motion|Motion)\b/i, 'Framer Motion'],
+    [/^three\.js\b/i, 'three.js'],
+    [/^Lenis\b/i, 'Lenis'],
+    [/^Barba\.js\b/i, 'Barba.js'],
+    [/^jQuery\b/i, 'jQuery'],
+    [/^Tailwind\b/i, 'Tailwind CSS'],
+    [/^Sanity\b/i, 'Sanity'],
+    [/^Mux\b/i, 'Mux'],
+    [/^Cloudflare\b/i, 'Cloudflare'],
+    [/^Vercel\b/i, 'Vercel'],
+    [/^Webflow\b/i, 'Webflow'],
+    [/^(Headless WordPress|WordPress)\b/i, 'WordPress'],
+    [/^Framer\b/i, 'Framer'],
+    [/^Web Audio( API)?\b/i, 'Web Audio API'],
+    [/^Plausible\b/i, 'Plausible'],
+    [/^PostHog\b/i, 'PostHog'],
+    [/^Google Tag Manager\b/i, 'Google Tag Manager'],
+    [/^Google Analytics 4\b/i, 'Google Analytics 4'],
+    [/^PlayCanvas\b/i, 'PlayCanvas'],
+    [/^Rive\b/i, 'Rive'],
+    [/^Spline\b/i, 'Spline'],
+    [/^Unity\b/i, 'Unity'],
+    [/^Vite\b/i, 'Vite'],
+    [/^Turbopack\b/i, 'Turbopack'],
+    [/^nginx\b/i, 'nginx'],
+    [/^OpenResty\b/i, 'OpenResty'],
+    [/^AWS EC2\b/i, 'AWS EC2'],
+    [/^Google Fonts\b/i, 'Google Fonts']
+  ];
+  for (const [re, label] of families) if (re.test(value)) return label;
+
+  value = value.split(/\s+(?:—|–|\+)\s+|\s+со\s+|\s+с\s+|\s+и\s+|\s+в\s+|\s+на\s+|\s+для\s+|\s+как\s+|\s+вместо\s+|,\s+/i)[0].trim();
+  return value;
+}
+
 /* ============================================================
    Палитра
    ============================================================ */
@@ -234,9 +290,9 @@ function card(site) {
 
   const media = shot
     ? `<a class="card__media" href="${href}" tabindex="-1" aria-hidden="true">
-        <img src="Screens/${esc(shot)}" alt="" width="${palette.width || 1600}" height="${palette.height || 1000}" loading="lazy" decoding="async">
+        <img src="screens/${esc(shot)}" alt="" width="${palette.width || 1600}" height="${palette.height || 1000}" loading="lazy" decoding="async">
       </a>`
-    : `<span class="card__media card__media--empty">Скриншот ещё не добавлен в Screens/</span>`;
+    : `<span class="card__media card__media--empty">Скриншот ещё не добавлен в screens/</span>`;
 
   const facetValues = {
     cat: (site.categories || []).join(' '),
@@ -245,7 +301,7 @@ function card(site) {
     type: site.site_type || '',
     style: (site.styles || []).join(' '),
     tech: (site.techniques || []).join(' '),
-    stack: (site.tech || []).map((t) => slugify(t.name)).join(' '),
+    stack: [...new Set((site.tech || []).map((t) => slugify(techFilterName(t.name))).filter(Boolean))].join(' '),
     lang: (site.facts && site.facts.languages ? site.facts.languages : []).join(' '),
     mode: palette.mode || '',
     hue: palette.hue || '',
@@ -268,7 +324,6 @@ function card(site) {
         <h3 class="card__title"><a href="${href}">${esc(site.name)}</a></h3>
         ${linkStateBadge(site)}
       </div>
-      <p class="card__domain">${esc(site.domain)}</p>
       <p class="card__desc">${esc(shortDescription(site))}</p>
       <div class="card__foot">
         ${swatches(palette.colors)}
@@ -312,10 +367,18 @@ function buildFacets() {
 
   const stackMap = new Map();
   for (const site of sites) {
+    const seen = new Set();
     for (const item of site.tech || []) {
-      const id = slugify(item.name);
-      if (!stackMap.has(id)) stackMap.set(id, { id, title: displayTechName(item.name), count: 0 });
-      stackMap.get(id).count += 1;
+      const name = techFilterName(item.name);
+      /* В фильтр идут только названия технологий: русские описательные
+         заметки вроде «Чего нет» или «Собственный бандл» — не фильтр. */
+      if (!name || !/[A-Za-z]/.test(name)) continue;
+      const id = slugify(name);
+      if (!stackMap.has(id)) stackMap.set(id, { id, title: displayTechName(name), count: 0 });
+      if (!seen.has(id)) {
+        stackMap.get(id).count += 1;
+        seen.add(id);
+      }
     }
   }
   const usedStack = [...stackMap.values()];
@@ -459,10 +522,10 @@ function renderSite(site) {
 
   const shot = site.screenshot
     ? `<figure class="shot">
-      <img src="../Screens/${esc(site.screenshot)}" alt="Скриншот главной страницы ${esc(site.name)}"
+      <img src="../screens/${esc(site.screenshot)}" alt="Скриншот главной страницы ${esc(site.name)}"
            width="${palette.width || 1600}" height="${palette.height || 1000}" decoding="async" fetchpriority="high">
     </figure>`
-    : `<div class="shot--missing">Скриншот ещё не добавлен в <code>Screens/</code>.<br>Положите файл <code>${esc(site.slot)}.webp</code> и пересоберите страницы.</div>`;
+    : `<div class="shot--missing">Скриншот ещё не добавлен в <code>screens/</code>.<br>Положите файл <code>${esc(site.slot)}.webp</code> и пересоберите страницы.</div>`;
 
   /* «Что это» — единый текст: своё описание и описание владельца коллекции */
   const intro = [site.description_own, site.description_user]
@@ -505,7 +568,13 @@ function renderSite(site) {
     .sort((a, b) => b.shared.length - a.shared.length)
     .slice(0, 4);
 
-  const body = `<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  const body = `<div class="site-brand container">
+  <a href="../index.html" aria-label="Коллекция сайтов — на главную">
+    <img src="../assets/logo.svg" alt="Коллекция сайтов" width="300" height="60" fetchpriority="high">
+  </a>
+</div>
+
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>${esc(site.name)}</li>
@@ -525,7 +594,6 @@ function renderSite(site) {
   </header>
 
   <div class="site-grid section section--tight">
-    <div>
       ${shot}
 
       <section class="panel">
@@ -537,9 +605,7 @@ function renderSite(site) {
         <h2>Чем интересен</h2>
         <ul>${site.observations.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
       </section>` : ''}
-    </div>
 
-    <div>
       <section class="panel">
         <h2>Паспорт</h2>
         <dl class="specs">
@@ -604,7 +670,6 @@ function renderSite(site) {
             ].join(', '))}</span></li>`).join('')}
         </ul>
       </section>` : ''}
-    </div>
   </div>
 </article>`;
 

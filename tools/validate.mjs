@@ -48,7 +48,7 @@ const REQUIRED = [
   'index.html',
   'assets/style.css', 'assets/app.js', 'assets/favicon.svg', 'assets/logo.svg',
   'data/sites.json', 'data/taxonomy.json', 'data/palette.json', 'data/SCHEMA.md',
-  'tools/build.mjs', 'tools/validate.mjs', 'Screens'
+  'tools/build.mjs', 'tools/validate.mjs', 'screens'
 ];
 for (const rel of REQUIRED) {
   if (!existsSync(join(ROOT, rel))) error(rel, 'обязательный файл или папка отсутствует');
@@ -112,10 +112,10 @@ for (const category of taxonomy.categories || []) {
 
 const slots = new Set();
 const slugs = new Set();
-const screens = existsSync(join(ROOT, 'Screens'))
-  ? readdirSync(join(ROOT, 'Screens')).filter((name) => /\.(webp|png|jpe?g|avif)$/i.test(name))
+const screens = existsSync(join(ROOT, 'screens'))
+  ? readdirSync(join(ROOT, 'screens')).filter((name) => /\.(webp|png|jpe?g|avif)$/i.test(name))
   : [];
-const usedScreens = new Set();
+const usedscreens = new Set();
 
 /* Поля, которые бриф удалил: их присутствие — признак старой записи */
 const LEGACY_FIELDS = ['typography', 'design', 'unverified', 'personal', 'champ'];
@@ -181,8 +181,8 @@ for (const site of sites) {
   }
 
   if (site.screenshot) {
-    if (!screens.includes(site.screenshot)) error(where, `${tag}: нет файла Screens/${site.screenshot}`);
-    else usedScreens.add(site.screenshot);
+    if (!screens.includes(site.screenshot)) error(where, `${tag}: нет файла screens/${site.screenshot}`);
+    else usedscreens.add(site.screenshot);
   } else {
     warn(where, `${tag}: скриншот ещё не добавлен — карточка будет без превью`);
   }
@@ -214,7 +214,7 @@ for (const site of sites) {
 }
 
 for (const file of screens) {
-  if (!usedScreens.has(file)) warn('Screens/' + file, 'скриншот не привязан ни к одному сайту в data/sites.json');
+  if (!usedscreens.has(file)) warn('screens/' + file, 'скриншот не привязан ни к одному сайту в data/sites.json');
 }
 
 /* ---------- 4. Проверка HTML ---------- */

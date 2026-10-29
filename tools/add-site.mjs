@@ -6,8 +6,7 @@
  *
  * Скрипт намеренно ничего не выдумывает: он создаёт каркас с null и подсказывает,
  * что заполнить. Скриншот нужно положить в screens/NNN.webp самому —
- * автоматическая съёмка не делается. Чемпионата в проекте больше нет:
- * оценок и баллов в данных нет.
+ * автоматическая съёмка не делается.
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';

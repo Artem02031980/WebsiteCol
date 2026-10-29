@@ -5,8 +5,7 @@
  * Запуск: node tools/validate.mjs [папка] [--json] [--quiet]
  * Код возврата: 0 — ошибок нет, 1 — есть ошибки, 2 — неверный вызов.
  *
- * Только встроенные модули Node. Чемпионата в проекте больше нет:
- * проверяются каталог и страницы сайтов.
+ * Только встроенные модули Node; проверяются каталог и страницы сайтов.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative, resolve, dirname } from 'node:path';
@@ -54,11 +53,6 @@ for (const rel of REQUIRED) {
   if (!existsSync(join(ROOT, rel))) error(rel, 'обязательный файл или папка отсутствует');
 }
 
-/* Устаревшие файлы чемпионата не должны оставаться */
-for (const rel of ['champ.html', 'categories.html', 'data/champ.json', 'data/weights.json']) {
-  if (existsSync(join(ROOT, rel))) error(rel, 'устаревший файл чемпионата — удали его');
-}
-
 const taxonomy = readJsonFile('data/taxonomy.json') || {};
 const sitesDoc = readJsonFile('data/sites.json') || { sites: [] };
 const paletteDoc = readJsonFile('data/palette.json') || { images: {} };
@@ -92,9 +86,7 @@ uniq(collect(taxonomy.techniques), 'techniques');
 uniq(collect(taxonomy.languages), 'languages');
 uniq(collect(taxonomy.link_states), 'link_states');
 
-if (taxonomy.champ_sections) error('data/taxonomy.json', 'остался блок champ_sections — чемпионата больше нет');
 for (const category of taxonomy.categories || []) {
-  if (category.profile) warn('data/taxonomy.json', `категория ${category.id}: осталось поле profile от чемпионата`);
   uniq(collect(category.subs), `subs категории ${category.id}`);
 }
 for (const item of taxonomy.link_states || []) {
@@ -118,7 +110,7 @@ const screens = existsSync(join(ROOT, 'screens'))
 const usedscreens = new Set();
 
 /* Поля, которые бриф удалил: их присутствие — признак старой записи */
-const LEGACY_FIELDS = ['typography', 'design', 'unverified', 'personal', 'champ'];
+const LEGACY_FIELDS = ['typography', 'design', 'unverified', 'personal'];
 
 const checkIds = (site, field, set, label) => {
   for (const id of site[field] || []) {

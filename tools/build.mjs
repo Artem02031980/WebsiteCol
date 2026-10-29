@@ -6,7 +6,6 @@
  * Зависимостей нет, только встроенные модули Node.
  *
  * Страницы генерируются целиком из данных: руками их не правим — перезапишутся.
- * Чемпионата в проекте больше нет: есть каталог и страница-разбор на каждый сайт.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';

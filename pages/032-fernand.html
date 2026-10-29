@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernand — сайт в коллекции</title>
+<meta name="description" content="Спокойный сайт платформы поддержки для SaaS-команд">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fernand — сайт в коллекции">
+<meta property="og:description" content="Спокойный сайт платформы поддержки для SaaS-команд">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Fernand</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <h1>Fernand</h1>
+    <ul class="taglist">
+      <li><span class="tag">Сервисы и приложения</span></li>
+      <li><span class="tag tag--muted">Командная работа</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Сайт жив</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://getfernand.com/" target="_blank" rel="noopener noreferrer">https://getfernand.com/</a></p>
+  </header>
+
+  <div class="site-grid section section--tight">
+      <figure class="shot">
+      <img src="../screens/032.webp" alt="Скриншот главной страницы Fernand"
+           width="1816" height="1260" decoding="async" fetchpriority="high">
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Сайт платформы поддержки для SaaS-команд: общий инбокс, база знаний и ИИ-агент, который отвечает первым. Светлая спокойная страница с мягким градиентом и цветами на фоне, а вместо статичного скриншота — большая демонстрация интерфейса поддержки. Светлый успокаивающий сайт компании, которая берёт на себя функцию поддержки для пользователей SaaS-продуктов.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>Главная отвечает 200 (Cloudflare + Netlify), но тело отдаётся крайне медленно: за 110 секунд пришло 80 КБ HTML, соединение так и не закрылось; при этом robots.txt и sitemap.xml скачались мгновенно — полный документ и внутренние страницы проверить не удалось.</li><li>Заголовок &lt;title&gt; дословно совпадает с главным тезисом на скриншоте владельца, а баннер «Sep. 30 · Automatically triage new messages by intent» отвечает обновлению /updates/ai-triage/ с lastmod 30.09.2026 — снимок сделан на актуальной версии.</li><li>В первом экране не картинка, а видео: блок .screenshot__video с aspect-ratio 28/15 и постером /video/poster.png в sitemap, а .hero-demo{cursor:pointer} открывает демонстрацию по клику.</li><li>Рядом встроен макет виджета поддержки: блок .widget-pg__widget со своей палитрой в CSS-переменных --wpg-bg / --wpg-text / --wpg-border и тёмным состоянием --wpg-dark.</li><li>Графика нарисована, а не сфотографирована: 63 класса семейства .illu__* и маскот в шапке; фон первого экрана — мягкий градиент, в sitemap лежат изображения цветов /images/flowers/fernand_flowers_1..3.png и fernand-cherry-blossom.</li><li>Строка каналов тянется мышью: .channels__section{cursor:grab}; движение сделано на CSS — 22 @keyframes, 35 правил :hover и три правила prefers-reduced-motion.</li><li>Sitemap на 64 URL: 9 страниц-альтернатив конкурентам (intercom, zendesk, crisp, tidio, pylon и др.), 30 записей changelog и 4 юридические страницы; первая запись — initial-release от 07.11.2022, последняя — dodo-payments от 27.10.2026.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">getfernand.com</dd></div>
+          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+          <div><dt>Подкатегории</dt><dd>Командная работа</dd></div>
+          <div><dt>Для кого</dt><dd>Продуктовым командам</dd></div>
+          <div><dt>Стиль</dt><dd>Минимализм</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
+          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+          <div><dt>Год</dt><dd>2022</dd></div>
+          <div><dt>Добавлен в коллекцию</dt><dd>29.10.2026</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F5FBFE"></span><span class="swatch" style="background:#D2E0E7"></span><span class="swatch" style="background:#D1BEBF"></span><span class="swatch" style="background:#A2A3AD"></span><span class="swatch" style="background:#CDA890"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#F5FBFE, #D2E0E7, #D1BEBF, #A2A3AD, #CDA890">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#F5FBFE" aria-hidden="true"></span>
+          <code>#F5FBFE</code> — 88% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#D2E0E7" aria-hidden="true"></span>
+          <code>#D2E0E7</code> — 5% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#D1BEBF" aria-hidden="true"></span>
+          <code>#D1BEBF</code> — 2% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#A2A3AD" aria-hidden="true"></span>
+          <code>#A2A3AD</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#CDA890" aria-hidden="true"></span>
+          <code>#CDA890</code> — 1% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>Fernand — The free customer support platform for SaaS teams <span class="small muted">(59 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd><span class="placeholder">нет данных</span></dd></div>
+          <div><dt>Open Graph</dt><dd><span class="placeholder">не измерено</span></dd></div>
+          <div><dt>Структурированные данные</dt><dd><span class="placeholder">не измерено</span></dd></div>
+          <div><dt>Sitemap</dt><dd>есть: https://getfernand.com/sitemap.xml — 64 URL, генерируется @nuxtjs/sitemap v8.0.11, lastmod до 27.10.2026</dd></div>
+          <div><dt>Robots</dt><dd>есть: User-agent: * / Disallow: (пусто) плюс ссылка на Sitemap</dd></div>
+          <div><dt>Аналитика</dt><dd>внешний счётчик signups.js с бакета Supabase Storage (data-domain=getfernand.com); вендор не подтверждён</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>2</dd></div>
+          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
+          <div><dt>Контакты</dt><dd><span class="placeholder">не указано</span></dd></div>
+          <div><dt>Юридическая информация</dt><dd>есть страницы /imprint/, /privacy/, /terms/ и /gdpr-compliance/ (все в sitemap от 27.10.2026); текст не прочитан</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>Nuxt</strong> — комментарий в /sitemap.xml: «XML Sitemap generated by @nuxtjs/sitemap v8.0.11»; стиль карты — /__sitemap__/style.xsl</li><li><strong>Inter (самохостинг шрифтов)</strong> — инлайновые @font-face на /fonts/Inter-Light|Regular|Medium|SemiBold|Bold.woff2?v=3.19 плюс курсивные начертания Inter-Italic и Inter-SemiBoldItalic</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-RAY: a523a08e5923bda3-HEL, cf-cache-status: DYNAMIC, NEL и Report-To</li><li><strong>Netlify</strong> — заголовки x-nf-request-id: 01M648K58KMS8E56WG4E98S7W9W и cache-status: &quot;Netlify Edge&quot;; hit</li><li><strong>Supabase Storage</strong> — скрипт грузится с https://ispapumuzwpgesmxhiii.supabase.co/storage/v1/object/public/signups/signups.js с атрибутом data-domain=&quot;getfernand.com&quot;</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Смотреть демонстрацию продукта в первом экране: вместо скриншота там видео и живой макет виджета поддержки. И общий тон — мягкий градиент с цветами при строгой сетке и Inter.</p>
+      </section>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>37 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heist — сайт в коллекции</title>
+<meta name="description" content="Магазин декафа Heist с манифестами и прокруткой героя">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Heist — сайт в коллекции">
+<meta property="og:description" content="Магазин декафа Heist с манифестами и прокруткой героя">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Heist</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <h1>Heist</h1>
+    <ul class="taglist">
+      <li><span class="tag">Еда и HoReCa</span></li>
+      <li><span class="tag tag--muted">Кофейня</span></li>
+      <li><span class="tag tag--muted">Редакционный</span></li>
+      <li><span class="tag tag--muted">Люкс</span></li>
+      <li><span class="tag tag--muted">Сайт жив</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://www.heist.co/" target="_blank" rel="noopener noreferrer">https://www.heist.co/</a></p>
+  </header>
+
+  <div class="site-grid section section--tight">
+      <figure class="shot">
+      <img src="../screens/034.webp" alt="Скриншот главной страницы Heist"
+           width="1632" height="1220" decoding="async" fetchpriority="high">
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Магазин американского бренда декафа Heist: кофе без кофеина и «1/4 каф» для второй половины дня. Тёмно-синий герой с гигантским логотипом и бокалом, который остаётся на месте при прокрутке, длинные манифесты о декафе и плёночное зерно на всём сайте. Зернистый претенциозный сайт бренда кофе без кофеина.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>Герой — не видео и не GSAP: собственный веб-компонент heist-scroll-capture на requestAnimationFrame считает прогресс прокрутки, ставит CSS-переменные --heist-progress и --heist-glass-y, держит бокал position: fixed и отпускает его после --heist-release-distance (40rem).</li><li>Скриншот 034.webp совпадает с живым героем по h1, логотипу, бокалу, рукам и подписям «Steal Back / The Night.»; отдельный слой зерна .heist-capture__grain в текущей CSS отключён (display: none), поэтому зерно на снимке — фотографическое, из фонового JPEG, а не CSS-оверлей.</li><li>Типографика построена на трёх гарнитурах: узкий дисплейный сериф Feature Display Condensed для заголовков (h1 до 10.25rem), Aro Narrow для интерфейса и Forma DJR Mono для цифр и служебных подписей; гигантское HEIST — отдельный SVG-логотип, а не шрифт.</li><li>Тема Horizon 4.1.1 собрана через Vite из кастомных секций (heist-scroll-capture, quality-showcase, coffee-heist, late-night-gallery); в бандле темы есть Lenis, но на главной и контентных страницах он выключен атрибутом data-smooth-scroll=&quot;false&quot;, а Swiper отвечает за карусели в brewing guide и блоке отзывов.</li><li>SEO неровный: у главной и контентных страниц есть уникальные title и description, а у карточки товара /products/blueprint title — просто «Heist», meta description отсутствует; на главной только Organization JSON-LD, на товаре — Product.</li><li>На главной четыре беззвучных зацикленных видео (фон quality-showcase, две вставки в late-night gallery и кампанейский фильм с отдельной вертикальной версией), все с preload=&quot;none&quot; и автозапуском через js-autoplay-video; в разметке есть и HLS, и MP4.</li><li>Контент — длинные манифесты с таблицами: сравнение способов декофеинизации, содержание кофеина, слепая чашечная оценка 78–86 баллов и 66 отзывов; robots.txt вдобавок ссылается на agents.md, UCP discovery и MCP-эндпоинт для агентских покупок.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">heist.co</dd></div>
+          <div><dt>Тип сайта</dt><dd>Интернет-магазин</dd></div>
+          <div><dt>Категории</dt><dd>Еда и HoReCa</dd></div>
+          <div><dt>Подкатегории</dt><dd>Кофейня</dd></div>
+          <div><dt>Для кого</dt><dd>Обычным пользователям, Дизайнерам, Маркетологам</dd></div>
+          <div><dt>Стиль</dt><dd>Редакционный, Люкс</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd>США, Орландо</dd></div>
+          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Добавлен в коллекцию</dt><dd>29.10.2026</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#216EEC"></span><span class="swatch" style="background:#1A2244"></span><span class="swatch" style="background:#124EB3"></span><span class="swatch" style="background:#DCD6C6"></span><span class="swatch" style="background:#0A3587"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#216EEC, #1A2244, #124EB3, #DCD6C6, #0A3587">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#216EEC" aria-hidden="true"></span>
+          <code>#216EEC</code> — 32% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#1A2244" aria-hidden="true"></span>
+          <code>#1A2244</code> — 21% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#124EB3" aria-hidden="true"></span>
+          <code>#124EB3</code> — 14% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#DCD6C6" aria-hidden="true"></span>
+          <code>#DCD6C6</code> — 14% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#0A3587" aria-hidden="true"></span>
+          <code>#0A3587</code> — 10% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Цветная</dd></div>
+         <div><dt>Цвет фона</dt><dd>Синий</dd></div>
+       </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>Specialty Decaf and 1/4 Caf Coffee without a Curfew – Heist <span class="small muted">(59 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd>Specialty decaf and quarter-caf coffee, water-processed and roasted to order. All the ritual, none of the curfew. Drink it at 4pm, or at midnight. <span class="small muted">(146 симв.)</span></dd></div>
+          <div><dt>Open Graph</dt><dd>да</dd></div>
+          <div><dt>Структурированные данные</dt><dd>да</dd></div>
+          <div><dt>Sitemap</dt><dd>есть: индекс Shopify из пяти карт — 5 товаров, 18 страниц, блог, статьи и agentic discovery</dd></div>
+          <div><dt>Robots</dt><dd>есть: Shopify storefront, закрыты cart/checkout/account/services, указан sitemap и agents.md</dd></div>
+          <div><dt>Аналитика</dt><dd>Google Analytics 4 (G-1XBWFP28VY), Google tag / Google Ads (GT-5R7GQTD4), Meta Pixel (2542195152790880), Microsoft Clarity, Klaviyo (S6dNxP)</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>16</dd></div>
+          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
+          <div><dt>Контакты</dt><dd>support@heist.co, info@heist.co, office@heist.co, телефон +1 888-974-3478; форма на /pages/customer-support и чат Gorgias; адрес в политике — 1900 Diversified Way, Orlando FL 32804.</dd></div>
+          <div><dt>Юридическая информация</dt><dd>Privacy Policy (обновлена 9 октября 2026), Terms of Service, Refund Policy с 30-дневной гарантией, Accessibility Statement и Privacy Choices; магазин на Shopify.</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>Shopify</strong> — ассеты cdn.shopify.com, Shopify.theme, checkout /checkouts, robots.txt называет себя Shopify storefront; тема Horizon 4.1.1 сильно переработана</li><li><strong>Vite</strong> — секционные бандлы /cdn/shop/t/127/assets/vite-*.js и vite-*.css с хешами, modulepreload и &lt;script type=&quot;module&quot;&gt;</li><li><strong>Swiper</strong> — классы brewing-guide__list swiper, coffee-heist-receipts__carousel swiper, swiper-wrapper; отдельный бандл vite-swiper-CCmqQlFu.js и vite-free-mode</li><li><strong>Adobe Fonts и свои гарнитуры</strong> — use.typekit.net/jmu4nzm.css для forma-djr-micro/mono; @font-face в heist-theme-fast.css: FeatureDisplayCondensed-Regular.woff2 и Aro-Narrow.woff2</li><li><strong>Google Analytics 4</strong> — webPixelsConfigList: google_tag_ids [&quot;G-1XBWFP28VY&quot;,&quot;GT-5R7GQTD4&quot;], gtag</li><li><strong>Meta Pixel</strong> — webPixelsConfigList: {&quot;pixel_id&quot;:&quot;2542195152790880&quot;,&quot;pixel_type&quot;:&quot;facebook_pixel&quot;}</li><li><strong>Microsoft Clarity</strong> — app block shopify://apps/microsoft-clarity и загрузчик clarity.ms/tag/ в разметке</li><li><strong>Klaviyo</strong> — script static.klaviyo.com/onsite/js/S6dNxP/klaviyo.js?company_id=S6dNxP и app block klaviyo-email-marketing-sms</li><li><strong>Okendo</strong> — data-oke-reviews-version=&quot;0.105.0&quot;, виджет отзывов и «66 verified reviews» на главной</li><li><strong>Gorgias</strong> — config.gorgias.chat/bundle-loader/shopify/upquav-04.myshopify.com и contact-forms replacemailto</li><li><strong>Lightlabs</strong> — &lt;lightlabs-widget company-id=&quot;1080&quot; product-id=&quot;7295&quot;&gt; и app.lightlabs.com/assets/ll-pip-widget-v5.js — виджет лабораторных отчётов по партии</li><li><strong>Patrol</strong> — patrol-ally-core.js, patrol_privacy_script_blocker.js, patrol-consent-root и блокировка скриптов по CIPA</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Смотреть в первую очередь героя: закреплённый бокал, всплывающие руки и гигантский HEIST на синем градиенте. Затем — страницу «Why Decaf» с таблицами и длинным манифестом; зерно и красный подвал задают тон всему сайту.</p>
+      </section>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>37 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

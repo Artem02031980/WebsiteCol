@@ -543,6 +543,7 @@ function renderSite(site) {
 
   const paletteBlock = palette.colors.length
     ? `<div class="swatches swatches--big" aria-hidden="true">${palette.colors.map((hex) => `<span class="swatch" style="background:${esc(hex)}"></span>`).join('')}</div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="${esc(palette.colors.join(', '))}">Скопировать палитру</button></p>
        <ul class="palette-list">
         ${paletteRows}
        </ul>

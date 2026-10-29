@@ -358,6 +358,8 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   border: 1px solid var(--border-strong); display: inline-block;
 }
 .swatches--big .swatch { width: 44px; height: 44px; border-radius: var(--radius-sm); }
+.palette-actions { margin: var(--space-2) 0 0; }
+.palette-actions + .palette-list { margin-top: var(--space-1); }
 .palette-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: grid; gap: 0.5rem; }
 .palette-row { display: flex; align-items: center; gap: 0.5rem; font-size: var(--fs-small); font-variant-numeric: tabular-nums; }
 .palette-row .swatch { flex: none; }

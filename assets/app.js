@@ -539,6 +539,25 @@
     });
   }
 
+  /* ---------- Копирование палитры со страницы сайта ---------- */
+
+  Array.prototype.slice.call(document.querySelectorAll('[data-copy-palette]')).forEach(function (button) {
+    button.addEventListener('click', function () {
+      var value = button.getAttribute('data-copy-palette') || '';
+      if (!value) return;
+      var done = function () {
+        var old = button.textContent;
+        button.textContent = 'Палитра скопирована';
+        setTimeout(function () { button.textContent = old; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(done, function () { window.prompt('Скопируйте палитру:', value); });
+      } else {
+        window.prompt('Скопируйте палитру:', value);
+      }
+    });
+  });
+
   /* ---------- Две колонки на странице сайта ---------- */
 
   /* Карточки разной высоты в жёсткой сетке оставляли пустоту под короткой

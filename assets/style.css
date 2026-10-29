@@ -430,6 +430,13 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   .toolbar__hint { display: none; }
 }
 
+@media (max-width: 767px) {
+  /* «Список» на телефоне: скриншот сверху, текст под ним, без выравнивания по высоте */
+  .grid--list .card { grid-template-columns: 1fr; align-items: start; }
+  .grid--list .card__media { border-right: 0; border-bottom: 1px solid var(--border-subtle); }
+  .grid--list .card__media img { height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+}
+
 @media (max-width: 700px) {
   .facets { grid-template-columns: 1fr; }
   .hero { padding-block: var(--space-4) var(--space-2); }

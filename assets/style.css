@@ -358,7 +358,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   border: 1px solid var(--border-strong); display: inline-block;
 }
 .swatches--big .swatch { width: 44px; height: 44px; border-radius: var(--radius-sm); }
-.palette-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: grid; gap: 0.35rem; }
+.palette-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: grid; gap: 0.5rem; }
 .palette-row { display: flex; align-items: center; gap: 0.5rem; font-size: var(--fs-small); font-variant-numeric: tabular-nums; }
 .palette-row .swatch { flex: none; }
 
@@ -396,10 +396,15 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   border-radius: var(--radius-lg); padding: var(--space-2); margin: 0;
 }
 .panel h2 { margin-top: 0; }
-.specs { display: grid; gap: 0.4rem; margin: 0; }
+/* Читаемость внутри карточек: воздух между строками и пунктами списков */
+.panel p,
+.panel li { line-height: 1.6; }
+.panel li + li { margin-top: 0.55rem; }
+.panel .palette-list li + li { margin-top: 0; }
+.specs { display: grid; gap: 0.8rem; margin: 0; }
 .specs div { display: grid; grid-template-columns: minmax(8rem, 40%) 1fr; gap: var(--space-1); }
 .specs dt { color: var(--text-muted); font-size: var(--fs-small); }
-.specs dd { margin: 0; font-size: var(--fs-small); }
+.specs dd { margin: 0; font-size: var(--fs-small); line-height: 1.6; }
 
 /* ===== Подвал: одна строка ===== */
 .footer {

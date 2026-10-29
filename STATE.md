@@ -41,6 +41,7 @@
   и содержание), High (рутинные данные), Low (мелкие правки), Off (только чтение).
 - **GitHub:** remote `origin` — https://github.com/Artem02031980/WebsiteCol.git, ветка `main`;
   актуальный `main` — https://github.com/Artem02031980/WebsiteCol/commits/main.
+  Локальный `main` и `origin/main` синхронизированы; точный HEAD — по ссылке.
   После каждой законченной партии — коммит и `git push origin main`.
 - **Git:** последний содержательный коммит — `748ee5b` (очистка инструкций и правило pull);
   снимок состояния — отдельным коммитом после него.

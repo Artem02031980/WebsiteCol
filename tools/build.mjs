@@ -239,7 +239,7 @@ function header(prefix) {
 function footer() {
   return `<footer class="footer">
   <div class="container">
-    <p>${sites.length} ${plural(sites.length, ['сайт', 'сайта', 'сайтов'])} в подборке · данные: <code>data/sites.json</code> · сборка: <code>node tools/build.mjs</code></p>
+    <p>${sites.length} ${plural(sites.length, ['сайт', 'сайта', 'сайтов'])} в подборке · Личная коллекция Хмелёва Артёма</p>
   </div>
 </footer>`;
 }

@@ -62,7 +62,7 @@
   /* Каркас */
   --container: 1320px;
   --gutter: 1rem;
-  --header-h: 64px;
+  --header-h: 104px;
   /* Отступ якоря под липкую шапку */
   --anchor-offset: calc(var(--header-h) + 16px);
 }
@@ -117,9 +117,9 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
   background: var(--bg);
   border-bottom: 1px solid var(--border-subtle);
 }
-.header__inner { display: flex; align-items: center; min-height: var(--header-h); }
-.header__logo { display: inline-flex; align-items: center; min-height: 48px; }
-.header__logo img { display: block; height: 48px; width: auto; }
+.header__inner { display: flex; align-items: center; min-height: var(--header-h); padding-block: 0.5rem; }
+.header__logo { display: block; width: 100%; max-width: 430px; }
+.header__logo img { display: block; width: 100%; height: auto; }
 
 /* ===== Кнопки ===== */
 .btn {
@@ -143,10 +143,8 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
 .tiny { font-size: var(--fs-tiny); }
 .mono { font-family: var(--font-mono); }
 
-/* ===== Герой каталога: крупный логотип + описание ===== */
-.hero { padding-block: var(--space-5) var(--space-3); }
-.hero__logo { margin: 0 0 var(--space-3); }
-.hero__logo img { display: block; width: min(430px, 100%); height: auto; }
+/* ===== Герой каталога: описание под шапкой ===== */
+.hero { padding-block: var(--space-4) var(--space-3); }
 .hero__text { color: var(--text-muted); font-size: 1.0625rem; margin: 0; }
 
 /* ===== Панель поиска ===== */
@@ -240,7 +238,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 }
 
 /* ===== Раскладка каталога ===== */
-.layout { display: grid; grid-template-columns: 300px 1fr; gap: var(--space-4); align-items: start; }
+.layout { display: grid; grid-template-columns: 300px 1fr; gap: var(--space-4); align-items: start; margin-top: var(--space-5); }
 
 /* ===== Фасеты ===== */
 .facets {
@@ -373,9 +371,6 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .empty h3 { margin-bottom: var(--space-1); }
 
 /* ===== Страница сайта ===== */
-.site-brand { padding-block: var(--space-3) 0; }
-.site-brand a { display: inline-flex; }
-.site-brand img { display: block; width: min(300px, 100%); height: auto; }
 .breadcrumbs { padding-block: var(--space-2) 0; font-size: var(--fs-small); color: var(--text-muted); }
 .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
 .breadcrumbs li + li::before { content: '/'; margin-right: 0.4rem; color: var(--border-strong); }

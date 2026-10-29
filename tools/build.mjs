@@ -230,7 +230,7 @@ function header(prefix) {
   return `<header class="header">
   <div class="container header__inner">
     <a class="header__logo" href="${prefix}/index.html" aria-label="Коллекция сайтов — на главную">
-      <img src="${prefix}/assets/logo.svg" alt="Коллекция сайтов" width="240" height="48" fetchpriority="high">
+      <img src="${prefix}/assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
     </a>
   </div>
 </header>`;
@@ -432,9 +432,7 @@ function renderCatalog() {
     .join('\n    ');
 
   const body = `<section class="hero container">
-  <h1 class="hero__logo">
-    <img src="assets/logo.svg" alt="Коллекция сайтов — каталог понравившихся сайтов" width="360" height="72" fetchpriority="high">
-  </h1>
+  <h1 class="visually-hidden">Коллекция сайтов — каталог понравившихся сайтов</h1>
   <p class="hero__text">Личная коллекция сайтов, которые запомнились: каждый — со своей страницей-разбором,
   где видно, что это, чем интересен, кто и на чём сделал. Ищите по категории, стилю, приёму, технологии
   или палитре, сочетайте фильтры и делитесь ссылкой на подборку.</p>
@@ -568,13 +566,7 @@ function renderSite(site) {
     .sort((a, b) => b.shared.length - a.shared.length)
     .slice(0, 4);
 
-  const body = `<div class="site-brand container">
-  <a href="../index.html" aria-label="Коллекция сайтов — на главную">
-    <img src="../assets/logo.svg" alt="Коллекция сайтов" width="300" height="60" fetchpriority="high">
-  </a>
-</div>
-
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  const body = `<nav class="breadcrumbs container" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>${esc(site.name)}</li>

@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 /**
- * Добавляет черновик записи о новом сайте в data/sites.json и пустую запись в data/champ.json.
+ * Добавляет черновик записи о новом сайте в data/sites.json.
  *
  * Запуск: node tools/add-site.mjs <url> [--slot 006] [--name "Название"] [--slug slug]
  *
- * Скрипт намеренно ничего не выдумывает: он создаёт каркас с null и подсказывает, что заполнить.
- * Скриншот нужно положить в Screens/NNN.webp самому — автоматическая съёмка не делается.
+ * Скрипт намеренно ничего не выдумывает: он создаёт каркас с null и подсказывает,
+ * что заполнить. Скриншот нужно положить в Screens/NNN.webp самому —
+ * автоматическая съёмка не делается. Чемпионата в проекте больше нет:
+ * оценок и баллов в данных нет.
  */
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -37,7 +39,6 @@ const readJson = (rel) => JSON.parse(readFileSync(join(ROOT, rel), 'utf8'));
 const writeJson = (rel, data) => writeFileSync(join(ROOT, rel), JSON.stringify(data, null, 2) + '\n', 'utf8');
 
 const sitesDoc = readJson('data/sites.json');
-const champDoc = readJson('data/champ.json');
 const screens = existsSync(join(ROOT, 'Screens'))
   ? readdirSync(join(ROOT, 'Screens')).filter((name) => /\.(webp|png|jpe?g|avif)$/i.test(name))
   : [];
@@ -78,19 +79,20 @@ const draft = {
   link_state: 'unknown',
   description_user: null,
   description_own: null,
+  description_short: null,
   categories: [],
   subcategories: [],
   audience: [],
   site_type: null,
   styles: [],
   techniques: [],
-  palette: { mode: null, colors: [], source: screenshot ? 'измерено из Screens/' + screenshot : null },
+  palette: { mode: null, colors: [] },
   tech: [],
   observations: [],
   facts: {
     https: parsed.protocol === 'https:',
     country: null,
-    language: null,
+    languages: [],
     author: null,
     year: null,
     mobile: { viewport_meta: null, overflow_375: null },
@@ -100,26 +102,22 @@ const draft = {
     legal: null,
     analytics: []
   },
-  notes: '',
-  unverified: []
+  notes: ''
 };
 
 sitesDoc.sites.push(draft);
 sitesDoc.updated = new Date().toISOString().slice(0, 10);
 writeJson('data/sites.json', sitesDoc);
 
-champDoc.sites = champDoc.sites || {};
-champDoc.sites[slot] = { criteria: {}, group_notes: {} };
-champDoc.meta = champDoc.meta || {};
-champDoc.meta.updated = new Date().toISOString().slice(0, 10);
-writeJson('data/champ.json', champDoc);
-
 console.log('Добавлен черновик ' + slot + ' — ' + name + ' (' + draft.domain + ')');
 console.log('Скриншот: ' + (screenshot ? 'Screens/' + screenshot : 'НЕ НАЙДЕН — положи файл Screens/' + slot + '.webp'));
 console.log('');
-console.log('Что заполнить в data/sites.json:');
-console.log('  description_own, categories, subcategories, audience, site_type, styles, techniques, palette.colors');
-console.log('  facts.language, facts.seo.*, tech (с доказательствами), observations, notes');
-console.log('Что заполнить в data/champ.json: criteria по критериям из data/weights.json, section_notes');
+console.log('Что заполнить в data/sites.json (правила — data/SCHEMA.md):');
+console.log('  description_own — что это, одним абзацем, человеческим языком; description_user — словами владельца');
+console.log('  description_short — одна фраза до 90 символов без точки в конце');
+console.log('  categories, subcategories, audience, site_type, styles, techniques, palette.colors');
+console.log('  facts.country — просто «Австрия, Вена», без пояснений; facts.author — «Edoardo Lunardi — частный разработчик»');
+console.log('  facts.languages — массив id из taxonomy.languages; у мультиязычных перечислить языки');
+console.log('  tech (с доказательствами), observations, notes');
 console.log('');
 console.log('Дальше: node tools/palette.mjs && node tools/build.mjs && node tools/validate.mjs');

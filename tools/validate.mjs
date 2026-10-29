@@ -5,8 +5,8 @@
  * Запуск: node tools/validate.mjs [папка] [--json] [--quiet]
  * Код возврата: 0 — ошибок нет, 1 — есть ошибки, 2 — неверный вызов.
  *
- * Только встроенные модули Node. Математика контраста и профиль доступности —
- * из навыка prototype-site-builder (references/acceptance.md).
+ * Только встроенные модули Node. Чемпионата в проекте больше нет:
+ * проверяются каталог и страницы сайтов.
  */
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative, resolve, dirname } from 'node:path';
@@ -45,23 +45,37 @@ const readJsonFile = (rel) => {
 /* ---------- 1. Состав файлов ---------- */
 
 const REQUIRED = [
-  'index.html', 'champ.html', 'categories.html',
-  'assets/style.css', 'assets/app.js', 'assets/favicon.svg',
-  'data/sites.json', 'data/taxonomy.json', 'data/weights.json', 'data/champ.json', 'data/SCHEMA.md',
+  'index.html',
+  'assets/style.css', 'assets/app.js', 'assets/favicon.svg', 'assets/logo.svg',
+  'data/sites.json', 'data/taxonomy.json', 'data/palette.json', 'data/SCHEMA.md',
   'tools/build.mjs', 'tools/validate.mjs', 'Screens'
 ];
 for (const rel of REQUIRED) {
   if (!existsSync(join(ROOT, rel))) error(rel, 'обязательный файл или папка отсутствует');
 }
 
+/* Устаревшие файлы чемпионата не должны оставаться */
+for (const rel of ['champ.html', 'categories.html', 'data/champ.json', 'data/weights.json']) {
+  if (existsSync(join(ROOT, rel))) error(rel, 'устаревший файл чемпионата — удали его');
+}
+
 const taxonomy = readJsonFile('data/taxonomy.json') || {};
-const weights = readJsonFile('data/weights.json') || {};
 const sitesDoc = readJsonFile('data/sites.json') || { sites: [] };
-const champDoc = readJsonFile('data/champ.json') || { sites: {} };
 const paletteDoc = readJsonFile('data/palette.json') || { images: {} };
 const sites = sitesDoc.sites || [];
 
-const ids = (list) => new Set((list || []).map((item) => item.id));
+/* ---------- 2. Таксономия ---------- */
+
+const collect = (list) => (list || []).map((item) => item.id);
+const uniq = (list, label) => {
+  const seen = new Set();
+  for (const id of list) {
+    if (seen.has(id)) error('data/taxonomy.json', `повтор id «${id}» в списке ${label}`);
+    seen.add(id);
+  }
+};
+
+const ids = (list) => new Set(collect(list));
 const CATS = ids(taxonomy.categories);
 const AUD = ids(taxonomy.audiences);
 const TYPES = ids(taxonomy.site_types);
@@ -70,35 +84,28 @@ const TECHS = ids(taxonomy.techniques);
 const LANGS = ids(taxonomy.languages);
 const LINKS = ids(taxonomy.link_states);
 
+uniq(collect(taxonomy.categories), 'categories');
+uniq(collect(taxonomy.audiences), 'audiences');
+uniq(collect(taxonomy.site_types), 'site_types');
+uniq(collect(taxonomy.styles), 'styles');
+uniq(collect(taxonomy.techniques), 'techniques');
+uniq(collect(taxonomy.languages), 'languages');
+uniq(collect(taxonomy.link_states), 'link_states');
+
+if (taxonomy.champ_sections) error('data/taxonomy.json', 'остался блок champ_sections — чемпионата больше нет');
+for (const category of taxonomy.categories || []) {
+  if (category.profile) warn('data/taxonomy.json', `категория ${category.id}: осталось поле profile от чемпионата`);
+  uniq(collect(category.subs), `subs категории ${category.id}`);
+}
+for (const item of taxonomy.link_states || []) {
+  if (item.id === 'alive' && item.title !== 'Сайт жив') {
+    error('data/taxonomy.json', 'состояние «alive» должно называться «Сайт жив»');
+  }
+}
+
 const SUBS = new Map();
 for (const category of taxonomy.categories || []) {
   for (const sub of category.subs || []) SUBS.set(sub.id, category.id);
-}
-
-/* ---------- 2. Веса ---------- */
-
-for (const [id, profile] of Object.entries(weights.profiles || {})) {
-  const sum = Object.values(profile.weights || {}).reduce((a, b) => a + b, 0);
-  if (sum !== 100) error('data/weights.json', `профиль «${id}»: сумма весов ${sum}, должна быть 100`);
-}
-for (const [categoryId, profileId] of Object.entries((weights.nomination_profiles || {}).by_category || {})) {
-  if (!weights.profiles[profileId]) error('data/weights.json', `категория ${categoryId} ссылается на несуществующий профиль ${profileId}`);
-  if (!CATS.has(categoryId)) warn('data/weights.json', `в профилях есть категория ${categoryId}, которой нет в taxonomy.json`);
-}
-const CRITERIA_KEYS = new Set();
-const SECTIONS = (taxonomy.champ_sections && taxonomy.champ_sections.list) || [];
-for (const section of SECTIONS) {
-  const list = (weights.criteria || {})[section.id];
-  if (!list) { error('data/weights.json', `нет критериев для раздела ${section.id}`); continue; }
-  for (const criterion of list) {
-    CRITERIA_KEYS.add(section.id + '.' + criterion.id);
-    if (!['auto', 'partial', 'expert'].includes(criterion.measured)) {
-      warn('data/weights.json', `критерий ${section.id}.${criterion.id}: неизвестный тип измерения «${criterion.measured}»`);
-    }
-  }
-}
-if (CRITERIA_KEYS.size && CRITERIA_KEYS.size !== 30) {
-  info('data/weights.json', `в чемпионате ${CRITERIA_KEYS.size} критериев — номинаций столько же`);
 }
 
 /* ---------- 3. Записи сайтов ---------- */
@@ -109,6 +116,9 @@ const screens = existsSync(join(ROOT, 'Screens'))
   ? readdirSync(join(ROOT, 'Screens')).filter((name) => /\.(webp|png|jpe?g|avif)$/i.test(name))
   : [];
 const usedScreens = new Set();
+
+/* Поля, которые бриф удалил: их присутствие — признак старой записи */
+const LEGACY_FIELDS = ['typography', 'design', 'unverified', 'personal', 'champ'];
 
 const checkIds = (site, field, set, label) => {
   for (const id of site[field] || []) {
@@ -133,6 +143,16 @@ for (const site of sites) {
   if (site.domain && site.url && !site.url.includes(site.domain)) warn(where, `${tag}: домен не встречается в url`);
   if (!site.description_own) error(where, `${tag}: не заполнено description_own`);
   if (!(site.description_own || '').trim().endsWith('.')) warn(where, `${tag}: описание без точки в конце`);
+  if (!site.description_short) warn(where, `${tag}: нет description_short — в карточке покажется первое предложение`);
+  else {
+    const short = site.description_short.trim();
+    if (short.length > 90) warn(where, `${tag}: description_short длиннее 90 символов`);
+    if (/[.!?]$/.test(short)) warn(where, `${tag}: description_short заканчивается знаком — в списке он лишний`);
+  }
+
+  for (const field of LEGACY_FIELDS) {
+    if (site[field] !== undefined) warn(where, `${tag}: осталось устаревшее поле «${field}» — удали его`);
+  }
 
   if (!site.categories || !site.categories.length) error(where, `${tag}: не указана ни одна категория`);
   checkIds(site, 'categories', CATS, 'категория');
@@ -141,15 +161,23 @@ for (const site of sites) {
   checkIds(site, 'styles', STYLES, 'стиль');
   checkIds(site, 'techniques', TECHS, 'приём');
   if (!TYPES.has(site.site_type)) error(where, `${tag}: неизвестный тип сайта «${site.site_type}»`);
-  if (!LINKS.has(site.link_state)) error(where, `${tag}: неизвестное состояние ссылки`);
-  if (!LANGS.has(site.facts && site.facts.language)) error(where, `${tag}: неизвестный язык сайта`);
-  if (site.personal) warn(where, `${tag}: остался блок personal — личные оценки владельца из коллекции убраны, используй поле notes`);
+  if (!LINKS.has(site.link_state)) error(where, `${tag}: неизвестное состояние ссылки «${site.link_state}»`);
+
+  const facts = site.facts || {};
+  if (facts.language !== undefined) error(where, `${tag}: старый формат языка — замени facts.language на массив facts.languages`);
+  for (const lang of facts.languages || []) {
+    if (!LANGS.has(lang)) error(where, `${tag}: язык «${lang}» нет в taxonomy.json`);
+  }
 
   for (const sub of site.subcategories || []) {
     const parent = SUBS.get(sub);
     if (parent && !(site.categories || []).includes(parent)) {
       warn(where, `${tag}: подкатегория ${sub} относится к категории ${parent}, которой нет у сайта`);
     }
+  }
+
+  if (site.added && !/^\d{4}-\d{2}-\d{2}$/.test(site.added)) {
+    warn(where, `${tag}: added не в формате YYYY-MM-DD`);
   }
 
   if (site.screenshot) {
@@ -176,28 +204,8 @@ for (const site of sites) {
 
   for (const item of site.tech || []) {
     if (!item.name || !item.evidence) error(where, `${tag}: технология без доказательства: ${JSON.stringify(item)}`);
-  }
-
-  /* Оценки чемпионата */
-  const entry = (champDoc.sites || {})[site.slot];
-  if (!entry) {
-    error('data/champ.json', `${tag}: нет записи с оценками`);
-  } else {
-    for (const key of Object.keys(entry.criteria || {})) {
-      if (!CRITERIA_KEYS.has(key)) error('data/champ.json', `${tag}: критерий «${key}» не описан в weights.json`);
-      const raw = entry.criteria[key];
-      const value = typeof raw === 'number' ? raw : raw && raw.v;
-      if (typeof value !== 'number') { error('data/champ.json', `${tag}.${key}: значение не число`); continue; }
-      if (value < 1 || value > 10) error('data/champ.json', `${tag}.${key}: балл ${value} вне шкалы 1–10`);
-      if (Math.round(value * 2) !== value * 2) warn('data/champ.json', `${tag}.${key}: шаг шкалы — 0.5, значение ${value}`);
-      if (raw && typeof raw === 'object' && !raw.note) {
-        warn('data/champ.json', `${tag}.${key}: оценка записана объектом без пояснения в note`);
-      }
-    }
-    for (const key of Object.keys(entry.section_notes || {})) {
-      if (!SECTIONS.some((section) => section.id === key)) {
-        error('data/champ.json', `${tag}: заметка к неизвестному разделу «${key}»`);
-      }
+    else if (/^[^\p{L}\p{N}]/u.test(item.name)) {
+      info(where, `${tag}: имя технологии «${item.name}» начинается с символа — в фильтрах покажется как «${item.name}» после замены build.mjs`);
     }
   }
 
@@ -207,9 +215,6 @@ for (const site of sites) {
 
 for (const file of screens) {
   if (!usedScreens.has(file)) warn('Screens/' + file, 'скриншот не привязан ни к одному сайту в data/sites.json');
-}
-for (const slot of Object.keys(champDoc.sites || {})) {
-  if (!slots.has(slot)) warn('data/champ.json', `оценки для номера ${slot}, которого нет в sites.json`);
 }
 
 /* ---------- 4. Проверка HTML ---------- */
@@ -221,7 +226,7 @@ const eachMatch = (text, re, fn) => {
   while ((match = re.exec(text)) !== null) fn(match);
 };
 
-const htmlFiles = ['index.html', 'champ.html', 'categories.html']
+const htmlFiles = ['index.html']
   .concat(sites.map((site) => `pages/${site.slot}-${site.slug}.html`));
 
 function checkDocument(text, file) {
@@ -233,6 +238,7 @@ function checkDocument(text, file) {
   if (!/id="main"/.test(text)) error(file, 'нет id="main"');
   if (!/class="skip-link"/.test(text) || !/href="#main"/.test(text)) error(file, 'нет skip-link «Перейти к содержимому» → #main');
   if (!/classList\.add\('js'\)/.test(text)) warn(file, 'нет inline-класса .js');
+  if (!/assets\/logo\.svg/.test(text)) error(file, 'нет логотипа assets/logo.svg — бриф требует логотип на каждой странице');
 
   const title = text.match(/<title>([\s\S]*?)<\/title>/i);
   if (!title || !title[1].trim()) error(file, 'пустой <title>');
@@ -276,9 +282,6 @@ function checkDocument(text, file) {
   });
 
   eachMatch(text, /<a\b[^>]*>\s*<\/a>/gi, (m) => warn(`${file}:${lineAt(text, m.index)}`, 'пустая ссылка'));
-
-  if (!/aria-label="Основная навигация"/.test(text)) warn(file, 'у навигации нет aria-label');
-  if (/class="burger"/.test(text)) warn(file, 'осталась кнопка бургера — мобильной версии в проекте нет');
 }
 
 for (const file of htmlFiles) {
@@ -302,13 +305,14 @@ if (css) {
   if (/position:\s*sticky/.test(css) && !/overflow-x:\s*clip/.test(css)) {
     warn('assets/style.css', 'есть position: sticky, но нет overflow-x: clip');
   }
+  if (!/@media\s*\(max-width/.test(css)) error('assets/style.css', 'нет адаптивных breakpoint-ов (@media max-width) — бриф требует адаптивность');
+  if (/min-width:\s*1280px/.test(css)) error('assets/style.css', 'остался min-width: 1280px — сайт больше не только десктопный');
 }
 
 const js = readText('assets/app.js');
 if (js) {
   if (!/Escape/.test(js)) warn('assets/app.js', 'Escape не обрабатывается (сброс поиска)');
   if (/window\.innerWidth/.test(js)) warn('assets/app.js', 'innerWidth в JS: раскладку должен решать CSS');
-  if (/is-open|burger/.test(js)) warn('assets/app.js', 'осталась логика мобильного меню');
 }
 
 /* ---------- 6. Контраст токенов ---------- */
@@ -333,14 +337,13 @@ if (css) {
     const vars = {};
     eachMatch(block[1], /(--[\w-]+)\s*:\s*([^;]+);/g, (m) => { vars[m[1]] = m[2].trim(); });
     const pairs = [
-      ['--text', '--bg', 4.5], ['--text', '--bg-elevated', 4.5],
+      ['--text', '--bg', 4.5], ['--text', '--bg-elevated', 4.5], ['--text', '--bg-sunken', 4.5],
       ['--text-muted', '--bg', 4.5], ['--text-muted', '--bg-elevated', 4.5], ['--text-muted', '--bg-sunken', 4.5],
       ['--accent', '--bg', 4.5], ['--accent-hover', '--bg', 4.5],
-      ['--nav-accent', '--bg', 4.5], ['--nav-accent-hover', '--bg', 4.5],
       ['--on-accent', '--accent', 4.5], ['--on-accent', '--accent-hover', 4.5],
       ['--ok', '--bg', 4.5], ['--danger', '--bg', 4.5], ['--warn', '--bg', 4.5],
-      ['--border-strong', '--bg', 3], ['--border-strong', '--bg-elevated', 3],
-      ['--gold', '--bg-elevated', 4.5], ['--silver', '--bg-elevated', 4.5], ['--bronze', '--bg-elevated', 4.5]
+      ['--danger', '--danger-soft', 4.5], ['--warn', '--warn-soft', 4.5],
+      ['--border-strong', '--bg', 3], ['--border-strong', '--bg-elevated', 3], ['--border-strong', '--bg-sunken', 3]
     ];
     for (const [fg, bg, min] of pairs) {
       const fgColor = parseColor(vars[fg]);
@@ -368,7 +371,6 @@ for (const file of htmlFiles.concat(['assets/style.css', 'assets/app.js'])) {
     } catch (e) { /* игнорируем */ }
   });
 }
-const contentHosts = [...externalHosts.keys()].filter((host) => !/^https?:/.test(host));
 if (externalHosts.size) {
   const list = [...externalHosts.keys()].join(', ');
   info('внешние ссылки', `исходящие ссылки на: ${list} — это ссылки на сайты коллекции, ресурсы страницы локальные`);
@@ -383,18 +385,16 @@ for (const file of htmlFiles) {
   if (found.length) info(file, 'заглушки в тексте: ' + [...new Set(found)].join('  '));
   placeholderCount += (text.match(/class="[^"]*\bplaceholder\b[^"]*"/g) || []).length;
 }
-if (placeholderCount) info('страницы', `элементов .placeholder (не измерено): ${placeholderCount}`);
+if (placeholderCount) info('страницы', `элементов .placeholder (не заполнено): ${placeholderCount}`);
 
 /* ---------- 8. Сводка по данным ---------- */
 
 if (!AS_JSON) {
   for (const site of sites) {
-    const entry = (champDoc.sites || {})[site.slot] || { criteria: {} };
-    const evaluated = Object.keys(entry.criteria || {}).length;
-    info('данные', `${site.slot} ${site.name}: критериев с оценкой ${evaluated} из ${CRITERIA_KEYS.size}` +
-      `${site.unverified && site.unverified.length ? `, не проверено пунктов: ${site.unverified.length}` : ''}`);
+    const langs = (site.facts && site.facts.languages) || [];
+    info('данные', `${site.slot} ${site.name}: ${(site.observations || []).length} наблюдений, ` +
+      `${(site.tech || []).length} технологий, языки: ${langs.join(', ') || '—'}`);
   }
-  info('чемпионат', `${CRITERIA_KEYS.size} критериев = ${CRITERIA_KEYS.size} номинаций, участников ${sites.length}`);
 }
 
 /* ---------- 9. Итог ---------- */

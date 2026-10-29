@@ -3,8 +3,8 @@
 Один сайт — один фоновый субагент. Ниже текст задания: подставить `{СЛОТ}`, `{НАЗВАНИЕ}`, `{URL}`,
 `{ОПИСАНИЕ_ВЛАДЕЛЬЦА}`, `{СКРИНШОТ}` и отправить. Пять сайтов — пять таких заданий параллельно.
 
-Ключевое: субагент **не оценивает**, он приносит факты и честный список непроверенного. Баллы
-выставляет сессия Max по этим фактам.
+Ключевое: субагент **не оценивает**, он приносит проверяемые факты. Чемпионата в проекте нет —
+баллов и номинаций в отчёте не существует.
 
 ---
 
@@ -21,7 +21,7 @@
    https://archive.org/wayback/available?url=<домен> — затем https://web.archive.org/web/<timestamp>id_/<url>.
    Если архив заблокирован по сети, используй релей
    https://<домен-через-дефисы>.translate.goog/<путь>?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en
-   и https://api.microlink.io/?url=<url>. Способ добычи обязательно укажи в unverified.
+   и https://api.microlink.io/?url=<url>. Способ добычи укажи в observations.
 2. Зафиксируй только то, что реально видно: title, meta description, lang, viewport, og-теги, h1,
    структуру секций, robots.txt и sitemap.xml (запроси /robots.txt и /sitemap.xml), HTTPS, контакты,
    юридическую информацию, счётчики аналитики.
@@ -30,36 +30,42 @@
    Каждая технология — с коротким доказательством (имя файла, класс, заголовок ответа).
    ОСТОРОЖНО С ЛОЖНЫМИ СРАБАТЫВАНИЯМИ: «rive» внутри «driven», «THREE» внутри «three-digit»,
    «d3» внутри base64, «Howl» внутри «howLine», «react» внутри «reacting». Проверяй контекст.
+   Имена пакетов пиши как есть: «@react-three/drei» допустимо — фильтры сами преобразуют.
 4. Опиши визуальный стиль и приёмы по скриншоту и разметке: палитра (hex из CSS-токенов),
-   типографика (семейства, кегли, трекинг), анимации, курсор, звук.
+   анимации, курсор, звук. Если CSS недоступен — не выдумывай, оставь поле пустым.
 5. Проверь 5–10 внутренних ссылок на доступность, отметь битые.
-6. Честно перечисли, что проверить НЕ удалось.
+6. Если сайт многоязычный — перечисли языки, которые реально есть (сверяясь со справочником
+   data/taxonomy.json → languages: en, fr, ru, de, it, ja, multi).
 
 Ресурсная гигиена: браузер запускай максимум один раз и только при реальной необходимости
 (свободной памяти меньше ~4 ГБ — не запускать вовсе), кадр не выше 2000 px по высоте,
 после себя убивай только свои процессы Chrome. Скачанное складывай в %TEMP%\<слаг>\,
 в папку проекта ничего не пиши.
 
-Жёсткое правило: не выдумывать. Не видно — «не определено» + пункт в unverified. Качество не оценивай.
+Жёсткое правило: не выдумывать. Не видно — null. Качество не оценивай.
 
 Формат ответа: один JSON-объект в блоке ```json, поля:
 {
- "slot": "{СЛОТ}", "name": "{НАЗВАНИЕ}", "url": "{URL}", "domain": "<домен без www>",
- "http_status": "...", "https": true,
- "title": "...", "title_len": 0, "meta_description": "...", "meta_description_len": 0,
- "lang": "...", "viewport_meta": true, "h1": ["..."],
- "og": {"present": true, "title": "...", "image": "..."}, "structured_data": false,
- "robots_txt": "...", "sitemap_xml": "...",
- "footer_contacts": "...", "legal_info": "...", "analytics": ["..."],
- "tech_stack": [{"name": "...", "evidence": "..."}],
- "sections_on_page": ["..."],
- "country_hint": "...", "author_or_studio": "...", "year_hint": "...",
- "style_notes": "...", "palette_hex": ["#..."], "typography_notes": "...",
- "techniques_seen": ["..."],
- "broken_links": ["..."], "checked_links_count": 0,
- "short_description_ru": "2–3 нейтральных предложения о том, что это за сайт и как он сделан",
- "notable": ["3–5 наблюдений, чем сайт интересен технически или визуально"],
- "unverified": ["..."]
+  "slot": "{СЛОТ}", "name": "{НАЗВАНИЕ}", "url": "{URL}", "domain": "<домен без www>",
+  "http_status": "...", "https": true,
+  "title": "...", "title_len": 0, "meta_description": "...", "meta_description_len": 0,
+  "lang": "...", "viewport_meta": true, "h1": ["..."],
+  "og": {"present": true, "title": "...", "image": "..."}, "structured_data": false,
+  "robots_txt": "...", "sitemap_xml": "...",
+  "footer_contacts": "...", "legal_info": "...", "analytics": ["..."],
+  "tech_stack": [{"name": "...", "evidence": "..."}],
+  "sections_on_page": ["..."],
+  "country_hint": "коротко: «Австрия, Вена» — без пояснений, либо null",
+  "author_or_studio": "коротко: «Edoardo Lunardi — частный разработчик», либо null",
+  "year_hint": 2024,
+  "style_notes": "...", "palette_hex": ["#..."],
+  "languages": ["en"] ,
+  "techniques_seen": ["..."],
+  "broken_links": ["..."], "checked_links_count": 0,
+  "short_description_ru": "абзац человеческим языком: что это за сайт, без углубления в детали",
+  "description_short_ru": "одна короткая фраза без точки в конце, до 90 символов",
+  "notable": ["3–7 наблюдений, чем сайт интересен технически или визуально"],
+  "what_to_see_first": "одна-две фразы: что смотреть в первую очередь"
 }
 ```
 
@@ -68,19 +74,20 @@
 ## Что делать с ответом
 
 1. Запись в `data/sites.json` по `data/SCHEMA.md`: `description_user` — дословно от владельца,
-   `description_own` — пересказ `short_description_ru` своими словами, `observations` — из `notable`,
-   `unverified` — из отчёта, `palette.source` — пометка, что цвета из CSS, если замер ещё не сделан.
-2. Оценки в `data/champ.json` (это уже работа Max): 30 критериев и восемь `section_notes`.
-3. `node tools/build.mjs` → `node tools/validate.mjs` → `palette.mjs` (если есть память) →
-   `check-widths.mjs`.
-4. Удалить `%TEMP%\<слаг>\` и `.tmp/`.
+   `description_own` — из `short_description_ru`, `description_short` — из `description_short_ru`,
+   `observations` — из `notable`, `notes` — из `what_to_see_first`, `facts.languages` — из `languages`,
+   `facts.country` / `facts.author` — короткие значения без пояснений. Оценок нет.
+   Поля без данных оставить пустыми (null) — их заполнит другой агент.
+2. `node tools/build.mjs` → `node tools/validate.mjs` (до нуля ошибок и предупреждений) →
+   `palette.mjs` (если есть память) → `check-widths.mjs`.
+3. Удалить `%TEMP%\<слаг>\` и `.tmp/`.
 
 ## Замечания, собранные на практике
 
 - Если сайт блокирует сеть (Cloudflare 403), это **свойство доступа**, а не сайта: помечай способ
-  добычи данных и не переноси в факты то, что не прочитано.
+  добычи данных в `observations` и не переноси в факты то, что не прочитано.
 - Скриншот владельца может фиксировать **более раннюю версию** сайта — сверяй текст с живой
-  разметкой и расхождения пиши в `unverified`.
-- Двуязычные сайты: `language` = `multi`, если есть вторая полноценная локаль.
+  разметкой и расхождения пиши в `observations`.
+- Двуязычные сайты: в `languages` — `multi` плюс конкретные языки, например `["multi", "fr", "en"]`.
 - Тяжёлые сайты (Unity WebGL, гауссовы сплаты) описывай по файлам сборки и загрузчику, но не
   утверждай, что видел сцену.

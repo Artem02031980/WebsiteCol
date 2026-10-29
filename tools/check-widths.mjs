@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 /**
- * Проверка горизонтального переполнения на десктопных ширинах.
+ * Проверка горизонтального переполнения на адаптивных ширинах.
  *
- * Сайт рассчитан на десктоп от 1280 px, мобильной вёрстки нет, поэтому проверяются
- * только широкие экраны: по умолчанию 1280, 1440 и 1920 px.
+ * Сайт адаптивный: по умолчанию проверяются 360, 768, 1024, 1280, 1440 и 1920 px.
  *
- * Запуск: node tools/check-widths.mjs [1280,1440,1920]
+ * Запуск: node tools/check-widths.mjs [360,768,1024,1280,1440,1920]
  * Требует Chrome или Edge; путь можно задать переменной окружения CHROME_PATH.
  */
 import { execFileSync } from 'node:child_process';
@@ -15,7 +14,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const TMP = join(ROOT, '.tmp');
-const WIDTHS = (process.argv[2] || '1280,1440,1920').split(',').map((n) => parseInt(n.trim(), 10)).filter(Boolean);
+const WIDTHS = (process.argv[2] || '360,768,1024,1280,1440,1920').split(',').map((n) => parseInt(n.trim(), 10)).filter(Boolean);
 
 const CHROME_CANDIDATES = [
   process.env.CHROME_PATH,
@@ -34,7 +33,7 @@ if (!chrome) {
 }
 
 const sitesDoc = JSON.parse(readFileSync(join(ROOT, 'data', 'sites.json'), 'utf8'));
-const PAGES = ['index.html', 'champ.html', 'categories.html']
+const PAGES = ['index.html']
   .concat(sitesDoc.sites.map((site) => `pages/${site.slot}-${site.slug}.html`));
 
 const page = `<!DOCTYPE html>

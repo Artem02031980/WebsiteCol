@@ -3,61 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ScreenTune — разбор сайта в коллекции</title>
-<meta name="description" content="ScreenTune — одностраничный сайт приложения для macOS, которое делает скриншоты, записывает экран и редактирует результат. Визуально это тёплая кремов">
+<title>ScreenTune — сайт в коллекции</title>
+<meta name="description" content="Сайт приложения для macOS со скриншотами и записью экрана">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../assets/style.css">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ScreenTune — разбор сайта в коллекции">
-<meta property="og:description" content="ScreenTune — одностраничный сайт приложения для macOS, которое делает скриншоты, записывает экран и редактирует результат. Визуально это тёплая кремов">
+<meta property="og:title" content="ScreenTune — сайт в коллекции">
+<meta property="og:description" content="Сайт приложения для macOS со скриншотами и записью экрана">
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
 <header class="header">
   <div class="container header__inner">
-    <a class="logo" href="../index.html">
-      Коллекция сайтов
-      <span class="logo__count">31 сайт</span>
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="240" height="48" fetchpriority="high">
     </a>
-    <nav class="nav" id="nav" aria-label="Основная навигация">
-      <ul class="nav__list">
-        <li><a class="nav__link" href="../index.html">Коллекция</a></li>
-        <li><a class="nav__link" href="../champ.html">Чемпионат</a></li>
-        <li><a class="nav__link" href="../categories.html">Категории</a></li>
-      </ul>
-    </nav>
   </div>
 </header>
 <main id="main">
 <nav class="breadcrumbs container" aria-label="Хлебные крошки">
   <ol>
-    <li><a href="../index.html">Коллекция</a></li>
-    <li><a href="../categories.html">Сервисы и приложения</a></li>
+    <li><a href="../index.html">Главная</a></li>
     <li>ScreenTune</li>
   </ol>
 </nav>
 
 <article class="container">
   <header class="site-head">
-    <p class="eyebrow">Сайт 019 · Лендинг · Сервисы и приложения</p>
-    <div class="site-head__row">
-      <h1 style="margin:0">ScreenTune</h1>
-      <span class="rank rank--8"><span class="rank__dot" aria-hidden="true"></span>8 место в чемпионате · 78.4 / 100</span>
-    </div>
+    <h1>ScreenTune</h1>
+    <ul class="taglist">
+      <li><span class="tag">Сервисы и приложения</span></li>
+      <li><span class="tag tag--muted">Продуктивность</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Утилитарный техно</span></li>
+      <li><span class="tag tag--muted">Сайт жив</span></li>
+    </ul>
     <p class="site-head__url"><a href="https://screentune.app/" target="_blank" rel="noopener noreferrer">https://screentune.app/</a></p>
-    <div class="site-head__actions">
-      <a class="btn btn--accent" href="https://screentune.app/" target="_blank" rel="noopener noreferrer">Открыть сайт</a>
-      <a class="btn btn--ghost" href="../champ.html">Чемпионат целиком</a>
-      <button class="btn btn--ghost" type="button" id="copy-link">Скопировать ссылку на страницу</button>
-    </div>
-    <div class="card__meta">
-      <span class="tag">Сервисы и приложения</span>
-      <span class="tag tag--muted">Продуктивность</span>
-      <span class="tag tag--muted">Минимализм</span><span class="tag tag--muted">Утилитарный техно</span>
-      <span class="tag">Работает</span>
-    </div>
   </header>
 
   <div class="site-grid section section--tight">
@@ -65,347 +48,16 @@
       <figure class="shot">
       <img src="../Screens/019.png" alt="Скриншот главной страницы ScreenTune"
            width="1671" height="1080" decoding="async" fetchpriority="high">
-      <figcaption>Скриншот из <code>Screens/019.png</code>, доминирующий цвет занимает 71% кадра.</figcaption>
     </figure>
 
       <section class="panel">
         <h2>Что это</h2>
-        <p>ScreenTune — одностраничный сайт приложения для macOS, которое делает скриншоты, записывает экран и редактирует результат. Визуально это тёплая кремовая страница с почти чёрным текстом и единственным карамельным акцентом, внутри которой тёмное окно редактора становится вторым миром. Главная механика — липкие скролл-сцены: полноэкранный фиксированный слой героя меняет геометрию и превращается в содержимое редактора, а интерфейс приложения пересобран настоящими элементами разметки — около двухсот классов с живыми ползунками, тумблерами и вкладками — и переключается классами-фазами по прогрессу скролла. Собрано как статический сайт без клиентского фреймворка, раздаётся через Vercel, плавный скролл — на Lenis.</p>
-        <blockquote class="small muted" style="margin:0;padding-left:var(--space-2);border-left:3px solid var(--border-subtle)">Описание владельца коллекции: Уютный кремово-угольный сайт Mac-приложения для скриншотов и записи экрана. Необычные переходы от одного интерактивного демо к другому по скроллу.</blockquote>
+        <p>ScreenTune — одностраничный сайт приложения для macOS, которое делает скриншоты, записывает экран и редактирует результат. Визуально это тёплая кремовая страница с почти чёрным текстом и единственным карамельным акцентом, внутри которой тёмное окно редактора становится вторым миром. Главная механика — липкие скролл-сцены: полноэкранный фиксированный слой героя меняет геометрию и превращается в содержимое редактора, а интерфейс приложения пересобран настоящими элементами разметки — около двухсот классов с живыми ползунками, тумблерами и вкладками — и переключается классами-фазами по прогрессу скролла. Собрано как статический сайт без клиентского фреймворка, раздаётся через Vercel, плавный скролл — на Lenis. Уютный кремово-угольный сайт Mac-приложения для скриншотов и записи экрана. Необычные переходы от одного интерактивного демо к другому по скроллу.</p>
       </section>
 
       <section class="panel">
         <h2>Чем интересен</h2>
         <ul><li>Переход от первого экрана к демо сделан не анимацией картинки, а морфингом геометрии: полноэкранный фиксированный слой интерполируется по координатам и радиусу в прямоугольник внутри окна редактора — то есть герой физически «причаливает» и становится содержимым редактора.</li><li>Интерактивные демо — не видео и не скриншоты, а заново собранный средствами разметки интерфейс приложения: около двухсот классов, живые ползунки с границами значений, свотчи фонов, вкладки, сетки рамок, устройств и курсоров, тумблеры с состоянием. Видео осталось только в первом экране и в карточках преимуществ.</li><li>Смена сцен сделана переключением классов-фаз на контейнере по долям прогресса скролла с окном 0.055 и границами 0.25, 0.5 и 0.75 — то есть вся режиссура описана в стилях, а скрипт только считает прогресс.</li><li>Lenis подключён деликатно: создаётся только если библиотека есть, карусель выведена из перехвата отдельным атрибутом, а демо-код слушает и нативный скролл, и событие библиотеки, и изменение размера.</li><li>Есть полноценный статический вариант вместо простого отключения анимаций: при узком экране, грубом указателе или включённом «уменьшении движения» липкие секции становятся обычными, а скрипт демо на 75 килобайт вообще не загружается — только по первому скроллу, касанию или клавише; при смене режима страница перезагружается, чтобы два макета не жили одновременно.</li><li>Кнопка скачивания подстраивается под платформу: на не-Mac она превращается в «поделиться ссылкой на Mac», подпись меняется, а клик копирует адрес с подтверждением — при этом подпись меняется и в блоке живых объявлений для скринридера.</li><li>Сайт двуязычный: английская версия по умолчанию и полноценная японская локаль по адресам /ja, причём в карте сайта у каждой страницы проставлены альтернативные адреса обеих версий.</li></ul>
-      </section>
-
-      <section class="panel">
-        <h2>Все 30 номинаций сайта</h2>
-        <p class="small muted">Итог: <strong>78.4 / 100</strong> по профилю «Сервис, банк, образование».
-        Первых мест в критериях: <strong>10</strong> (единолично 0, разделено 10),
-        призовых мест: <strong>12</strong>.
-        Строки отсортированы по месту в номинации, ссылка ведёт к номинации в чемпионате.</p>
-        <ol class="criterion-list">
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-func-interactive">Интерактивные элементы</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>10</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 4,5 %</span>
-            <span>Функциональность и интерактивность</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-ux-interface">Удобство интерфейса</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 5,25 %</span>
-            <span>Юзабилити и UX</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-design-brand_fit">Соответствие бренду и ЦА</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Дизайн и визуальное восприятие</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-design-consistency">Целостность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Дизайн и визуальное восприятие</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-content-freshness">Актуальность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Контент</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-content-grammar">Грамотность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Контент</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-tech-seo">SEO-оптимизация</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 5,33 %</span>
-            <span>Техническое качество</span>
-            <span>измеряется автоматически</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-ux-responsive">Адаптивность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 5,25 %</span>
-            <span>Юзабилити и UX</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-ux-a11y">Доступность (a11y)</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 5,25 %</span>
-            <span>Юзабилити и UX</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-design-readability">Читабельность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>1</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Дизайн и визуальное восприятие</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-fit-nomination_fit">Попадание в номинацию</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>2</strong> из 31</span>
-            <span>вес 0,67 %</span>
-            <span>Соответствие категории и целям</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-fit-completeness">Полнота реализации</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>2</strong> из 31</span>
-            <span>вес 0,67 %</span>
-            <span>Соответствие категории и целям</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-func-integrations">Интеграции</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>5</strong> из 31</span>
-            <span>вес 4,5 %</span>
-            <span>Функциональность и интерактивность</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-content-multimedia">Мультимедийность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>6</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Контент</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-tech-stability">Стабильность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>6</strong> из 31</span>
-            <span>вес 5,33 %</span>
-            <span>Техническое качество</span>
-            <span>измеряется автоматически</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-content-relevance">Релевантность и полнота</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>7</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Контент</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-innovation-creativity">Креативность в решении задач</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>9</strong></span>
-            <span>место <strong>8</strong> из 31</span>
-            <span>вес 3 %</span>
-            <span>Инновации и технологичность</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-content-expertise">Уникальность и экспертность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>8</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Контент</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-tech-security">Безопасность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>7</strong></span>
-            <span>место <strong>10</strong> из 31</span>
-            <span>вес 5,33 %</span>
-            <span>Техническое качество</span>
-            <span>измеряется автоматически</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-trust-transparency">Прозрачность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>7</strong></span>
-            <span>место <strong>10</strong> из 31</span>
-            <span>вес 2,25 %</span>
-            <span>Доверие и репутация</span>
-            <span>измеряется автоматически</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-ux-nav">Интуитивность навигации</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>7</strong></span>
-            <span>место <strong>11</strong> из 31</span>
-            <span>вес 5,25 %</span>
-            <span>Юзабилити и UX</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-func-promises">Соответствие заявленному</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>7</strong></span>
-            <span>место <strong>12</strong> из 31</span>
-            <span>вес 4,5 %</span>
-            <span>Функциональность и интерактивность</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-fit-usp">Уникальность предложения</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>13</strong> из 31</span>
-            <span>вес 0,67 %</span>
-            <span>Соответствие категории и целям</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-design-originality">Инновационность в дизайне</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>15</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Дизайн и визуальное восприятие</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-trust-reviews">Отзывы и рейтинги</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>4</strong></span>
-            <span>место <strong>15</strong> из 31</span>
-            <span>вес 2,25 %</span>
-            <span>Доверие и репутация</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-func-forms_search">Работа форм и поиска</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>5</strong></span>
-            <span>место <strong>16</strong> из 31</span>
-            <span>вес 4,5 %</span>
-            <span>Функциональность и интерактивность</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-innovation-modern_tech">Современные технологии</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>17</strong> из 31</span>
-            <span>вес 3 %</span>
-            <span>Инновации и технологичность</span>
-            <span>измеряется автоматически</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-design-aesthetics">Эстетика и оригинальность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>8</strong></span>
-            <span>место <strong>21</strong> из 31</span>
-            <span>вес 2,8 %</span>
-            <span>Дизайн и визуальное восприятие</span>
-            <span>экспертная оценка</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-trust-expertise">Экспертность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>7</strong></span>
-            <span>место <strong>24</strong> из 31</span>
-            <span>вес 2,25 %</span>
-            <span>Доверие и репутация</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        <li class="criterion">
-          <span class="criterion__title"><a href="../champ.html#crit-trust-social">Социальная ответственность</a></span>
-          <span class="criterion__meta">
-            <span>балл <strong>3</strong></span>
-            <span>место <strong>27</strong> из 31</span>
-            <span>вес 2,25 %</span>
-            <span>Доверие и репутация</span>
-            <span>частично измеряется</span>
-          </span>
-        </li>
-        </ol>
-      </section>
-
-      <section class="panel">
-        <h2>Обоснования по разделам</h2>
-        <dl class="specs">
-        <div><dt>Юзабилити и UX</dt><dd>Переходы между сценами сделаны липкими слоями с морфингом геометрии, а демо — настоящий интерфейс приложения с живыми контролами; мешает мелочь: вместо полноценных контактов только почта поддержки и профиль в соцсети.</dd></div>
-        <div><dt>Дизайн и визуальное восприятие</dt><dd>Кремовая страница с угольным текстом и единственным карамельным акцентом, внутри которой открывается тёмное окно редактора; контраст двух миров и есть основной приём.</dd></div>
-        <div><dt>Контент</dt><dd>Возможности, три сценария использования, восемь вопросов в FAQ, цены 35 и 89 долларов и журнал изменений с версиями — материал подан без воды.</dd></div>
-        <div><dt>Техническое качество</dt><dd>Статика без фреймворка с robots, картой сайта на две локали и микроразметкой приложения и FAQ; счётчик Google Analytics подключается лениво, но без запроса согласия.</dd></div>
-        <div><dt>Функциональность и интерактивность</dt><dd>Демо редактора и форматов действительно интерактивны, кнопка скачивания подстраивается под платформу и умеет копировать ссылку; форм обратной связи и поиска нет.</dd></div>
-        <div><dt>Доверие и репутация</dt><dd>Есть политика и условия с датами, право Японии, продавец и оговорка о распространении вне Mac App Store; названия юрлица и регистрационных номеров нет.</dd></div>
-        <div><dt>Инновации и технологичность</dt><dd>Морфинг полноэкранного слоя в окно редактора и пересобранный разметкой интерфейс приложения вместо видео — редкое сочетание; плюс честный статический вариант для узких экранов.</dd></div>
-        <div><dt>Соответствие категории и целям</dt><dd>Лендинг закрывает всё, что нужно для покупки утилиты: что умеет, сколько стоит и что с приватностью — и показывает продукт в работе, а не на картинке.</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Что не проверено</h2>
-        <ul class="small"><li>Рендер в браузере не выполнялся: вычисленные значения, фактические тайминги и то, как переходы выглядят в движении, не наблюдались — механика выведена из разметки, стилей и кода.</li><li>Расхождение скриншота 019.png с текущей версией: на снимке другой подзаголовок и кнопка «Share to Mac» с подписью «Open on a Mac to download ScreenTune.», тогда как живая страница для настольного браузера отдаёт «Screen recorder &amp; screenshot editor for Mac.» и «Download for Mac». Тексты со снимка в разметке есть — как часть макета внутри демо и как вариант кнопки для не-Mac, но чем вызвано расхождение (снимали не с Mac или это более ранняя версия), без рендера не установлено.</li><li>Итоговая высота скролл-трека секции демо выведена из каскада стилей, а не измерена: два правила с одинаковой специфичностью задают разную высоту, и порядок в файле решает исход — фактическое поведение в браузере не проверено.</li><li>Путь к фиду обновлений приложения не найден: каталог обновлений закрыт в robots, а ожидаемые адреса отдают 404, хотя политика описывает периодическую проверку обновлений.</li><li>Наличие звуковых эффектов не доказано и не опровергнуто: в разметке нет аудио, а скрипт минифицирован; кастомного курсора в стилях тоже нет.</li><li>Юридические реквизиты отсутствуют: названия юрлица, регистрационного номера, VAT и адреса на сайте нет — только почта поддержки и профиль в X.</li><li>Платёжный контур не установлен: страницы покупки отдают разметку стороннего провайдера, но какой именно домен обслуживает оплату, не проверялось.</li><li>Версии библиотек не определены: строки версии в минифицированном скрипте нет.</li><li>Публично доступен неманифицированный скрипт демо при том, что страница подключает сжатую версию; намеренность публикации исходника не подтверждена.</li><li>Соответствие скриншота 019.png текущему состоянию сайта частично расходится (см. выше), дата снимка неизвестна.</li></ul>
       </section>
     </div>
 
@@ -419,46 +71,43 @@
           <div><dt>Подкатегории</dt><dd>Продуктивность</dd></div>
           <div><dt>Для кого</dt><dd>Обычным пользователям, Дизайнерам, Разработчикам</dd></div>
           <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
-          <div><dt>Приёмы</dt><dd>Липкие секции, Скроллителлинг, Микроанимации, Видео-фон</dd></div>
-          <div><dt>Технологии</dt><dd>Статический HTML, CSS и JavaScript без фреймворка, Vercel, Lenis, Своя сборка сжатых ассетов, Самохостинг вариативных шрифтов, Медиа с ленивой загрузкой, Google Analytics 4, Оплата и обновления приложения</dd></div>
           <div><dt>Язык</dt><dd>Мультиязычный</dd></div>
-          <div><dt>Страна</dt><dd>Япония — по праву в условиях использования с исключительной юрисдикцией японских судов, по полноценной японской локали в карте сайта и по японскому шрифту в запасном стеке; юридического адреса и регистрационных данных на сайте нет</dd></div>
-          <div><dt>Автор</dt><dd>Сакино Томиура (Sakino Tomiura) — указан в мета-теге автора и в микроразметке как Person, издатель — организация ScreenTune</dd></div>
+          <div><dt>Страна</dt><dd>Япония</dd></div>
+          <div><dt>Автор</dt><dd>Сакино Томиура (Sakino Tomiura)</dd></div>
           <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен</dt><dd>2026-10-02</dd></div>
+          <div><dt>Добавлен в коллекцию</dt><dd>02.10.2026</dd></div>
         </dl>
       </section>
 
       <section class="panel">
         <h2>Палитра</h2>
         <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F4EEE8"></span><span class="swatch" style="background:#1B1B1A"></span><span class="swatch" style="background:#523D31"></span><span class="swatch" style="background:#9C9891"></span><span class="swatch" style="background:#CCC8C2"></span></div>
-       <ul class="small mono" style="list-style:none;padding:0;margin:var(--space-2) 0 0">
-       <li>#F4EEE8 — 71% кадра</li><li>#1B1B1A — 22% кадра</li><li>#523D31 — 4% кадра</li><li>#9C9891 — 1% кадра</li><li>#CCC8C2 — 1% кадра</li>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#F4EEE8" aria-hidden="true"></span>
+          <code>#F4EEE8</code> — 71% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#1B1B1A" aria-hidden="true"></span>
+          <code>#1B1B1A</code> — 22% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#523D31" aria-hidden="true"></span>
+          <code>#523D31</code> — 4% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#9C9891" aria-hidden="true"></span>
+          <code>#9C9891</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#CCC8C2" aria-hidden="true"></span>
+          <code>#CCC8C2</code> — 1% кадра
+        </li>
        </ul>
-       <p class="small muted" style="margin-top:var(--space-2)">измерено из Screens/019.png (кремовый занимает 71% кадра, угольный 22%); токены сайта: фон страницы #F6F0EB, текст #0A0A0A, карамельный акцент #D19461, поверхность демо #1E1E1E</p>
-        <dl class="specs" style="margin-top:var(--space-2)">
-          <div><dt>Режим</dt><dd>Светлая</dd></div>
-          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Чемпионат</h2>
-        <p class="small muted">8 место из 31 · 78.4 / 100 ·
-        первых мест 10 из 30 · сильнее всего: Интерактивные элементы (1 место)</p>
-        <ul class="small" style="margin:0;padding-left:var(--space-3)">
-          <li>Удобство интерфейса — 1 место, 9 баллов</li>
-          <li>Адаптивность — 1 место, 8 баллов</li>
-          <li>Доступность (a11y) — 1 место, 8 баллов</li>
-          <li>Соответствие бренду и ЦА — 1 место, 9 баллов</li>
-          <li>Читабельность — 1 место, 8 баллов</li>
-          <li>Целостность — 1 место, 9 баллов</li>
-          <li>Актуальность — 1 место, 9 баллов</li>
-          <li>Грамотность — 1 место, 9 баллов</li>
-          <li>SEO-оптимизация — 1 место, 9 баллов</li>
-          <li>Интерактивные элементы — 1 место, 10 баллов</li>
-        </ul>
-        <p style="margin:var(--space-2) 0 0"><a class="btn btn--ghost btn--small" href="../champ.html">Все 30 номинаций</a></p>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
       </section>
 
       <section class="panel">
@@ -502,37 +151,13 @@
             <span class="muted">— общее: Сервисы и приложения, Минимализм, Скроллителлинг, Микроанимации, Видео-фон</span></li>
         </ul>
       </section>
-
-      <nav class="panel" aria-label="Соседние сайты коллекции">
-        <h2>Рядом в коллекции</h2>
-        <p class="small">← <a href="018-flect.html">Flect</a></p>
-        <p class="small">→ <a href="020-odin.html">Odin</a></p>
-      </nav>
     </div>
   </div>
 </article>
 </main>
 <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <h2>Коллекция</h2>
-      <p>31 сайт в подборке. Данные лежат в <code>data/sites.json</code>,
-      страницы собираются командой <code>node tools/build.mjs</code>.</p>
-    </div>
-    <div>
-      <h2>Разделы</h2>
-      <p><a href="../index.html">Каталог с поиском</a></p>
-      <p><a href="../champ.html">Чемпионат сайтов</a></p>
-      <p><a href="../categories.html">Категории и аудитории</a></p>
-    </div>
-    <div>
-      <h2>Как это устроено</h2>
-      <p>Оценки чемпионата выставляются по 30 критериям: каждый критерий — отдельная номинация, вес зависит от категории сайта.</p>
-      <p>Чего не измерили — помечено как <span class="placeholder">не измерено</span>, а не выдумано.</p>
-    </div>
-  </div>
-  <div class="container footer__note">
-    <p>Собранный вручную каталог референсов. Скриншоты — в папке <code>Screens/</code>, схемы данных — в <code>data/SCHEMA.md</code>.</p>
+  <div class="container">
+    <p>31 сайт в подборке · данные: <code>data/sites.json</code> · сборка: <code>node tools/build.mjs</code></p>
   </div>
 </footer>
 <script src="../assets/app.js"></script>

@@ -1,8 +1,8 @@
 /* ============================================================
    Каталог коллекции: поиск, фасеты, сортировка, виды, состояние в адресе.
-   Данные не запрашиваются — всё уже отрендерено в HTML (@@BUILD@@
-   собирает разметку), скрипт только фильтрует и переупорядочивает.
-   Без JS страница читается: видны все карточки и ссылки.
+   Данные не запрашиваются — всё уже отрендерено в HTML, скрипт только
+   фильтрует и переупорядочивает. Без JS страница читается: видны все
+   карточки и ссылки.
    ============================================================ */
 (function () {
   'use strict';
@@ -14,6 +14,7 @@
   var cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('.card')) : [];
   var searchInput = document.getElementById('q');
   var sortSelect = document.getElementById('sort');
+  var customSort = null;
   var viewButtons = Array.prototype.slice.call(document.querySelectorAll('[data-view]'));
   var resetButton = document.getElementById('reset');
   var copyButton = document.getElementById('copy-link');
@@ -63,7 +64,7 @@
 
   /* ---------- Состояние ---------- */
 
-  var state = { q: '', sort: 'score', view: 'cards', facets: {} };
+  var state = { q: '', sort: 'slot-desc', view: 'cards', facets: {} };
   groups.forEach(function (group) { state.facets[group] = []; });
 
   function selected(group) {
@@ -74,7 +75,7 @@
 
   function readInputs() {
     state.q = searchInput ? searchInput.value : '';
-    state.sort = sortSelect ? sortSelect.value : 'score';
+    state.sort = sortSelect ? sortSelect.value : 'slot-desc';
     groups.forEach(function (group) { state.facets[group] = selected(group); });
   }
 
@@ -126,13 +127,197 @@
     if (mode === 'name') return COLLATOR ? COLLATOR.compare(a.dataset.name, b.dataset.name)
       : a.dataset.name.localeCompare(b.dataset.name);
     if (mode === 'slot') return (a.dataset.slot || '').localeCompare(b.dataset.slot || '');
-    if (mode === 'added') return String(b.dataset.added || '').localeCompare(String(a.dataset.added || ''));
-    return num(b.dataset.score) - num(a.dataset.score);
+    /* «По номеру с конца»: свежие сайты сверху */
+    return (b.dataset.slot || '').localeCompare(a.dataset.slot || '');
   }
 
-  function num(value) {
-    var parsed = parseFloat(value);
-    return Number.isFinite(parsed) ? parsed : -1;
+  /* ---------- Сортировка: свой список вместо системного <select> ----------
+     Нативное меню нельзя оформить, поэтому select остаётся в разметке для
+     работы без JS, а здесь скрывается и заменяется кнопкой с listbox.
+     Стрелки, Home/End, Enter, Esc, Tab и набор по первым буквам — как у select. */
+
+  function setupSort(select) {
+    if (!select || !select.parentNode) return null;
+
+    var field = select.closest ? select.closest('.field') : select.parentNode;
+    var label = field ? field.querySelector('.field__label') : null;
+    if (label && !label.id) label.id = 'sort-label';
+
+    var options = Array.prototype.slice.call(select.options).map(function (option) {
+      return { value: option.value, title: option.textContent.trim() };
+    });
+
+    var wrapper = document.createElement('div');
+    wrapper.className = 'select';
+
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'select__button';
+    button.id = 'sort-button';
+    button.setAttribute('aria-haspopup', 'listbox');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', 'sort-listbox');
+    if (label) {
+      button.setAttribute('aria-labelledby', label.id + ' sort-button-value');
+      label.htmlFor = 'sort-button';
+    }
+
+    var valueBox = document.createElement('span');
+    valueBox.className = 'select__value';
+    valueBox.id = 'sort-button-value';
+
+    var chevron = document.createElement('span');
+    chevron.className = 'select__chevron';
+    chevron.setAttribute('aria-hidden', 'true');
+    chevron.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" focusable="false">' +
+      '<path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" ' +
+      'stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+
+    button.appendChild(valueBox);
+    button.appendChild(chevron);
+
+    var list = document.createElement('ul');
+    list.className = 'select__menu';
+    list.id = 'sort-listbox';
+    list.setAttribute('role', 'listbox');
+    list.setAttribute('tabindex', '-1');
+    list.hidden = true;
+    if (label) list.setAttribute('aria-labelledby', label.id);
+
+    var items = options.map(function (option, index) {
+      var item = document.createElement('li');
+      item.className = 'select__option';
+      item.id = 'sort-option-' + index;
+      item.setAttribute('role', 'option');
+      item.setAttribute('data-value', option.value);
+      item.setAttribute('aria-selected', 'false');
+
+      var text = document.createElement('span');
+      text.textContent = option.title;
+      item.appendChild(text);
+
+      var check = document.createElement('span');
+      check.className = 'select__check';
+      check.setAttribute('aria-hidden', 'true');
+      check.innerHTML = '<svg width="12" height="12" viewBox="0 0 12 12" focusable="false">' +
+        '<path d="M1.5 6.5 4.5 9.5 10.5 2.5" fill="none" stroke="currentColor" stroke-width="1.7" ' +
+        'stroke-linecap="round" stroke-linejoin="round"></path></svg>';
+      item.appendChild(check);
+
+      list.appendChild(item);
+      return item;
+    });
+
+    field.insertBefore(wrapper, select);
+    wrapper.appendChild(select);
+    wrapper.appendChild(button);
+    wrapper.appendChild(list);
+    select.hidden = true;
+    select.tabIndex = -1;
+
+    var isOpen = false;
+    var active = -1;
+    var typed = '';
+    var typedTimer = null;
+
+    function valueIndex() {
+      for (var i = 0; i < options.length; i += 1) {
+        if (options[i].value === select.value) return i;
+      }
+      return 0;
+    }
+
+    function setActive(index) {
+      if (!items.length) return;
+      active = Math.max(0, Math.min(index, items.length - 1));
+      for (var i = 0; i < items.length; i += 1) {
+        items[i].classList.toggle('is-active', i === active);
+      }
+      list.setAttribute('aria-activedescendant', items[active].id);
+      if (items[active].scrollIntoView) items[active].scrollIntoView({ block: 'nearest' });
+    }
+
+    function openList(atEnd) {
+      if (isOpen) return;
+      isOpen = true;
+      list.hidden = false;
+      button.setAttribute('aria-expanded', 'true');
+      setActive(atEnd ? items.length - 1 : valueIndex());
+      list.focus();
+    }
+
+    function closeList(refocus) {
+      if (!isOpen) return;
+      isOpen = false;
+      list.hidden = true;
+      button.setAttribute('aria-expanded', 'false');
+      list.removeAttribute('aria-activedescendant');
+      // Если фокус остался в скрытом списке, вернуть его на кнопку, иначе он уйдёт в body
+      if (refocus || document.activeElement === list) button.focus();
+    }
+
+    function choose(index) {
+      var item = items[index];
+      if (!item) return;
+      select.value = item.getAttribute('data-value');
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+      sync();
+      closeList(true);
+    }
+
+    function sync() {
+      var index = valueIndex();
+      valueBox.textContent = options[index] ? options[index].title : '';
+      for (var i = 0; i < items.length; i += 1) {
+        items[i].setAttribute('aria-selected', i === index ? 'true' : 'false');
+      }
+    }
+
+    button.addEventListener('click', function () {
+      if (isOpen) closeList(true);
+      else openList(false);
+    });
+
+    button.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        if (!isOpen) openList(event.key === 'ArrowUp');
+      }
+    });
+
+    // Клик по пункту не должен уводить фокус из списка до выбора
+    list.addEventListener('mousedown', function (event) { event.preventDefault(); });
+
+    list.addEventListener('click', function (event) {
+      var item = event.target.closest ? event.target.closest('.select__option') : null;
+      if (item) choose(items.indexOf(item));
+    });
+
+    list.addEventListener('keydown', function (event) {
+      var key = event.key;
+      if (key === 'ArrowDown') { event.preventDefault(); setActive(active + 1); return; }
+      if (key === 'ArrowUp') { event.preventDefault(); setActive(active - 1); return; }
+      if (key === 'Home') { event.preventDefault(); setActive(0); return; }
+      if (key === 'End') { event.preventDefault(); setActive(items.length - 1); return; }
+      if (key === 'Enter' || key === ' ') { event.preventDefault(); choose(active); return; }
+      if (key === 'Escape') { event.stopPropagation(); closeList(true); return; }
+      if (key === 'Tab') { closeList(true); return; }
+      if (key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+        typed += key.toLowerCase();
+        clearTimeout(typedTimer);
+        typedTimer = setTimeout(function () { typed = ''; }, 600);
+        for (var i = 0; i < options.length; i += 1) {
+          if (options[i].title.toLowerCase().indexOf(typed) === 0) { setActive(i); break; }
+        }
+      }
+    });
+
+    document.addEventListener('pointerdown', function (event) {
+      if (isOpen && !wrapper.contains(event.target)) closeList(false);
+    }, true);
+
+    sync();
+    return { sync: sync };
   }
 
   /* ---------- Отрисовка ---------- */
@@ -140,6 +325,7 @@
   var currentMatches = [];
 
   function apply() {
+    if (customSort) customSort.sync();
     if (!grid) return;
     var queryWords = words(state.q);
     currentMatches = cards.filter(function (card) { return match(card, queryWords, null); });
@@ -250,7 +436,7 @@
     groups.forEach(function (group) {
       if (state.facets[group].length) parts.push(group + '=' + state.facets[group].join(','));
     });
-    if (state.sort !== 'score') parts.push('sort=' + state.sort);
+    if (state.sort !== 'slot-desc') parts.push('sort=' + state.sort);
     if (state.view !== 'cards') parts.push('view=' + state.view);
     var hash = parts.length ? '#' + parts.join('&') : '#';
     try {
@@ -289,7 +475,7 @@
   function resetAll() {
     if (searchInput) searchInput.value = '';
     facetBoxes.forEach(function (box) { box.checked = false; });
-    if (sortSelect) sortSelect.value = 'score';
+    if (sortSelect) sortSelect.value = 'slot-desc';
     setView('cards');
     readInputs();
     apply();
@@ -353,9 +539,12 @@
     });
   }
 
+  /* ---------- Горячие клавиши ---------- */
+
   document.addEventListener('keydown', function (event) {
     var tag = (event.target && event.target.tagName) || '';
-    var typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+    var typing = tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' ||
+      Boolean(event.target && event.target.closest && event.target.closest('.select'));
     if (event.key === '/' && !typing) {
       event.preventDefault();
       if (searchInput) searchInput.focus();
@@ -372,6 +561,7 @@
 
   /* ---------- Старт ---------- */
 
+  customSort = setupSort(sortSelect);
   readUrl();
   setView(state.view);
   apply();

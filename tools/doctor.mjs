@@ -60,11 +60,11 @@ else warn('Chrome', 'не найден — palette.mjs и check-widths.mjs ра�
 /* ---------- Файлы ---------- */
 
 const required = [
-  'index.html', 'champ.html', 'categories.html',
-  'assets/style.css', 'assets/app.js',
-  'data/sites.json', 'data/champ.json', 'data/taxonomy.json', 'data/weights.json', 'data/palette.json',
+  'index.html',
+  'assets/style.css', 'assets/app.js', 'assets/logo.svg',
+  'data/sites.json', 'data/taxonomy.json', 'data/palette.json',
   'tools/build.mjs', 'tools/validate.mjs', 'tools/palette.mjs', 'tools/check-widths.mjs', 'tools/add-site.mjs',
-  'README.md', 'AGENTS.md', 'STATE.md', 'SESSIONS.md'
+  'README.md', 'AGENTS.md', 'STATE.md'
 ];
 const missing = required.filter((rel) => !existsSync(join(ROOT, rel)));
 if (!missing.length) ok('обязательные файлы', `${required.length} шт. на месте`);
@@ -75,33 +75,16 @@ else fail('обязательные файлы', `нет: ${missing.join(', ')}`
 let sites = [];
 try {
   sites = readJson('data/sites.json').sites;
-  const champ = readJson('data/champ.json').sites;
   const taxonomy = readJson('data/taxonomy.json');
-  const weights = readJson('data/weights.json');
 
   const slots = sites.map((s) => s.slot);
   const unique = new Set(slots);
   if (unique.size === slots.length) ok('слоты уникальны', `${slots.length} сайтов`);
   else fail('слоты', 'есть повторы номеров');
 
-  const noChamp = slots.filter((slot) => !champ[slot]);
-  if (!noChamp.length) ok('оценки чемпионата', `есть у всех ${slots.length}`);
-  else fail('оценки чемпионата', `нет у слотов: ${noChamp.join(', ')}`);
-
-  const extraChamp = Object.keys(champ).filter((slot) => !unique.has(slot));
-  if (extraChamp.length) warn('оценки без сайта', extraChamp.join(', '));
-
-  const criteriaKeys = Object.values(weights.criteria).flat().map((c) => c.id ? `${c.section ?? ''}` : '');
-  const expected = Object.entries(weights.criteria).flatMap(([section, list]) => list.map((c) => `${section}.${c.id}`));
-  const champSizes = Object.entries(champ).map(([slot, data]) => [slot, Object.keys(data.criteria || {}).length]);
-  const short = champSizes.filter(([, n]) => n !== expected.length);
-  if (!short.length) ok('критерии', `${expected.length} у каждого сайта`);
-  else warn('критерии', `неполные наборы: ${short.map(([s, n]) => `${s} (${n})`).join(', ')}`);
-  void criteriaKeys;
-
   const ids = (list) => new Set((taxonomy[list] || []).map((x) => x.id));
   const CATS = ids('categories'), AUD = ids('audiences'), TYPES = ids('site_types'),
-    STYLES = ids('styles'), TECHS = ids('techniques'), LANGS = ids('languages'),
+    STYLES = ids('styles'), TECHS = ids('techniques'), LANGS = ids('languages'), LINKS = ids('link_states'),
     SUBS = new Set((taxonomy.categories || []).flatMap((c) => (c.subs || []).map((s) => s.id)));
   const bad = [];
   for (const s of sites) {
@@ -111,7 +94,8 @@ try {
     };
     check('categories', CATS); check('subcategories', SUBS); check('audience', AUD);
     check('site_type', TYPES); check('styles', STYLES); check('techniques', TECHS);
-    if (s.facts && s.facts.language && !LANGS.has(s.facts.language)) bad.push(`${s.slot}.language=${s.facts.language}`);
+    for (const v of (s.facts && s.facts.languages) || []) if (!LANGS.has(v)) bad.push(`${s.slot}.languages=${v}`);
+    if (!LINKS.has(s.link_state)) bad.push(`${s.slot}.link_state=${s.link_state}`);
   }
   if (!bad.length) ok('справочники', 'все id из taxonomy существуют');
   else fail('справочники', bad.slice(0, 8).join(', ') + (bad.length > 8 ? ` … ещё ${bad.length - 8}` : ''));
@@ -143,7 +127,7 @@ if (missingPages.length) warn('нет страниц', missingPages.slice(0, 5).
 
 try {
   const built = statSync(join(ROOT, 'index.html')).mtimeMs;
-  const dataFiles = ['data/sites.json', 'data/champ.json', 'data/taxonomy.json', 'data/weights.json', 'data/palette.json'];
+  const dataFiles = ['data/sites.json', 'data/taxonomy.json', 'data/palette.json'];
   const newer = dataFiles.filter((rel) => existsSync(join(ROOT, rel)) && statSync(join(ROOT, rel)).mtimeMs > built);
   if (!newer.length) ok('сборка свежая', 'данные старше страниц');
   else warn('нужна пересборка', `изменены после сборки: ${newer.join(', ')} → node tools/build.mjs`);

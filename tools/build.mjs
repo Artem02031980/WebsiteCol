@@ -40,7 +40,6 @@ const STYLES = index(taxonomy.styles);
 const TECHS = index(taxonomy.techniques);
 const LANGS = index(taxonomy.languages);
 const MODES = index(taxonomy.palette_modes);
-const LINKS = index(taxonomy.link_states);
 
 const SUBS = new Map();
 for (const category of taxonomy.categories) {
@@ -282,7 +281,7 @@ ${footer()}
    ============================================================ */
 
 function linkStateBadge(site) {
-  if (site.link_state === 'dead') return '<span class="card__state card__state--dead">Сайт недоступен</span>';
+  if (site.link_state === 'dead') return '<span class="card__state card__state--dead">Недействующий сайт</span>';
   if (site.link_state === 'moved') return '<span class="card__state card__state--moved">Сайт переехал</span>';
   return '';
 }
@@ -311,7 +310,7 @@ function card(site) {
     country: country.id,
     mode: palette.mode || '',
     hue: palette.hue || '',
-    link: site.link_state || 'unknown'
+    link: site.link_state === 'alive' ? 'active' : 'inactive'
   };
 
   const attrs = Object.entries(facetValues)
@@ -369,7 +368,6 @@ function buildFacets() {
   const usedStyles = taxonomy.styles.filter((st) => countBy((s) => (s.styles || []).includes(st.id)));
   const usedTechs = taxonomy.techniques.filter((t) => countBy((s) => (s.techniques || []).includes(t.id)));
   const usedLangs = taxonomy.languages.filter((l) => countBy((s) => (s.facts && s.facts.languages || []).includes(l.id)));
-  const usedLinks = taxonomy.link_states.filter((l) => countBy((s) => s.link_state === l.id));
 
   const stackMap = new Map();
   for (const site of sites) {
@@ -415,19 +413,22 @@ function buildFacets() {
     { group: 'lang', title: 'Язык сайта', values: sortFacetValues(usedLangs.map((l) => ({ id: l.id, title: l.title, count: countBy((s) => (s.facts && s.facts.languages || []).includes(l.id)) })), true) }
   ];
 
-  /* Состояние ссылки появляется только когда в коллекции есть неживые ссылки:
-     проверки идут по прямой команде, и пока всё живо — чекбокс не нужен. */
-  const hasInactive = sites.some((s) => s.link_state !== 'alive');
-  if (hasInactive) {
-    groups.push({ group: 'link', title: 'Состояние ссылки', values: sortFacetValues(usedLinks.map((l) => ({ id: l.id, title: l.title, count: countBy((s) => s.link_state === l.id) })), true) });
-  }
-
   const countries = sortFacetValues([...countryMap.values()], true);
   const unknownCountry = countries.find((country) => country.id === 'unknown');
   groups.push({
     group: 'country',
     title: 'Страна',
     values: unknownCountry ? [...countries.filter((country) => country.id !== 'unknown'), unknownCountry] : countries
+  });
+
+  const activeCount = sites.filter((site) => site.link_state === 'alive').length;
+  groups.push({
+    group: 'link',
+    title: 'Актуальность сайта',
+    values: [
+      { id: 'active', title: 'Действующий', count: activeCount },
+      { id: 'inactive', title: 'Недействующий', count: sites.length - activeCount }
+    ]
   });
 
   return groups.filter((group) => group.values.length);
@@ -599,7 +600,7 @@ function renderSite(site) {
       ${(site.categories || []).map((id) => `<li><span class="tag">${esc(title(CATS, id))}</span></li>`).join('\n      ')}
       ${(site.subcategories || []).map((id) => `<li><span class="tag tag--muted">${esc(title(SUBS, id))}</span></li>`).join('\n      ')}
       ${(site.styles || []).map((id) => `<li><span class="tag tag--muted">${esc(title(STYLES, id))}</span></li>`).join('\n      ')}
-      <li><span class="tag tag--muted">${esc(title(LINKS, site.link_state))}</span></li>
+      <li><span class="tag tag--status ${site.link_state === 'alive' ? 'tag--active' : 'tag--inactive'}">${site.link_state === 'alive' ? 'Действующий сайт' : 'Недействующий сайт'}</span></li>
     </ul>
     <p class="site-head__url"><a href="${esc(site.url)}" target="_blank" rel="noopener noreferrer">${esc(site.url)}</a></p>
   </header>

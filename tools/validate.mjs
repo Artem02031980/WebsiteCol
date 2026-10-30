@@ -90,8 +90,11 @@ for (const category of taxonomy.categories || []) {
   uniq(collect(category.subs), `subs категории ${category.id}`);
 }
 for (const item of taxonomy.link_states || []) {
-  if (item.id === 'alive' && item.title !== 'Сайт жив') {
-    error('data/taxonomy.json', 'состояние «alive» должно называться «Сайт жив»');
+  if (item.id === 'alive' && item.title !== 'Действующий сайт') {
+    error('data/taxonomy.json', 'состояние «alive» должно называться «Действующий сайт»');
+  }
+  if (item.id === 'dead' && item.title !== 'Недействующий сайт') {
+    error('data/taxonomy.json', 'состояние «dead» должно называться «Недействующий сайт»');
   }
 }
 

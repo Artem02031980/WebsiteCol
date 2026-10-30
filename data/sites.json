@@ -1,7 +1,7 @@
 {
   "_comment": "Источник правды по коллекции. Описание полей — в data/SCHEMA.md. Страницы собираются командой node tools/build.mjs.",
   "version": 1,
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "sites": [
     {
       "slot": "001",
@@ -4977,6 +4977,501 @@
           "Reb2b",
           "Snitcher",
           "ZoomInfo"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "038",
+      "slug": "sasha-martynchuk",
+      "name": "Sasha Martynchuk",
+      "url": "https://www.sashamartynchuk.com/",
+      "domain": "sashamartynchuk.com",
+      "screenshot": "038.webp",
+      "added": "2026-10-30",
+      "link_state": "alive",
+      "description_user": "Динамичный анимированный сайт-портфолио Саши Мартынчука — продуктового дизайнера из Сан-Хосе.",
+      "description_own": "Портфолио Саши Мартынчука, штатного продуктового дизайнера из Сан-Хосе: 16 лет в SaaS и кейсы OKX, Pangeam, GlobalTrack, Lumus AI. Сайт собран как аккуратный светлый журнал — крупная типографика, цифры проектов и видео-фрагменты интерфейсов, которые включаются сами, когда попадают в кадр.",
+      "description_short": "Светлое портфолио продуктового дизайнера из Сан-Хосе с видео-кейсами",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "designer"
+      ],
+      "audience": [
+        "designers",
+        "product-teams"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "minimal",
+        "monochrome",
+        "editorial"
+      ],
+      "techniques": [
+        "page-transitions",
+        "type-animation",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#060606",
+          "#26272D",
+          "#F7F7F7",
+          "#7F8080",
+          "#5D5E5F"
+        ]
+      },
+      "tech": [
+        {
+          "name": "GSAP 3.15.0",
+          "evidence": "в /assets/site-BDuHJ0WA.js баннер «GSAP 3.15.0» и registerPlugin, твины с autoAlpha, clip-path, тикер"
+        },
+        {
+          "name": "GSAP SplitText 3.15.0",
+          "evidence": "баннер «SplitText 3.15.0» в том же бандле и разбивка через Intl.Segmenter"
+        },
+        {
+          "name": "ScrollTrigger",
+          "evidence": "в бандле ScrollTrigger.create и scrollTrigger-хуки, к ним привязаны элементы data-reveal"
+        },
+        {
+          "name": "Lenis",
+          "evidence": "строка «Lenis: Target not found» и r.start(), r.scrollTo(s,{offset:-24,immediate:!0}) при смене страницы"
+        },
+        {
+          "name": "Barba.js",
+          "evidence": "<body data-barba=\"wrapper\"> и <div data-barba=\"container\" data-barba-namespace=\"home\">; ke.init({transitions:[{name:\"cube\",sync:!0}]}), заголовок x-barba в запросе"
+        },
+        {
+          "name": "Vite",
+          "evidence": "хешированные /assets/site-BDuHJ0WA.js и site-fOKwfq8O.css, обработчик vite:preloadError, link rel=modulepreload"
+        },
+        {
+          "name": "Hostinger",
+          "evidence": "заголовки platform: hostinger, panel: hpanel, Server: hcdn, x-hcdn-cache-status"
+        },
+        {
+          "name": "Шрифты Neue Montreal и Arges",
+          "evidence": "@font-face: NeueMontreal-Regular.woff2 (400), NeueMontreal-Medium (500), Arges-Black-Latin (900)"
+        },
+        {
+          "name": "HTML5 video (AV1/HEVC/H.264)",
+          "evidence": "<video class=\"film\" data-film muted loop playsinline preload=\"none\"> с источниками okx.av1-*.mp4 (av01.0.12M.10), okx.hevc-*.mp4 (hvc1), okx.h264-*.mp4"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — другая, более ранняя версия: тёмный первый экран с сеткой скриншотов, надписью «I design complex software products 0→1», крупным «STAFF PRODUCT DESIGNER» и меню Intro / Approach / Works / About. В живой версии (октябрь 2026) — светлая страница с аватаром, заголовком «Staff product designer based in San Jose, CA», кнопками Send email / Copy email / Resume и вертикальным списком кейсов, меню нет.",
+        "До июня 2026 на домене стояла сборка Framer: в архивном снимке от 14.06.2026 — тысячи упоминаний framer и заголовок «Sasha Martynchuk - Senior Product Designer». Текущая версия отдаётся статикой с Hostinger (platform: hostinger, panel: hpanel, Server: hcdn) и собрана Vite.",
+        "Переходы между страницами — Barba.js с переходом cube: контейнер помечен data-barba=\"container\", в бандле transitions [{name:\"cube\", sync:!0}] с хуками once/leave/enter, поверх работает оверлей .page-transition/.bend с кейфреймами bend-strip, bend-copy и «шторкой» rv-wipe на clip-path.",
+        "Анимация на GSAP 3.15.0 и SplitText 3.15.0 со ScrollTrigger: hero-заголовок разбивается на символы, элементы с data-reveal раскрываются клип-патхом; при prefers-reduced-motion всё сразу ставится в конечное состояние.",
+        "Видео в кейсах — не фон, а «плёнка»: у каждого проекта <video class=\"film\" data-film> с тремя источниками AV1/HEVC/H.264 и preload=\"none\"; IntersectionObserver с threshold 0.33 включает preload=\"auto\" и play(), когда блок на треть в кадре, и ставит на паузу, когда уходит.",
+        "Страницы кейсов устроены как лонгрид: шапка с dl-метриками (роль, команда), hero-изображение с data-fold (сгиб 3D по CSS-переменным --case-fold-angle, --case-fold-zone, --case-fold-round), блок Key contributions со стат-карточками ($208M, $650M) и список глав вроде Trade page revamp, Simple Perps, USDG US adoption.",
+        "Аналитика загружается лениво: GA4 (G-FXJ8ZVD01Y), Microsoft Clarity (y0ua8k1qhj) и Contentsquare подключаются только после первого жеста или через 3,5 с после load — в комментарии кода это объяснено экономией ~370 КБ трекеров."
+      ],
+      "notes": "Начать с переходов: клик по кейсу переворачивает страницу кубом, а на странице кейса hero-картинка складывается по сгибу. Дальше — видео-фрагменты интерфейсов, которые запускаются сами, когда попадают в кадр.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Хосе",
+        "author": "Sasha Martynchuk — продуктовый дизайнер",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Sasha Martynchuk — Staff Product Designer",
+          "title_len": 41,
+          "description": "Staff product designer based in San Jose, CA. 16 years of experience building SaaS products.",
+          "description_len": 92,
+          "og": true,
+          "sitemap": "есть: /sitemap.xml, 7 адресов — главная, okx, pangeam, keyword, globaltrack, lumus-ai, payhoa",
+          "robots": "есть: User-agent: *, Allow: /, Disallow: /admin, Sitemap: https://sashamartynchuk.com/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 14,
+          "broken": []
+        },
+        "contacts": "iamvisp@gmail.com — кнопки Send email и Copy email; LinkedIn linkedin.com/in/iamvisp; резюме /resume.pdf; телефона и формы нет",
+        "legal": "юридических страниц нет: /privacy, /privacy-policy, /terms, /imprint, /cookies и /legal отдают 404, в подвале только «© 2026 Sasha Martynchuk»",
+        "analytics": [
+          "Google Analytics 4 (G-FXJ8ZVD01Y)",
+          "Microsoft Clarity (y0ua8k1qhj)",
+          "Contentsquare"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "039",
+      "slug": "resurf",
+      "name": "Resurf",
+      "url": "https://resurf.so/",
+      "domain": "resurf.so",
+      "screenshot": "039.webp",
+      "added": "2026-10-30",
+      "link_state": "alive",
+      "description_user": "Аккуратный информативный сайт приложения для хранения заметок, ссылок и картинок на Mac и iPhone.",
+      "description_own": "Локальная библиотека для заметок, ссылок, картинок и PDF на Mac, iPhone и iPad: всё падает в инбокс, а потом раскладывается по пространствам и тегам. Внутри — поиск по смыслу, похожие изображения и передача контекста ИИ-агентам по MCP. Сделано для дизайнеров и всех, кто собирает референсы.",
+      "description_short": "Локальная библиотека заметок, ссылок и картинок для Mac и iPhone",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "productivity"
+      ],
+      "audience": [
+        "designers",
+        "developers",
+        "consumers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F7F7F7",
+          "#DDDBD7",
+          "#141515",
+          "#B3B3B0",
+          "#909090"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "разметка грузит /_next/static/chunks/app/(website)/page-da4b37207518b92c.js и /_next/static/css/8ee50a657e1a63d3.css; в заголовках ответа X-Nextjs-Prerender: 1 и Vary: rsc, next-router-state-tree, next-router-prefetch"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id: arn1::…, в адресах чанков параметр dpl=dpl_4jwwzL7hzEnL3KoYXVKBrJYkML16"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "классы с произвольными значениями в разметке h1: text-[36px] sm:text-[40px] md:text-[45px] leading-[41px] tracking-[-0.035em] max-w-[640px]"
+        },
+        {
+          "name": "next/font",
+          "evidence": "инлайновый style=\"font-family:var(--font-signifier)\" у h1 и h2 плюс шесть классов-переменных __variable_* на <html> — шрифты подключены через next/font"
+        },
+        {
+          "name": "next/image",
+          "evidence": "все картинки идут через /_next/image?url=%2Fproduct-tour%2Fcarousel%2F…&w=3840&q=85"
+        },
+        {
+          "name": "Schema.org JSON-LD",
+          "evidence": "script type=application/ld+json с SoftwareApplication: operatingSystem «macOS, iOS, iPadOS», offers price 39 USD priceCurrency USD, author Person «Dipmal Lakhani»"
+        },
+        {
+          "name": "Klibon",
+          "evidence": "единственный сторонний скрипт в документе: https://go.klibon.com/klibon.js?p=3b7a4b87-88f2-4135-8fba-879be7099572"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — более ранняя версия: там подзаголовок «Save notes, links, images, and documents in a fully local library…» и кнопка «Download for Free», на живом сайте — «Save notes, bookmarks, screenshots and PDFs in one local library…» и «Download for Mac»; старая формулировка сохранилась в описании JSON-LD.",
+        "В живом первом экране вместо статичного снимка приложения — интерактивная экскурсия: постер с кнопкой Play и миниатюры разделов (Library, Image, Reader, Notes, Inbox, Search, Spaces, PDF, Assistant).",
+        "Заголовки набраны антиквой: переменная --font-signifier, светлый почти белый фон, крупный центрированный h1 «A Personal Context Library» и пилюля «#1 Product of the Day».",
+        "SEO заточено под поисковые запросы: title «Personal Knowledge Base & Bookmark Manager for Mac», meta keywords перечисляет mymind и Pocket как альтернативы, в карте сайта 4 страницы сравнения (mymind, Raindrop.io, Anybox, Eagle).",
+        "Карта сайта — 97 адресов, из них 75 коротких страниц-инструкций /guides: от сочетаний клавиш и меню-бара до MCP, CLI и подключения своих моделей (OpenAI, Claude, Gemini, OpenRouter, Ollama).",
+        "Плашка «#1 Product of the Day» ведёт на producthunt.com/products/resurf-2 с параметром embed=true — это встроенный бейдж сервиса, а не картинка.",
+        "Полный HTML главной из этой сети не докачался (поток рвался на ~92 КБ за 50 с), поэтому текст читался через релей resurf-so.translate.goog, а разметка — из пришедшей части HTML; /privacy и /terms ответили 429 на HEAD-запрос, похоже на ограничение частоты, в битые не записаны."
+      ],
+      "notes": "Смотреть первый экран: крупная антиква Signifier на почти белом фоне, спокойные кнопки скачивания и живая экскурсия по интерфейсу. Дальше — раздел /guides: 75 коротких инструкций, по которым видно, как устроено приложение.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Dipmal Lakhani — независимый разработчик",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Resurf: Personal Knowledge Base & Bookmark Manager for Mac",
+          "title_len": 58,
+          "description": "Save notes, bookmarks, screenshots, and PDFs in one local library on Mac, iPhone, and iPad. Search offline, hand context to Claude or Cursor over MCP.",
+          "description_len": 150,
+          "og": true,
+          "sitemap": "есть: 97 адресов — 75 страниц /guides, 4 сравнения, 3 статьи блога, остальное — главная, about, roadmap, changelogs, download, license, blog, ios, presskit, affiliates, support, faq, privacy, terms",
+          "robots": "User-agent: * → Allow: /; Disallow: /api/, /checkout/, /checkout-success/, /gift; отдельные правила для Twitterbot и OAI-SearchBot; Sitemap: https://resurf.so/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 6,
+          "broken": []
+        },
+        "contacts": "почта support@resurf.so, X сайта (@resurfso) и личный X автора (@deeplakhani), страницы Support и Feedback; телефона и почтового адреса нет",
+        "legal": "страницы Privacy и Terms в подвале, копирайт © 2026 Resurf; цена и условия лицензии — на /license («Buy a license · $39»)",
+        "analytics": [
+          "Klibon — go.klibon.com/klibon.js (единственный сторонний скрипт)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "040",
+      "slug": "hancore",
+      "name": "Hancore",
+      "url": "https://hancore.dev/",
+      "domain": "hancore.dev",
+      "screenshot": "040.webp",
+      "added": "2026-10-30",
+      "link_state": "alive",
+      "description_user": "Иммерсивный сайт-портфолио разработчика тем и плагинов для Linux-сборок, который публикует свои проекты под псевдонимом Hancore. Страница оформлена в виде хакерского футуристичного терминала.",
+      "description_own": "Портфолио разработчика Hancore: темы, плагины и оболочки для Linux-сборки Omarchy, оформленные как терминал и редактор кода. Вместо карточек — интерактивное древо проектов, живая статистика GitHub и палитры тем; зайти стоит разработчикам, которые любят минималистичные интерфейсы.",
+      "description_short": "Терминальное портфолио тем и плагинов для Linux-сборки Omarchy",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "developer"
+      ],
+      "audience": [
+        "developers"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "utility-tech",
+        "cyberpunk"
+      ],
+      "techniques": [
+        "dark-default",
+        "type-animation",
+        "drag-interaction",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#0C0C0C",
+          "#2F2F2C",
+          "#585751",
+          "#828279",
+          "#C1BFA7"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовки ответа главной: Server: cloudflare, CF-Cache-Status: HIT, CF-RAY, Alt-Svc h3"
+        },
+        {
+          "name": "Cloudflare Web Analytics",
+          "evidence": "script static.cloudflareinsights.com/beacon.min.js с data-cf-beacon token dcc1be70d6054fa7a5c540b3562c2cd4 на обеих страницах"
+        },
+        {
+          "name": "Vanilla JavaScript ES-модули",
+          "evidence": "script type=module glimpse.js и editor.js; editor.js импортирует archive.js, watch.js, bar.js, wheel.js, terminal.js, blueprint.js, tip.js, family.js, lightbox.js"
+        },
+        {
+          "name": "Canvas 2D",
+          "evidence": "четыре canvas на главной (wall, machine, tile, overlay) и canvas в строке VISITORS — графика рисуется скриптом, без WebGL-библиотек в разметке"
+        },
+        {
+          "name": "Шрифты (Archivo, Instrument Serif, IBM Plex Mono)",
+          "evidence": "@font-face в frame.css: /assets/fonts/archivo.ttf, /assets/fonts/InstrumentSerif-Regular.ttf, /assets/fonts/IBMPlexMono-Regular.ttf"
+        },
+        {
+          "name": "JSON как источник контента",
+          "evidence": "editor.js делает fetch content.json, themes.json, github-snapshot.json, stack.json, months.json"
+        },
+        {
+          "name": "GitHub REST API",
+          "evidence": "github-snapshot.json перечисляет источники api.github.com/users/HANCORE-linux, /repos?type=owner&per_page=100 и страницу contributions"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — более ранняя версия: в кадре терминал fish со статистикой на 4 октября 2026 (793 подписчика, 4'282 контрибуции, 217'373 визита), тогда как живая главная — канвас-«стена кода» с входом Enter ↩ на /site/, а данные обновлены 15 октября (1'317 подписчиков, 4'457 контрибуций, 221'847 визитов).",
+        "Текущий сайт — две HTML-страницы: интро / (canvas, «a quiet wall of code») и редактор /site/ с деревом проектов; sitemap.xml, manifest.json и favicon.ico отдают 404 (иконка — favicon.svg), OG-тегов и JSON-LD нет.",
+        "Контент /site/ собирается из JSON: content.json (8 проектов и 28 палитр тем), themes.json, github-snapshot.json, stack.json и months.json; проекты — темы и плагины Omarchy, крупнейшие waybar-themes (652 звезды), Shibumi-Shell (229) и quickshell-dots (210).",
+        "Метафора терминала держится на деталях: fish-промпт, whoami и fetch HANCORE-linux в старом кадре, вращаемое колесо карточек «scroll · drag the wheel», строка VISITORS с canvas-графиком и панель WORM / EYE / GHOST.",
+        "В профиле GitHub, на который ведёт шапка (rel=me), указаны имя HANCORE, Германия и био про UI/UX и open-source; аккаунт создан 4 сентября 2025.",
+        "Собственный счётчик /api/seen отдаёт JSON: 221'847 визитов с 26 сентября 2026, данные засеяны аналитикой Cloudflare; на странице он рисует гистограмму.",
+        "Публичных контактов, кроме ссылок, нет: почты и телефона на страницах не найдено, юридических страниц тоже; в about — GitHub, Discord, Ko-fi, Buy Me a Coffee и две ссылки на omarchy.org."
+      ],
+      "notes": "Смотреть вход Enter ↩ с канвас-интро в редактор: слева вращаемое колесо проектов, справа терминал с README и палитрой темы. Начать стоит с Shibumi-Shell и waybar-themes.",
+      "facts": {
+        "https": true,
+        "country": "Германия",
+        "author": "Hancore (HANCORE-linux)",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "hancore.dev",
+          "title_len": 11,
+          "description": "hancore.dev — a quiet wall of code. Engineering with feeling.",
+          "description_len": 61,
+          "og": false,
+          "sitemap": "не найдено (404)",
+          "robots": "есть, 1248 байт: только комментарии о content-signals (search, ai-input, ai-train), без User-agent, Disallow и Sitemap",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 6,
+          "broken": []
+        },
+        "contacts": "GitHub, Discord, Ko-fi и Buy Me a Coffee; в about ещё ссылки на omarchy.org/teams и omarchy.org/air; почты и телефона нет",
+        "legal": "нет: /privacy/ и /contact/ отдают 404, копирайта и условий на страницах нет; лицензии MIT и GPL-3.0 — только в README проектов",
+        "analytics": [
+          "Cloudflare Web Analytics (beacon.min.js)",
+          "собственный счётчик /api/seen на данных Cloudflare"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "041",
+      "slug": "lightspark",
+      "name": "Lightspark",
+      "url": "https://www.lightspark.com/",
+      "domain": "lightspark.com",
+      "screenshot": "041.webp",
+      "added": "2026-10-30",
+      "link_state": "alive",
+      "description_user": "Светлый сдержанный сайт международной платёжной системы.",
+      "description_own": "Сайт международной платёжной платформы Lightspark: один API, чтобы открывать долларовые счета, принимать и отправлять деньги, выпускать карты и стейблкоины в 65+ странах. Спокойный светлый лендинг для финтех-команд: размытые карточки интерфейсов в первом экране и швейцарская типографика.",
+      "description_short": "Светлый API денег: долларовые счета, карты и стейблкоины в 65+ странах",
+      "categories": [
+        "finance",
+        "saas"
+      ],
+      "subcategories": [
+        "fintech",
+        "crypto"
+      ],
+      "audience": [
+        "fintech",
+        "product-teams",
+        "developers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "swiss-type",
+        "strict-b2b"
+      ],
+      "techniques": [
+        "marquee",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F7F7F7",
+          "#525E3D",
+          "#D0D1CD",
+          "#777567",
+          "#B0B1AA"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "заголовок X-Powered-By: Next.js, атрибуты data-next-head, чанки /_next/static/chunks и _buildManifest.js, роутер pages (_app, pages/index)"
+        },
+        {
+          "name": "React",
+          "evidence": "чанки framework-5991737ec854c1b5.js и main-a6aa65be32620e2f.js, гидрация из __NEXT_DATA__ с pageProps"
+        },
+        {
+          "name": "Prismic CMS",
+          "evidence": "документы Prismic в __NEXT_DATA__ (layout.seo, hubspotFormId), картинки с images.prismic.io/lightspark-web, internal.prismic.io в CSP connect-src"
+        },
+        {
+          "name": "Suisse Intl (Swiss Typefaces)",
+          "evidence": "@font-face font-family: Suisse Intl, src url(/fonts/SuisseIntlVF.woff2) format woff2-variations, вес 100–900; отдельно Suisse Intl Mono и Italic"
+        },
+        {
+          "name": "CSS Modules",
+          "evidence": "хешированные классы Footer_metaRow__ySQ7D, MainSections_stageCarouselCard__0bEPX, Marquee_track__vznT9; в CSS ноль --tw- и ноль @layer — Tailwind нет"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id: arn1::iad1::9h858-1793362224668"
+        },
+        {
+          "name": "Google Tag Manager",
+          "evidence": "в чанке _app-44817acd33900988.js загрузчик googletagmanager.com/gtm.js?id= и контейнер GTM-PZVJRZC; /js/datalayer.js задаёт gtag consent по умолчанию denied"
+        },
+        {
+          "name": "Osano (CMP)",
+          "evidence": "скрипт cmp.osano.com/169mFYTYUq2n01rC/29058e6e-a025-4cf6-96d2-a85e87c5e857/osano.js и классы .osano-cm-dialog в _app"
+        },
+        {
+          "name": "VWO (Visual Website Optimizer)",
+          "evidence": "/js/vwo.js с account_id 910376 и preconnect к dev.visualwebsiteoptimizer.com"
+        },
+        {
+          "name": "HubSpot",
+          "evidence": "hubspotFormId 0298b10d-ae20-4d1f-b2fe-7fcb42365250 в __NEXT_DATA__ и js.hubspot.com/web-interactives-embed.js в чанке _app"
+        },
+        {
+          "name": "Schema.org JSON-LD",
+          "evidence": "script type=application/ld+json с @graph: Organization (legalName Lightspark Group, Inc., foundingDate 2022-05-12, sameAs на X, LinkedIn, YouTube, GitHub) и WebSite"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца совпадает с живой главной по заголовку «The API for money», подзаголовку и кнопкам «Book a demo» и «Get API key», но в шапке скриншота первым пунктом идёт «What we do», а на живом сайте перед ним появился «Our products».",
+        "Тема светлая и почти монохромная: в CSS-переменных фон #f2f2f2, текст #020202, серая шкала от #f8f8f7 до #1a1a1a, из акцентов — синий #15b9eb; при этом meta theme-color задан чёрным (#000).",
+        "Первый экран — не картинка, а карусель-сцена из макетов интерфейсов: 128 карточек MainSections_stageCarouselCard и 152 маски cardMaskRest/cardMaskHover, края растворяются в фоне.",
+        "Логотипы партнёров (SoFi, Coinbase, Revolut, Nubank) идут бегущей строкой: блок с role=marquee и двумя одинаковыми сегментами Marquee_segment для бесшовного цикла, появление блоков — атрибуты data-reveal.",
+        "Футер честно описывает регулирование: Lightspark Group, Inc. — не банк, не биржа и не кастодиан, карты выпускаются партнёрами, банковские услуги — Lead Bank и Cross River Bank (Member FDIC), © 2022–2026; почты и телефона на сайте нет, только форма Talk with sales.",
+        "Контента больше, чем лендинга: две карты сайта на 140 и 690 адресов, среди них 79 новостей, 15 страниц FAQ и большой раздел /knowledge с материалами вроде «ACH vs SEPA» и страницами мгновенных платежей по странам.",
+        "Ссылка Support в подвале ведёт на support.lightspark.com, который из этой сети не разрешается по DNS; остальные 15 проверенных адресов, включая docs.lightspark.com и trustcenter.lightspark.com, ответили 200."
+      ],
+      "notes": "Смотреть первый экран: размытые макеты счетов, карт и кошельков на цветных градиентах и швейцарская Suisse Intl. Дальше — бегущая строка логотипов и секция продуктов с «таблетками» направлений.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Lightspark Group, Inc.",
+        "year": 2022,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Lightspark | The API for money: accounts, payments, cards",
+          "title_len": 57,
+          "description": "Launch global accounts, payments, cards, and stablecoins under your brand with one integration. Local rails in 65+ countries, real-time settlement, your economics.",
+          "description_len": 163,
+          "og": true,
+          "sitemap": "есть: /sitemap.xml — 140 адресов и /sitemap2.xml — 690 адресов (новости, /knowledge, FAQ, capabilities, businesses, solutions, legal)",
+          "robots": "есть: Allow /, закрыты /api/ и /partner-summit-2025, указаны Sitemap на sitemap.xml и sitemap2.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 16,
+          "broken": [
+            "https://support.lightspark.com/"
+          ]
+        },
+        "contacts": "форма Talk with sales на /contact; в подвале ссылки на docs.lightspark.com, trustcenter.lightspark.com, X, LinkedIn, GitHub; почты и телефона в разметке нет",
+        "legal": "Terms & conditions, Privacy policy, Licenses, Cookie preferences (Osano); дисклеймер в подвале: Lightspark Group, Inc. — не банк, не биржа и не кастодиан, банковские услуги через Lead Bank и Cross River Bank (Member FDIC), © 2022–2026",
+        "analytics": [
+          "Google Tag Manager (GTM-PZVJRZC)",
+          "Osano (CMP, gtag consent denied по умолчанию)",
+          "VWO (account 910376)",
+          "HubSpot (формы, formId 0298b10d)"
         ],
         "languages": [
           "en"

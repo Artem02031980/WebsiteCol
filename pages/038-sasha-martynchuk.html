@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sasha Martynchuk — сайт в коллекции</title>
+<meta name="description" content="Светлое портфолио продуктового дизайнера из Сан-Хосе с видео-кейсами">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sasha Martynchuk — сайт в коллекции">
+<meta property="og:description" content="Светлое портфолио продуктового дизайнера из Сан-Хосе с видео-кейсами">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Sasha Martynchuk</li>
+  </ol>
+</nav>
+
+<article class="container">
+  <header class="site-head">
+    <h1>Sasha Martynchuk</h1>
+    <ul class="taglist">
+      <li><span class="tag">Личные сайты и портфолио</span></li>
+      <li><span class="tag tag--muted">Дизайнер</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Монохром</span></li>
+      <li><span class="tag tag--muted">Редакционный</span></li>
+      <li><span class="tag tag--muted">Сайт жив</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://www.sashamartynchuk.com/" target="_blank" rel="noopener noreferrer">https://www.sashamartynchuk.com/</a></p>
+  </header>
+
+  <div class="site-grid section section--tight">
+      <figure class="shot">
+      <img src="../screens/038.webp" alt="Скриншот главной страницы Sasha Martynchuk"
+           width="1899" height="1257" decoding="async" fetchpriority="high">
+    </figure>
+
+      <section class="panel">
+        <h2>Что это</h2>
+        <p>Портфолио Саши Мартынчука, штатного продуктового дизайнера из Сан-Хосе: 16 лет в SaaS и кейсы OKX, Pangeam, GlobalTrack, Lumus AI. Сайт собран как аккуратный светлый журнал — крупная типографика, цифры проектов и видео-фрагменты интерфейсов, которые включаются сами, когда попадают в кадр. Динамичный анимированный сайт-портфолио Саши Мартынчука — продуктового дизайнера из Сан-Хосе.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Чем интересен</h2>
+        <ul><li>Скриншот владельца — другая, более ранняя версия: тёмный первый экран с сеткой скриншотов, надписью «I design complex software products 0→1», крупным «STAFF PRODUCT DESIGNER» и меню Intro / Approach / Works / About. В живой версии (октябрь 2026) — светлая страница с аватаром, заголовком «Staff product designer based in San Jose, CA», кнопками Send email / Copy email / Resume и вертикальным списком кейсов, меню нет.</li><li>До июня 2026 на домене стояла сборка Framer: в архивном снимке от 14.06.2026 — тысячи упоминаний framer и заголовок «Sasha Martynchuk - Senior Product Designer». Текущая версия отдаётся статикой с Hostinger (platform: hostinger, panel: hpanel, Server: hcdn) и собрана Vite.</li><li>Переходы между страницами — Barba.js с переходом cube: контейнер помечен data-barba=&quot;container&quot;, в бандле transitions [{name:&quot;cube&quot;, sync:!0}] с хуками once/leave/enter, поверх работает оверлей .page-transition/.bend с кейфреймами bend-strip, bend-copy и «шторкой» rv-wipe на clip-path.</li><li>Анимация на GSAP 3.15.0 и SplitText 3.15.0 со ScrollTrigger: hero-заголовок разбивается на символы, элементы с data-reveal раскрываются клип-патхом; при prefers-reduced-motion всё сразу ставится в конечное состояние.</li><li>Видео в кейсах — не фон, а «плёнка»: у каждого проекта &lt;video class=&quot;film&quot; data-film&gt; с тремя источниками AV1/HEVC/H.264 и preload=&quot;none&quot;; IntersectionObserver с threshold 0.33 включает preload=&quot;auto&quot; и play(), когда блок на треть в кадре, и ставит на паузу, когда уходит.</li><li>Страницы кейсов устроены как лонгрид: шапка с dl-метриками (роль, команда), hero-изображение с data-fold (сгиб 3D по CSS-переменным --case-fold-angle, --case-fold-zone, --case-fold-round), блок Key contributions со стат-карточками ($208M, $650M) и список глав вроде Trade page revamp, Simple Perps, USDG US adoption.</li><li>Аналитика загружается лениво: GA4 (G-FXJ8ZVD01Y), Microsoft Clarity (y0ua8k1qhj) и Contentsquare подключаются только после первого жеста или через 3,5 с после load — в комментарии кода это объяснено экономией ~370 КБ трекеров.</li></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Паспорт</h2>
+        <dl class="specs">
+          <div><dt>Домен</dt><dd class="mono">sashamartynchuk.com</dd></div>
+          <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
+          <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
+          <div><dt>Подкатегории</dt><dd>Дизайнер</dd></div>
+          <div><dt>Для кого</dt><dd>Дизайнерам, Продуктовым командам</dd></div>
+          <div><dt>Стиль</dt><dd>Минимализм, Монохром, Редакционный</dd></div>
+          <div><dt>Язык</dt><dd>Английский</dd></div>
+          <div><dt>Страна</dt><dd>США, Сан-Хосе</dd></div>
+          <div><dt>Автор</dt><dd>Sasha Martynchuk — продуктовый дизайнер</dd></div>
+          <div><dt>Год</dt><dd>2026</dd></div>
+          <div><dt>Добавлен в коллекцию</dt><dd>30.10.2026</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Палитра</h2>
+        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#060606"></span><span class="swatch" style="background:#26272D"></span><span class="swatch" style="background:#F7F7F7"></span><span class="swatch" style="background:#7F8080"></span><span class="swatch" style="background:#5D5E5F"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#060606, #26272D, #F7F7F7, #7F8080, #5D5E5F">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#060606" aria-hidden="true"></span>
+          <code>#060606</code> — 43% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#26272D" aria-hidden="true"></span>
+          <code>#26272D</code> — 14% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#F7F7F7" aria-hidden="true"></span>
+          <code>#F7F7F7</code> — 9% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#7F8080" aria-hidden="true"></span>
+          <code>#7F8080</code> — 6% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#5D5E5F" aria-hidden="true"></span>
+          <code>#5D5E5F</code> — 5% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Тёмная</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технические факты</h2>
+        <dl class="specs">
+          <div><dt>HTTPS</dt><dd>да</dd></div>
+          <div><dt>Meta viewport</dt><dd>да</dd></div>
+          <div><dt>Title</dt><dd>Sasha Martynchuk — Staff Product Designer <span class="small muted">(41 симв.)</span></dd></div>
+          <div><dt>Description</dt><dd>Staff product designer based in San Jose, CA. 16 years of experience building SaaS products. <span class="small muted">(92 симв.)</span></dd></div>
+          <div><dt>Open Graph</dt><dd>да</dd></div>
+          <div><dt>Структурированные данные</dt><dd>да</dd></div>
+          <div><dt>Sitemap</dt><dd>есть: /sitemap.xml, 7 адресов — главная, okx, pangeam, keyword, globaltrack, lumus-ai, payhoa</dd></div>
+          <div><dt>Robots</dt><dd>есть: User-agent: *, Allow: /, Disallow: /admin, Sitemap: https://sashamartynchuk.com/sitemap.xml</dd></div>
+          <div><dt>Аналитика</dt><dd>Google Analytics 4 (G-FXJ8ZVD01Y), Microsoft Clarity (y0ua8k1qhj), Contentsquare</dd></div>
+          <div><dt>Проверено ссылок</dt><dd>14</dd></div>
+          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
+          <div><dt>Контакты</dt><dd>iamvisp@gmail.com — кнопки Send email и Copy email; LinkedIn linkedin.com/in/iamvisp; резюме /resume.pdf; телефона и формы нет</dd></div>
+          <div><dt>Юридическая информация</dt><dd>юридических страниц нет: /privacy, /privacy-policy, /terms, /imprint, /cookies и /legal отдают 404, в подвале только «© 2026 Sasha Martynchuk»</dd></div>
+        </dl>
+      </section>
+
+      <section class="panel">
+        <h2>Технологии с доказательствами</h2>
+        <ul class="small">
+          <li><strong>GSAP 3.15.0</strong> — в /assets/site-BDuHJ0WA.js баннер «GSAP 3.15.0» и registerPlugin, твины с autoAlpha, clip-path, тикер</li><li><strong>GSAP SplitText 3.15.0</strong> — баннер «SplitText 3.15.0» в том же бандле и разбивка через Intl.Segmenter</li><li><strong>ScrollTrigger</strong> — в бандле ScrollTrigger.create и scrollTrigger-хуки, к ним привязаны элементы data-reveal</li><li><strong>Lenis</strong> — строка «Lenis: Target not found» и r.start(), r.scrollTo(s,{offset:-24,immediate:!0}) при смене страницы</li><li><strong>Barba.js</strong> — &lt;body data-barba=&quot;wrapper&quot;&gt; и &lt;div data-barba=&quot;container&quot; data-barba-namespace=&quot;home&quot;&gt;; ke.init({transitions:[{name:&quot;cube&quot;,sync:!0}]}), заголовок x-barba в запросе</li><li><strong>Vite</strong> — хешированные /assets/site-BDuHJ0WA.js и site-fOKwfq8O.css, обработчик vite:preloadError, link rel=modulepreload</li><li><strong>Hostinger</strong> — заголовки platform: hostinger, panel: hpanel, Server: hcdn, x-hcdn-cache-status</li><li><strong>Шрифты Neue Montreal и Arges</strong> — @font-face: NeueMontreal-Regular.woff2 (400), NeueMontreal-Medium (500), Arges-Black-Latin (900)</li><li><strong>HTML5 video (AV1/HEVC/H.264)</strong> — &lt;video class=&quot;film&quot; data-film muted loop playsinline preload=&quot;none&quot;&gt; с источниками okx.av1-*.mp4 (av01.0.12M.10), okx.hevc-*.mp4 (hvc1), okx.h264-*.mp4</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Что смотреть в первую очередь</h2>
+        <p class="small">Начать с переходов: клик по кейсу переворачивает страницу кубом, а на странице кейса hero-картинка складывается по сгибу. Дальше — видео-фрагменты интерфейсов, которые запускаются сами, когда попадают в кадр.</p>
+      </section>
+  </div>
+</article>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>41 сайт в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

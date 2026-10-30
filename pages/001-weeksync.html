@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>WeekSync</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>WeekSync</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://weeksync.app/" target="_blank" rel="noopener noreferrer">https://weeksync.app/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/001.webp" alt="Скриншот главной страницы WeekSync"
            width="1776" height="1118" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Одностраничный лендинг планировщика для творческих команд: работа расписывается неделями, а проекты, загрузка и личные цели собраны в одном месте. Сайт сделан как отрывной билет с перфорацией и разрезом ножницами, который раскрывается по мере прокрутки. Забавный минималистичный сайт планировщика для команд. Стилизован под отрывной билет, который разрезается при скролле.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Одностраничный лендинг планировщика для творческих команд: работа расписывается неделями, а проекты, загрузка и личные цели собраны в одном месте. Сайт сделан как отрывной билет с перфорацией и разрезом ножницами, который раскрывается по мере прокрутки. Забавный минималистичный сайт планировщика для команд. Стилизован под отрывной билет, который разрезается при скролле.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Метаданные отдаются стримом в конце документа, а og:*, twitter:* и canonical отсутствуют полностью: превью в соцсетях формировать нечем, зато есть meta keywords.</li><li>Страница прокручивается не нативно: контейнер фиксирован (100vh, overflow: hidden), содержимое двигается трансформом, у body отключён скролл; на ширине 1023 px и меньше всё превращается в обычный поток документа.</li><li>Отрывной билет собран без единой картинки: перфорация — это пунктирная CSS-рамка, разрез имитируют два SVG-лезвия ножниц с поворотом на ±20 градусов и отдельная «молния».</li><li>Заголовок и счётчики «N of 3» скрыты до выполнения JS (opacity: 0, печать посимвольно), поэтому без JavaScript пользователь видит пустые блоки; cookie-баннер тоже рендерится только на клиенте.</li><li>Тяжёлых библиотек нет: ноль совпадений gsap, three, lottie, framer-motion и tailwind; анимация собрана из CSS-модулей и PNG-спрайта на 29 кадров, звук — из двух коротких MP3.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример того, как из одной метафоры (отрывной билет с ножницами) вырастает вся механика страницы.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">weeksync.app</dd></div>
-          <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>Командная работа, Продуктивность</dd></div>
-          <div><dt>Для кого</dt><dd>Продуктовым командам, Дизайнерам, Агентствам</dd></div>
-          <div><dt>Стиль</dt><dd>Минимализм, Игривый</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Год</dt><dd>2024</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Метаданные отдаются стримом в конце документа, а og:*, twitter:* и canonical отсутствуют полностью: превью в соцсетях формировать нечем, зато есть meta keywords.</li><li>Страница прокручивается не нативно: контейнер фиксирован (100vh, overflow: hidden), содержимое двигается трансформом, у body отключён скролл; на ширине 1023 px и меньше всё превращается в обычный поток документа.</li><li>Отрывной билет собран без единой картинки: перфорация — это пунктирная CSS-рамка, разрез имитируют два SVG-лезвия ножниц с поворотом на ±20 градусов и отдельная «молния».</li><li>Заголовок и счётчики «N of 3» скрыты до выполнения JS (opacity: 0, печать посимвольно), поэтому без JavaScript пользователь видит пустые блоки; cookie-баннер тоже рендерится только на клиенте.</li><li>Тяжёлых библиотек нет: ноль совпадений gsap, three, lottie, framer-motion и tailwind; анимация собрана из CSS-модулей и PNG-спрайта на 29 кадров, звук — из двух коротких MP3.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#CEC9BF"></span><span class="swatch" style="background:#F8F7F3"></span><span class="swatch" style="background:#DFE296"></span><span class="swatch" style="background:#090804"></span><span class="swatch" style="background:#333221"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">weeksync.app</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Командная работа, Продуктивность</dd></div>
+        <div><dt>Для кого</dt><dd>Продуктовым командам, Дизайнерам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Игривый</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Год</dt><dd>2024</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#CEC9BF"></span><span class="swatch" style="background:#F8F7F3"></span><span class="swatch" style="background:#DFE296"></span><span class="swatch" style="background:#090804"></span><span class="swatch" style="background:#333221"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#CEC9BF, #F8F7F3, #DFE296, #090804, #333221">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>WeekSync. All projects and the team — in one workspace. <span class="small muted">(55 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>WeekSync. All projects and the team — in one workspace. <span class="small muted">(55 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>нет</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>нет: /sitemap.xml отдаёт 404</dd></div>
-          <div><dt>Robots</dt><dd>нет: /robots.txt отдаёт 404</dd></div>
-          <div><dt>Аналитика</dt><dd>Google Analytics 4 (G-M53918BGEB)</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>14</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>Telegram @no_ftr, X @v_sheikin, hello@weeksync.app (в разметке скрыт обфускацией Cloudflare); телефона, адреса и формы обратной связи нет</dd></div>
-          <div><dt>Юридическая информация</dt><dd>© 2024–2026 WeekSync®; страницы terms-and-conditions, privacy-policy и terms-of-use отвечают 200, Privacy Policy обновлена 20.04.2026; юрлицо и адрес не указаны</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js (App Router, RSC)</strong> — заголовок x-powered-by: Next.js, чанки /_next/static/chunks/app/page-*.js, RSC-пейлоад self.__next_f.push</li><li><strong>React 19 (стриминг метаданных)</strong> — title и description приходят не в &lt;head&gt;, а в конце &lt;body&gt; и завершаются маркером self.__next_f.push([1,&quot;d:\&quot;$8:metadata\&quot;&quot;])</li><li><strong>CSS Modules</strong> — хешированные классы ticket_ticket__d_kvJ, FeatureCard_wrapper__qwb3w; в 37 735 символах CSS ноль совпадений tailwind и --tw-</li><li><strong>next/font, самохостинг шрифтов</strong> — @font-face с src /_next/static/media/*.woff2: 7 начертаний Inter и 8 Red Hat Mono, preload в заголовках</li><li><strong>next/image</strong> — &lt;img data-nimg=&quot;1&quot; src=&quot;/_next/image?url=…&amp;w=1920&amp;q=75&quot;&gt; с srcSet</li><li><strong>Embla Carousel</strong> — классы Reviews_embla__9yLXa и девять упоминаний embla в JS-бандле</li><li><strong>Web Audio API</strong> — createBufferSource и decodeAudioData, файлы /landing/hover.mp3 (972 Б) и /landing/click.mp3 (5 374 Б)</li><li><strong>Google Analytics 4</strong> — googletagmanager.com/gtag/js?id=G-M53918BGEB и gtag(&#39;config&#39;, &#39;G-M53918BGEB&#39;)</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-RAY, cookie __cf_bm, обфускация почты через /cdn-cgi/l/email-protection</li><li><strong>DigitalOcean App Platform</strong> — заголовки x-do-app-origin и x-do-orig-status: 200</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример того, как из одной метафоры (отрывной билет с ножницами) вырастает вся механика страницы.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js (App Router, RSC)</strong> — заголовок x-powered-by: Next.js, чанки /_next/static/chunks/app/page-*.js, RSC-пейлоад self.__next_f.push</li><li><strong>React 19 (стриминг метаданных)</strong> — title и description приходят не в &lt;head&gt;, а в конце &lt;body&gt; и завершаются маркером self.__next_f.push([1,&quot;d:\&quot;$8:metadata\&quot;&quot;])</li><li><strong>CSS Modules</strong> — хешированные классы ticket_ticket__d_kvJ, FeatureCard_wrapper__qwb3w; в 37 735 символах CSS ноль совпадений tailwind и --tw-</li><li><strong>next/font, самохостинг шрифтов</strong> — @font-face с src /_next/static/media/*.woff2: 7 начертаний Inter и 8 Red Hat Mono, preload в заголовках</li><li><strong>next/image</strong> — &lt;img data-nimg=&quot;1&quot; src=&quot;/_next/image?url=…&amp;w=1920&amp;q=75&quot;&gt; с srcSet</li><li><strong>Embla Carousel</strong> — классы Reviews_embla__9yLXa и девять упоминаний embla в JS-бандле</li><li><strong>Web Audio API</strong> — createBufferSource и decodeAudioData, файлы /landing/hover.mp3 (972 Б) и /landing/click.mp3 (5 374 Б)</li><li><strong>Google Analytics 4</strong> — googletagmanager.com/gtag/js?id=G-M53918BGEB и gtag(&#39;config&#39;, &#39;G-M53918BGEB&#39;)</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-RAY, cookie __cf_bm, обфускация почты через /cdn-cgi/l/email-protection</li><li><strong>DigitalOcean App Platform</strong> — заголовки x-do-app-origin и x-do-orig-status: 200</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Giga</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Giga</h1>
     <ul class="taglist">
@@ -43,42 +43,47 @@
     <p class="site-head__url"><a href="https://giga.ai/" target="_blank" rel="noopener noreferrer">https://giga.ai/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/037.webp" alt="Скриншот главной страницы Giga"
            width="2000" height="1050" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Сайт платформы Giga для поддержки клиентов: ИИ-агенты отвечают в чате, по телефону и в почте. Первый экран — оранжевая плёнка с зерном, точечная типографика и панель-«устройство» с кнопкой Talk, которая собирается на глазах и открывает демо. Технологичный сайт платформы ИИ-агентов для поддержки клиентов. Трёхмерная демопанель, анимации, пиксельная типографика и много других интересных деталей.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Сайт платформы Giga для поддержки клиентов: ИИ-агенты отвечают в чате, по телефону и в почте. Первый экран — оранжевая плёнка с зерном, точечная типографика и панель-«устройство» с кнопкой Talk, которая собирается на глазах и открывает демо. Технологичный сайт платформы ИИ-агентов для поддержки клиентов. Трёхмерная демопанель, анимации, пиксельная типографика и много других интересных деталей.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Скриншот владельца — более ранняя версия: в нём заголовок «Fast forward to fixed.» и подпись про голос, чат и почту, а в живой версии 29 октября первый экран говорит «No time to wait.», текст переписан, слева вместо «hello_» стоит «try talking_» с полем рабочей почты, а в правом краю виден вертикальный бейдж «W. Nominee»; архивная копия от 7 октября совпадает со скриншотом дословно.</li><li>В кадре скриншота нет шапки сайта: на живой странице над первым экраном есть меню Platform, Solutions, Industries, Company, вход и оранжевая кнопка See a demo.</li><li>«Трёхмерная» панель сделана не на WebGL: в серверной разметке нет ни канваса, ни three.js, а корпус устройства собран встроенным SVG с рисованием контура по stroke-dasharray, штампованными деталями и CSS-бликом sheen; панель живёт в декларативном теневом DOM.</li><li>Точечный заголовок — это шрифт Geist Pixel Line, подключённый локально и предзагруженный; остальная типографика — Geist Sans и Geist Mono, Inter и Source Serif 4.</li><li>Скролл-сцена рассказывает, как Giga повышает лимит отклонённой карты: у секции есть свой stage на высоту экрана, главы Build, Observe, Improve, кнопки-стадии и подсказки про стрелки и Escape, а скрытая панель review позволяет перематывать шестисекундную анимацию.</li><li>Сайт отдаёт HTML крайне медленно из этой сети: из 426 КБ за семь минут пришло около 17 КБ, поэтому разметку читали по копии Wayback от 7 октября, живой первый экран — по снимку Microlink, а заголовок, meta и JSON-LD сверили в живом ответе.</li><li>Публичных контактов на главной нет: ни почты, ни телефона, только формы с рабочей почтой и страница /contact; юридический слой — © 2026 Giga AI, Inc., шесть отдельных документов и Trust Center с бейджами SOC 2 Type II, ISO 27001, ISO 42001 и PCI DSS 4.0.1.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть первый экран: точечная типографика, сборка панели-устройства из SVG и демо с кнопкой Talk, а дальше — скролл-сцену с лимитом карты и главы Build / Observe / Improve.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">giga.ai</dd></div>
-          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>ИИ-сервисы</dd></div>
-          <div><dt>Для кого</dt><dd>Продуктовым командам, Маркетологам</dd></div>
-          <div><dt>Стиль</dt><dd>Утилитарный техно, Ретро</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Автор</dt><dd>Giga AI, Inc.</dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>29.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Скриншот владельца — более ранняя версия: в нём заголовок «Fast forward to fixed.» и подпись про голос, чат и почту, а в живой версии 29 октября первый экран говорит «No time to wait.», текст переписан, слева вместо «hello_» стоит «try talking_» с полем рабочей почты, а в правом краю виден вертикальный бейдж «W. Nominee»; архивная копия от 7 октября совпадает со скриншотом дословно.</li><li>В кадре скриншота нет шапки сайта: на живой странице над первым экраном есть меню Platform, Solutions, Industries, Company, вход и оранжевая кнопка See a demo.</li><li>«Трёхмерная» панель сделана не на WebGL: в серверной разметке нет ни канваса, ни three.js, а корпус устройства собран встроенным SVG с рисованием контура по stroke-dasharray, штампованными деталями и CSS-бликом sheen; панель живёт в декларативном теневом DOM.</li><li>Точечный заголовок — это шрифт Geist Pixel Line, подключённый локально и предзагруженный; остальная типографика — Geist Sans и Geist Mono, Inter и Source Serif 4.</li><li>Скролл-сцена рассказывает, как Giga повышает лимит отклонённой карты: у секции есть свой stage на высоту экрана, главы Build, Observe, Improve, кнопки-стадии и подсказки про стрелки и Escape, а скрытая панель review позволяет перематывать шестисекундную анимацию.</li><li>Сайт отдаёт HTML крайне медленно из этой сети: из 426 КБ за семь минут пришло около 17 КБ, поэтому разметку читали по копии Wayback от 7 октября, живой первый экран — по снимку Microlink, а заголовок, meta и JSON-LD сверили в живом ответе.</li><li>Публичных контактов на главной нет: ни почты, ни телефона, только формы с рабочей почтой и страница /contact; юридический слой — © 2026 Giga AI, Inc., шесть отдельных документов и Trust Center с бейджами SOC 2 Type II, ISO 27001, ISO 42001 и PCI DSS 4.0.1.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#933E21"></span><span class="swatch" style="background:#050505"></span><span class="swatch" style="background:#D1CDC8"></span><span class="swatch" style="background:#503D5B"></span><span class="swatch" style="background:#B87F18"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">giga.ai</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>ИИ-сервисы</dd></div>
+        <div><dt>Для кого</dt><dd>Продуктовым командам, Маркетологам</dd></div>
+        <div><dt>Стиль</dt><dd>Утилитарный техно, Ретро</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Автор</dt><dd>Giga AI, Inc.</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>29.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#933E21"></span><span class="swatch" style="background:#050505"></span><span class="swatch" style="background:#D1CDC8"></span><span class="swatch" style="background:#503D5B"></span><span class="swatch" style="background:#B87F18"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#933E21, #050505, #D1CDC8, #503D5B, #B87F18">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -106,40 +111,28 @@
          <div><dt>Режим</dt><dd>Тёмная</dd></div>
          <div><dt>Цвет фона</dt><dd>Красный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Giga: AI support agents that improve your metrics <span class="small muted">(49 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Giga builds enterprise AI agents for customer support that resolve complex conversations across chat, voice, and email. Deployed in weeks, human-like at scale. <span class="small muted">(159 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>есть: 149 адресов — платформа, индустрии, новости и юридические страницы, часть записей с lastmod 2026 года</dd></div>
-          <div><dt>Robots</dt><dd>есть: Allow: /, закрыты /api/ и четыре адреса /tailored/*, указана карта сайта</dd></div>
-          <div><dt>Аналитика</dt><dd>Cookiebot (3e2dee21-…), Google Consent Mode v2, PostHog, HubSpot, Reb2b, Snitcher, ZoomInfo</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>3</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>ни почты, ни телефона: демо и заявка через формы с рабочей почтой, отдельная страница /contact; в подвале X, LinkedIn и Trust Center</dd></div>
-          <div><dt>Юридическая информация</dt><dd>© 2026 Giga AI, Inc.; Privacy Policy, Cookie Policy, Terms of Service, Enterprise Pilot Terms, Prohibited Use Policy, Data Processing Addendum; Trust Center с SOC 2 Type II, ISO 27001, ISO 42001 и PCI DSS 4.0.1</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js</strong> — служебные чанки /_next/static/chunks/, заголовки X-Nextjs-Prerender и X-Nextjs-Stale-Time, поток self.__next_f и meta next-size-adjust</li><li><strong>Turbopack</strong> — чанк /_next/static/chunks/turbopack-2jbz4uoc5r7ka.js</li><li><strong>React</strong> — маркеры Suspense &lt;!--$--&gt; и ссылки на клиентские модули $L2 в потоке серверных компонентов</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id и идентификатор деплоя dpl_… в атрибуте html</li><li><strong>Surface CMS</strong> — CSP разрешает фреймы cms.withsurface.com и формы forms.withsurface.com; страница и стили лежат в /assets/site/home/&lt;hash&gt;/, в потоке есть модули SurfaceTracking и SurfaceFunnelTracking</li><li><strong>Declarative Shadow DOM</strong> — &lt;template shadowrootmode=&quot;open&quot;&gt; со своим &lt;style&gt; у панели первого экрана и у секции how — компоненты изолированы в теневом дереве</li><li><strong>Geist Pixel Line</strong> — предзагрузка geist_pixel_line-s.p.*.woff2 и класс geistpixelline_… на html; заголовок набран точечной гарнитурой, рядом Geist Sans, Geist Mono, Inter и Source Serif 4</li><li><strong>JSON-LD</strong> — три блока application/ld+json: Organization, WebSite и SoftwareApplication</li><li><strong>Cookiebot</strong> — предзагрузка consent.cookiebot.com/uc.js и data-cbid 3e2dee21-57d0-45a0-ab52-e2cc978ce8a1 с отдельным id для региона US</li><li><strong>Google Consent Mode v2</strong> — инлайн-сниппет gtag(&#39;consent&#39;,&#39;default&#39;) с denied для ad_storage, ad_user_data и ad_personalization</li><li><strong>LiveKit</strong> — CSP connect-src разрешает wss://*.livekit.cloud и wss://agents.prod.giga.ai — голосовое демо</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть первый экран: точечная типографика, сборка панели-устройства из SVG и демо с кнопкой Talk, а дальше — скролл-сцену с лимитом карты и главы Build / Observe / Improve.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js</strong> — служебные чанки /_next/static/chunks/, заголовки X-Nextjs-Prerender и X-Nextjs-Stale-Time, поток self.__next_f и meta next-size-adjust</li><li><strong>Turbopack</strong> — чанк /_next/static/chunks/turbopack-2jbz4uoc5r7ka.js</li><li><strong>React</strong> — маркеры Suspense &lt;!--$--&gt; и ссылки на клиентские модули $L2 в потоке серверных компонентов</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id и идентификатор деплоя dpl_… в атрибуте html</li><li><strong>Surface CMS</strong> — CSP разрешает фреймы cms.withsurface.com и формы forms.withsurface.com; страница и стили лежат в /assets/site/home/&lt;hash&gt;/, в потоке есть модули SurfaceTracking и SurfaceFunnelTracking</li><li><strong>Declarative Shadow DOM</strong> — &lt;template shadowrootmode=&quot;open&quot;&gt; со своим &lt;style&gt; у панели первого экрана и у секции how — компоненты изолированы в теневом дереве</li><li><strong>Geist Pixel Line</strong> — предзагрузка geist_pixel_line-s.p.*.woff2 и класс geistpixelline_… на html; заголовок набран точечной гарнитурой, рядом Geist Sans, Geist Mono, Inter и Source Serif 4</li><li><strong>JSON-LD</strong> — три блока application/ld+json: Organization, WebSite и SoftwareApplication</li><li><strong>Cookiebot</strong> — предзагрузка consent.cookiebot.com/uc.js и data-cbid 3e2dee21-57d0-45a0-ab52-e2cc978ce8a1 с отдельным id для региона US</li><li><strong>Google Consent Mode v2</strong> — инлайн-сниппет gtag(&#39;consent&#39;,&#39;default&#39;) с denied для ad_storage, ad_user_data и ad_personalization</li><li><strong>LiveKit</strong> — CSP connect-src разрешает wss://*.livekit.cloud и wss://agents.prod.giga.ai — голосовое демо</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

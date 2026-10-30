@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Dia</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Dia</h1>
     <ul class="taglist">
@@ -45,42 +45,47 @@
     <p class="site-head__url"><a href="https://www.diabrowser.com/" target="_blank" rel="noopener noreferrer">https://www.diabrowser.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/014.webp" alt="Скриншот главной страницы Dia"
            width="1602" height="1163" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Продуктовый сайт браузера Dia от The Browser Company: утренний брифинг, ответы по контексту открытых вкладок и подключённых инструментов, профили и группы вкладок. Светлая продуктовая подача с видео и мягкими анимациями. Информативный экспрессивный продуктовый сайт браузера.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Продуктовый сайт браузера Dia от The Browser Company: утренний брифинг, ответы по контексту открытых вкладок и подключённых инструментов, профили и группы вкладок. Светлая продуктовая подача с видео и мягкими анимациями. Информативный экспрессивный продуктовый сайт браузера.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Скриншот 014.webp фиксирует более раннюю тёмную версию сайта эпохи листа ожидания: живой сайт уже светлый и релизный, со слоганом «More than a browser. A better workday.»</li><li>Старый слоган «A browser you won&#39;t dread opening» при этом остался в og:title и twitter:title — метаданные разошлись с заголовком страницы.</li><li>Контент полностью на Sanity: в данных страницы лежат реальные документы CMS, а hero-компонент умеет выбирать тип ассета — картинка, видео или Lottie.</li><li>Аналитика Plausible намеренно отдаётся с собственного домена, а не с чужого — обычный приём обхода блокировщиков; других счётчиков в разметке нет.</li><li>Tailwind переопределён почти до неузнаваемости: числовые утилиты соответствуют пикселям, а точки перелома заданы вручную с шагом в сотню пикселей.</li><li>В подвале нет ни юридического лица, ни адреса, а год копирайта подставляется скриптом уже на клиенте — в серверном HTML стоит пустой знак охраны прав.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример продуктового лендинга с аккуратной типографикой: крупная антиква в заголовках, капсульная шапка с размытием, полноэкранные видео продукта и честный блок про приватность с тумблерами.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">diabrowser.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>Продуктивность, ИИ-сервисы</dd></div>
-          <div><dt>Для кого</dt><dd>Продуктовым командам, Разработчикам, Маркетологам</dd></div>
-          <div><dt>Стиль</dt><dd>Редакционный, Минимализм, Строгий B2B</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>США, Нью-Йорк</dd></div>
-          <div><dt>Автор</dt><dd>The Browser Company of New York</dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Скриншот 014.webp фиксирует более раннюю тёмную версию сайта эпохи листа ожидания: живой сайт уже светлый и релизный, со слоганом «More than a browser. A better workday.»</li><li>Старый слоган «A browser you won&#39;t dread opening» при этом остался в og:title и twitter:title — метаданные разошлись с заголовком страницы.</li><li>Контент полностью на Sanity: в данных страницы лежат реальные документы CMS, а hero-компонент умеет выбирать тип ассета — картинка, видео или Lottie.</li><li>Аналитика Plausible намеренно отдаётся с собственного домена, а не с чужого — обычный приём обхода блокировщиков; других счётчиков в разметке нет.</li><li>Tailwind переопределён почти до неузнаваемости: числовые утилиты соответствуют пикселям, а точки перелома заданы вручную с шагом в сотню пикселей.</li><li>В подвале нет ни юридического лица, ни адреса, а год копирайта подставляется скриптом уже на клиенте — в серверном HTML стоит пустой знак охраны прав.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#020204"></span><span class="swatch" style="background:#361E12"></span><span class="swatch" style="background:#66341C"></span><span class="swatch" style="background:#FAFAFA"></span><span class="swatch" style="background:#958C65"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">diabrowser.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Продуктивность, ИИ-сервисы</dd></div>
+        <div><dt>Для кого</dt><dd>Продуктовым командам, Разработчикам, Маркетологам</dd></div>
+        <div><dt>Стиль</dt><dd>Редакционный, Минимализм, Строгий B2B</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>США, Нью-Йорк</dd></div>
+        <div><dt>Автор</dt><dd>The Browser Company of New York</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#020204"></span><span class="swatch" style="background:#361E12"></span><span class="swatch" style="background:#66341C"></span><span class="swatch" style="background:#FAFAFA"></span><span class="swatch" style="background:#958C65"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#020204, #361E12, #66341C, #FAFAFA, #958C65">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -108,40 +113,28 @@
          <div><dt>Режим</dt><dd>Тёмная</dd></div>
          <div><dt>Цвет фона</dt><dd>Синий</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Dia | The browser for better days at work. <span class="small muted">(42 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Dia is the browser for better days at work. Get answers without having to ask, produce beautiful ready-to-share outputs, and stay focused in the best browser for your work day. <span class="small muted">(176 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>https://www.diabrowser.com/sitemap.xml — главная, разделы продукта и порядка сотни страниц changelog и release notes</dd></div>
-          <div><dt>Robots</dt><dd>есть: Allow: /, ссылки на sitemap нет</dd></div>
-          <div><dt>Аналитика</dt><dd>Plausible, скрипт отдаётся с собственного домена</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>15</dd></div>
-          <div><dt>Битые ссылки</dt><dd>https://diabrowser.com/privacy-policy — 404, хотя адрес указан в sitemap</dd></div>
-          <div><dt>Контакты</dt><dd>почты в подвале главной нет; на внутренних страницах найдены help@diabrowser.com и teams@diabrowser.com; есть страницы статуса, доверия и релизов, соцсети X, LinkedIn, Instagram</dd></div>
-          <div><dt>Юридическая информация</dt><dd>страницы политики конфиденциальности, условий использования и безопасности отвечают 200; юридического лица и адреса в подвале нет, год копирайта подставляет клиентский скрипт</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js (Pages Router)</strong> — заголовок X-Powered-By: Next.js, чанки /_next/static/chunks/pages/_app-*.js, инлайн-скрипт __NEXT_DATA__, манифесты _buildManifest.js и _ssgManifest.js</li><li><strong>React</strong> — корневой div#__next и чанк framework-*.js, серверный рендеринг с инлайновым opacity:0 на анимируемых узлах</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, идентификатор деплоя в адресах статики</li><li><strong>Tailwind CSS (сильно переопределённый)</strong> — 993 вхождения --tw-* в собранном CSS, числовые утилиты равны пикселям (px-24, rounded-30), брейкпоинты заданы вручную от 400 до 2000 px</li><li><strong>Sanity (headless CMS)</strong> — картинки с cdn.sanity.io/images/e5fj2khm/production/*, в __NEXT_DATA__ документы Sanity с _type/_rev и тип hero-компонента homePageHeroSunrise</li><li><strong>Mux (видео)</strong> — четыре тега video с постерами image.mux.com, в данных объекты _type: mux.video и mux.videoAsset</li><li><strong>Lenis</strong> — атрибут data-lenis-prevent на мобильной навигации</li><li><strong>Typeform</strong> — формы form.typeform.com на страницах /earlybirds и /windows</li><li><strong>Plausible с собственным прокси</strong> — скрипт отдаётся с домена сайта (/js/es.js), endpoint указывает на plausible.io, включены события страниц, глубины скролла и внешних ссылок</li><li><strong>Self-hosted шрифты</strong> — preload для ABCOracle-Regular.woff2 и 205TF-Exposure; в CSS 27 файлов шрифтов (205TF Exposure, ABC Oracle, ABC Favorit Mono, Quadrant Text Mono, Ammer Handwriting)</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример продуктового лендинга с аккуратной типографикой: крупная антиква в заголовках, капсульная шапка с размытием, полноэкранные видео продукта и честный блок про приватность с тумблерами.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js (Pages Router)</strong> — заголовок X-Powered-By: Next.js, чанки /_next/static/chunks/pages/_app-*.js, инлайн-скрипт __NEXT_DATA__, манифесты _buildManifest.js и _ssgManifest.js</li><li><strong>React</strong> — корневой div#__next и чанк framework-*.js, серверный рендеринг с инлайновым opacity:0 на анимируемых узлах</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, идентификатор деплоя в адресах статики</li><li><strong>Tailwind CSS (сильно переопределённый)</strong> — 993 вхождения --tw-* в собранном CSS, числовые утилиты равны пикселям (px-24, rounded-30), брейкпоинты заданы вручную от 400 до 2000 px</li><li><strong>Sanity (headless CMS)</strong> — картинки с cdn.sanity.io/images/e5fj2khm/production/*, в __NEXT_DATA__ документы Sanity с _type/_rev и тип hero-компонента homePageHeroSunrise</li><li><strong>Mux (видео)</strong> — четыре тега video с постерами image.mux.com, в данных объекты _type: mux.video и mux.videoAsset</li><li><strong>Lenis</strong> — атрибут data-lenis-prevent на мобильной навигации</li><li><strong>Typeform</strong> — формы form.typeform.com на страницах /earlybirds и /windows</li><li><strong>Plausible с собственным прокси</strong> — скрипт отдаётся с домена сайта (/js/es.js), endpoint указывает на plausible.io, включены события страниц, глубины скролла и внешних ссылок</li><li><strong>Self-hosted шрифты</strong> — preload для ABCOracle-Regular.woff2 и 205TF-Exposure; в CSS 27 файлов шрифтов (205TF Exposure, ABC Oracle, ABC Favorit Mono, Quadrant Text Mono, Ammer Handwriting)</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

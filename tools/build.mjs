@@ -509,11 +509,24 @@ function renderCatalog() {
    pages/*.html
    ============================================================ */
 
+/* Постоянная секция перед футером: контакты автора коллекции */
+function feedbackSection() {
+  return `<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>`;
+}
+
 function renderSite(site) {
   const palette = paletteFor(site);
   const facts = site.facts || {};
-  const seo = facts.seo || {};
-  const links = facts.links || {};
   const notes = site.notes || '';
   const prefix = '..';
 
@@ -552,14 +565,14 @@ function renderSite(site) {
        </dl>`
     : '<p class="placeholder">палитра не измерена</p>';
 
-  const body = `<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+  const body = `<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>${esc(site.name)}</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>${esc(site.name)}</h1>
     <ul class="taglist">
@@ -571,73 +584,56 @@ function renderSite(site) {
     <p class="site-head__url"><a href="${esc(site.url)}" target="_blank" rel="noopener noreferrer">${esc(site.url)}</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      ${shot}
+  ${shot}
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>${esc(intro)}</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>${esc(intro)}</p>
+  </section>
 
-      ${site.observations && site.observations.length ? `<section class="panel">
-        <h2>Чем интересен</h2>
-        <ul>${site.observations.map((item) => `<li>${esc(item)}</li>`).join('')}</ul>
-      </section>` : ''}
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>${notes ? esc(notes) : '<span class="placeholder">заметок пока нет</span>'}</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">${esc(site.domain)}</dd></div>
-          <div><dt>Тип сайта</dt><dd>${esc(title(TYPES, site.site_type))}</dd></div>
-          <div><dt>Категории</dt><dd>${joinOr(titles(CATS, site.categories))}</dd></div>
-          <div><dt>Подкатегории</dt><dd>${joinOr(titles(SUBS, site.subcategories))}</dd></div>
-          <div><dt>Для кого</dt><dd>${joinOr(titles(AUD, site.audience))}</dd></div>
-          <div><dt>Стиль</dt><dd>${joinOr(titles(STYLES, site.styles))}</dd></div>
-          <div><dt>Язык</dt><dd>${joinOr(langs)}</dd></div>
-          <div><dt>Страна</dt><dd>${orDash(facts.country)}</dd></div>
-          <div><dt>Автор</dt><dd>${orDash(facts.author)}</dd></div>
-          <div><dt>Год</dt><dd>${orDash(facts.year)}</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>${fmtDate(site.added)}</dd></div>
-        </dl>
-      </section>
+  ${site.observations && site.observations.length ? `<section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol>${site.observations.map((item) => `<li>${esc(item)}</li>`).join('')}</ol>
+  </section>` : ''}
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        ${paletteBlock}
-      </section>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">${esc(site.domain)}</dd></div>
+        <div><dt>Тип сайта</dt><dd>${esc(title(TYPES, site.site_type))}</dd></div>
+        <div><dt>Категории</dt><dd>${joinOr(titles(CATS, site.categories))}</dd></div>
+        <div><dt>Подкатегории</dt><dd>${joinOr(titles(SUBS, site.subcategories))}</dd></div>
+        <div><dt>Для кого</dt><dd>${joinOr(titles(AUD, site.audience))}</dd></div>
+        <div><dt>Стиль</dt><dd>${joinOr(titles(STYLES, site.styles))}</dd></div>
+        <div><dt>Язык</dt><dd>${joinOr(langs)}</dd></div>
+        <div><dt>Страна</dt><dd>${orDash(facts.country)}</dd></div>
+        <div><dt>Автор</dt><dd>${orDash(facts.author)}</dd></div>
+        <div><dt>Год</dt><dd>${orDash(facts.year)}</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>${fmtDate(site.added)}</dd></div>
+      </dl>
+    </section>
 
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>${yesNo(facts.https)}</dd></div>
-          <div><dt>Meta viewport</dt><dd>${yesNo(facts.mobile && facts.mobile.viewport_meta)}</dd></div>
-          <div><dt>Title</dt><dd>${seo.title ? `${esc(seo.title)} <span class="small muted">(${seo.title_len} симв.)</span>` : '<span class="placeholder">нет данных</span>'}</dd></div>
-          <div><dt>Description</dt><dd>${seo.description ? `${esc(seo.description)} <span class="small muted">(${seo.description_len} симв.)</span>` : '<span class="placeholder">нет данных</span>'}</dd></div>
-          <div><dt>Open Graph</dt><dd>${yesNo(seo.og)}</dd></div>
-          <div><dt>Структурированные данные</dt><dd>${yesNo(seo.structured_data)}</dd></div>
-          <div><dt>Sitemap</dt><dd>${orDash(seo.sitemap)}</dd></div>
-          <div><dt>Robots</dt><dd>${orDash(seo.robots)}</dd></div>
-          <div><dt>Аналитика</dt><dd>${(facts.analytics || []).length ? facts.analytics.map(esc).join(', ') : '<span class="placeholder">счётчиков не найдено</span>'}</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>${links.checked == null ? '<span class="placeholder">не проверялось</span>' : esc(links.checked)}</dd></div>
-          <div><dt>Битые ссылки</dt><dd>${(links.broken || []).length ? links.broken.map(esc).join('<br>') : 'нет'}</dd></div>
-          <div><dt>Контакты</dt><dd>${orDash(facts.contacts)}</dd></div>
-          <div><dt>Юридическая информация</dt><dd>${orDash(facts.legal)}</dd></div>
-        </dl>
-      </section>
-
-      ${(site.tech || []).length ? `<section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          ${site.tech.map((item) => `<li><strong>${esc(displayTechName(item.name))}</strong> — ${esc(item.evidence)}</li>`).join('')}
-        </ul>
-      </section>` : ''}
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">${notes ? esc(notes) : '<span class="placeholder">заметок пока нет</span>'}</p>
-      </section>
+    <section class="panel">
+      <h2>Палитра</h2>
+      ${paletteBlock}
+    </section>
   </div>
-</article>`;
+
+  ${(site.tech || []).length ? `<section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      ${site.tech.map((item) => `<li><strong>${esc(displayTechName(item.name))}</strong> — ${esc(item.evidence)}</li>`).join('')}
+    </ul>
+  </section>` : ''}
+</article>
+
+${feedbackSection()}`;
 
   return pageShell({
     prefix,

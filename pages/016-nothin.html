@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Nothin&#39;</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Nothin&#39;</h1>
     <ul class="taglist">
@@ -45,42 +45,47 @@
     <p class="site-head__url"><a href="https://www.noth.in/" target="_blank" rel="noopener noreferrer">https://www.noth.in/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/016.webp" alt="Скриншот главной страницы Nothin&#39;"
            width="1626" height="1181" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Сайт парижской креативной студии с радикально чёрно-белым оформлением и единственным розово-малиновым акцентом. В первом экране SVG-надпись растворяется под симуляцией жидкости, открывая видео, а дальше работу ведут полноэкранные ролики и переходы между страницами. Впечатляющий сайт парижской креативной студии. Нетривиальный ховер-эффект, сочные анимации и крупные слайды.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Сайт парижской креативной студии с радикально чёрно-белым оформлением и единственным розово-малиновым акцентом. В первом экране SVG-надпись растворяется под симуляцией жидкости, открывая видео, а дальше работу ведут полноэкранные ролики и переходы между страницами. Впечатляющий сайт парижской креативной студии. Нетривиальный ховер-эффект, сочные анимации и крупные слайды.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Первый экран сделан инверсией: не эффект поверх контента, а полноценный GPU-солвер жидкости на three.js, чей канал красителя работает маской смешивания двух слоёв — мышь разъедает надпись и проявляет видео.</li><li>Ховер карточек работ — магнитная пилюля «explore →»: системный курсор у ссылки отключается, а пилюля догоняет мышь с инерцией и появляется с пружинным изингом.</li><li>Переход между проектами — это FLIP на клонах: заголовок и номер следующего проекта клонируются, фиксируются поверх страницы и улетают в целевые позиции на новой странице.</li><li>Часть метаданных спрятана в alt-текст картинок: ширина карточки в сетке и адрес видео вычисляются в скрипте разбором содержимого этого атрибута.</li><li>При сильной инженерии есть семантические пробелы: на главной нет ни одного h1, нет юридических страниц и cookie-баннера, а prefers-reduced-motion не обрабатывается ни в стилях, ни в скрипте — при трёх автовоспроизводящихся видео и постоянном WebGL-рендере.</li><li>Контент и режиссура живут отдельно: Webflow отвечает за страницы, CMS и разметку, а вся анимационная логика приезжает одним минифицированным бандлом с чужого домена.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример смелой инженерии поверх конструктора: Webflow отвечает за контент и разметку, а вся режиссура живёт в отдельном бандле — с GPU-симуляцией жидкости, FLIP-переходами и магнитным курсором.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">noth.in</dd></div>
-          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
-          <div><dt>Категории</dt><dd>Агентства и студии</dd></div>
-          <div><dt>Подкатегории</dt><dd>Дизайн-студия, Брендинг</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Маркетологам, Агентствам</dd></div>
-          <div><dt>Стиль</dt><dd>Брутализм, Монохром, Редакционный</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Франция, Париж</dd></div>
-          <div><dt>Автор</dt><dd>Nothin&#39;, основатель Sara Guedj</dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Первый экран сделан инверсией: не эффект поверх контента, а полноценный GPU-солвер жидкости на three.js, чей канал красителя работает маской смешивания двух слоёв — мышь разъедает надпись и проявляет видео.</li><li>Ховер карточек работ — магнитная пилюля «explore →»: системный курсор у ссылки отключается, а пилюля догоняет мышь с инерцией и появляется с пружинным изингом.</li><li>Переход между проектами — это FLIP на клонах: заголовок и номер следующего проекта клонируются, фиксируются поверх страницы и улетают в целевые позиции на новой странице.</li><li>Часть метаданных спрятана в alt-текст картинок: ширина карточки в сетке и адрес видео вычисляются в скрипте разбором содержимого этого атрибута.</li><li>При сильной инженерии есть семантические пробелы: на главной нет ни одного h1, нет юридических страниц и cookie-баннера, а prefers-reduced-motion не обрабатывается ни в стилях, ни в скрипте — при трёх автовоспроизводящихся видео и постоянном WebGL-рендере.</li><li>Контент и режиссура живут отдельно: Webflow отвечает за страницы, CMS и разметку, а вся анимационная логика приезжает одним минифицированным бандлом с чужого домена.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#401116"></span><span class="swatch" style="background:#751A2D"></span><span class="swatch" style="background:#AE264C"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">noth.in</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Агентства и студии</dd></div>
+        <div><dt>Подкатегории</dt><dd>Дизайн-студия, Брендинг</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Маркетологам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Брутализм, Монохром, Редакционный</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Франция, Париж</dd></div>
+        <div><dt>Автор</dt><dd>Nothin&#39;, основатель Sara Guedj</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#401116"></span><span class="swatch" style="background:#751A2D"></span><span class="swatch" style="background:#AE264C"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FFFFFF, #000000, #401116, #751A2D, #AE264C">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -108,40 +113,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Nothin&#39; | Home <span class="small muted">(14 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Nothin&#39; A protean augmented-creative studio in Paris. Branding, editorial, art direction &amp; AI for fashion &amp; luxury strategists who refuse the generic. <span class="small muted">(150 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>https://www.noth.in/sitemap.xml — 9 адресов с датами обновления</dd></div>
-          <div><dt>Robots</dt><dd>есть: директив запрета нет, указана карта сайта</dd></div>
-          <div><dt>Аналитика</dt><dd>Google Tag Manager (GTM-TXXTT3WJ), Google Analytics 4 (G-HHTL91GJ73), Metricool, подтверждение домена для Pinterest</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>21</dd></div>
-          <div><dt>Битые ссылки</dt><dd>битых среди слинкованных адресов нет; проверенные как гипотеза /studio, /contact и /privacy-policy отдают 404 — юридических страниц на сайте нет вовсе</dd></div>
-          <div><dt>Контакты</dt><dd>hello@noth.in, запись на звонок через Calendly, ссылки на LinkedIn, Instagram и Behance; телефона и почтового адреса нет</dd></div>
-          <div><dt>Юридическая информация</dt><dd>юридических страниц нет: ни политики конфиденциальности, ни cookie-баннера, ни реквизитов; только строка «©2026 — Founded by Sara Guedj» и кредиты разработчиков</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Webflow (конструктор, CMS и хостинг)</strong> — атрибуты data-wf-domain и data-wf-site на html, комментарий Last Published, ассеты с cdn.prod.website-files.com, CMS-классы w-dyn-list и w-dyn-item</li><li><strong>Cloudflare перед Webflow</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, x-wf-region: us-east-1</li><li><strong>Собственный JS-бандл на Netlify</strong> — инлайн-скрипт подключает nothinv1.netlify.app/main.js (752 КБ), рядом ветка разработки на localhost:3000</li><li><strong>three.js r184</strong> — в бандле строка &quot;184&quot;, canvas получает атрибут data-engine с ревизией; используются WebGLRenderer, ShaderMaterial, WebGLRenderTarget</li><li><strong>Симуляция жидкости Navier–Stokes как маска</strong> — функция _initFluid создаёт FBO для скорости, давления и красителя с проходами curl, vorticity, advection, splat, divergence, pressure; в шейдере mask = smoothstep(edgeSoftness, edgeSoftness + edgeWidth, dye * revealSize)</li><li><strong>GSAP 3.13.0 со ScrollTrigger</strong> — строки version:&quot;3.13.0&quot; и registerPlugin в бандле, API ScrollTrigger (getById, isScrolling, normalizeScroll)</li><li><strong>Lenis</strong> — класс с window.lenisVersion и параметрами duration 1.2, smooth, touchMultiplier 2</li><li><strong>Taxi.js (переходы между страницами)</strong> — конструктор с transitions default и flip, селектор ссылок, атрибуты data-taxi в разметке</li><li><strong>Bunny CDN для видео</strong> — все видео с домена noth-in.b-cdn.net</li><li><strong>PP Neue Montreal и IBM Plex Mono</strong> — @font-face с woff2 в семи начертаниях на Webflow CDN и WebFont.load для IBM Plex Mono с Google Fonts</li><li><strong>JSON-LD Organization</strong> — блок application/ld+json с адресом в Париже, основателем Sara Guedj и ссылками на соцсети</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример смелой инженерии поверх конструктора: Webflow отвечает за контент и разметку, а вся режиссура живёт в отдельном бандле — с GPU-симуляцией жидкости, FLIP-переходами и магнитным курсором.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Webflow (конструктор, CMS и хостинг)</strong> — атрибуты data-wf-domain и data-wf-site на html, комментарий Last Published, ассеты с cdn.prod.website-files.com, CMS-классы w-dyn-list и w-dyn-item</li><li><strong>Cloudflare перед Webflow</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, x-wf-region: us-east-1</li><li><strong>Собственный JS-бандл на Netlify</strong> — инлайн-скрипт подключает nothinv1.netlify.app/main.js (752 КБ), рядом ветка разработки на localhost:3000</li><li><strong>three.js r184</strong> — в бандле строка &quot;184&quot;, canvas получает атрибут data-engine с ревизией; используются WebGLRenderer, ShaderMaterial, WebGLRenderTarget</li><li><strong>Симуляция жидкости Navier–Stokes как маска</strong> — функция _initFluid создаёт FBO для скорости, давления и красителя с проходами curl, vorticity, advection, splat, divergence, pressure; в шейдере mask = smoothstep(edgeSoftness, edgeSoftness + edgeWidth, dye * revealSize)</li><li><strong>GSAP 3.13.0 со ScrollTrigger</strong> — строки version:&quot;3.13.0&quot; и registerPlugin в бандле, API ScrollTrigger (getById, isScrolling, normalizeScroll)</li><li><strong>Lenis</strong> — класс с window.lenisVersion и параметрами duration 1.2, smooth, touchMultiplier 2</li><li><strong>Taxi.js (переходы между страницами)</strong> — конструктор с transitions default и flip, селектор ссылок, атрибуты data-taxi в разметке</li><li><strong>Bunny CDN для видео</strong> — все видео с домена noth-in.b-cdn.net</li><li><strong>PP Neue Montreal и IBM Plex Mono</strong> — @font-face с woff2 в семи начертаниях на Webflow CDN и WebFont.load для IBM Plex Mono с Google Fonts</li><li><strong>JSON-LD Organization</strong> — блок application/ld+json с адресом в Париже, основателем Sara Guedj и ссылками на соцсети</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

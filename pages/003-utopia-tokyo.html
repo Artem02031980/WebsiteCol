@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Utopia Tokyo</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Utopia Tokyo</h1>
     <ul class="taglist">
@@ -47,42 +47,47 @@
     <p class="site-head__url"><a href="https://www.utopiatokyo.com/" target="_blank" rel="noopener noreferrer">https://www.utopiatokyo.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/003.webp" alt="Скриншот главной страницы Utopia Tokyo"
            width="1775" height="1122" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Промо-сайт проекта о японских масках, оформленный как красный терминальный HUD: плоский фон, крупная типографика и пиксельные служебные надписи. Внутри — каталог из 14 масок и генератор собственной маски с радаром характеристик. Иммерсивный сайт о японских масках в антиутопическом Токио будущего. Стилизован под киберпанковый интерфейс видеоигры.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Промо-сайт проекта о японских масках, оформленный как красный терминальный HUD: плоский фон, крупная типографика и пиксельные служебные надписи. Внутри — каталог из 14 масок и генератор собственной маски с радаром характеристик. Иммерсивный сайт о японских масках в антиутопическом Токио будущего. Стилизован под киберпанковый интерфейс видеоигры.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Доступность встроена в замысел: первым экраном идёт предупреждение о фоточувствительной эпилепсии с выбором Safe Mode, глитч включается отдельной кнопкой, запоминается в localStorage и принудительно выключается на мобильных, в Safari и при prefers-reduced-motion.</li><li>Раскладка каталога масок управляется из CSS: токены --masks-count, --masks-cols, --masks-grid-rows и координаты элементов через :nth-child(N) — сетка переключается между режимами сменой переменных.</li><li>Один визуальный приём проведён через все слои: заголовок, логотип и надписи прелоадера набраны с чередованием залитых и контурных глифов, а служебный слой говорит на языке игры — VERSION: 2.0.0-RC.1, HASH: 0xE5B28E, Skill Points 60.</li><li>Состояния интерфейса живут в data-атрибутах (data-mask-state, data-slider-state, data-disclaimer-status) — разметка, CSS и логика GSAP связаны одним словарём состояний вместо набора классов.</li><li>На сайте нет ни одного счётчика аналитики и пустой robots.txt при отсутствующем sitemap — по SEO-обвязке это минимальный проект.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Разбирать как пример того, как служебный слой интерфейса (координаты, версии, хэши, кандзи) делает промо-страницу похожей на приборную панель.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">utopiatokyo.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Промо-сайт</dd></div>
-          <div><dt>Категории</dt><dd>Культура и искусство, Эксперименты и спецпроекты</dd></div>
-          <div><dt>Подкатегории</dt><dd>Арт-проект, Интерактив, Технология WebGL и 3D</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Геймерам</dd></div>
-          <div><dt>Стиль</dt><dd>Киберпанк, Неон, Иммерсивный 3D</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Япония</dd></div>
-          <div><dt>Автор</dt><dd>арт-дирекшн Spotheroz, разработка Andrew Measham</dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Доступность встроена в замысел: первым экраном идёт предупреждение о фоточувствительной эпилепсии с выбором Safe Mode, глитч включается отдельной кнопкой, запоминается в localStorage и принудительно выключается на мобильных, в Safari и при prefers-reduced-motion.</li><li>Раскладка каталога масок управляется из CSS: токены --masks-count, --masks-cols, --masks-grid-rows и координаты элементов через :nth-child(N) — сетка переключается между режимами сменой переменных.</li><li>Один визуальный приём проведён через все слои: заголовок, логотип и надписи прелоадера набраны с чередованием залитых и контурных глифов, а служебный слой говорит на языке игры — VERSION: 2.0.0-RC.1, HASH: 0xE5B28E, Skill Points 60.</li><li>Состояния интерфейса живут в data-атрибутах (data-mask-state, data-slider-state, data-disclaimer-status) — разметка, CSS и логика GSAP связаны одним словарём состояний вместо набора классов.</li><li>На сайте нет ни одного счётчика аналитики и пустой robots.txt при отсутствующем sitemap — по SEO-обвязке это минимальный проект.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FF1A1A"></span><span class="swatch" style="background:#17171E"></span><span class="swatch" style="background:#C42323"></span><span class="swatch" style="background:#871919"></span><span class="swatch" style="background:#4F0C0F"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">utopiatokyo.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Промо-сайт</dd></div>
+        <div><dt>Категории</dt><dd>Культура и искусство, Эксперименты и спецпроекты</dd></div>
+        <div><dt>Подкатегории</dt><dd>Арт-проект, Интерактив, Технология WebGL и 3D</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Геймерам</dd></div>
+        <div><dt>Стиль</dt><dd>Киберпанк, Неон, Иммерсивный 3D</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Япония</dd></div>
+        <div><dt>Автор</dt><dd>арт-дирекшн Spotheroz, разработка Andrew Measham</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FF1A1A"></span><span class="swatch" style="background:#17171E"></span><span class="swatch" style="background:#C42323"></span><span class="swatch" style="background:#871919"></span><span class="swatch" style="background:#4F0C0F"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FF1A1A, #17171E, #C42323, #871919, #4F0C0F">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -110,40 +115,28 @@
          <div><dt>Режим</dt><dd>Цветная</dd></div>
          <div><dt>Цвет фона</dt><dd>Красный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Utopia Tokyo | Masked. Marked. Watched. <span class="small muted">(40 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Step into Utopia Tokyo, where hidden histories converge with a reimagined future, and ancient masks become symbols of untold possibilities. <span class="small muted">(139 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>нет: /sitemap.xml и /sitemap_index.xml отдают 404</dd></div>
-          <div><dt>Robots</dt><dd>файл есть, но пустой (0 байт)</dd></div>
-          <div><dt>Аналитика</dt><dd><span class="placeholder">счётчиков не найдено</span></dd></div>
-          <div><dt>Проверено ссылок</dt><dd>10</dd></div>
-          <div><dt>Битые ссылки</dt><dd>https://www.utopiatokyo.com/sitemap.xml — 404 (sitemap отсутствует)</dd></div>
-          <div><dt>Контакты</dt><dd>контактов нет; в футере кредиты Spotheroz и Andrew Measham, координаты и подпись JAPAN</dd></div>
-          <div><dt>Юридическая информация</dt><dd>только ©2026 и номер версии 2.0.0-RC.1; юридических данных и политики нет</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Webflow</strong> — &lt;meta name=&quot;generator&quot; content=&quot;Webflow&quot;&gt;, data-wf-site и data-wf-page на &lt;html&gt;, ассеты на cdn.prod.website-files.com</li><li><strong>GSAP 3.14.1</strong> — шесть тегов с jsdelivr: gsap.min.js, ScrollTrigger, SplitText, ScrambleTextPlugin, DrawSVGPlugin, Flip</li><li><strong>Barba.js 2.10.3</strong> — data-barba=&quot;wrapper&quot;/&quot;container&quot; и data-barba-namespace=&quot;home&quot;/&quot;utils&quot; в разметке</li><li><strong>Lenis 1.3.17</strong> — unpkg.com/lenis@1.3.17/dist/lenis.min.js и initLenis() в авторском бандле</li><li><strong>Spline (3D)</strong> — &lt;spline-viewer url=&quot;https://prod.spline.design/6seqSqLduZQvr44P/scene.splinecode&quot;&gt; и загрузчик @splinetool/viewer@1.12.61</li><li><strong>Авторский бандл на стороннем CDN</strong> — cdn.navire.app/UtopiaToyko/main-min.js (78 КБ) — кастомный курсор, прелоадер, Lenis, глитч, canvas-инструмент</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, Strict-Transport-Security</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Разбирать как пример того, как служебный слой интерфейса (координаты, версии, хэши, кандзи) делает промо-страницу похожей на приборную панель.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Webflow</strong> — &lt;meta name=&quot;generator&quot; content=&quot;Webflow&quot;&gt;, data-wf-site и data-wf-page на &lt;html&gt;, ассеты на cdn.prod.website-files.com</li><li><strong>GSAP 3.14.1</strong> — шесть тегов с jsdelivr: gsap.min.js, ScrollTrigger, SplitText, ScrambleTextPlugin, DrawSVGPlugin, Flip</li><li><strong>Barba.js 2.10.3</strong> — data-barba=&quot;wrapper&quot;/&quot;container&quot; и data-barba-namespace=&quot;home&quot;/&quot;utils&quot; в разметке</li><li><strong>Lenis 1.3.17</strong> — unpkg.com/lenis@1.3.17/dist/lenis.min.js и initLenis() в авторском бандле</li><li><strong>Spline (3D)</strong> — &lt;spline-viewer url=&quot;https://prod.spline.design/6seqSqLduZQvr44P/scene.splinecode&quot;&gt; и загрузчик @splinetool/viewer@1.12.61</li><li><strong>Авторский бандл на стороннем CDN</strong> — cdn.navire.app/UtopiaToyko/main-min.js (78 КБ) — кастомный курсор, прелоадер, Lenis, глитч, canvas-инструмент</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, Strict-Transport-Security</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Sutéra</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Sutéra</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://www.sutera.ch/" target="_blank" rel="noopener noreferrer">https://www.sutera.ch/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/013.webp" alt="Скриншот главной страницы Sutéra"
            width="1682" height="1268" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Личное одностраничное портфолио Стеллы Мюльхаус о дизайне взаимодействия человека и машины: четыре направления работы, девять проектов, преподавание и публикации. Оформление — инженерный чертёж с кастомным курсором и WebGL-сценой. Вдохновляющий сайт-портфолио Стеллы Мюльхаус — дизайнера из Meta, которая занимается проектированием интерфейсов для коммуникации человека и ИИ.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Личное одностраничное портфолио Стеллы Мюльхаус о дизайне взаимодействия человека и машины: четыре направления работы, девять проектов, преподавание и публикации. Оформление — инженерный чертёж с кастомным курсором и WebGL-сценой. Вдохновляющий сайт-портфолио Стеллы Мюльхаус — дизайнера из Meta, которая занимается проектированием интерфейсов для коммуникации человека и ИИ.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Сайт умышленно имитирует инженерный чертёж: в центре фотореалистичный 3D-остров в WebGL, вокруг — тонкие выноски с квадратными узлами и подписи в квадратных скобках чертёжным шрифтом.</li><li>Четыре гарнитуры разведены по ролям через CSS-переменные — интерфейс, лаборатория, чертёж и кибер-акцент — это даёт три визуальных слоя текста на одной странице.</li><li>Вся типографика и отступы построены на вьюпортных единицах и на медиазапросах по соотношению сторон, а не на классических пиксельных брейкпоинтах.</li><li>Кастомный курсор — не CSS-фигура, а две картинки с заданной горячей точкой, включаемые только при точном указателе.</li><li>Расстановка элементов «чертежа» приходит из CMS: в данных Prismic у каждой картинки хранятся координаты, масштаб и фон.</li><li>Сайт одностраничный: все двенадцать проверенных внутренних маршрутов отдают 404, карты сайта нет, навигация держится только на скролле.</li><li>Юридической информации нет вовсе — ни импрессума, ни политики, ни cookie-баннера, что для швейцарского сайта заметно; счётчиков аналитики тоже нет.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример «инженерного чертежа» в вебе: 3D-объект в центре, выноски-аннотации к нему, четыре шрифта в разных ролях и типографика на вьюпортных единицах.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">sutera.ch</dd></div>
-          <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
-          <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
-          <div><dt>Подкатегории</dt><dd>Дизайнер</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Продуктовым командам, Разработчикам</dd></div>
-          <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм, Редакционный</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Швейцария, Цюрих</dd></div>
-          <div><dt>Автор</dt><dd>Стелла Мюльхаус (Stella Mühlhaus)</dd></div>
-          <div><dt>Год</dt><dd>2025</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Сайт умышленно имитирует инженерный чертёж: в центре фотореалистичный 3D-остров в WebGL, вокруг — тонкие выноски с квадратными узлами и подписи в квадратных скобках чертёжным шрифтом.</li><li>Четыре гарнитуры разведены по ролям через CSS-переменные — интерфейс, лаборатория, чертёж и кибер-акцент — это даёт три визуальных слоя текста на одной странице.</li><li>Вся типографика и отступы построены на вьюпортных единицах и на медиазапросах по соотношению сторон, а не на классических пиксельных брейкпоинтах.</li><li>Кастомный курсор — не CSS-фигура, а две картинки с заданной горячей точкой, включаемые только при точном указателе.</li><li>Расстановка элементов «чертежа» приходит из CMS: в данных Prismic у каждой картинки хранятся координаты, масштаб и фон.</li><li>Сайт одностраничный: все двенадцать проверенных внутренних маршрутов отдают 404, карты сайта нет, навигация держится только на скролле.</li><li>Юридической информации нет вовсе — ни импрессума, ни политики, ни cookie-баннера, что для швейцарского сайта заметно; счётчиков аналитики тоже нет.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#161714"></span><span class="swatch" style="background:#626458"></span><span class="swatch" style="background:#C9CACA"></span><span class="swatch" style="background:#404335"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">sutera.ch</dd></div>
+        <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
+        <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
+        <div><dt>Подкатегории</dt><dd>Дизайнер</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Продуктовым командам, Разработчикам</dd></div>
+        <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм, Редакционный</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Швейцария, Цюрих</dd></div>
+        <div><dt>Автор</dt><dd>Стелла Мюльхаус (Stella Mühlhaus)</dd></div>
+        <div><dt>Год</dt><dd>2025</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#161714"></span><span class="swatch" style="background:#626458"></span><span class="swatch" style="background:#C9CACA"></span><span class="swatch" style="background:#404335"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FFFFFF, #161714, #626458, #C9CACA, #404335">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Sutéra - Reality By Design <span class="small muted">(26 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>I design systems that shape how humans and machines connect. From robotic extensions to perceptual interfaces, my work lives at the intersection of biology and technology. <span class="small muted">(171 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>нет: /sitemap.xml отдаёт 404</dd></div>
-          <div><dt>Robots</dt><dd>есть: Disallow: — всё открыто, ссылки на sitemap нет</dd></div>
-          <div><dt>Аналитика</dt><dd><span class="placeholder">счётчиков не найдено</span></dd></div>
-          <div><dt>Проверено ссылок</dt><dd>40</dd></div>
-          <div><dt>Битые ссылки</dt><dd>https://www.sutera.ch/sitemap.xml — 404<br>внутренних ссылок на сайте нет вообще: проверенные маршруты вроде /about, /work и /contact отдают 404 — сайт одностраничный</dd></div>
-          <div><dt>Контакты</dt><dd>почты, телефона и формы нет; связь только через LinkedIn, Instagram и Medium</dd></div>
-          <div><dt>Юридическая информация</dt><dd>юридической информации нет: ни импрессума, ни политики конфиденциальности, ни cookie-баннера; единственная правовая строка — кредит «Sutéra website 2025 — made by Okey Studio»</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Nuxt 3 (Vue 3) с серверным рендерингом</strong> — заголовок X-Powered-By: Nuxt, объект window.__NUXT__ в конце HTML, ассеты /_nuxt/; HTML приходит полным (231 390 байт) при X-Vercel-Cache: MISS</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache, X-Vercel-Id; оптимизация картинок через /_vercel/image</li><li><strong>Prismic (headless CMS)</strong> — preconnect на sutera.cdn.prismic.io и images.prismic.io, скрипт prismic.min.js?repo=sutera, все картинки с images.prismic.io/sutera, конфиг в window.__NUXT__.config.public.prismic</li><li><strong>GSAP 3.13.0 со ScrollTrigger и SplitText</strong> — в бандле строка version:&quot;3.13.0&quot;; класс SplitText с this.isSplit и предупреждением о не загруженных шрифтах</li><li><strong>Lenis</strong> — 31 вхождение lenis в бандле, window.lenisVersion и событие lenisScrollEnd</li><li><strong>Three.js и WebGL</strong> — 32 вхождения THREE, 127 webgl, 24 shader; код WebGLRenderer с проверкой расширений</li><li><strong>Tailwind (сборка вида v4)</strong> — слои @layer theme/base/components/utilities и 37 объявлений @property --tw-*; точная версия не заявлена</li><li><strong>Четыре self-hosted шрифта</strong> — @font-face для PP Neue Montreal, Neue Haas Grotesk Text, Bitter и Bruno Ace SC, файлы лежат локально в /fonts/</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример «инженерного чертежа» в вебе: 3D-объект в центре, выноски-аннотации к нему, четыре шрифта в разных ролях и типографика на вьюпортных единицах.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Nuxt 3 (Vue 3) с серверным рендерингом</strong> — заголовок X-Powered-By: Nuxt, объект window.__NUXT__ в конце HTML, ассеты /_nuxt/; HTML приходит полным (231 390 байт) при X-Vercel-Cache: MISS</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache, X-Vercel-Id; оптимизация картинок через /_vercel/image</li><li><strong>Prismic (headless CMS)</strong> — preconnect на sutera.cdn.prismic.io и images.prismic.io, скрипт prismic.min.js?repo=sutera, все картинки с images.prismic.io/sutera, конфиг в window.__NUXT__.config.public.prismic</li><li><strong>GSAP 3.13.0 со ScrollTrigger и SplitText</strong> — в бандле строка version:&quot;3.13.0&quot;; класс SplitText с this.isSplit и предупреждением о не загруженных шрифтах</li><li><strong>Lenis</strong> — 31 вхождение lenis в бандле, window.lenisVersion и событие lenisScrollEnd</li><li><strong>Three.js и WebGL</strong> — 32 вхождения THREE, 127 webgl, 24 shader; код WebGLRenderer с проверкой расширений</li><li><strong>Tailwind (сборка вида v4)</strong> — слои @layer theme/base/components/utilities и 37 объявлений @property --tw-*; точная версия не заявлена</li><li><strong>Четыре self-hosted шрифта</strong> — @font-face для PP Neue Montreal, Neue Haas Grotesk Text, Bitter и Bruno Ace SC, файлы лежат локально в /fonts/</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

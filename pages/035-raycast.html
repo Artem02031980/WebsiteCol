@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Raycast</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Raycast</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://www.raycast.com/" target="_blank" rel="noopener noreferrer">https://www.raycast.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/035.png" alt="Скриншот главной страницы Raycast"
            width="1839" height="900" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Сайт приложения Raycast — лаунчера для macOS и Windows: запуск приложений, поиск файлов, буфер обмена, заметки и AI в одном окне по горячей клавише. Лендинг для профессионалов, живущих с клавиатуры: демонстрации интерфейса, каталог расширений, истории пользователей и разделы про AI, Store и команды. Традиционно тёмный и продуманный до мелочей сайт Raycast.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Сайт приложения Raycast — лаунчера для macOS и Windows: запуск приложений, поиск файлов, буфер обмена, заметки и AI в одном окне по горячей клавише. Лендинг для профессионалов, живущих с клавиатуры: демонстрации интерфейса, каталог расширений, истории пользователей и разделы про AI, Store и команды. Традиционно тёмный и продуманный до мелочей сайт Raycast.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Скриншот владельца совпадает с живой главной: тот же заголовок «Your shortcut to everything.», тот же подзаголовок и то же меню (Store, Pro, AI, iOS, Windows, Teams, Enterprise, Blog, Pricing), а в headless-запуске на Windows кнопка героя читается «Download for Windows», ниже — «Windows 10+» и «Install via WinGet».</li><li>Красные ленты в герое — живая WebGL-сцена: на 1440 px в DOM один canvas 1200×967 с контекстом WebGL2, в RSC-пейлоаде лежит конфиг cubeShader с 16 цилиндрами и четырьмя цветами (#f4feff, #ff7a98, #b80232, #ff162a); на 375 px canvas в DOM нет — сцена включается только на широком экране.</li><li>Кнопка скачивания собирается на клиенте: в серверном HTML нет ни «Download for Windows», ни «WinGet», контейнер EQy08a_buttonContainer пуст, а из подписей остаётся только «Download and use Raycast for free» — поэтому CTA зависит от определённой ОС.</li><li>Тёмная тема без переключателя: в CSS нет ни prefers-color-scheme, ни data-theme, фон body — #07080a, текст — #f4f4f6, акцент — #ff6363 (он же Brand Red на /press).</li><li>Структурированных данных нет: ноль блоков application/ld+json и ни одного itemprop или itemtype, при этом og:title, og:image, twitter:card и canonical заполнены.</li><li>Видео встроено без YouTube-плееров: 18 роликов показаны обложками с i.ytimg.com и обычными ссылками на youtube.com, iframe ноль; всего на 1440 px 117 картинок и ни одной битой.</li><li>Подвал заканчивается формой подписки — знака © и года в нём нет, юрлицо Raycast Technologies Ltd. и адрес в Олтринчеме указаны только в Terms of Service; блог относит запуск Raycast к 2020 году, а нынешняя версия сайта — редизайн 2026-го (Raycast 2.0).</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть герой: красные ленты — работающая WebGL-сцена на three.js, которая включается только на широком экране. Дальше — Store с карточками расширений и макеты приложения, собранные из настоящей вёрстки, а не из картинок.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">raycast.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>Продуктивность, ИИ-сервисы</dd></div>
-          <div><dt>Для кого</dt><dd>Разработчикам, Дизайнерам, Продуктовым командам</dd></div>
-          <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Великобритания, Олтринчем</dd></div>
-          <div><dt>Автор</dt><dd>Raycast Technologies Ltd.</dd></div>
-          <div><dt>Год</dt><dd>2020</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>29.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Скриншот владельца совпадает с живой главной: тот же заголовок «Your shortcut to everything.», тот же подзаголовок и то же меню (Store, Pro, AI, iOS, Windows, Teams, Enterprise, Blog, Pricing), а в headless-запуске на Windows кнопка героя читается «Download for Windows», ниже — «Windows 10+» и «Install via WinGet».</li><li>Красные ленты в герое — живая WebGL-сцена: на 1440 px в DOM один canvas 1200×967 с контекстом WebGL2, в RSC-пейлоаде лежит конфиг cubeShader с 16 цилиндрами и четырьмя цветами (#f4feff, #ff7a98, #b80232, #ff162a); на 375 px canvas в DOM нет — сцена включается только на широком экране.</li><li>Кнопка скачивания собирается на клиенте: в серверном HTML нет ни «Download for Windows», ни «WinGet», контейнер EQy08a_buttonContainer пуст, а из подписей остаётся только «Download and use Raycast for free» — поэтому CTA зависит от определённой ОС.</li><li>Тёмная тема без переключателя: в CSS нет ни prefers-color-scheme, ни data-theme, фон body — #07080a, текст — #f4f4f6, акцент — #ff6363 (он же Brand Red на /press).</li><li>Структурированных данных нет: ноль блоков application/ld+json и ни одного itemprop или itemtype, при этом og:title, og:image, twitter:card и canonical заполнены.</li><li>Видео встроено без YouTube-плееров: 18 роликов показаны обложками с i.ytimg.com и обычными ссылками на youtube.com, iframe ноль; всего на 1440 px 117 картинок и ни одной битой.</li><li>Подвал заканчивается формой подписки — знака © и года в нём нет, юрлицо Raycast Technologies Ltd. и адрес в Олтринчеме указаны только в Terms of Service; блог относит запуск Raycast к 2020 году, а нынешняя версия сайта — редизайн 2026-го (Raycast 2.0).</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#07090A"></span><span class="swatch" style="background:#DA1B2F"></span><span class="swatch" style="background:#40111C"></span><span class="swatch" style="background:#9B121E"></span><span class="swatch" style="background:#F5F1F1"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">raycast.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Продуктивность, ИИ-сервисы</dd></div>
+        <div><dt>Для кого</dt><dd>Разработчикам, Дизайнерам, Продуктовым командам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Великобритания, Олтринчем</dd></div>
+        <div><dt>Автор</dt><dd>Raycast Technologies Ltd.</dd></div>
+        <div><dt>Год</dt><dd>2020</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>29.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#07090A"></span><span class="swatch" style="background:#DA1B2F"></span><span class="swatch" style="background:#40111C"></span><span class="swatch" style="background:#9B121E"></span><span class="swatch" style="background:#F5F1F1"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#07090A, #DA1B2F, #40111C, #9B121E, #F5F1F1">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Тёмная</dd></div>
          <div><dt>Цвет фона</dt><dd>Синий</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Raycast - Your shortcut to everything <span class="small muted">(37 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>A collection of powerful productivity tools all within an extendable launcher. <span class="small muted">(78 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>есть: /sitemap.xml, 98 адресов, lastmod 2026-10-29</dd></div>
-          <div><dt>Robots</dt><dd>есть: Allow /, закрыты /upgrade, /settings/sessions, /handles/new, /users/confirmation, указан Sitemap</dd></div>
-          <div><dt>Аналитика</dt><dd>PostHog (phc_ufAVDrqt…), Vercel Web Analytics, Vercel Speed Insights, Sentry (@sentry/nextjs), Rewardful (r.wdfl.co, id b460d6)</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>22</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>форма обратной связи по ссылке Contact (/feedback) и подписка на рассылку в подвале; телефона и адреса на главной нет, почты на внутренних страницах: hello@, press@, privacy@, copyright@, jobs@, enterprise@raycast.com</dd></div>
-          <div><dt>Юридическая информация</dt><dd>Terms of Service, Privacy Policy, Acceptable Use Policy, DPA и Trust Center на trust.raycast.com; в условиях Raycast Technologies Ltd. (Англия и Уэльс, компания № 12394678, VAT GB450606416), адрес 3rd Floor 1 Ashley Road, Altrincham, Cheshire, WA14 2DT; знака © и года в подвале нет</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js</strong> — заголовок x-powered-by: Next.js, чанки /_next/static/immutable/chunks/ с рантаймом turbopack-2_04ewhudzrza.js, RSC-пейлоад self.__next_f.push в HTML</li><li><strong>React (Server Components)</strong> — поток RSC в HTML: плейсхолдеры $L33 и $L35 в self.__next_f.push, из которых клиент монтирует кнопку скачивания и сцену героя</li><li><strong>three.js</strong> — чанк 0o-9t_s7w6-t8.js: WebGLRenderer, PerspectiveCamera, THREE.Timer; в консоли «THREE.Clock: This module has been deprecated», на 1440 px в DOM canvas 1200×967 с контекстом WebGL2</li><li><strong>React (@react-three/fiber)</strong> — в чанке 0o-9t_s7w6-t8.js рядом с three.js лежат строки @react-three и вызов createRoot; сцена героя описана конфигом (cylinder.count: 16, cubeShader) в RSC-пейлоаде</li><li><strong>postprocessing (EffectComposer)</strong> — чанк 0g9me6ox1p3e7.js: EffectComposer и postProcessing рядом с REVISION из three.js — постобработка сцены героя</li><li><strong>CSS Modules</strong> — хешированные классы nhiC3q_footerLink, NFhuXW_embla__slide, H3BVAa_heroBackground и @keyframes с тем же префиксом; совпадений tailwind и --tw- в 345 746 символах CSS ноль</li><li><strong>next/font, самохостинг шрифтов</strong> — 18 @font-face с src url(../media/*.woff2) и метрическими фолбэками Inter Fallback / VT323 Fallback; на главной загружены Inter 100–900, Geist Mono и JetBrains Mono</li><li><strong>Motion (framer-motion)</strong> — чанк 2_rs_aplsmaon.js: VisualElement, motionValue.jump(0) и mixTargetDelta — внутренности framer-motion</li><li><strong>Embla Carousel</strong> — CSS-модуль NFhuXW_embla / embla__container / embla__slide и вызовы play() и stop() автопрокрутки в чанке 1_0n9rwcbnqpg.js</li><li><strong>next/image и CDN misc-assets.raycast.com</strong> — &lt;img data-nimg=&quot;1&quot; src=&quot;/_next/image?url=https%3A%2F%2Fmisc-assets.raycast.com…&amp;w=96&amp;q=70&quot;&gt; с srcSet и loading=lazy</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: MISS, X-Vercel-Id: arn1::iad1::…</li><li><strong>Sentry (@sentry/nextjs)</strong> — метатеги sentry-trace и baggage с sentry-release и sentry-public_key, плюс код @sentry/nextjs в чанке 3pr8ds2u5p743.js</li><li><strong>PostHog</strong> — ключ phc_ufAVDrqt… в чанке 3pr8ds2u5p743.js и PostHogProvider в чанке 1y-admim0t7j6.js</li><li><strong>Vercel Web Analytics и Speed Insights</strong> — /_vercel/insights/script.js и очередь window.va в чанке 1hd3fbfxrjvra.js; @vercel/speed-insights sdkv 2.0.0 и эндпоинт /speed-insights/vitals</li><li><strong>Rewardful</strong> — preload https://r.wdfl.co/rw.js и атрибут data-rewardful=&quot;b460d6&quot; в RSC-пейлоаде</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть герой: красные ленты — работающая WebGL-сцена на three.js, которая включается только на широком экране. Дальше — Store с карточками расширений и макеты приложения, собранные из настоящей вёрстки, а не из картинок.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js</strong> — заголовок x-powered-by: Next.js, чанки /_next/static/immutable/chunks/ с рантаймом turbopack-2_04ewhudzrza.js, RSC-пейлоад self.__next_f.push в HTML</li><li><strong>React (Server Components)</strong> — поток RSC в HTML: плейсхолдеры $L33 и $L35 в self.__next_f.push, из которых клиент монтирует кнопку скачивания и сцену героя</li><li><strong>three.js</strong> — чанк 0o-9t_s7w6-t8.js: WebGLRenderer, PerspectiveCamera, THREE.Timer; в консоли «THREE.Clock: This module has been deprecated», на 1440 px в DOM canvas 1200×967 с контекстом WebGL2</li><li><strong>React (@react-three/fiber)</strong> — в чанке 0o-9t_s7w6-t8.js рядом с three.js лежат строки @react-three и вызов createRoot; сцена героя описана конфигом (cylinder.count: 16, cubeShader) в RSC-пейлоаде</li><li><strong>postprocessing (EffectComposer)</strong> — чанк 0g9me6ox1p3e7.js: EffectComposer и postProcessing рядом с REVISION из three.js — постобработка сцены героя</li><li><strong>CSS Modules</strong> — хешированные классы nhiC3q_footerLink, NFhuXW_embla__slide, H3BVAa_heroBackground и @keyframes с тем же префиксом; совпадений tailwind и --tw- в 345 746 символах CSS ноль</li><li><strong>next/font, самохостинг шрифтов</strong> — 18 @font-face с src url(../media/*.woff2) и метрическими фолбэками Inter Fallback / VT323 Fallback; на главной загружены Inter 100–900, Geist Mono и JetBrains Mono</li><li><strong>Motion (framer-motion)</strong> — чанк 2_rs_aplsmaon.js: VisualElement, motionValue.jump(0) и mixTargetDelta — внутренности framer-motion</li><li><strong>Embla Carousel</strong> — CSS-модуль NFhuXW_embla / embla__container / embla__slide и вызовы play() и stop() автопрокрутки в чанке 1_0n9rwcbnqpg.js</li><li><strong>next/image и CDN misc-assets.raycast.com</strong> — &lt;img data-nimg=&quot;1&quot; src=&quot;/_next/image?url=https%3A%2F%2Fmisc-assets.raycast.com…&amp;w=96&amp;q=70&quot;&gt; с srcSet и loading=lazy</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: MISS, X-Vercel-Id: arn1::iad1::…</li><li><strong>Sentry (@sentry/nextjs)</strong> — метатеги sentry-trace и baggage с sentry-release и sentry-public_key, плюс код @sentry/nextjs в чанке 3pr8ds2u5p743.js</li><li><strong>PostHog</strong> — ключ phc_ufAVDrqt… в чанке 3pr8ds2u5p743.js и PostHogProvider в чанке 1y-admim0t7j6.js</li><li><strong>Vercel Web Analytics и Speed Insights</strong> — /_vercel/insights/script.js и очередь window.va в чанке 1hd3fbfxrjvra.js; @vercel/speed-insights sdkv 2.0.0 и эндпоинт /speed-insights/vitals</li><li><strong>Rewardful</strong> — preload https://r.wdfl.co/rw.js и атрибут data-rewardful=&quot;b460d6&quot; в RSC-пейлоаде</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

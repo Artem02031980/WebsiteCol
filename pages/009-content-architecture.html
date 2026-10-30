@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>The Content Architecture</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>The Content Architecture</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://www.contentarchitecture.dev/" target="_blank" rel="noopener noreferrer">https://www.contentarchitecture.dev/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/009.webp" alt="Скриншот главной страницы The Content Architecture"
            width="1728" height="1281" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Лендинг набора исходников для сборки сайтов на Next.js и Astro с headless-CMS Sanity; продаётся двумя редакциями за 549 €. Главный визуальный аттракцион — интерактивная спираль из повторяющегося названия и ASCII-превью кейсов. Шикарно оформленный сайт готового набора для разработки сайтов на Next.js или Astro с CMS Sanity. Очень оригинальные интерактивные шейдеры с текстом.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Лендинг набора исходников для сборки сайтов на Next.js и Astro с headless-CMS Sanity; продаётся двумя редакциями за 549 €. Главный визуальный аттракцион — интерактивная спираль из повторяющегося названия и ASCII-превью кейсов. Шикарно оформленный сайт готового набора для разработки сайтов на Next.js или Astro с CMS Sanity. Очень оригинальные интерактивные шейдеры с текстом.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Спираль из повторяющегося текста — не готовая библиотека эффектов и не Canvas 2D: текст сначала рисуется в offscreen-canvas и уходит в GPU-текстуру, а затем выводится instanced-квадами по 30 кольцам собственными шейдерами на WebGL2.</li><li>Сцена действительно интерактивна: удержание кнопки заряжает кольца с глитчем и дрожанием, отпускание запускает волну, а курсор растворяет буквы в точки, подменяя индекс глифа на индекс точки в атласе.</li><li>Сайт сделан «читаемым для агентов» и это проверяется машинно: каждая страница отдаёт облегчённый Markdown по тому же адресу при заголовке Accept: text/markdown, рядом лежат llms.txt и openapi.json с описанием публичной поверхности.</li><li>В robots.txt есть директива Content-Signal (search=yes, ai-train=no, use-reference) и раздельные правила: поисковым краулерам разрешено, обучающим запрещено — с комментарием, что политика объявлена в кодовой базе, а не у хостера.</li><li>Вся растровая графика на странице заменена ASCII: 13 canvas с ролью img и aria-label для карточек кейсов и аватаров отзывов, плюс полноэкранный ASCII-занавес перехода между страницами.</li><li>Заявление продукта о React Compiler подтверждается на самом сайте: в собранных чанках 114 вхождений служебных меток компилятора.</li><li>Ссылка «Imprint» в подвале ведёт на несуществующую страницу — 404; в sitemap её тоже нет.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример интерактивной графики с текстом: спираль собрана на WebGL2 собственными шейдерами поверх текстового атласа, а не библиотекой эффектов. Отдельно поучительна «агентная» часть — Markdown по тому же адресу, llms.txt, openapi.json и правила для AI-краулеров.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">contentarchitecture.dev</dd></div>
-          <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>Инструменты разработчика</dd></div>
-          <div><dt>Для кого</dt><dd>Разработчикам, Агентствам, Дизайнерам</dd></div>
-          <div><dt>Стиль</dt><dd>Брутализм, Утилитарный техно, Швейцарская типографика</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Австрия, Вена</dd></div>
-          <div><dt>Автор</dt><dd>Edoardo Lunardi — частный разработчик</dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Спираль из повторяющегося текста — не готовая библиотека эффектов и не Canvas 2D: текст сначала рисуется в offscreen-canvas и уходит в GPU-текстуру, а затем выводится instanced-квадами по 30 кольцам собственными шейдерами на WebGL2.</li><li>Сцена действительно интерактивна: удержание кнопки заряжает кольца с глитчем и дрожанием, отпускание запускает волну, а курсор растворяет буквы в точки, подменяя индекс глифа на индекс точки в атласе.</li><li>Сайт сделан «читаемым для агентов» и это проверяется машинно: каждая страница отдаёт облегчённый Markdown по тому же адресу при заголовке Accept: text/markdown, рядом лежат llms.txt и openapi.json с описанием публичной поверхности.</li><li>В robots.txt есть директива Content-Signal (search=yes, ai-train=no, use-reference) и раздельные правила: поисковым краулерам разрешено, обучающим запрещено — с комментарием, что политика объявлена в кодовой базе, а не у хостера.</li><li>Вся растровая графика на странице заменена ASCII: 13 canvas с ролью img и aria-label для карточек кейсов и аватаров отзывов, плюс полноэкранный ASCII-занавес перехода между страницами.</li><li>Заявление продукта о React Compiler подтверждается на самом сайте: в собранных чанках 114 вхождений служебных меток компилятора.</li><li>Ссылка «Imprint» в подвале ведёт на несуществующую страницу — 404; в sitemap её тоже нет.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F2EEE9"></span><span class="swatch" style="background:#242424"></span><span class="swatch" style="background:#4E4E4E"></span><span class="swatch" style="background:#C1C1C0"></span><span class="swatch" style="background:#6F6F6F"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">contentarchitecture.dev</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Инструменты разработчика</dd></div>
+        <div><dt>Для кого</dt><dd>Разработчикам, Агентствам, Дизайнерам</dd></div>
+        <div><dt>Стиль</dt><dd>Брутализм, Утилитарный техно, Швейцарская типографика</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Австрия, Вена</dd></div>
+        <div><dt>Автор</dt><dd>Edoardo Lunardi — частный разработчик</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F2EEE9"></span><span class="swatch" style="background:#242424"></span><span class="swatch" style="background:#4E4E4E"></span><span class="swatch" style="background:#C1C1C0"></span><span class="swatch" style="background:#6F6F6F"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#F2EEE9, #242424, #4E4E4E, #C1C1C0, #6F6F6F">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Agent-Ready Sanity Kit for Next.js &amp; Astro | The Content Architecture <span class="small muted">(69 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>The agent-ready Sanity kit for Next.js and Astro. Six years of decisions committed: page builder, fetch layer, AGENTS.md, skills, MCP servers, llms.txt. Buy once, own it forever. <span class="small muted">(178 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>https://www.contentarchitecture.dev/sitemap.xml — 7 адресов с датами обновления</dd></div>
-          <div><dt>Robots</dt><dd>есть: Content-Signal search=yes, ai-train=no; отдельные правила по AI-краулерам; закрыты /api/, /_next/, /studio</dd></div>
-          <div><dt>Аналитика</dt><dd>Umami Cloud — аналитика без cookie, скрипт с отложенной загрузкой</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>22</dd></div>
-          <div><dt>Битые ссылки</dt><dd>https://www.contentarchitecture.dev/legal/imprint — 404 (ссылка есть в архивной разметке подвала, страницы нет и в sitemap)</dd></div>
-          <div><dt>Контакты</dt><dd>hello@edoardolunardi.dev; форма подписки на обновления; телефона, адреса и мессенджеров нет</dd></div>
-          <div><dt>Юридическая информация</dt><dd>оператор Edoardo Lunardi, sole trader в Вене; применимое право австрийское; оплата через Stripe, продажи финальные, для ЕС описан отказ от 14-дневного возврата; лицензия бессрочная без атрибуции и без права перепродажи; документы обновлены в августе 2026</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js 16.3.4 (App Router)</strong> — в чанке window.next={version:&quot;16.3.4&quot;,appDir:!0}, заголовки X-Nextjs-Stale-Time и Vary с rsc, рантайм Turbopack</li><li><strong>React Compiler</strong> — 114 вхождений react.memo_cache_sentinel в 13 чанках — кодогенерация memo-cache, то есть сборка прошла через компилятор</li><li><strong>Sanity (headless CMS) и Live Content API</strong> — компоненты SanityLink, SanityLive, SanityMuxVideo, SanityRichText; картинки с cdn.sanity.io (project szlvuc1t)</li><li><strong>Tailwind CSS v4</strong> — 555 вхождений --tw-*, 67 @property, 88 вызовов color-mix(in oklab) в собранном CSS</li><li><strong>OGL (минималистичная WebGL-библиотека)</strong> — в чанке классы Renderer, Program, Geometry, Texture, вызовы createVertexArray и uniformMatrix, new Renderer({webgl:2, antialias:false})</li><li><strong>WebGL2 и собственные GLSL ES 3.00 шейдеры</strong> — два шейдера с &quot;#version 300 es&quot;: вершинный с атрибутами aRadius/aTheta0/aSpeed/aSize/aCharIdx/aRingIdx и uniform-массивами uRingCharge[30], uRippleStarts[16], фрагментный с выборкой из атласа sampler2D tAtlas</li><li><strong>Canvas 2D для ASCII-графики</strong> — getContext(&quot;2d&quot;), fillText и drawImage в чанках ASCII-занавеса и компонента AsciiImage; набор глифов &quot;.:-=+*#%@&quot;</li><li><strong>Motion (framer-motion)</strong> — AnimatePresence, MotionConfig, useScroll, useTransform, whileInView, staggerChildren в нескольких чанках</li><li><strong>Lenis</strong> — хук useLenis в семи чанках, скорость скролла передаётся в сцену спирали</li><li><strong>Mux и SanityMuxVideo</strong> — компонент с пропсами video, objectFit, autoPlay, priority</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, атрибут data-dpl-id на html</li><li><strong>Geist Sans и Geist Mono</strong> — @font-face для переменных GeistSans и GeistMono, preload через Link, токены --font-geist-sans и --font-geist-mono</li><li><strong>Stripe</strong> — openapi.json описывает GET /api/checkout/status с session_id вида cs_live_/cs_test_; политика называет Stripe обработчиком платежей</li><li><strong>Umami Cloud</strong> — next/script с cloud.umami.is/script.js, data-website-id и strategy=lazyOnload; аналитика без cookie</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример интерактивной графики с текстом: спираль собрана на WebGL2 собственными шейдерами поверх текстового атласа, а не библиотекой эффектов. Отдельно поучительна «агентная» часть — Markdown по тому же адресу, llms.txt, openapi.json и правила для AI-краулеров.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js 16.3.4 (App Router)</strong> — в чанке window.next={version:&quot;16.3.4&quot;,appDir:!0}, заголовки X-Nextjs-Stale-Time и Vary с rsc, рантайм Turbopack</li><li><strong>React Compiler</strong> — 114 вхождений react.memo_cache_sentinel в 13 чанках — кодогенерация memo-cache, то есть сборка прошла через компилятор</li><li><strong>Sanity (headless CMS) и Live Content API</strong> — компоненты SanityLink, SanityLive, SanityMuxVideo, SanityRichText; картинки с cdn.sanity.io (project szlvuc1t)</li><li><strong>Tailwind CSS v4</strong> — 555 вхождений --tw-*, 67 @property, 88 вызовов color-mix(in oklab) в собранном CSS</li><li><strong>OGL (минималистичная WebGL-библиотека)</strong> — в чанке классы Renderer, Program, Geometry, Texture, вызовы createVertexArray и uniformMatrix, new Renderer({webgl:2, antialias:false})</li><li><strong>WebGL2 и собственные GLSL ES 3.00 шейдеры</strong> — два шейдера с &quot;#version 300 es&quot;: вершинный с атрибутами aRadius/aTheta0/aSpeed/aSize/aCharIdx/aRingIdx и uniform-массивами uRingCharge[30], uRippleStarts[16], фрагментный с выборкой из атласа sampler2D tAtlas</li><li><strong>Canvas 2D для ASCII-графики</strong> — getContext(&quot;2d&quot;), fillText и drawImage в чанках ASCII-занавеса и компонента AsciiImage; набор глифов &quot;.:-=+*#%@&quot;</li><li><strong>Motion (framer-motion)</strong> — AnimatePresence, MotionConfig, useScroll, useTransform, whileInView, staggerChildren в нескольких чанках</li><li><strong>Lenis</strong> — хук useLenis в семи чанках, скорость скролла передаётся в сцену спирали</li><li><strong>Mux и SanityMuxVideo</strong> — компонент с пропсами video, objectFit, autoPlay, priority</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, атрибут data-dpl-id на html</li><li><strong>Geist Sans и Geist Mono</strong> — @font-face для переменных GeistSans и GeistMono, preload через Link, токены --font-geist-sans и --font-geist-mono</li><li><strong>Stripe</strong> — openapi.json описывает GET /api/checkout/status с session_id вида cs_live_/cs_test_; политика называет Stripe обработчиком платежей</li><li><strong>Umami Cloud</strong> — next/script с cloud.umami.is/script.js, data-website-id и strategy=lazyOnload; аналитика без cookie</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

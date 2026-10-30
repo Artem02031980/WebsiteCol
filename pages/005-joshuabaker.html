@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Joshua Baker</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Joshua Baker</h1>
     <ul class="taglist">
@@ -45,42 +45,47 @@
     <p class="site-head__url"><a href="https://www.joshuabaker.com/" target="_blank" rel="noopener noreferrer">https://www.joshuabaker.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/005.webp" alt="Скриншот главной страницы Joshua Baker"
            width="1757" height="1114" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Персональное портфолио Джошуа Бейкера, разработчика и дизайнера: тёмная монохромная страница с единственным синим акцентом и видео-карточками по краям вместо крупной типографики. Приватность здесь тоже часть дизайна: без счётчиков, а почта открывается только после проверки. Аккуратный информативный сайт-портфолио лондонского разработчика и дизайнера Джошуа Бейкера.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Персональное портфолио Джошуа Бейкера, разработчика и дизайнера: тёмная монохромная страница с единственным синим акцентом и видео-карточками по краям вместо крупной типографики. Приватность здесь тоже часть дизайна: без счётчиков, а почта открывается только после проверки. Аккуратный информативный сайт-портфолио лондонского разработчика и дизайнера Джошуа Бейкера.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Вся анимация сделана без сторонних библиотек: пружина описана CSS-функцией linear(), скролл-эффекты — через animation-timeline с JS-фолбэком, а разброс карточек в первом экране считает собственный модуль с бинарным поиском по расстоянию между карточками.</li><li>Работа показана не шестью карточками, а сортируемой таблицей-индексом на 145 проектов с 2006 по 2026 год: столбцы «год, клиент, проект, отрасль, место», aria-sort, залипающая шапка и live-регион для скринридеров.</li><li>Почта нигде не опубликована открытым текстом: адрес собирается на клиенте из перемешанных фрагментов и показывается только после проверки Cloudflare Turnstile, с запасным вариантом «Message me on LinkedIn» и вариантом для отключённого JS.</li><li>Приватность заявлена и подтверждается разметкой: по семи страницам не нашлось ни одного счётчика или трекера, cookie-баннера нет, а единственный сторонний запрос — скрипт Turnstile на странице контактов.</li><li>Инженерная гигиена: 26 aria-label, 15 правил prefers-reduced-motion, оптическая обрезка полей через text-trim, счётчик-одометр со скрытым для зрения значением и 12-колоночная отладочная сетка, вызываемая по Alt+G прямо в продакшене.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример тихого портфолио: глубина сделана разбросом медиа и точной типографикой, а не крупными заголовками. Отдельно изучить таблицу-индекс проектов и приватностную часть.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">joshuabaker.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
-          <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
-          <div><dt>Подкатегории</dt><dd>Разработчик, Дизайнер</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Продуктовым командам</dd></div>
-          <div><dt>Стиль</dt><dd>Минимализм, Редакционный, Монохром</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Великобритания, Лондон</dd></div>
-          <div><dt>Автор</dt><dd>Джошуа Бейкер</dd></div>
-          <div><dt>Год</dt><dd>2006</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Вся анимация сделана без сторонних библиотек: пружина описана CSS-функцией linear(), скролл-эффекты — через animation-timeline с JS-фолбэком, а разброс карточек в первом экране считает собственный модуль с бинарным поиском по расстоянию между карточками.</li><li>Работа показана не шестью карточками, а сортируемой таблицей-индексом на 145 проектов с 2006 по 2026 год: столбцы «год, клиент, проект, отрасль, место», aria-sort, залипающая шапка и live-регион для скринридеров.</li><li>Почта нигде не опубликована открытым текстом: адрес собирается на клиенте из перемешанных фрагментов и показывается только после проверки Cloudflare Turnstile, с запасным вариантом «Message me on LinkedIn» и вариантом для отключённого JS.</li><li>Приватность заявлена и подтверждается разметкой: по семи страницам не нашлось ни одного счётчика или трекера, cookie-баннера нет, а единственный сторонний запрос — скрипт Turnstile на странице контактов.</li><li>Инженерная гигиена: 26 aria-label, 15 правил prefers-reduced-motion, оптическая обрезка полей через text-trim, счётчик-одометр со скрытым для зрения значением и 12-колоночная отладочная сетка, вызываемая по Alt+G прямо в продакшене.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#030303"></span><span class="swatch" style="background:#0F0F0F"></span><span class="swatch" style="background:#1A1A1A"></span><span class="swatch" style="background:#999999"></span><span class="swatch" style="background:#002BFF"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">joshuabaker.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
+        <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
+        <div><dt>Подкатегории</dt><dd>Разработчик, Дизайнер</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Продуктовым командам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Редакционный, Монохром</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Великобритания, Лондон</dd></div>
+        <div><dt>Автор</dt><dd>Джошуа Бейкер</dd></div>
+        <div><dt>Год</dt><dd>2006</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#030303"></span><span class="swatch" style="background:#0F0F0F"></span><span class="swatch" style="background:#1A1A1A"></span><span class="swatch" style="background:#999999"></span><span class="swatch" style="background:#002BFF"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#030303, #0F0F0F, #1A1A1A, #999999, #002BFF">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -108,40 +113,28 @@
          <div><dt>Режим</dt><dd>Тёмная</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Joshua Baker — Software engineer and designer <span class="small muted">(41 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Software engineer and designer with 20+ years of building, designing, and leading products that move revenue, valuations, fundraising, even the law. Now building at the AI frontier. <span class="small muted">(181 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>https://www.joshuabaker.com/sitemap-index.xml — 13 адресов; привычный /sitemap.xml отдаёт 404</dd></div>
-          <div><dt>Robots</dt><dd>есть: Allow: / и ссылка на sitemap-index.xml</dd></div>
-          <div><dt>Аналитика</dt><dd><span class="placeholder">счётчиков не найдено</span></dd></div>
-          <div><dt>Проверено ссылок</dt><dd>28</dd></div>
-          <div><dt>Битые ссылки</dt><dd>https://www.joshuabaker.com/sitemap.xml — 404, но robots указывает на рабочий sitemap-index.xml, так что на пользователя это не влияет</dd></div>
-          <div><dt>Контакты</dt><dd>почта намеренно не опубликована: раскрывается на /contact/ после проверки Turnstile; в подвале пять соцсетей — LinkedIn, GitHub, Instagram, Threads, X. Телефона и адреса нет</dd></div>
-          <div><dt>Юридическая информация</dt><dd>©2026 Joshua Baker; есть страница /privacy/ с прямым текстом: «No cookies, no tracking scripts, and no analytics that follow you around the web»</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Astro v6.1.6</strong> — &lt;meta name=&quot;generator&quot; content=&quot;Astro v6.1.6&quot;&gt;, ассеты в /_astro/, признаков React, Vue, Svelte и SPA-рантаймов нет</li><li><strong>Astro ClientRouter (View Transitions)</strong> — meta astro-view-transitions-enabled, скрипт ClientRouter на каждой странице, data-astro-transition-persist=&quot;footer-backdrop&quot;</li><li><strong>Tailwind CSS v4</strong> — в BaseLayout.*.css объявлены --tw-border-spacing-x, --spacing: .25rem, @property-переменные и @layer, утилитарные классы в разметке</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, CF-RAY …-AMS; скрипт challenges.cloudflare.com/turnstile на странице контактов</li><li><strong>Шрифт Söhne (Klim Type Foundry), самохостинг</strong> — @font-face /fonts/soehne-buch.woff2 (400) и soehne-kraftig.woff2 (500) с preload crossorigin</li><li><strong>Собственный vanilla JS</strong> — модули HeroScatter, WorkCarousel, ProjectsTable, StudyDrawer, MediaCarousel, FooterBackdrop; совпадений gsap, framer-motion, lenis, barba и three.js нет</li><li><strong>CSS-пружина linear() и animation-timeline</strong> — ease-[var(--spring-heavy)] — linear() примерно из 40 стопов; проверка CSS.supports(&quot;animation-timeline: scroll()&quot;) с JS-фолбэком</li><li><strong>CSS color(display-p3)</strong> — --color-accent: color(display-p3 0 .1667 1) с sRGB-фолбэком #002BFF</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример тихого портфолио: глубина сделана разбросом медиа и точной типографикой, а не крупными заголовками. Отдельно изучить таблицу-индекс проектов и приватностную часть.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Astro v6.1.6</strong> — &lt;meta name=&quot;generator&quot; content=&quot;Astro v6.1.6&quot;&gt;, ассеты в /_astro/, признаков React, Vue, Svelte и SPA-рантаймов нет</li><li><strong>Astro ClientRouter (View Transitions)</strong> — meta astro-view-transitions-enabled, скрипт ClientRouter на каждой странице, data-astro-transition-persist=&quot;footer-backdrop&quot;</li><li><strong>Tailwind CSS v4</strong> — в BaseLayout.*.css объявлены --tw-border-spacing-x, --spacing: .25rem, @property-переменные и @layer, утилитарные классы в разметке</li><li><strong>Cloudflare</strong> — заголовки Server: cloudflare, CF-Cache-Status: HIT, CF-RAY …-AMS; скрипт challenges.cloudflare.com/turnstile на странице контактов</li><li><strong>Шрифт Söhne (Klim Type Foundry), самохостинг</strong> — @font-face /fonts/soehne-buch.woff2 (400) и soehne-kraftig.woff2 (500) с preload crossorigin</li><li><strong>Собственный vanilla JS</strong> — модули HeroScatter, WorkCarousel, ProjectsTable, StudyDrawer, MediaCarousel, FooterBackdrop; совпадений gsap, framer-motion, lenis, barba и three.js нет</li><li><strong>CSS-пружина linear() и animation-timeline</strong> — ease-[var(--spring-heavy)] — linear() примерно из 40 стопов; проверка CSS.supports(&quot;animation-timeline: scroll()&quot;) с JS-фолбэком</li><li><strong>CSS color(display-p3)</strong> — --color-accent: color(display-p3 0 .1667 1) с sRGB-фолбэком #002BFF</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

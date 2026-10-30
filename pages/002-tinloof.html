@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Tinloof</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Tinloof</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://tinloof.com/" target="_blank" rel="noopener noreferrer">https://tinloof.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/002.webp" alt="Скриншот главной страницы Tinloof"
            width="1777" height="1122" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Сайт берлинского агентства дизайна и разработки, построенный как рабочая панель: слева навигация, в центре крупные кейсы, справа пояснения и служебная информация. Строгая мелкая типографика соседствует с большими видео о работах. Утилитарный технический сайт берлинского агентства дизайна и разработки. Мелкая типографика и крупные медиакарточки.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Сайт берлинского агентства дизайна и разработки, построенный как рабочая панель: слева навигация, в центре крупные кейсы, справа пояснения и служебная информация. Строгая мелкая типографика соседствует с большими видео о работах. Утилитарный технический сайт берлинского агентства дизайна и разработки. Мелкая типографика и крупные медиакарточки.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Стек — Astro с React-островами, а не SPA: страница приходит готовым HTML, тяжёлый клиентский рантайм не грузится.</li><li>Три режима темы (system / light / dark) плюс отдельный страничный режим «pritch» с красной палитрой #C9000D, который включается только на одной статье.</li><li>Нестандартно лёгкие начертания как приём: базовый вес шрифта 325 в тёмной теме и 335 в светлой, под подменный Arial подобран size-adjust, чтобы вёрстка не сдвигалась.</li><li>Вся анимация сделана на CSS-переходах с собственными spring-классами и View Transitions: GSAP, Three.js, Lottie и Framer Motion в разметке не найдены.</li><li>Импрессум спрятан в сворачиваемый блок в боковой панели, политики конфиденциальности и cookie-баннера нет — при подключённом PostHog с person_profiles: &#39;identified_only&#39; и проксированием через поддомен s.tinloof.com.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример утилитарной композиции из трёх колонок и аккуратной работы с типографикой малого кегля.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">tinloof.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
-          <div><dt>Категории</dt><dd>Агентства и студии</dd></div>
-          <div><dt>Подкатегории</dt><dd>Студия разработки, Дизайн-студия</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Агентствам</dd></div>
-          <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Германия, Берлин</dd></div>
-          <div><dt>Автор</dt><dd>Tinloof</dd></div>
-          <div><dt>Год</dt><dd>2020</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Стек — Astro с React-островами, а не SPA: страница приходит готовым HTML, тяжёлый клиентский рантайм не грузится.</li><li>Три режима темы (system / light / dark) плюс отдельный страничный режим «pritch» с красной палитрой #C9000D, который включается только на одной статье.</li><li>Нестандартно лёгкие начертания как приём: базовый вес шрифта 325 в тёмной теме и 335 в светлой, под подменный Arial подобран size-adjust, чтобы вёрстка не сдвигалась.</li><li>Вся анимация сделана на CSS-переходах с собственными spring-классами и View Transitions: GSAP, Three.js, Lottie и Framer Motion в разметке не найдены.</li><li>Импрессум спрятан в сворачиваемый блок в боковой панели, политики конфиденциальности и cookie-баннера нет — при подключённом PostHog с person_profiles: &#39;identified_only&#39; и проксированием через поддомен s.tinloof.com.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#0A0A0A"></span><span class="swatch" style="background:#F6F6F5"></span><span class="swatch" style="background:#39332F"></span><span class="swatch" style="background:#D9D9D9"></span><span class="swatch" style="background:#918C88"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">tinloof.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Агентства и студии</dd></div>
+        <div><dt>Подкатегории</dt><dd>Студия разработки, Дизайн-студия</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Германия, Берлин</dd></div>
+        <div><dt>Автор</dt><dd>Tinloof</dd></div>
+        <div><dt>Год</dt><dd>2020</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#0A0A0A"></span><span class="swatch" style="background:#F6F6F5"></span><span class="swatch" style="background:#39332F"></span><span class="swatch" style="background:#D9D9D9"></span><span class="swatch" style="background:#918C88"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#0A0A0A, #F6F6F5, #39332F, #D9D9D9, #918C88">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Тёмная</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Work <span class="small muted">(4 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Design and development agency. <span class="small muted">(30 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>https://tinloof.com/sitemap.xml — 24 URL, lastmod только у /contact</dd></div>
-          <div><dt>Robots</dt><dd>есть: Allow: /, закрыты /api/, /design/, /docs/</dd></div>
-          <div><dt>Аналитика</dt><dd>PostHog (api_host s.tinloof.com, ui_host eu.posthog.com)</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>11</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>hi@tinloof.com, jobs@tinloof.com, соцсети Are.na, Instagram, LinkedIn, Twitter</dd></div>
-          <div><dt>Юридическая информация</dt><dd>импрессум в аккордеоне: Bärbel-Bohley-Ring 8, 13355 Berlin; VAT DE345235005; HRB 231289 B. Политики конфиденциальности нет</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Astro</strong> — ассеты в /_astro/, meta astro-view-transitions-enabled, data-astro-transition-scope на &lt;html&gt;</li><li><strong>React (острова)</strong> — 73 тега &lt;astro-island&gt; с renderer-url=/ _astro/client.*.js; гидратация client:load / visible / only</li><li><strong>Astro View Transitions</strong> — подключён ClientRouter.astro_astro_type_script_index_0_lang.*.js, в CSS ::view-transition-name по data-astro-transition-scope</li><li><strong>Sanity (headless CMS)</strong> — в пропсах островов документы вида &quot;_type&quot;:&quot;caseStudy&quot;, &quot;_status&quot;:&quot;published&quot;, &quot;_id&quot;:&quot;ast_…&quot;</li><li><strong>Tailwind CSS</strong> — 771 совпадение --tw- в CSS, 5 блоков @layer, утилитарные классы в разметке; точная версия не подтверждена</li><li><strong>PostHog</strong> — posthog.init(&#39;phc_…&#39;, { api_host: &#39;https://s.tinloof.com&#39;, ui_host: &#39;https://eu.posthog.com&#39; })</li><li><strong>Собственный CDN медиа</strong> — все видео и постеры с https://cdn.krud.app/, 6 тегов &lt;video loop muted playsinline&gt; с &lt;img&gt;-постером поверх</li><li><strong>Шрифт ABC Oracle</strong> — @font-face из /_astro/fonts/*.ttf с начертаниями 325/335/460 и @font-face-заглушка для Arial с size-adjust</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример утилитарной композиции из трёх колонок и аккуратной работы с типографикой малого кегля.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Astro</strong> — ассеты в /_astro/, meta astro-view-transitions-enabled, data-astro-transition-scope на &lt;html&gt;</li><li><strong>React (острова)</strong> — 73 тега &lt;astro-island&gt; с renderer-url=/ _astro/client.*.js; гидратация client:load / visible / only</li><li><strong>Astro View Transitions</strong> — подключён ClientRouter.astro_astro_type_script_index_0_lang.*.js, в CSS ::view-transition-name по data-astro-transition-scope</li><li><strong>Sanity (headless CMS)</strong> — в пропсах островов документы вида &quot;_type&quot;:&quot;caseStudy&quot;, &quot;_status&quot;:&quot;published&quot;, &quot;_id&quot;:&quot;ast_…&quot;</li><li><strong>Tailwind CSS</strong> — 771 совпадение --tw- в CSS, 5 блоков @layer, утилитарные классы в разметке; точная версия не подтверждена</li><li><strong>PostHog</strong> — posthog.init(&#39;phc_…&#39;, { api_host: &#39;https://s.tinloof.com&#39;, ui_host: &#39;https://eu.posthog.com&#39; })</li><li><strong>Собственный CDN медиа</strong> — все видео и постеры с https://cdn.krud.app/, 6 тегов &lt;video loop muted playsinline&gt; с &lt;img&gt;-постером поверх</li><li><strong>Шрифт ABC Oracle</strong> — @font-face из /_astro/fonts/*.ttf с начертаниями 325/335/460 и @font-face-заглушка для Arial с size-adjust</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

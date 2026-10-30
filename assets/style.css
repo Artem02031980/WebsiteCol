@@ -97,6 +97,8 @@ kbd {
 section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset); }
 
 .container { max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+/* Узкий контейнер лонг-рида продуктовых страниц */
+.container--narrow { max-width: 1000px; }
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
@@ -369,23 +371,25 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 }
 .empty h3 { margin-bottom: var(--space-1); }
 
-/* ===== Страница сайта ===== */
+/* ===== Страница сайта: лонг-рид ===== */
 .breadcrumbs { padding-block: var(--space-2) 0; font-size: var(--fs-small); color: var(--text-muted); }
-.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+/* Хлебные крошки — по правому краю контейнера */
+.breadcrumbs ol { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
 .breadcrumbs li + li::before { content: '/'; margin-right: 0.4rem; color: var(--border-strong); }
-.site-head { display: grid; gap: var(--space-2); padding-block: var(--space-3) var(--space-2); }
+/* Название, теги и ссылка — по центру контейнера */
+.site-head { display: grid; justify-items: center; gap: var(--space-2); padding-block: var(--space-3) var(--space-2); text-align: center; }
 .site-head h1 { margin: 0; }
 .site-head__url { font-family: var(--font-mono); font-size: var(--fs-small); word-break: break-all; margin: 0; }
-.site-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2) var(--space-4); align-items: start; }
-/* Раскладку по двум колонкам делает app.js: карточки разной высоты в жёсткой
-   сетке оставляли пустоту под короткой колонкой. Скрипт переносит их в две
-   колонки-флекса, каждый раз в более короткую. Без JS остаётся обычная сетка. */
-.site-grid.is-split { display: flex; gap: var(--space-4); align-items: flex-start; }
-.site-col { display: flex; flex-direction: column; gap: var(--space-2); flex: 1 1 0; min-width: 0; }
-.shot { margin: 0; }
+/* Контент — лонг-рид; карточками остаются только Паспорт и Палитра */
+.site-section { margin: 0 0 var(--space-3); }
+.site-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); align-items: stretch; margin: 0 0 var(--space-3); }
+.site-cards .panel { margin: 0; }
+/* Скриншот — максимум 800 px, по центру */
+.shot { margin: 0 auto var(--space-3); max-width: 800px; }
 .shot img { display: block; width: 100%; border: 1px solid var(--border-subtle); }
 .shot--missing {
   display: flex; align-items: center; justify-content: center; min-height: 220px;
+  max-width: 800px; margin: 0 auto var(--space-3);
   border: 1px dashed var(--border-strong);
   background: var(--bg-elevated); color: var(--text-muted); text-align: center; padding: var(--space-3);
 }
@@ -404,6 +408,18 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .specs div { display: grid; grid-template-columns: minmax(8rem, 40%) 1fr; gap: var(--space-1); }
 .specs dt { color: var(--text-muted); font-size: var(--fs-small); }
 .specs dd { margin: 0; font-size: var(--fs-small); line-height: 1.6; }
+
+/* ===== Feedback: контакты автора коллекции ===== */
+.feedback {
+  margin-top: var(--space-5);
+  padding-block: var(--space-4);
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border-subtle);
+}
+.feedback__name { margin: 0 0 var(--space-1); }
+.feedback__about { margin: 0 0 var(--space-2); color: var(--text-muted); }
+.feedback__contacts { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; }
+.feedback__contacts a { font-weight: 600; }
 
 /* ===== Подвал: одна строка ===== */
 .footer {
@@ -428,9 +444,6 @@ select:focus, .field__input:focus { border-color: var(--accent); }
     position: static; max-height: none;
     grid-template-columns: repeat(2, 1fr); align-items: start;
   }
-  .site-grid { grid-template-columns: 1fr; }
-  .site-grid.is-split { display: grid; grid-template-columns: 1fr; }
-  .site-col { display: contents; }
   .toolbar__hint { display: none; }
 }
 
@@ -450,6 +463,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   .toolbar__row .field { width: 100%; }
   .select__button { min-width: 0; }
   .grid { grid-template-columns: 1fr; }
+  .site-cards { grid-template-columns: 1fr; }
   .specs div { grid-template-columns: 1fr; gap: 0.15rem; }
   .specs dd { padding-left: var(--space-1); }
 }

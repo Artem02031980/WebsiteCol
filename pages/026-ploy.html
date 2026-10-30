@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Ploy</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Ploy</h1>
     <ul class="taglist">
@@ -43,42 +43,47 @@
     <p class="site-head__url"><a href="https://ploy.ai/" target="_blank" rel="noopener noreferrer">https://ploy.ai/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/026.webp" alt="Скриншот главной страницы Ploy"
            width="1760" height="1076" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Сайт маркетинговой ИИ-платформы, которая продаётся как «двигатель роста» корпоративного сайта: сборка страниц, аналитика, идентификация посетителей и автоматизация SEO. Графика — глянцевые трёхмерные шарики в пастельной палитре. Выразительный яркий сайт маркетинговой ИИ-платформы для продвижения сайтов.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Сайт маркетинговой ИИ-платформы, которая продаётся как «двигатель роста» корпоративного сайта: сборка страниц, аналитика, идентификация посетителей и автоматизация SEO. Графика — глянцевые трёхмерные шарики в пастельной палитре. Выразительный яркий сайт маркетинговой ИИ-платформы для продвижения сайтов.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Сайт работает на самом себе: в исходнике видны слоты экспериментов с вариантами control, трекер движка с шиной показа эксперимента и конфигурация интеграций с пикселями — то есть платформа служит себе витриной, а подпись в подвале ведёт на студию-подрядчика.</li><li>Анимации сделаны без WebGL: ни three.js, ни единого канваса, ни Lottie с Rive — вместо этого GSAP с разбором текста на символы в кнопках и навигации, декларативные атрибуты появления по скроллу, библиотека из двадцати восьми CSS-анимаций и Framer Motion с явной проверкой «уменьшения движения».</li><li>Обнаружен слой оптимизации под ИИ-ответы, ровно соответствующий продаваемой услуге: файл llms.txt на 32 килобайта, каталог API, описание OpenAPI, запрет обучения в Content-Signal и футерные ссылки «спросить у ИИ» в ChatGPT, Claude, Google AI Mode, Grok и Perplexity с заранее написанным промптом.</li><li>Аналитика собрана плотно и полностью на первом лице: PostHog, Tag Manager, GA4, пиксели Google Ads, Meta, TikTok, LinkedIn, Snapchat и X, плюс собственная атрибуционная cookie на 90 дней по принципу первого касания и собственный менеджер согласия.</li><li>Заметный дефект: адрес документации, на который ведёт пункт в подвале, недоступен по HTTPS — рукопожатие обрывается, при этом HTTP отвечает перенаправлением на тот же неработающий адрес, а DNS и вышестоящий сервер живы.</li><li>Скриншот из коллекции не совпадает с текущим первым экраном: на снимке статичная трёхмерная композиция с крупной надписью, а в живом сайте стоит автовоспроизводящееся видео с другим заголовком; родственная разметка в коде есть, но именно такой композиции нет.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть ради двух слоёв: первый — машиночитаемый, с файлом llms.txt, каталогом API, описанием OpenAPI и директивой Content-Signal, ровно под продаваемую услугу; второй — визуальный, где пастельные трёхмерные шарики и «раздавленная» типографика сделаны предрендеренными картинками и CSS, без WebGL.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">ploy.ai</dd></div>
-          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>ИИ-сервисы</dd></div>
-          <div><dt>Для кого</dt><dd>Маркетологам, Агентствам, Продуктовым командам</dd></div>
-          <div><dt>Стиль</dt><dd>Игривый, Минимализм</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>США</dd></div>
-          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>05.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Сайт работает на самом себе: в исходнике видны слоты экспериментов с вариантами control, трекер движка с шиной показа эксперимента и конфигурация интеграций с пикселями — то есть платформа служит себе витриной, а подпись в подвале ведёт на студию-подрядчика.</li><li>Анимации сделаны без WebGL: ни three.js, ни единого канваса, ни Lottie с Rive — вместо этого GSAP с разбором текста на символы в кнопках и навигации, декларативные атрибуты появления по скроллу, библиотека из двадцати восьми CSS-анимаций и Framer Motion с явной проверкой «уменьшения движения».</li><li>Обнаружен слой оптимизации под ИИ-ответы, ровно соответствующий продаваемой услуге: файл llms.txt на 32 килобайта, каталог API, описание OpenAPI, запрет обучения в Content-Signal и футерные ссылки «спросить у ИИ» в ChatGPT, Claude, Google AI Mode, Grok и Perplexity с заранее написанным промптом.</li><li>Аналитика собрана плотно и полностью на первом лице: PostHog, Tag Manager, GA4, пиксели Google Ads, Meta, TikTok, LinkedIn, Snapchat и X, плюс собственная атрибуционная cookie на 90 дней по принципу первого касания и собственный менеджер согласия.</li><li>Заметный дефект: адрес документации, на который ведёт пункт в подвале, недоступен по HTTPS — рукопожатие обрывается, при этом HTTP отвечает перенаправлением на тот же неработающий адрес, а DNS и вышестоящий сервер живы.</li><li>Скриншот из коллекции не совпадает с текущим первым экраном: на снимке статичная трёхмерная композиция с крупной надписью, а в живом сайте стоит автовоспроизводящееся видео с другим заголовком; родственная разметка в коде есть, но именно такой композиции нет.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F5F5F5"></span><span class="swatch" style="background:#B2C6DC"></span><span class="swatch" style="background:#D0D99D"></span><span class="swatch" style="background:#B2C97D"></span><span class="swatch" style="background:#D399C7"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">ploy.ai</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>ИИ-сервисы</dd></div>
+        <div><dt>Для кого</dt><dd>Маркетологам, Агентствам, Продуктовым командам</dd></div>
+        <div><dt>Стиль</dt><dd>Игривый, Минимализм</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>США</dd></div>
+        <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>05.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F5F5F5"></span><span class="swatch" style="background:#B2C6DC"></span><span class="swatch" style="background:#D0D99D"></span><span class="swatch" style="background:#B2C97D"></span><span class="swatch" style="background:#D399C7"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#F5F5F5, #B2C6DC, #D0D99D, #B2C97D, #D399C7">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -106,40 +111,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>AI Marketing Platform for Website Growth | Ploy <span class="small muted">(49 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Ploy is an AI marketing platform for website growth. Build on-brand pages, identify visitors, automate SEO and outreach, and improve conversion. <span class="small muted">(142 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>индекс /sitemap-index.xml на две карты — 223 и 150 адресов; привычный /sitemap.xml отвечает 404 и в разметке не заявлен</dd></div>
-          <div><dt>Robots</dt><dd>есть: отдельные правила для восьми ботов, директива Content-Signal с запретом обучения ИИ и указание карты сайта</dd></div>
-          <div><dt>Аналитика</dt><dd>PostHog, Google Tag Manager (GTM-PF7R2RX2), Google Analytics 4, Google Ads, Meta Pixel, TikTok Pixel, LinkedIn Insight Tag, Snapchat Pixel, X/Twitter Pixel, собственная атрибуционная cookie на 90 дней, собственный менеджер согласия</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>34</dd></div>
-          <div><dt>Битые ссылки</dt><dd>docs.ploy.ai — рукопожатие TLS обрывается, HTTP перенаправляет на тот же неработающий HTTPS; при этом ссылка «Docs» стоит в подвале</dd></div>
-          <div><dt>Контакты</dt><dd>формы на странице контактов с полями имени, рабочей почты, должности и компании; почта legal@ploy.ai указана только в политике конфиденциальности, там же почтовый адрес в Сан-Франциско; в подвале также ссылки на страницы доверия и статуса</dd></div>
-          <div><dt>Юридическая информация</dt><dd>условия обслуживания и политика конфиденциальности с датами обновления, компания Ploy, Inc. (Делавэр), право штата Делавэр и обязательный арбитраж по правилам Американской арбитражной ассоциации после тридцати дней переговоров; политика покрывает GDPR и CCPA; в микроразметке юридическое имя указано иначе, чем на юридических страницах</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Astro</strong> — статическая сборка с хешированными путями и литералом astro в именах файлов, элементы-острова и слоты, встроенный рантайм, инициализирующий загрузку</li><li><strong>React 18 в островах</strong> — модуль клиентского рендерера на 182 килобайта с внутренностями React; острова объявляют компонент, рендерер и стратегию загрузки</li><li><strong>Framer Motion (Motion)</strong> — в коде острова анимация с возможностью прерывания через kill и явная проверка «уменьшения движения» через matchMedia</li><li><strong>GSAP</strong> — свыше сотни декларативных хуков в разметке, включая пять кнопок с побайтовым разбором подписи на символы</li><li><strong>Tailwind CSS</strong> — утилитарная разметка, собственное пространство токенов и переменные шрифтов, сотни классов скруглений и трекинга</li><li><strong>Swiper</strong> — встроенный блок стилей карусели с переменными навигации и элементами кнопок, плюс разметка с хуками переключения</li><li><strong>FK Screamer и Geist</strong> — правила @font-face на кастомный дисплейный шрифт с CDN и вариативный Geist с локальными подмножествами latin и latin-ext, оба предзагружены</li><li><strong>Cloudflare</strong> — заголовки сервера, состояние кэша и служебная cookie управления ботами</li><li><strong>Собственный CDN</strong> — все медиа и кастомный шрифт отдаются с отдельного поддомена, в пути зашит идентификатор арендатора и пользовательское пространство загрузок</li><li><strong>Собственный продукт на самом сайте</strong> — в разметке видны слоты экспериментов с вариантами control, трекер движка с шиной событий показа эксперимента и конфигурация интеграций с пикселями Meta и Google Ads</li><li><strong>Видео на своём хостинге</strong> — тег video с автозапуском, отключённым звуком и зацикливанием, источники mp4 и webm плюс постер, все файлы отдаются с основного домена</li><li><strong>Слой для ИИ-агентов</strong> — файл llms.txt на 32 килобайта, каталог API, описание OpenAPI, ссылки service-desc и api-catalog в разметке, директива Content-Signal в robots и диплинки «Ask AI» в пять сервисов</li><li><strong>Микроразметка</strong> — четыре блока JSON-LD на главной, отдельные типы на страницах тарифов, возможностей, контактов, блога и эффекта платформы</li><li><strong>Чего нет</strong> — three.js и WebGL, Lottie, Rive, Spline, Matter.js — ноль совпадений в разметке и тринадцати скачанных чанках; ни одного канваса, ни звуковой библиотеки</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть ради двух слоёв: первый — машиночитаемый, с файлом llms.txt, каталогом API, описанием OpenAPI и директивой Content-Signal, ровно под продаваемую услугу; второй — визуальный, где пастельные трёхмерные шарики и «раздавленная» типографика сделаны предрендеренными картинками и CSS, без WebGL.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Astro</strong> — статическая сборка с хешированными путями и литералом astro в именах файлов, элементы-острова и слоты, встроенный рантайм, инициализирующий загрузку</li><li><strong>React 18 в островах</strong> — модуль клиентского рендерера на 182 килобайта с внутренностями React; острова объявляют компонент, рендерер и стратегию загрузки</li><li><strong>Framer Motion (Motion)</strong> — в коде острова анимация с возможностью прерывания через kill и явная проверка «уменьшения движения» через matchMedia</li><li><strong>GSAP</strong> — свыше сотни декларативных хуков в разметке, включая пять кнопок с побайтовым разбором подписи на символы</li><li><strong>Tailwind CSS</strong> — утилитарная разметка, собственное пространство токенов и переменные шрифтов, сотни классов скруглений и трекинга</li><li><strong>Swiper</strong> — встроенный блок стилей карусели с переменными навигации и элементами кнопок, плюс разметка с хуками переключения</li><li><strong>FK Screamer и Geist</strong> — правила @font-face на кастомный дисплейный шрифт с CDN и вариативный Geist с локальными подмножествами latin и latin-ext, оба предзагружены</li><li><strong>Cloudflare</strong> — заголовки сервера, состояние кэша и служебная cookie управления ботами</li><li><strong>Собственный CDN</strong> — все медиа и кастомный шрифт отдаются с отдельного поддомена, в пути зашит идентификатор арендатора и пользовательское пространство загрузок</li><li><strong>Собственный продукт на самом сайте</strong> — в разметке видны слоты экспериментов с вариантами control, трекер движка с шиной событий показа эксперимента и конфигурация интеграций с пикселями Meta и Google Ads</li><li><strong>Видео на своём хостинге</strong> — тег video с автозапуском, отключённым звуком и зацикливанием, источники mp4 и webm плюс постер, все файлы отдаются с основного домена</li><li><strong>Слой для ИИ-агентов</strong> — файл llms.txt на 32 килобайта, каталог API, описание OpenAPI, ссылки service-desc и api-catalog в разметке, директива Content-Signal в robots и диплинки «Ask AI» в пять сервисов</li><li><strong>Микроразметка</strong> — четыре блока JSON-LD на главной, отдельные типы на страницах тарифов, возможностей, контактов, блога и эффекта платформы</li><li><strong>Чего нет</strong> — three.js и WebGL, Lottie, Rive, Spline, Matter.js — ноль совпадений в разметке и тринадцати скачанных чанках; ни одного канваса, ни звуковой библиотеки</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

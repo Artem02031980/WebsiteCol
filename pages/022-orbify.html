@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Orbify</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Orbify</h1>
     <ul class="taglist">
@@ -43,42 +43,47 @@
     <p class="site-head__url"><a href="https://www.orbify.eu" target="_blank" rel="noopener noreferrer">https://www.orbify.eu</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/022.png" alt="Скриншот главной страницы Orbify"
            width="1595" height="913" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Англоязычный одностраничник о технологии навигационной визуализации: дорожная картина загибается на изогнутую поверхность, и в одном кадре совмещаются вид от дороги и обзор сверху. Продукт продаётся как встраиваемый SDK для автопроизводителей, морской навигации и картографических платформ.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Англоязычный одностраничник о технологии навигационной визуализации: дорожная картина загибается на изогнутую поверхность, и в одном кадре совмещаются вид от дороги и обзор сверху. Продукт продаётся как встраиваемый SDK для автопроизводителей, морской навигации и картографических платформ.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Демонстрация не нарисована: страница демо грузит настоящие файлы гауссовых сплатов на 97,5 и 4,85 МБ и рендерит их движком PlayCanvas, а сам эффект изгиба сделан подменой шейдерного чанка с набором параметров.</li><li>Демо стилизовано под экран автомобильного навигатора: поверх холста лежит рамка устройства с бортиком и «камерой», а маршрутные маркеры — обычные элементы разметки, а не объекты трёхмерной сцены.</li><li>Сайт собран предельно вручную: пятнадцать килобайт стилей с токенами и меньше двух килобайт скриптов, без сборщика, фреймворка и UI-библиотек; в стилях при этом остались неиспользуемые классы карточек команды и метаданных подвала.</li><li>SEO не сделано вовсе: нет описания, карточек для соцсетей, канонического адреса, иконки и микроразметки, а robots.txt и карта сайта отвечают 404 — при корректном заголовке и языке документа.</li><li>Юридический блок с названием компании, регистрационным номером, телефоном и упоминанием патентной заявки есть только на странице демо, а не на главной.</li><li>Все три контентных видео подключают формат webm первым, но все три файла отдают 404 — фактически играют только тяжёлые mp4, а заявленные адреса остаются битыми.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть ради демо: это настоящая сцена гауссовых сплатов под управлением PlayCanvas, где изгиб пространства сделан собственным шейдерным чанком, а маршрут и рамка навигатора собраны обычной разметкой поверх холста.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">orbify.eu</dd></div>
-          <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>Инструменты разработчика</dd></div>
-          <div><dt>Для кого</dt><dd>Разработчикам, Продуктовым командам, Автопрому и транспорту</dd></div>
-          <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Норвегия</dd></div>
-          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>02.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Демонстрация не нарисована: страница демо грузит настоящие файлы гауссовых сплатов на 97,5 и 4,85 МБ и рендерит их движком PlayCanvas, а сам эффект изгиба сделан подменой шейдерного чанка с набором параметров.</li><li>Демо стилизовано под экран автомобильного навигатора: поверх холста лежит рамка устройства с бортиком и «камерой», а маршрутные маркеры — обычные элементы разметки, а не объекты трёхмерной сцены.</li><li>Сайт собран предельно вручную: пятнадцать килобайт стилей с токенами и меньше двух килобайт скриптов, без сборщика, фреймворка и UI-библиотек; в стилях при этом остались неиспользуемые классы карточек команды и метаданных подвала.</li><li>SEO не сделано вовсе: нет описания, карточек для соцсетей, канонического адреса, иконки и микроразметки, а robots.txt и карта сайта отвечают 404 — при корректном заголовке и языке документа.</li><li>Юридический блок с названием компании, регистрационным номером, телефоном и упоминанием патентной заявки есть только на странице демо, а не на главной.</li><li>Все три контентных видео подключают формат webm первым, но все три файла отдают 404 — фактически играют только тяжёлые mp4, а заявленные адреса остаются битыми.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#06070C"></span><span class="swatch" style="background:#3D6FFF"></span><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#212637"></span><span class="swatch" style="background:#88898B"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">orbify.eu</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Инструменты разработчика</dd></div>
+        <div><dt>Для кого</dt><dd>Разработчикам, Продуктовым командам, Автопрому и транспорту</dd></div>
+        <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Норвегия</dd></div>
+        <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>02.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#06070C"></span><span class="swatch" style="background:#3D6FFF"></span><span class="swatch" style="background:#FFFFFF"></span><span class="swatch" style="background:#212637"></span><span class="swatch" style="background:#88898B"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#06070C, #3D6FFF, #FFFFFF, #212637, #88898B">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -106,40 +111,28 @@
          <div><dt>Режим</dt><dd>Тёмная</dd></div>
          <div><dt>Цвет фона</dt><dd>Синий</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Orbify — Next-Generation Navigation Visualization <span class="small muted">(49 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd><span class="placeholder">нет данных</span></dd></div>
-          <div><dt>Open Graph</dt><dd>нет</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>нет: /sitemap.xml отвечает 404</dd></div>
-          <div><dt>Robots</dt><dd>нет: /robots.txt отвечает 404</dd></div>
-          <div><dt>Аналитика</dt><dd>Vercel Web Analytics</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>20</dd></div>
-          <div><dt>Битые ссылки</dt><dd>/videos/rotate.webm — 404, хотя указан первым источником фонового видео<br>/videos/x.webm — 404<br>/videos/video.webm — 404<br>/robots.txt — 404<br>/sitemap.xml — 404</dd></div>
-          <div><dt>Контакты</dt><dd>почта karsten@orbify.eu в навигации и в кнопке связи; телефон и регистрационные данные — только на странице демо</dd></div>
-          <div><dt>Юридическая информация</dt><dd>на главной юридического блока нет; на странице демо указаны Orbify AS, регистрационный номер, телефон, знак охраны прав и патентная заявка, а также лицензия CC BY 4.0 на трёхмерную модель</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong> — свои стили и скрипт на 1816 байт без хешей сборки; ни React, ни Vue, ни Nuxt, ни Astro, ни Svelte, ни Webflow, ни Framer, ни WordPress</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, HSTS на два года</li><li><strong>PlayCanvas Engine</strong> — на странице демо подключение через import map с CDN и импорт Application, Asset, AssetListLoader; в панели подпись о рендере на PlayCanvas, в коде выбор между WebGL и WebGPU</li><li><strong>Гауссовы сплаты</strong> — ассеты scene.sog на 97,5 МБ и bronco.sog на 4,85 МБ, тип ассета gsplat, первые байты подтвердили ZIP-контейнер</li><li><strong>Собственный шейдерный деформер поверх сплатов</strong> — подписка на создание материала и подмена чанка gsplatModifyPS с параметрами включения, начала изгиба, ширины и высоты ближней зоны, высоты точки схода и дистанции затухания</li><li><strong>Появление блоков на IntersectionObserver</strong> — класс fade-in и наблюдатель с порогом 0,12 и отрицательным нижним отступом, каскадная задержка по индексу элемента</li><li><strong>Фоновое видео</strong> — тег video с автозапуском, зацикливанием и отключённым звуком в фиксированном контейнере под контентом, плюс два контентных видео</li><li><strong>Google Fonts</strong> — предзагрузка fonts.googleapis.com и запрос семейств Syne, IBM Plex Sans и IBM Plex Mono</li><li><strong>Токены в CSS-переменных</strong> — корневые переменные фона, карточек, акцентов, шрифтов и кривой перехода; шесть применений размытия подложки</li><li><strong>Чего нет</strong> — поиск по коду не нашёл ни three.js, ни GSAP, ни Lenis, ни Lottie, ни Rive, ни Tailwind, ни карт Mapbox, MapLibre или Leaflet, ни библиотек графиков, ни CMS</li><li><strong>Аналитика</strong> — только Vercel Web Analytics; других счётчиков нет</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть ради демо: это настоящая сцена гауссовых сплатов под управлением PlayCanvas, где изгиб пространства сделан собственным шейдерным чанком, а маршрут и рамка навигатора собраны обычной разметкой поверх холста.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong> — свои стили и скрипт на 1816 байт без хешей сборки; ни React, ни Vue, ни Nuxt, ни Astro, ни Svelte, ни Webflow, ни Framer, ни WordPress</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, HSTS на два года</li><li><strong>PlayCanvas Engine</strong> — на странице демо подключение через import map с CDN и импорт Application, Asset, AssetListLoader; в панели подпись о рендере на PlayCanvas, в коде выбор между WebGL и WebGPU</li><li><strong>Гауссовы сплаты</strong> — ассеты scene.sog на 97,5 МБ и bronco.sog на 4,85 МБ, тип ассета gsplat, первые байты подтвердили ZIP-контейнер</li><li><strong>Собственный шейдерный деформер поверх сплатов</strong> — подписка на создание материала и подмена чанка gsplatModifyPS с параметрами включения, начала изгиба, ширины и высоты ближней зоны, высоты точки схода и дистанции затухания</li><li><strong>Появление блоков на IntersectionObserver</strong> — класс fade-in и наблюдатель с порогом 0,12 и отрицательным нижним отступом, каскадная задержка по индексу элемента</li><li><strong>Фоновое видео</strong> — тег video с автозапуском, зацикливанием и отключённым звуком в фиксированном контейнере под контентом, плюс два контентных видео</li><li><strong>Google Fonts</strong> — предзагрузка fonts.googleapis.com и запрос семейств Syne, IBM Plex Sans и IBM Plex Mono</li><li><strong>Токены в CSS-переменных</strong> — корневые переменные фона, карточек, акцентов, шрифтов и кривой перехода; шесть применений размытия подложки</li><li><strong>Чего нет</strong> — поиск по коду не нашёл ни three.js, ни GSAP, ни Lenis, ни Lottie, ни Rive, ни Tailwind, ни карт Mapbox, MapLibre или Leaflet, ни библиотек графиков, ни CMS</li><li><strong>Аналитика</strong> — только Vercel Web Analytics; других счётчиков нет</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

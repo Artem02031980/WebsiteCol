@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Aevion</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Aevion</h1>
     <ul class="taglist">
@@ -46,42 +46,47 @@
     <p class="site-head__url"><a href="https://drone.riotters.com/" target="_blank" rel="noopener noreferrer">https://drone.riotters.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/010.webp" alt="Скриншот главной страницы Aevion"
            width="1732" height="1276" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Одностраничный сайт вымышленного автономного LiDAR-дрона для инспекции инфраструктуры — демонстрация технологий студии Riotters. Фотореалистичная модель дрона и запечённая анимация раскрываются по мере прокрутки, а меню работает как якоря. Эффектный демосайт вымышленного автономного дрона. Главная фишка — псевдоинтерактивные 3D-анимации с привязкой к пунктам меню. Сайт создан студией Riotters в экспериментальных творческих целях.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Одностраничный сайт вымышленного автономного LiDAR-дрона для инспекции инфраструктуры — демонстрация технологий студии Riotters. Фотореалистичная модель дрона и запечённая анимация раскрываются по мере прокрутки, а меню работает как якоря. Эффектный демосайт вымышленного автономного дрона. Главная фишка — псевдоинтерактивные 3D-анимации с привязкой к пунктам меню. Сайт создан студией Riotters в экспериментальных творческих целях.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Весь 3D-нарратив — одна запечённая анимация на 1038 кадров при 30 fps, нарезанная по секциям; камеры для разделов тоже запечены в модель отдельными узлами, то есть режиссура сделана в Blender, а не в коде.</li><li>Смаз винтов сделан не постэффектом, а инстансингом: на каждый пропеллер накладывается пятнадцать клонов-призраков, распределённых по дуге выдержки 1/24 секунды — именно это даёт размытые винты на скриншоте.</li><li>Связь меню с 3D непрямая: пункты Gear, Solutions, Capabilities, Software и Contact — это якоря со своими смещениями, Lenis прокручивает страницу, а прогресс скролла в секции высотой 390vh выбирает кадр и угол рыскания.</li><li>Псевдоинтерактивность интро устроена как подмена источника у одного скрытого видео: слова «cracks», «deformations» и «structural risks» несут разные mp4-файлы, а элемент видео один.</li><li>Инженерная аккуратность для демо: отдельный счётчик кадров, восстановление после потери WebGL-контекста до трёх раз, раздельные коэффициенты сглаживания для десктопа и мобильного, мобильные переопределения почти для каждой константы.</li><li>В подвале перечислен Payload CMS, но /api и /admin отдают 404, страница полностью пререндерена и обращений к CMS нет — список технологий выглядит декларацией, а не описанием рантайма.</li><li>На странице нет ни одного h1 — только четыре подзаголовка второго уровня, а гигантский логотип AEVION в первом экране отрисован как SVG с сильным размытием.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример режиссуры в 3D: вся анимация вместе с камерами запечена в одну модель, а скролл лишь выбирает кадр. Отдельно интересен приём со смазом винтов инстансингом вместо постобработки.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">drone.riotters.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Промо-сайт</dd></div>
-          <div><dt>Категории</dt><dd>Эксперименты и спецпроекты</dd></div>
-          <div><dt>Подкатегории</dt><dd>Промо, Технология WebGL и 3D, Интерактив</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Маркетологам</dd></div>
-          <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм, Иммерсивный 3D</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Польша</dd></div>
-          <div><dt>Автор</dt><dd>Riotters</dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Весь 3D-нарратив — одна запечённая анимация на 1038 кадров при 30 fps, нарезанная по секциям; камеры для разделов тоже запечены в модель отдельными узлами, то есть режиссура сделана в Blender, а не в коде.</li><li>Смаз винтов сделан не постэффектом, а инстансингом: на каждый пропеллер накладывается пятнадцать клонов-призраков, распределённых по дуге выдержки 1/24 секунды — именно это даёт размытые винты на скриншоте.</li><li>Связь меню с 3D непрямая: пункты Gear, Solutions, Capabilities, Software и Contact — это якоря со своими смещениями, Lenis прокручивает страницу, а прогресс скролла в секции высотой 390vh выбирает кадр и угол рыскания.</li><li>Псевдоинтерактивность интро устроена как подмена источника у одного скрытого видео: слова «cracks», «deformations» и «structural risks» несут разные mp4-файлы, а элемент видео один.</li><li>Инженерная аккуратность для демо: отдельный счётчик кадров, восстановление после потери WebGL-контекста до трёх раз, раздельные коэффициенты сглаживания для десктопа и мобильного, мобильные переопределения почти для каждой константы.</li><li>В подвале перечислен Payload CMS, но /api и /admin отдают 404, страница полностью пререндерена и обращений к CMS нет — список технологий выглядит декларацией, а не описанием рантайма.</li><li>На странице нет ни одного h1 — только четыре подзаголовка второго уровня, а гигантский логотип AEVION в первом экране отрисован как SVG с сильным размытием.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F1F4F5"></span><span class="swatch" style="background:#CDD0D0"></span><span class="swatch" style="background:#AEB2B2"></span><span class="swatch" style="background:#909292"></span><span class="swatch" style="background:#090D0E"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">drone.riotters.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Промо-сайт</dd></div>
+        <div><dt>Категории</dt><dd>Эксперименты и спецпроекты</dd></div>
+        <div><dt>Подкатегории</dt><dd>Промо, Технология WebGL и 3D, Интерактив</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Маркетологам</dd></div>
+        <div><dt>Стиль</dt><dd>Утилитарный техно, Минимализм, Иммерсивный 3D</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Польша</dd></div>
+        <div><dt>Автор</dt><dd>Riotters</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>30.09.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F1F4F5"></span><span class="swatch" style="background:#CDD0D0"></span><span class="swatch" style="background:#AEB2B2"></span><span class="swatch" style="background:#909292"></span><span class="swatch" style="background:#090D0E"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#F1F4F5, #CDD0D0, #AEB2B2, #909292, #090D0E">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -109,40 +114,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Aevion — autonomous LiDAR inspection drone <span class="small muted">(42 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Interactive 3D demo of Aevion: full-hemisphere LiDAR capture at 240,000 points per second, folding to 42 cm. A technology demo by Riotters. <span class="small muted">(139 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>https://drone.riotters.com/sitemap.xml — один адрес, lastmod 19.08.2026</dd></div>
-          <div><dt>Robots</dt><dd>есть: Allow: /, указаны Host и Sitemap</dd></div>
-          <div><dt>Аналитика</dt><dd>Vercel Web Analytics, Vercel Speed Insights</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>23</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>контактов на странице нет: в подвале ссылка «Tech Demo by Riotters» и кнопка «Contact Us» ведут на сайт студии; контакт студии — contact@riotters.com</dd></div>
-          <div><dt>Юридическая информация</dt><dd>© Riotters 2026 и дисклеймер о товарных знаках DJI с оговоркой, что это некоммерческая демонстрация, не связанная с DJI; политики конфиденциальности и импрессума на сайте нет</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js (App Router) с Turbopack</strong> — чанки /_next/static/chunks/*, RSC-пейлоад self.__next_f.push, заголовок X-Nextjs-Prerender: 1, чанки turbopack-*.js</li><li><strong>React 19</strong> — flight-данные RSC, ссылки на $Sreact.fragment, серверные ссылки-модули</li><li><strong>three.js</strong> — GLTFLoader, PerspectiveCamera, OrthographicCamera, WebGLRenderer, InstancedMesh, ShaderMaterial, ColorManagement; three.js заявлен и в og:description</li><li><strong>React (@react-three/fiber) 9.5.0</strong> — литерально в чанке: rendererPackageName: &quot;@react-three/fiber&quot;, rendererVersion: &quot;9.5.0&quot;</li><li><strong>React (@react-three/drei)</strong> — хук useEnvironment с характерными строками ошибок, useGLTF, useThree</li><li><strong>postprocessing (pmndrs)</strong> — классы LuminanceMaterial и EffectMaterial с defines THREE_REVISION</li><li><strong>Motion (framer-motion)</strong> — классы VisualElement, MotionValue, KeyframeResolver, interpolate с опциями clamp и ease</li><li><strong>Lenis</strong> — классы lenis/lenis-smooth, экспорты ReactLenis и useLenis, вызов scrollTo с флагами immediate и force</li><li><strong>Rive (@rive-app/webgl2 2.38.5)</strong> — дескриптор пакета в чанке, ленивая загрузка отдельного чанка; Rive рисует в четыре canvas в разметке</li><li><strong>GLTFLoader с Draco, KTX2 и meshopt</strong> — код загрузчика с KHR_DRACO_MESH_COMPRESSION, KHR_MESH_QUANTIZATION, ktx2Loader, meshoptDecoder</li><li><strong>Tailwind CSS v4</strong> — слои @layer properties и @property --tw-*, токен --color-ink: #24363f</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, ссылки с параметром dpl</li><li><strong>Blender (экспорт моделей)</strong> — в заголовке GLB: &quot;generator&quot;:&quot;Khronos glTF Blender I/O v5.2.39&quot;</li><li><strong>Шрифты Switzer Variable и Proto Mono Light</strong> — @font-face со self-hosted woff2 и preload; для обоих сгенерированы fallback-метрики с size-adjust</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример режиссуры в 3D: вся анимация вместе с камерами запечена в одну модель, а скролл лишь выбирает кадр. Отдельно интересен приём со смазом винтов инстансингом вместо постобработки.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js (App Router) с Turbopack</strong> — чанки /_next/static/chunks/*, RSC-пейлоад self.__next_f.push, заголовок X-Nextjs-Prerender: 1, чанки turbopack-*.js</li><li><strong>React 19</strong> — flight-данные RSC, ссылки на $Sreact.fragment, серверные ссылки-модули</li><li><strong>three.js</strong> — GLTFLoader, PerspectiveCamera, OrthographicCamera, WebGLRenderer, InstancedMesh, ShaderMaterial, ColorManagement; three.js заявлен и в og:description</li><li><strong>React (@react-three/fiber) 9.5.0</strong> — литерально в чанке: rendererPackageName: &quot;@react-three/fiber&quot;, rendererVersion: &quot;9.5.0&quot;</li><li><strong>React (@react-three/drei)</strong> — хук useEnvironment с характерными строками ошибок, useGLTF, useThree</li><li><strong>postprocessing (pmndrs)</strong> — классы LuminanceMaterial и EffectMaterial с defines THREE_REVISION</li><li><strong>Motion (framer-motion)</strong> — классы VisualElement, MotionValue, KeyframeResolver, interpolate с опциями clamp и ease</li><li><strong>Lenis</strong> — классы lenis/lenis-smooth, экспорты ReactLenis и useLenis, вызов scrollTo с флагами immediate и force</li><li><strong>Rive (@rive-app/webgl2 2.38.5)</strong> — дескриптор пакета в чанке, ленивая загрузка отдельного чанка; Rive рисует в четыре canvas в разметке</li><li><strong>GLTFLoader с Draco, KTX2 и meshopt</strong> — код загрузчика с KHR_DRACO_MESH_COMPRESSION, KHR_MESH_QUANTIZATION, ktx2Loader, meshoptDecoder</li><li><strong>Tailwind CSS v4</strong> — слои @layer properties и @property --tw-*, токен --color-ink: #24363f</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, ссылки с параметром dpl</li><li><strong>Blender (экспорт моделей)</strong> — в заголовке GLB: &quot;generator&quot;:&quot;Khronos glTF Blender I/O v5.2.39&quot;</li><li><strong>Шрифты Switzer Variable и Proto Mono Light</strong> — @font-face со self-hosted woff2 и preload; для обоих сгенерированы fallback-метрики с size-adjust</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

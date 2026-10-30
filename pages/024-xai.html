@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>xAI</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>xAI</h1>
     <ul class="taglist">
@@ -43,42 +43,47 @@
     <p class="site-head__url"><a href="https://x.ai/" target="_blank" rel="noopener noreferrer">https://x.ai/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/024.webp" alt="Скриншот главной страницы xAI"
            width="1288" height="1151" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Корпоративный сайт компании xAI, создателя чат-бота Grok. Светлая витрина с крупным центрированным заголовком, двумя кнопками-капсулами и сеткой из пяти продуктовых плиток; анимированный логотип нарисован векторным рантаймом. Аккуратный информативный сайт ИИ-компании Илона Маска.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Корпоративный сайт компании xAI, создателя чат-бота Grok. Светлая витрина с крупным центрированным заголовком, двумя кнопками-капсулами и сеткой из пяти продуктовых плиток; анимированный логотип нарисован векторным рантаймом. Аккуратный информативный сайт ИИ-компании Илона Маска.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Сайт полностью переписан между апрелем и сентябрём 2026: архивная версия начала апреля — ещё старый xAI на webpack с заголовком про человечество и меню вокруг Grok, тогда как текущая — SpaceXAI с серверными компонентами, сборкой Turbopack и новым меню из продуктов, решений, разработчиков и компании.</li><li>Логотип в шапке — не SVG и не гифка, а векторная анимация: страница грузит рантайм на 717 килобайт ради одного файла логотипа на 12 килобайт.</li><li>Заголовок первого экрана меняет последнее слово: два независимых рендера дали «imagine» и «build», причём слово визуально выделено — то есть это осмысленная ротация, а не случайная разница версий.</li><li>Трекинг-слой очень тяжёлый: 176 запросов и 2,87 мегабайта на мобильной загрузке, четырнадцать сторонних сервисов и восемьдесят скриптов, из которых сторонний код — почти половина трафика; при этом сдвигов макета нет вовсе.</li><li>Собственная политика безопасности блокирует часть собственных же пикселей: в консоли зафиксированы нарушения для счётчика Cloudflare и хелперов синхронизации — редкий случай, когда защита настроена строже, чем интеграции.</li><li>В robots.txt объявлена позиция по использованию контента: обучение ИИ, поиск и подача в ответы разрешены — прямо противоположно тому, что выбрала платформа Ploy из этой же партии.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример корпоративной витрины ИИ-компании, где инженерия ушла в инфраструктуру: серверные компоненты с предзагрузкой маршрутов, векторная анимация логотипа, генерация картинок для соцсетей на каждый маршрут и серверный сбор конверсий — при внешне простой светлой странице.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">x.ai</dd></div>
-          <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
-          <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
-          <div><dt>Подкатегории</dt><dd>ИИ-сервисы</dd></div>
-          <div><dt>Для кого</dt><dd>Разработчикам, Продуктовым командам, Обычным пользователям</dd></div>
-          <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>США</dd></div>
-          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>05.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Сайт полностью переписан между апрелем и сентябрём 2026: архивная версия начала апреля — ещё старый xAI на webpack с заголовком про человечество и меню вокруг Grok, тогда как текущая — SpaceXAI с серверными компонентами, сборкой Turbopack и новым меню из продуктов, решений, разработчиков и компании.</li><li>Логотип в шапке — не SVG и не гифка, а векторная анимация: страница грузит рантайм на 717 килобайт ради одного файла логотипа на 12 килобайт.</li><li>Заголовок первого экрана меняет последнее слово: два независимых рендера дали «imagine» и «build», причём слово визуально выделено — то есть это осмысленная ротация, а не случайная разница версий.</li><li>Трекинг-слой очень тяжёлый: 176 запросов и 2,87 мегабайта на мобильной загрузке, четырнадцать сторонних сервисов и восемьдесят скриптов, из которых сторонний код — почти половина трафика; при этом сдвигов макета нет вовсе.</li><li>Собственная политика безопасности блокирует часть собственных же пикселей: в консоли зафиксированы нарушения для счётчика Cloudflare и хелперов синхронизации — редкий случай, когда защита настроена строже, чем интеграции.</li><li>В robots.txt объявлена позиция по использованию контента: обучение ИИ, поиск и подача в ответы разрешены — прямо противоположно тому, что выбрала платформа Ploy из этой же партии.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FDFDFC"></span><span class="swatch" style="background:#171716"></span><span class="swatch" style="background:#453425"></span><span class="swatch" style="background:#756556"></span><span class="swatch" style="background:#D3CBBF"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">x.ai</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>ИИ-сервисы</dd></div>
+        <div><dt>Для кого</dt><dd>Разработчикам, Продуктовым командам, Обычным пользователям</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>США</dd></div>
+        <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>05.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FDFDFC"></span><span class="swatch" style="background:#171716"></span><span class="swatch" style="background:#453425"></span><span class="swatch" style="background:#756556"></span><span class="swatch" style="background:#D3CBBF"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FDFDFC, #171716, #453425, #756556, #D3CBBF">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -106,40 +111,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>SpaceXAI <span class="small muted">(8 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>SpaceXAI builds Grok — frontier AI models for reasoning, voice, image generation, and more. Build with the Grok API. <span class="small muted">(116 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd><span class="placeholder">не измерено</span></dd></div>
-          <div><dt>Sitemap</dt><dd>существует и объявлен в robots, но содержимое прочитать не удалось: прямой запрос блокируется Cloudflare</dd></div>
-          <div><dt>Robots</dt><dd>есть, получен напрямую: разрешён обход корня, закрыт служебный раздел инструментов, указана карта сайта и декларация Content-Signal с разрешением обучения ИИ</dd></div>
-          <div><dt>Аналитика</dt><dd>Google Tag Manager (GTM-MSD4MG6C), Google Analytics 4 (G-Y57KB83RE7), Google Ads и DoubleClick (AW-18347536691), Meta Pixel с серверной автоматизацией (2893130651053628), серверный Google Tag Manager на Cloud Run, LinkedIn Insight Tag, TikTok Pixel, Reddit Pixel, X и Twitter Pixel, Snapchat Pixel, Tapad, Hightouch Events, Mixpanel, OneTrust (управление согласиями), Cloudflare Web Analytics — запрос блокируется собственной политикой безопасности сайта</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>12</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>не определено: подвал страницы в снимок не попал, разметка недоступна; в архивной версии были разделы продуктов, API, компании и ресурсов</dd></div>
-          <div><dt>Юридическая информация</dt><dd>отдельного юридического блока получить не удалось; подтверждено наличие управления согласиями OneTrust, маршрутов политики, безопасности и правовой информации в структуре приложения и отдельного центра доверия на поддомене; юридическое лицо, адрес и реквизиты не получены</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Next.js с серверными компонентами</strong> — ассеты из служебного каталога сборки, заголовки предрендера и времени жизни кэша, поток серверных компонентов и флайт-запросы к страницам продуктов и новостей</li><li><strong>Turbopack</strong> — запрошен служебный чанк с именем turbopack; в архивной версии апреля 2026 на том же месте был чанк webpack</li><li><strong>Vercel</strong> — к каждому ассету подклеен идентификатор развёртывания; в политике безопасности разрешено хранилище Vercel Blob</li><li><strong>Cloudflare</strong> — заголовки сервера, состояние кэша, служебная cookie управления ботами и скрипт проверки</li><li><strong>Rive</strong> — запрошены рантайм rive.wasm весом 717 килобайт и файл анимации логотипа на 12 килобайт</li><li><strong>Самохостинг шрифтов через next/font</strong> — два вариативных файла, включая Geist Mono, оба с предзагрузкой; сторонние шрифтовые сервисы не запрашивались</li><li><strong>Генерация изображений для соцсетей</strong> — маршруты вида opengraph-image с хешами на главной, в разделах компании, новостей и вакансий, все размером 2400 на 1260</li><li><strong>Cloudflare Images</strong> — адреса медиа с параметрами масштабирования и автоматического формата</li><li><strong>Строгая политика безопасности и HSTS</strong> — заголовок Content-Security-Policy с поимёнными списками доменов и требованием перевода на HTTPS, плюс строгий транспортный заголовок на год</li><li><strong>Разрешено политикой, но не подтверждено запросами</strong> — в списках разрешений есть трёхмерный редактор Spline, шрифтовый сервис Typekit, служба вакансий Greenhouse, картографические тайлы Stadia Maps и видео YouTube; фактических обращений к ним в измеренном прогоне нет</li><li><strong>Не подтверждено</strong> — наличие Tailwind, three.js, GSAP, Lenis и Lottie ни в одном признаке не обнаружено; сырой HTML недоступен, поэтому отрицать их наличие нельзя</li><li><strong>Аналитика</strong> — Tag Manager, GA4, рекламные пиксели Google, Meta с серверной автоматизацией, LinkedIn, TikTok, Reddit, X, Snapchat, Tapad, Hightouch, Mixpanel, управление согласиями OneTrust и серверный сбор конверсий на Cloud Run</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример корпоративной витрины ИИ-компании, где инженерия ушла в инфраструктуру: серверные компоненты с предзагрузкой маршрутов, векторная анимация логотипа, генерация картинок для соцсетей на каждый маршрут и серверный сбор конверсий — при внешне простой светлой странице.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Next.js с серверными компонентами</strong> — ассеты из служебного каталога сборки, заголовки предрендера и времени жизни кэша, поток серверных компонентов и флайт-запросы к страницам продуктов и новостей</li><li><strong>Turbopack</strong> — запрошен служебный чанк с именем turbopack; в архивной версии апреля 2026 на том же месте был чанк webpack</li><li><strong>Vercel</strong> — к каждому ассету подклеен идентификатор развёртывания; в политике безопасности разрешено хранилище Vercel Blob</li><li><strong>Cloudflare</strong> — заголовки сервера, состояние кэша, служебная cookie управления ботами и скрипт проверки</li><li><strong>Rive</strong> — запрошены рантайм rive.wasm весом 717 килобайт и файл анимации логотипа на 12 килобайт</li><li><strong>Самохостинг шрифтов через next/font</strong> — два вариативных файла, включая Geist Mono, оба с предзагрузкой; сторонние шрифтовые сервисы не запрашивались</li><li><strong>Генерация изображений для соцсетей</strong> — маршруты вида opengraph-image с хешами на главной, в разделах компании, новостей и вакансий, все размером 2400 на 1260</li><li><strong>Cloudflare Images</strong> — адреса медиа с параметрами масштабирования и автоматического формата</li><li><strong>Строгая политика безопасности и HSTS</strong> — заголовок Content-Security-Policy с поимёнными списками доменов и требованием перевода на HTTPS, плюс строгий транспортный заголовок на год</li><li><strong>Разрешено политикой, но не подтверждено запросами</strong> — в списках разрешений есть трёхмерный редактор Spline, шрифтовый сервис Typekit, служба вакансий Greenhouse, картографические тайлы Stadia Maps и видео YouTube; фактических обращений к ним в измеренном прогоне нет</li><li><strong>Не подтверждено</strong> — наличие Tailwind, three.js, GSAP, Lenis и Lottie ни в одном признаке не обнаружено; сырой HTML недоступен, поэтому отрицать их наличие нельзя</li><li><strong>Аналитика</strong> — Tag Manager, GA4, рекламные пиксели Google, Meta с серверной автоматизацией, LinkedIn, TikTok, Reddit, X, Snapchat, Tapad, Hightouch, Mixpanel, управление согласиями OneTrust и серверный сбор конверсий на Cloud Run</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

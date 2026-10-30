@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Flect</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Flect</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://www.getflect.app/" target="_blank" rel="noopener noreferrer">https://www.getflect.app/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/018.png" alt="Скриншот главной страницы Flect"
            width="1685" height="1118" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Промо-сайт велнес-приложения, которое помогает понять, что влияет на ощущение счастья, и выстроить привычки. Одна длинная страница с методом из трёх шагов, индексом Happiness Lifestyle Index, сравнением подходов и формой раннего доступа. Светлый дружелюбный сайт велнес-приложения для «построения счастья».</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Промо-сайт велнес-приложения, которое помогает понять, что влияет на ощущение счастья, и выстроить привычки. Одна длинная страница с методом из трёх шагов, индексом Happiness Lifestyle Index, сравнением подходов и формой раннего доступа. Светлый дружелюбный сайт велнес-приложения для «построения счастья».</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Сайт собран вообще без зависимостей: ни фреймворка, ни сборщика, ни анимационных библиотек — вся моторика на requestAnimationFrame и IntersectionObserver, а на страницах-заглушках фон рисует собственный шейдер вместо three.js.</li><li>О сознательном отказе от библиотек говорит след в разметке: версия скриптов помечена как no-lenis, а в коде остался комментарий про нативный скролл — плавный скролл удалили, оставив его только для переходов по якорям.</li><li>Фотографии обрезаны по суперэллипсу: вместо скругления углов используется polygon примерно из ста двадцати точек, поэтому снимки выглядят «сквошами», а не прямоугольниками со скруглением.</li><li>Заголовок и лид проявляются не целиком, а по словам: скрипт режет текст на фрагменты, и каждый всплывает из размытия со своей задержкой.</li><li>SEO проработано заметно выше среднего для рукописного сайта — карта сайта с приоритетами, robots с директивой Sitemap, канонический адрес, полные карточки для соцсетей и микроразметка; при этом в карте лежат две страницы-лендинга, на которые с сайта не ведёт ни одной ссылки.</li><li>Часть обещаний не выполнена: страницы блога и партнёров выложены заглушками с надписью «This part is still settling», кнопки скачивания в подвале ведут на якорь той же страницы, а не в магазины приложений, и контактов в подвале нет вовсе — единственная почта спрятана на юридических страницах.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример сайта, собранного вообще без библиотек: проявление текста по словам, закреплённая сцена с шагами метода, параллакс, счётчик индекса и состояния формы — всё на requestAnimationFrame и IntersectionObserver, плюс собственный WebGL-шейдер там, где обычно берут three.js.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">getflect.app</dd></div>
-          <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
-          <div><dt>Категории</dt><dd>Здоровье и медицина</dd></div>
-          <div><dt>Подкатегории</dt><dd>Велнес</dd></div>
-          <div><dt>Для кого</dt><dd>Обычным пользователям, Дизайнерам, Продуктовым командам</dd></div>
-          <div><dt>Стиль</dt><dd>Минимализм, Редакционный, Игривый</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>США, Нью-Джерси</dd></div>
-          <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
-          <div><dt>Год</dt><dd>2026</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>02.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Сайт собран вообще без зависимостей: ни фреймворка, ни сборщика, ни анимационных библиотек — вся моторика на requestAnimationFrame и IntersectionObserver, а на страницах-заглушках фон рисует собственный шейдер вместо three.js.</li><li>О сознательном отказе от библиотек говорит след в разметке: версия скриптов помечена как no-lenis, а в коде остался комментарий про нативный скролл — плавный скролл удалили, оставив его только для переходов по якорям.</li><li>Фотографии обрезаны по суперэллипсу: вместо скругления углов используется polygon примерно из ста двадцати точек, поэтому снимки выглядят «сквошами», а не прямоугольниками со скруглением.</li><li>Заголовок и лид проявляются не целиком, а по словам: скрипт режет текст на фрагменты, и каждый всплывает из размытия со своей задержкой.</li><li>SEO проработано заметно выше среднего для рукописного сайта — карта сайта с приоритетами, robots с директивой Sitemap, канонический адрес, полные карточки для соцсетей и микроразметка; при этом в карте лежат две страницы-лендинга, на которые с сайта не ведёт ни одной ссылки.</li><li>Часть обещаний не выполнена: страницы блога и партнёров выложены заглушками с надписью «This part is still settling», кнопки скачивания в подвале ведут на якорь той же страницы, а не в магазины приложений, и контактов в подвале нет вовсе — единственная почта спрятана на юридических страницах.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FCFFEF"></span><span class="swatch" style="background:#F4FAC6"></span><span class="swatch" style="background:#98774D"></span><span class="swatch" style="background:#281913"></span><span class="swatch" style="background:#B5A483"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">getflect.app</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Здоровье и медицина</dd></div>
+        <div><dt>Подкатегории</dt><dd>Велнес</dd></div>
+        <div><dt>Для кого</dt><dd>Обычным пользователям, Дизайнерам, Продуктовым командам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Редакционный, Игривый</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>США, Нью-Джерси</dd></div>
+        <div><dt>Автор</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>02.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FCFFEF"></span><span class="swatch" style="background:#F4FAC6"></span><span class="swatch" style="background:#98774D"></span><span class="swatch" style="background:#281913"></span><span class="swatch" style="background:#B5A483"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FCFFEF, #F4FAC6, #98774D, #281913, #B5A483">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Flect — Build your happiness <span class="small muted">(28 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>Flect helps people with busy, demanding lifestyles understand what affects their happiness, and build habits that improve it over time. <span class="small muted">(135 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>да</dd></div>
-          <div><dt>Sitemap</dt><dd>есть: /sitemap.xml на восемь адресов с приоритетами и датами; две страницы в карте не слинкованы с сайта</dd></div>
-          <div><dt>Robots</dt><dd>User-agent: * / Allow: / и директива Sitemap</dd></div>
-          <div><dt>Аналитика</dt><dd>Google Tag Manager (GTM-P9D5BFCL), Google Analytics 4 (G-PCT2PKP296), Vercel Web Analytics, Vercel Speed Insights</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>15</dd></div>
-          <div><dt>Битые ссылки</dt><dd>нет</dd></div>
-          <div><dt>Контакты</dt><dd>в подвале контактов нет — только четыре колонки ссылок; единственная почта support@getflect.app указана на страницах условий, приватности и cookie</dd></div>
-          <div><dt>Юридическая информация</dt><dd>юрлицо Flect App Inc. с адресом в Нью-Джерси, условия версии 1.1 от 28 мая 2025 года, отдельные страницы политики конфиденциальности и cookie; в условиях прямо сказано, что сервис не оказывает медицинских услуг</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong> — ни одного признака Next, Nuxt, Astro, Svelte, Vue, WordPress, Webflow, Framer или Tilda; в разметке только свои стили и свои скрипты main.js, header.js, partials.js, lazyload.js, buttons.js без сборщика</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, HSTS на два года, скрипты /_vercel/insights и /_vercel/speed-insights</li><li><strong>Собственный WebGL-шейдер без three.js</strong> — файл wave-bg.js с комментарием «Pure WebGL (no three.js)»: холст создаётся в рантайме, шейдер на инлайновом GLSL, value-noise и три октавы fbm с доменным искажением, ограничение 30 кадров в секунду и пауза вне экрана</li><li><strong>Анимации на requestAnimationFrame и IntersectionObserver</strong> — в main.js свыше тридцати вызовов requestAnimationFrame и около десяти конструкторов IntersectionObserver, собственный планировщик подписчиков; поиск по всем скриптам не нашёл ни GSAP, ни Lenis, ни three.js, ни anime.js, ни Swiper, ни Lottie</li><li><strong>Отказ от библиотеки плавного скролла</strong> — версия скриптов в разметке помечена как no-lenis, в шапке main.js стоит комментарий про нативный скролл; плавность осталась только у переходов по якорям через ручной твининг в requestAnimationFrame</li><li><strong>Шрифты Pangram Pangram самохостом</strong> — правила @font-face на PP Neue Montreal и PP Editorial New с локальными файлами и font-display: swap; Google Fonts не подключён, иконки — собственные SVG</li><li><strong>Токены дизайна из Figma в CSS-переменных</strong> — комментарий в стилях «Colour tokens are pulled directly from Figma — do not eyeball» и корневые переменные цвета, шрифтов, ширины контента и кривых анимации</li><li><strong>Бэкенд формы на отдельном поддомене</strong> — запрос POST на api.getflect.app/p/early-access с полем почты и адресом страницы; проверка показала, что адрес жив и отвечает 405 на GET; при успехе переход на страницу благодарности</li><li><strong>Микроразметка JSON-LD</strong> — граф из Organization, WebSite, WebPage с частями, SoftwareApplication с категорией health, нулевой ценой и доступностью PreOrder, а также SiteNavigationElement</li><li><strong>Ленивая загрузка изображений</strong> — отдельный lazyload.js на IntersectionObserver с классами плавного появления; в первом экране, наоборот, высокий приоритет загрузки</li><li><strong>Аналитика</strong> — Google Tag Manager, Google Analytics 4 и Vercel Web Analytics со Speed Insights — подтверждено тегами и скриптами в разметке</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример сайта, собранного вообще без библиотек: проявление текста по словам, закреплённая сцена с шагами метода, параллакс, счётчик индекса и состояния формы — всё на requestAnimationFrame и IntersectionObserver, плюс собственный WebGL-шейдер там, где обычно берут three.js.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong> — ни одного признака Next, Nuxt, Astro, Svelte, Vue, WordPress, Webflow, Framer или Tilda; в разметке только свои стили и свои скрипты main.js, header.js, partials.js, lazyload.js, buttons.js без сборщика</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, HSTS на два года, скрипты /_vercel/insights и /_vercel/speed-insights</li><li><strong>Собственный WebGL-шейдер без three.js</strong> — файл wave-bg.js с комментарием «Pure WebGL (no three.js)»: холст создаётся в рантайме, шейдер на инлайновом GLSL, value-noise и три октавы fbm с доменным искажением, ограничение 30 кадров в секунду и пауза вне экрана</li><li><strong>Анимации на requestAnimationFrame и IntersectionObserver</strong> — в main.js свыше тридцати вызовов requestAnimationFrame и около десяти конструкторов IntersectionObserver, собственный планировщик подписчиков; поиск по всем скриптам не нашёл ни GSAP, ни Lenis, ни three.js, ни anime.js, ни Swiper, ни Lottie</li><li><strong>Отказ от библиотеки плавного скролла</strong> — версия скриптов в разметке помечена как no-lenis, в шапке main.js стоит комментарий про нативный скролл; плавность осталась только у переходов по якорям через ручной твининг в requestAnimationFrame</li><li><strong>Шрифты Pangram Pangram самохостом</strong> — правила @font-face на PP Neue Montreal и PP Editorial New с локальными файлами и font-display: swap; Google Fonts не подключён, иконки — собственные SVG</li><li><strong>Токены дизайна из Figma в CSS-переменных</strong> — комментарий в стилях «Colour tokens are pulled directly from Figma — do not eyeball» и корневые переменные цвета, шрифтов, ширины контента и кривых анимации</li><li><strong>Бэкенд формы на отдельном поддомене</strong> — запрос POST на api.getflect.app/p/early-access с полем почты и адресом страницы; проверка показала, что адрес жив и отвечает 405 на GET; при успехе переход на страницу благодарности</li><li><strong>Микроразметка JSON-LD</strong> — граф из Organization, WebSite, WebPage с частями, SoftwareApplication с категорией health, нулевой ценой и доступностью PreOrder, а также SiteNavigationElement</li><li><strong>Ленивая загрузка изображений</strong> — отдельный lazyload.js на IntersectionObserver с классами плавного появления; в первом экране, наоборот, высокий приоритет загрузки</li><li><strong>Аналитика</strong> — Google Tag Manager, Google Analytics 4 и Vercel Web Analytics со Speed Insights — подтверждено тегами и скриптами в разметке</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

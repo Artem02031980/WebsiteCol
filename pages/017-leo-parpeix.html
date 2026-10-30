@@ -23,14 +23,14 @@
   </div>
 </header>
 <main id="main">
-<nav class="breadcrumbs container" aria-label="Хлебные крошки">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
   <ol>
     <li><a href="../index.html">Главная</a></li>
     <li>Leo Parpeix</li>
   </ol>
 </nav>
 
-<article class="container">
+<article class="container container--narrow">
   <header class="site-head">
     <h1>Leo Parpeix</h1>
     <ul class="taglist">
@@ -44,42 +44,47 @@
     <p class="site-head__url"><a href="https://www.leoparpeix.com/" target="_blank" rel="noopener noreferrer">https://www.leoparpeix.com/</a></p>
   </header>
 
-  <div class="site-grid section section--tight">
-      <figure class="shot">
+  <figure class="shot">
       <img src="../screens/017.webp" alt="Скриншот главной страницы Leo Parpeix"
            width="1623" height="1160" decoding="async" fetchpriority="high">
     </figure>
 
-      <section class="panel">
-        <h2>Что это</h2>
-        <p>Персональное портфолио французского арт-директора и interactive-дизайнера Лео Парпе. Главная — WebGL-сцена с комнатой, ромашкой, пчелой и фруктами, по которой можно ховерить и которая живёт по своим физическим правилам. Современное портфолио арт-директора из Франции, украшенное сложным трёхмерным ховер-эффектом.</p>
-      </section>
+  <section class="site-section">
+    <h2>Что это</h2>
+    <p>Персональное портфолио французского арт-директора и interactive-дизайнера Лео Парпе. Главная — WebGL-сцена с комнатой, ромашкой, пчелой и фруктами, по которой можно ховерить и которая живёт по своим физическим правилам. Современное портфолио арт-директора из Франции, украшенное сложным трёхмерным ховер-эффектом.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Чем интересен</h2>
-        <ul><li>Трёхмерный ховер — настоящий WebGL, а не CSS и не видео: объект ловится рейкастером на плоскости, а целевая группа экспоненциально подтягивается к курсору — отсюда ощущение тяжёлого плавного следования за мышью.</li><li>Поверх рендера работает поведенческий ИИ: на библиотеке Yuka собраны преследователь и убегающий, и пчела гоняется за целью не по заготовленной анимации, а вычисляя движение каждый кадр.</li><li>Сцена разделена на два полотна: фоновое на дальнем плане и верхнее поверх HTML с отключёнными указателями — так 3D-объекты проходят над текстом, оставаясь некликабельными.</li><li>Тема меняется по маршруту прямо в подложке: главная почти белая, страница о себе тёмно-зелёная, детская — жёлтая, при этом цвет в мета-теге всегда один и тот же.</li><li>Кастомный курсор несёт смысл: подпись меняется по контексту, адрес почты копируется в буфер с подтверждением, а звук включается только после явного клика.</li><li>При этом техническая гигиена хромает: файлов robots и sitemap нет — сервер отдаёт на эти адреса то же приложение, а несуществующие страницы отвечают кодом 200 с надписью «Page not found» уже на клиенте.</li></ul>
-      </section>
+  <section class="site-section">
+    <h2>Что смотреть в первую очередь</h2>
+    <p>Смотреть как пример настоящего 3D-ховера: объект ловится рейкастером и следует за курсором с экспоненциальным сглаживанием, а фон и передний слой — два отдельных WebGL-полотна вокруг обычной HTML-вёрстки.</p>
+  </section>
 
-      <section class="panel">
-        <h2>Паспорт</h2>
-        <dl class="specs">
-          <div><dt>Домен</dt><dd class="mono">leoparpeix.com</dd></div>
-          <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
-          <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
-          <div><dt>Подкатегории</dt><dd>Дизайнер</dd></div>
-          <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Агентствам</dd></div>
-          <div><dt>Стиль</dt><dd>Иммерсивный 3D, Минимализм, Редакционный</dd></div>
-          <div><dt>Язык</dt><dd>Английский</dd></div>
-          <div><dt>Страна</dt><dd>Франция</dd></div>
-          <div><dt>Автор</dt><dd>Лео Парпе (Léo Parpeix), арт-директор и interactive-дизайнер</dd></div>
-          <div><dt>Год</dt><dd>2024</dd></div>
-          <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
-        </dl>
-      </section>
+  <section class="site-section">
+    <h2>Чем интересен</h2>
+    <ol><li>Трёхмерный ховер — настоящий WebGL, а не CSS и не видео: объект ловится рейкастером на плоскости, а целевая группа экспоненциально подтягивается к курсору — отсюда ощущение тяжёлого плавного следования за мышью.</li><li>Поверх рендера работает поведенческий ИИ: на библиотеке Yuka собраны преследователь и убегающий, и пчела гоняется за целью не по заготовленной анимации, а вычисляя движение каждый кадр.</li><li>Сцена разделена на два полотна: фоновое на дальнем плане и верхнее поверх HTML с отключёнными указателями — так 3D-объекты проходят над текстом, оставаясь некликабельными.</li><li>Тема меняется по маршруту прямо в подложке: главная почти белая, страница о себе тёмно-зелёная, детская — жёлтая, при этом цвет в мета-теге всегда один и тот же.</li><li>Кастомный курсор несёт смысл: подпись меняется по контексту, адрес почты копируется в буфер с подтверждением, а звук включается только после явного клика.</li><li>При этом техническая гигиена хромает: файлов robots и sitemap нет — сервер отдаёт на эти адреса то же приложение, а несуществующие страницы отвечают кодом 200 с надписью «Page not found» уже на клиенте.</li></ol>
+  </section>
 
-      <section class="panel">
-        <h2>Палитра</h2>
-        <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#D8D1C5"></span><span class="swatch" style="background:#B39B83"></span><span class="swatch" style="background:#8F7659"></span><span class="swatch" style="background:#F4EDE4"></span><span class="swatch" style="background:#C9B8A5"></span></div>
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">leoparpeix.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
+        <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
+        <div><dt>Подкатегории</dt><dd>Дизайнер</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Разработчикам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Иммерсивный 3D, Минимализм, Редакционный</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Франция</dd></div>
+        <div><dt>Автор</dt><dd>Лео Парпе (Léo Parpeix), арт-директор и interactive-дизайнер</dd></div>
+        <div><dt>Год</dt><dd>2024</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>01.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#D8D1C5"></span><span class="swatch" style="background:#B39B83"></span><span class="swatch" style="background:#8F7659"></span><span class="swatch" style="background:#F4EDE4"></span><span class="swatch" style="background:#C9B8A5"></span></div>
        <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#D8D1C5, #B39B83, #8F7659, #F4EDE4, #C9B8A5">Скопировать палитру</button></p>
        <ul class="palette-list">
         <li class="palette-row">
@@ -107,40 +112,28 @@
          <div><dt>Режим</dt><dd>Светлая</dd></div>
          <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технические факты</h2>
-        <dl class="specs">
-          <div><dt>HTTPS</dt><dd>да</dd></div>
-          <div><dt>Meta viewport</dt><dd>да</dd></div>
-          <div><dt>Title</dt><dd>Léo Parpeix — Art Director &amp; Interactive Designer <span class="small muted">(49 симв.)</span></dd></div>
-          <div><dt>Description</dt><dd>French Art Director &amp; Interactive Designer. I create impactful websites using a mix of typography, clean, layouts, animation and 3D elements. <span class="small muted">(141 симв.)</span></dd></div>
-          <div><dt>Open Graph</dt><dd>да</dd></div>
-          <div><dt>Структурированные данные</dt><dd>нет</dd></div>
-          <div><dt>Sitemap</dt><dd>нет: /sitemap.xml отдаёт тот же каркас приложения, карты сайта нет</dd></div>
-          <div><dt>Robots</dt><dd>нет: /robots.txt отдаёт тот же каркас приложения</dd></div>
-          <div><dt>Аналитика</dt><dd>Vercel Web Analytics 2.0.1</dd></div>
-          <div><dt>Проверено ссылок</dt><dd>15</dd></div>
-          <div><dt>Битые ссылки</dt><dd>/robots.txt и /sitemap.xml отдают каркас приложения вместо файлов<br>несуществующие адреса отвечают кодом 200: страница ошибки рисуется на клиенте</dd></div>
-          <div><dt>Контакты</dt><dd>lparpeix@gmail.com с копированием в буфер по клику, Instagram и LinkedIn; в шапке ссылка на отдельный поддомен Lab</dd></div>
-          <div><dt>Юридическая информация</dt><dd>юридического раздела нет: ни политики, ни cookie-баннера, ни реквизитов; в данных подвала копирайт 2024 года, а на странице год подставляется скриптом</dd></div>
-        </dl>
-      </section>
-
-      <section class="panel">
-        <h2>Технологии с доказательствами</h2>
-        <ul class="small">
-          <li><strong>Vue 3 со сборкой Vite</strong> — meta generator «Vite + Vue 3», контейнер div с data-v-app, scoped-атрибуты data-v-*, хешированные ассеты /assets/index-*.js</li><li><strong>vue-router</strong> — баннер версии 4.1.6 в бандле и таблица маршрутов: главная, /about, /playground и catch-all</li><li><strong>three.js</strong> — баннер Three.js, WebGLRenderer, ShaderMaterial, Raycaster; в бандле 97 вершинных и 97 фрагментных шейдеров</li><li><strong>GLTFLoader с Draco и KTX2</strong> — классы загрузчиков и модели scene_v9.glb, flower_v2.glb, bee_v4.glb, orange.glb, raisin.glb</li><li><strong>GSAP 3.14.1 со ScrollTrigger</strong> — баннеры GSAP 3.14.1 и ScrollTrigger 3.14.1, registerPlugin, инлайновые трансформации в DOM</li><li><strong>Lenis</strong> — классы lenis, lenis-smooth и lenis-stopped прямо на элементе html</li><li><strong>Yuka (поведенческий ИИ)</strong> — API EntityManager, Vehicle, PursuitBehavior, SeekBehavior и флаг преследования для пчелы</li><li><strong>Howler.js (звук)</strong> — 49 совпадений howler, AudioContext и надпись «Click to enable sound» — звук включается только по клику</li><li><strong>Vercel и Cloudflare</strong> — заголовки Server: Vercel и X-Vercel-Cache; медиа отдаётся с cdn.leoparpeix.com за Cloudflare</li><li><strong>Видео и шрифты</strong> — 22 файла mp4 и 9 webm в бандле, шоурил в теге video; локальные Monument Grotesk Regular и Avantt Variable с preload</li>
-        </ul>
-      </section>
-
-      <section class="panel">
-        <h2>Что смотреть в первую очередь</h2>
-        <p class="small">Смотреть как пример настоящего 3D-ховера: объект ловится рейкастером и следует за курсором с экспоненциальным сглаживанием, а фон и передний слой — два отдельных WebGL-полотна вокруг обычной HTML-вёрстки.</p>
-      </section>
+    </section>
   </div>
+
+  <section class="site-section">
+    <h2>Технологии с доказательствами</h2>
+    <ul>
+      <li><strong>Vue 3 со сборкой Vite</strong> — meta generator «Vite + Vue 3», контейнер div с data-v-app, scoped-атрибуты data-v-*, хешированные ассеты /assets/index-*.js</li><li><strong>vue-router</strong> — баннер версии 4.1.6 в бандле и таблица маршрутов: главная, /about, /playground и catch-all</li><li><strong>three.js</strong> — баннер Three.js, WebGLRenderer, ShaderMaterial, Raycaster; в бандле 97 вершинных и 97 фрагментных шейдеров</li><li><strong>GLTFLoader с Draco и KTX2</strong> — классы загрузчиков и модели scene_v9.glb, flower_v2.glb, bee_v4.glb, orange.glb, raisin.glb</li><li><strong>GSAP 3.14.1 со ScrollTrigger</strong> — баннеры GSAP 3.14.1 и ScrollTrigger 3.14.1, registerPlugin, инлайновые трансформации в DOM</li><li><strong>Lenis</strong> — классы lenis, lenis-smooth и lenis-stopped прямо на элементе html</li><li><strong>Yuka (поведенческий ИИ)</strong> — API EntityManager, Vehicle, PursuitBehavior, SeekBehavior и флаг преследования для пчелы</li><li><strong>Howler.js (звук)</strong> — 49 совпадений howler, AudioContext и надпись «Click to enable sound» — звук включается только по клику</li><li><strong>Vercel и Cloudflare</strong> — заголовки Server: Vercel и X-Vercel-Cache; медиа отдаётся с cdn.leoparpeix.com за Cloudflare</li><li><strong>Видео и шрифты</strong> — 22 файла mp4 и 9 webm в бандле, шоурил в теге video; локальные Monument Grotesk Regular и Avantt Variable с preload</li>
+    </ul>
+  </section>
 </article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container container--narrow">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
 </main>
 <footer class="footer">
   <div class="container">

@@ -586,17 +586,19 @@ function renderSite(site) {
 
   ${shot}
 
-  <section class="site-section">
-    <h2>Что это</h2>
-    <p>${esc(intro)}</p>
-  </section>
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>${esc(intro)}</p>
+    </section>
 
-  <section class="site-section">
-    <h2>Что смотреть в первую очередь</h2>
-    <p>${notes ? esc(notes) : '<span class="placeholder">заметок пока нет</span>'}</p>
-  </section>
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>${notes ? esc(notes) : '<span class="placeholder">заметок пока нет</span>'}</p>
+    </section>
+  </div>
 
-  ${site.observations && site.observations.length ? `<section class="site-section">
+  ${site.observations && site.observations.length ? `<section class="site-section site-section--observations">
     <h2>Чем интересен</h2>
     <ol>${site.observations.map((item) => `<li>${esc(item)}</li>`).join('')}</ol>
   </section>` : ''}
@@ -625,9 +627,9 @@ function renderSite(site) {
     </section>
   </div>
 
-  ${(site.tech || []).length ? `<section class="site-section">
+  ${(site.tech || []).length ? `<section class="site-section site-section--tech">
     <h2>Технологии</h2>
-    <ul>
+    <ul class="tech-list">
       ${site.tech.map((item) => `<li><strong>${esc(displayTechName(item.name))}</strong></li>`).join('')}
     </ul>
   </section>` : ''}

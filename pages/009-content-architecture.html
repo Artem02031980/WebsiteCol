@@ -49,17 +49,19 @@
            width="1728" height="1281" decoding="async" fetchpriority="high">
     </figure>
 
-  <section class="site-section">
-    <h2>Что это</h2>
-    <p>Лендинг набора исходников для сборки сайтов на Next.js и Astro с headless-CMS Sanity; продаётся двумя редакциями за 549 €. Главный визуальный аттракцион — интерактивная спираль из повторяющегося названия и ASCII-превью кейсов. Шикарно оформленный сайт готового набора для разработки сайтов на Next.js или Astro с CMS Sanity. Очень оригинальные интерактивные шейдеры с текстом.</p>
-  </section>
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Лендинг набора исходников для сборки сайтов на Next.js и Astro с headless-CMS Sanity; продаётся двумя редакциями за 549 €. Главный визуальный аттракцион — интерактивная спираль из повторяющегося названия и ASCII-превью кейсов. Шикарно оформленный сайт готового набора для разработки сайтов на Next.js или Astro с CMS Sanity. Очень оригинальные интерактивные шейдеры с текстом.</p>
+    </section>
 
-  <section class="site-section">
-    <h2>Что смотреть в первую очередь</h2>
-    <p>Смотреть как пример интерактивной графики с текстом: спираль собрана на WebGL2 собственными шейдерами поверх текстового атласа, а не библиотекой эффектов. Отдельно поучительна «агентная» часть — Markdown по тому же адресу, llms.txt, openapi.json и правила для AI-краулеров.</p>
-  </section>
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть как пример интерактивной графики с текстом: спираль собрана на WebGL2 собственными шейдерами поверх текстового атласа, а не библиотекой эффектов. Отдельно поучительна «агентная» часть — Markdown по тому же адресу, llms.txt, openapi.json и правила для AI-краулеров.</p>
+    </section>
+  </div>
 
-  <section class="site-section">
+  <section class="site-section site-section--observations">
     <h2>Чем интересен</h2>
     <ol><li>Спираль из повторяющегося текста сделана не готовой библиотекой и не обычным холстом: текст сначала рисуется в скрытом холсте, затем уходит на видеокарту текстурой и выводится тридцатью кольцами собственными шейдерами — маленькими программами для видеокарты.</li><li>Сцена действительно интерактивна: удержание кнопки заряжает кольца с дрожанием, отпускание запускает волну, а курсор растворяет буквы в точки.</li><li>Сайт сделан «читаемым для агентов», и это проверяется машинно: любая страница отдаёт упрощённый Markdown, если запросить её с заголовком Accept: text/markdown, а рядом лежат llms.txt и описание API в openapi.json.</li><li>В robots.txt объявлена политика использования контента: поисковым роботам можно, обучению ИИ — нельзя. Это редкий для сайтов случай, когда правило прописано явно и с комментарием.</li><li>Вся растровая графика заменена ASCII-рисунками: тринадцать холстов с подписями для программ чтения с экрана, плюс полноэкранная ASCII-«занавесь» при переходе между страницами.</li><li>Заявление продукта про React Compiler подтверждается на самом сайте: в собранных файлах 114 служебных меток компилятора.</li><li>Ссылка «Imprint» в подвале ведёт на несуществующую страницу — 404, и в карте сайта её тоже нет.</li></ol>
   </section>
@@ -115,9 +117,9 @@
     </section>
   </div>
 
-  <section class="site-section">
+  <section class="site-section site-section--tech">
     <h2>Технологии</h2>
-    <ul>
+    <ul class="tech-list">
       <li><strong>Next.js 16.3.4 (App Router)</strong></li><li><strong>React Compiler</strong></li><li><strong>Sanity (headless CMS) и Live Content API</strong></li><li><strong>Tailwind CSS v4</strong></li><li><strong>OGL (минималистичная WebGL-библиотека)</strong></li><li><strong>WebGL2 и собственные GLSL ES 3.00 шейдеры</strong></li><li><strong>Canvas 2D для ASCII-графики</strong></li><li><strong>Motion (framer-motion)</strong></li><li><strong>Lenis</strong></li><li><strong>Mux и SanityMuxVideo</strong></li><li><strong>Vercel</strong></li><li><strong>Geist Sans и Geist Mono</strong></li><li><strong>Stripe</strong></li><li><strong>Umami Cloud</strong></li>
     </ul>
   </section>

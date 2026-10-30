@@ -49,17 +49,19 @@
            width="1839" height="900" decoding="async" fetchpriority="high">
     </figure>
 
-  <section class="site-section">
-    <h2>Что это</h2>
-    <p>Сайт приложения Raycast — лаунчера для macOS и Windows: запуск приложений, поиск файлов, буфер обмена, заметки и AI в одном окне по горячей клавише. Лендинг для профессионалов, живущих с клавиатуры: демонстрации интерфейса, каталог расширений, истории пользователей и разделы про AI, Store и команды. Традиционно тёмный и продуманный до мелочей сайт Raycast.</p>
-  </section>
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Сайт приложения Raycast — лаунчера для macOS и Windows: запуск приложений, поиск файлов, буфер обмена, заметки и AI в одном окне по горячей клавише. Лендинг для профессионалов, живущих с клавиатуры: демонстрации интерфейса, каталог расширений, истории пользователей и разделы про AI, Store и команды. Традиционно тёмный и продуманный до мелочей сайт Raycast.</p>
+    </section>
 
-  <section class="site-section">
-    <h2>Что смотреть в первую очередь</h2>
-    <p>Смотреть герой: красные ленты — работающая WebGL-сцена на three.js, которая включается только на широком экране. Дальше — Store с карточками расширений и макеты приложения, собранные из настоящей вёрстки, а не из картинок.</p>
-  </section>
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть герой: красные ленты — работающая WebGL-сцена на three.js, которая включается только на широком экране. Дальше — Store с карточками расширений и макеты приложения, собранные из настоящей вёрстки, а не из картинок.</p>
+    </section>
+  </div>
 
-  <section class="site-section">
+  <section class="site-section site-section--observations">
     <h2>Чем интересен</h2>
     <ol><li>Скриншот владельца совпадает с живой главной: тот же заголовок, подзаголовок и меню, а кнопка при запуске на Windows читается «Download for Windows».</li><li>Красные ленты в первом экране — живая трёхмерная сцена на WebGL: на широком экране в разметке один холст с шестнадцатью цилиндрами, а на ширине 375 px холста нет — сцена включается только на большом экране.</li><li>Кнопка скачивания собирается в браузере: в серверном HTML нет ни «Download for Windows», ни упоминания пакетного менеджера WinGet, поэтому кнопка зависит от определённой системы.</li><li>Тёмная тема без переключателя: в стилях нет ни системной темы, ни атрибута темы, фон #07080a, текст #f4f4f6, акцент #ff6363.</li><li>Структурированных данных нет: ни одной микроразметки для поисковиков, зато превью для соцсетей и канонический адрес заполнены.</li><li>Видео встроены без плееров YouTube: восемнадцать роликов показаны обложками и обычными ссылками, встроенных рамок ноль.</li><li>Подвал заканчивается формой подписки — знака © и года нет, юрлицо и адрес указаны только в условиях, а блог относит запуск Raycast к 2020 году.</li></ol>
   </section>
@@ -115,9 +117,9 @@
     </section>
   </div>
 
-  <section class="site-section">
+  <section class="site-section site-section--tech">
     <h2>Технологии</h2>
-    <ul>
+    <ul class="tech-list">
       <li><strong>Next.js</strong></li><li><strong>React (Server Components)</strong></li><li><strong>three.js</strong></li><li><strong>React (@react-three/fiber)</strong></li><li><strong>postprocessing (EffectComposer)</strong></li><li><strong>CSS Modules</strong></li><li><strong>next/font, самохостинг шрифтов</strong></li><li><strong>Motion (framer-motion)</strong></li><li><strong>Embla Carousel</strong></li><li><strong>next/image и CDN misc-assets.raycast.com</strong></li><li><strong>Vercel</strong></li><li><strong>Sentry (@sentry/nextjs)</strong></li><li><strong>PostHog</strong></li><li><strong>Vercel Web Analytics и Speed Insights</strong></li><li><strong>Rewardful</strong></li>
     </ul>
   </section>

@@ -377,15 +377,19 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .breadcrumbs ol { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
 .breadcrumbs li + li::before { content: '/'; margin-right: 0.4rem; color: var(--border-strong); }
 /* Название, теги и ссылка — по центру контейнера */
-.site-head { display: grid; justify-items: center; gap: var(--space-2); padding-block: var(--space-3) var(--space-2); text-align: center; }
+.site-head { display: grid; justify-items: center; gap: var(--space-2); padding-block: 100px 150px; text-align: center; }
 .site-head h1 { margin: 0; }
 .site-head__url { font-family: var(--font-mono); font-size: var(--fs-small); word-break: break-all; margin: 0; }
 /* Контент — лонг-рид; карточками остаются только Паспорт и Палитра */
 .site-section { margin: 0 0 var(--space-3); }
-.site-intro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin: 0 0 var(--space-3); }
+.site-intro { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin: 0 0 150px; }
 .site-intro .site-section { margin: 0; }
-.site-section--observations { max-width: 800px; margin-top: 150px; }
+.site-section--observations { max-width: 800px; margin: 0 0 150px; }
+.site-section--observations h2,
+.site-cards .panel h2,
+.site-section--tech h2 { margin-bottom: 35px; }
 .site-section li + li { margin-top: 1rem; }
+.site-section--tech { margin-bottom: 0; }
 .site-section--tech li + li { margin-top: 0; }
 .site-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); align-items: stretch; margin: 0 0 150px; }
 .site-cards .panel { margin: 0; padding-block: 50px; }
@@ -423,7 +427,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 
 /* ===== Feedback: контакты автора коллекции ===== */
 .feedback {
-  margin-top: var(--space-5);
+  margin-top: 350px;
   padding-block: var(--space-4);
   background: var(--bg-elevated);
   border-top: 1px solid var(--border-subtle);
@@ -460,9 +464,11 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 }
 
 @media (max-width: 700px) {
-  .site-intro { grid-template-columns: 1fr; gap: var(--space-3); }
-  .site-section--observations { margin-top: var(--space-5); }
+  .site-head { padding-block: 48px 64px; }
+  .site-intro { grid-template-columns: 1fr; gap: var(--space-3); margin-bottom: var(--space-5); }
+  .site-section--observations { margin-top: 0; margin-bottom: var(--space-5); }
   .site-cards { margin-bottom: var(--space-5); }
+  .feedback { margin-top: var(--space-5); }
   .tech-list { grid-template-columns: 1fr; }
 }
 

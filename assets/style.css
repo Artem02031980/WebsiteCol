@@ -37,10 +37,7 @@
   --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.05);
   --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.10);
 
-  /* Форма и фокус */
-  --radius:        8px;
-  --radius-sm:     4px;
-  --radius-lg:     14px;
+  /* Форма и фокус: скруглений в проекте нет — все углы прямые */
   --focus-ring:    2px solid var(--accent-hover);
 
   /* Типографика */
@@ -93,7 +90,7 @@ ul, ol { margin: 0 0 var(--space-2); padding-left: var(--space-3); }
 code, kbd { font-family: var(--font-mono); font-size: 0.9em; }
 kbd {
   padding: 0.1em 0.4em; background: var(--bg-sunken);
-  border: 1px solid var(--border-subtle); border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
 }
 :focus-visible { outline: var(--focus-ring); outline-offset: 2px; }
 [hidden] { display: none !important; }
@@ -107,7 +104,7 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
 .skip-link {
   position: absolute; left: -9999px; top: 0; z-index: 100;
   background: var(--accent); color: var(--on-accent);
-  padding: var(--space-1) var(--space-2); border-radius: 0 0 var(--radius-sm) 0;
+  padding: var(--space-1) var(--space-2);
 }
 .skip-link:focus { left: 0; }
 
@@ -125,7 +122,7 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
   min-height: 44px; padding: 0.6rem 1.1rem;
-  border: 1px solid transparent; border-radius: var(--radius);
+  border: 1px solid transparent;
   font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
@@ -152,7 +149,7 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
   display: grid; gap: var(--space-2);
   padding: var(--space-2);
   background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
 }
 .search { display: grid; gap: 0.35rem; }
 .search__label { font-size: var(--fs-small); font-weight: 600; }
@@ -160,7 +157,7 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
 .search__input {
   flex: 1 1 16rem; height: 44px; min-height: 44px; padding: 0 0.9rem;
   background: var(--bg); color: var(--text);
-  border: 1px solid var(--border-strong); border-radius: var(--radius); font: inherit;
+  border: 1px solid var(--border-strong); font: inherit;
   transition: border-color 0.15s ease;
 }
 .search__input:hover { border-color: var(--text-muted); }
@@ -172,7 +169,7 @@ section[id], article[id], [id].anchor { scroll-margin-top: var(--anchor-offset);
 select, .field__input {
   min-height: 44px; padding: 0.4rem 0.6rem;
   background: var(--bg); color: var(--text);
-  border: 1px solid var(--border-strong); border-radius: var(--radius); font: inherit;
+  border: 1px solid var(--border-strong); font: inherit;
 }
 select:hover, .field__input:hover { border-color: var(--text-muted); }
 select:focus, .field__input:focus { border-color: var(--accent); }
@@ -183,7 +180,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-2);
   width: 100%; min-width: 14rem; min-height: 44px; padding: 0.4rem 0.65rem 0.4rem 0.8rem;
   background: var(--bg); color: var(--text);
-  border: 1px solid var(--border-strong); border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
   font: inherit; text-align: left; cursor: pointer;
   transition: border-color 0.15s ease, background-color 0.15s ease;
 }
@@ -198,7 +195,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   position: absolute; z-index: 30; top: calc(100% + 0.35rem); left: 0;
   min-width: 100%; max-height: 20rem; overflow-y: auto;
   margin: 0; padding: 0.25rem; list-style: none;
-  background: var(--bg); border: 1px solid var(--border-subtle); border-radius: var(--radius);
+  background: var(--bg); border: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-md);
   animation: select-menu-in 0.12s ease-out;
 }
@@ -208,7 +205,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 }
 .select__option {
   display: flex; align-items: center; justify-content: space-between; gap: var(--space-1);
-  padding: 0.5rem 0.6rem; border-radius: var(--radius-sm); cursor: pointer;
+  padding: 0.5rem 0.6rem; cursor: pointer;
 }
 .select__option:hover, .select__option.is-active { background: var(--bg-sunken); }
 .select__option[aria-selected="true"] { color: var(--accent); font-weight: 600; }
@@ -218,12 +215,12 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 /* Вид: сегментированный переключатель */
 .viewswitch {
   display: inline-flex; gap: 2px; padding: 3px;
-  background: var(--bg); border: 1px solid var(--border-strong); border-radius: var(--radius);
+  background: var(--bg); border: 1px solid var(--border-strong);
 }
 .viewswitch .btn,
 .viewswitch .btn--small {
   min-height: 36px; padding: 0.3rem 0.9rem;
-  background: transparent; border-color: transparent; border-radius: 6px;
+  background: transparent; border-color: transparent;
   font-size: var(--fs-small); font-weight: 600; color: var(--text-muted);
 }
 .viewswitch .btn:hover,
@@ -248,7 +245,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 }
 .facets__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-1); }
 .facet {
-  border: 1px solid var(--border-subtle); border-radius: var(--radius);
+  border: 1px solid var(--border-subtle);
   background: var(--bg); overflow: hidden;
 }
 .facet > summary {
@@ -274,7 +271,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .check--swatch span::before {
   content: ''; display: inline-block; width: 12px; height: 12px; margin-right: 0.4rem;
   background: var(--dot, transparent);
-  border: 1px solid var(--border-strong); border-radius: 3px; vertical-align: -1px;
+  border: 1px solid var(--border-strong); vertical-align: -1px;
 }
 .check.is-empty { opacity: 0.45; }
 
@@ -283,7 +280,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .chip {
   display: inline-flex; align-items: center; gap: 0.35rem;
   padding: 0.25rem 0.55rem; background: var(--bg-sunken);
-  border: 1px solid var(--border-subtle); border-radius: 999px; font-size: var(--fs-tiny);
+  border: 1px solid var(--border-subtle); font-size: var(--fs-tiny);
 }
 .chip button {
   min-width: 24px; min-height: 24px; padding: 0; border: 0; background: none;
@@ -302,7 +299,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 
 .card {
   display: flex; flex-direction: column;
-  background: var(--bg); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  background: var(--bg); border: 1px solid var(--border-subtle);
   overflow: hidden;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -327,12 +324,12 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .card__open {
   display: inline-flex; align-items: center; gap: 0.3rem;
   min-height: 36px; padding: 0.3rem 0.7rem;
-  border: 1px solid var(--border-strong); border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
   color: var(--text); font-weight: 600; font-size: var(--fs-small); text-decoration: none;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .card__open:hover { border-color: var(--accent); color: var(--accent); }
-.card__state { display: inline-block; padding: 0.1rem 0.45rem; border-radius: 999px; font-size: var(--fs-tiny); font-weight: 600; }
+.card__state { display: inline-block; padding: 0.1rem 0.45rem; font-size: var(--fs-tiny); font-weight: 600; }
 .card__state--dead { background: var(--danger-soft); color: var(--danger); }
 .card__state--moved { background: var(--warn-soft); color: var(--warn); }
 
@@ -346,7 +343,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .tag {
   display: inline-block; padding: 0.1rem 0.45rem;
   background: var(--bg-sunken); border: 1px solid var(--border-subtle);
-  border-radius: 999px; font-size: var(--fs-tiny); color: var(--text);
+  font-size: var(--fs-tiny); color: var(--text);
 }
 .tag--muted { color: var(--text-muted); }
 .taglist { display: flex; flex-wrap: wrap; gap: 0.3rem; list-style: none; margin: 0; padding: 0; }
@@ -354,10 +351,10 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 /* Палитра */
 .swatches { display: inline-flex; gap: 4px; align-items: center; }
 .swatch {
-  width: 14px; height: 14px; border-radius: 3px;
+  width: 14px; height: 14px;
   border: 1px solid var(--border-strong); display: inline-block;
 }
-.swatches--big .swatch { width: 44px; height: 44px; border-radius: var(--radius-sm); }
+.swatches--big .swatch { width: 44px; height: 44px; }
 .palette-actions { margin: var(--space-2) 0 0; }
 .palette-actions + .palette-list { margin-top: var(--space-1); }
 .palette-list { list-style: none; margin: var(--space-2) 0 0; padding: 0; display: grid; gap: 0.5rem; }
@@ -367,7 +364,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 /* Пустое состояние */
 .empty {
   padding: var(--space-4);
-  border: 1px dashed var(--border-strong); border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-strong);
   background: var(--bg-elevated);
 }
 .empty h3 { margin-bottom: var(--space-1); }
@@ -386,16 +383,16 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .site-grid.is-split { display: flex; gap: var(--space-4); align-items: flex-start; }
 .site-col { display: flex; flex-direction: column; gap: var(--space-2); flex: 1 1 0; min-width: 0; }
 .shot { margin: 0; }
-.shot img { display: block; width: 100%; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); }
+.shot img { display: block; width: 100%; border: 1px solid var(--border-subtle); }
 .shot--missing {
   display: flex; align-items: center; justify-content: center; min-height: 220px;
-  border: 1px dashed var(--border-strong); border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-strong);
   background: var(--bg-elevated); color: var(--text-muted); text-align: center; padding: var(--space-3);
 }
 
 .panel {
   background: var(--bg-elevated); border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg); padding: var(--space-2); margin: 0;
+  padding: var(--space-2); margin: 0;
 }
 .panel h2 { margin-top: 0; }
 /* Читаемость внутри карточек: воздух между строками и пунктами списков */
@@ -420,7 +417,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 /* ===== Заглушки ===== */
 .placeholder {
   display: inline-block; padding: 0.05rem 0.4rem;
-  border: 1px dashed var(--border-strong); border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-strong);
   color: var(--text-muted); font-size: var(--fs-tiny);
 }
 

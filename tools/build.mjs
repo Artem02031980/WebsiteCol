@@ -202,6 +202,11 @@ function swatches(colors, size) {
   }</span>`;
 }
 
+function countryFacet(site) {
+  const raw = String((site.facts && site.facts.country) || '').split(',')[0].trim();
+  return raw ? { id: slugify(raw), title: raw } : { id: 'unknown', title: 'Не определено' };
+}
+
 function searchIndex(site) {
   const parts = [
     site.name, site.domain, site.url, site.slot,
@@ -293,6 +298,7 @@ function card(site) {
       </a>`
     : `<span class="card__media card__media--empty">Скриншот ещё не добавлен в screens/</span>`;
 
+  const country = countryFacet(site);
   const facetValues = {
     cat: (site.categories || []).join(' '),
     sub: (site.subcategories || []).join(' '),
@@ -302,6 +308,7 @@ function card(site) {
     tech: (site.techniques || []).join(' '),
     stack: [...new Set((site.tech || []).map((t) => slugify(techFilterName(t.name))).filter(Boolean))].join(' '),
     lang: (site.facts && site.facts.languages ? site.facts.languages : []).join(' '),
+    country: country.id,
     mode: palette.mode || '',
     hue: palette.hue || '',
     link: site.link_state || 'unknown'
@@ -384,10 +391,15 @@ function buildFacets() {
 
   const modeMap = new Map();
   const hueMap = new Map();
+  const countryMap = new Map();
   for (const site of sites) {
     const palette = paletteFor(site);
     if (palette.mode) modeMap.set(palette.mode, (modeMap.get(palette.mode) || 0) + 1);
     if (palette.hue) hueMap.set(palette.hue, (hueMap.get(palette.hue) || 0) + 1);
+    const country = countryFacet(site);
+    const entry = countryMap.get(country.id) || { ...country, count: 0 };
+    entry.count += 1;
+    countryMap.set(country.id, entry);
   }
 
   const groups = [
@@ -409,6 +421,14 @@ function buildFacets() {
   if (hasInactive) {
     groups.push({ group: 'link', title: 'Состояние ссылки', values: sortFacetValues(usedLinks.map((l) => ({ id: l.id, title: l.title, count: countBy((s) => s.link_state === l.id) })), true) });
   }
+
+  const countries = sortFacetValues([...countryMap.values()], true);
+  const unknownCountry = countries.find((country) => country.id === 'unknown');
+  groups.push({
+    group: 'country',
+    title: 'Страна',
+    values: unknownCountry ? [...countries.filter((country) => country.id !== 'unknown'), unknownCountry] : countries
+  });
 
   return groups.filter((group) => group.values.length);
 }

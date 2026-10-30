@@ -245,7 +245,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   position: sticky; top: calc(var(--header-h) + var(--space-2));
   max-height: calc(100svh - var(--header-h) - var(--space-4)); overflow-y: auto;
 }
-.facets__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-1); }
+.facets__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-1); margin-bottom: 1.25rem; }
 .facet {
   border: 1px solid var(--border-subtle);
   background: var(--bg); overflow: hidden;

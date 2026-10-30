@@ -599,7 +599,7 @@ function renderSite(site) {
   </div>
 
   ${site.observations && site.observations.length ? `<section class="site-section site-section--observations">
-    <h2>Чем интересен</h2>
+    <h2>Интересные факты</h2>
     <ol>${site.observations.map((item) => `<li>${esc(item)}</li>`).join('')}</ol>
   </section>` : ''}
 

@@ -512,7 +512,7 @@ function renderCatalog() {
 /* Постоянная секция перед футером: контакты автора коллекции */
 function feedbackSection() {
   return `<section class="feedback" aria-label="Связаться с автором коллекции">
-  <div class="container container--narrow">
+  <div class="container">
     <h2 class="feedback__name">Артём Хмелёв</h2>
     <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
     <p class="feedback__contacts">
@@ -626,9 +626,9 @@ function renderSite(site) {
   </div>
 
   ${(site.tech || []).length ? `<section class="site-section">
-    <h2>Технологии с доказательствами</h2>
+    <h2>Технологии</h2>
     <ul>
-      ${site.tech.map((item) => `<li><strong>${esc(displayTechName(item.name))}</strong> — ${esc(item.evidence)}</li>`).join('')}
+      ${site.tech.map((item) => `<li><strong>${esc(displayTechName(item.name))}</strong></li>`).join('')}
     </ul>
   </section>` : ''}
 </article>

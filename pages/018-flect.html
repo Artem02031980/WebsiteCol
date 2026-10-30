@@ -116,15 +116,15 @@
   </div>
 
   <section class="site-section">
-    <h2>Технологии с доказательствами</h2>
+    <h2>Технологии</h2>
     <ul>
-      <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong> — ни одного признака Next, Nuxt, Astro, Svelte, Vue, WordPress, Webflow, Framer или Tilda; в разметке только свои стили и свои скрипты main.js, header.js, partials.js, lazyload.js, buttons.js без сборщика</li><li><strong>Vercel</strong> — заголовки Server: Vercel, X-Vercel-Cache: HIT, HSTS на два года, скрипты /_vercel/insights и /_vercel/speed-insights</li><li><strong>Собственный WebGL-шейдер без three.js</strong> — файл wave-bg.js с комментарием «Pure WebGL (no three.js)»: холст создаётся в рантайме, шейдер на инлайновом GLSL, value-noise и три октавы fbm с доменным искажением, ограничение 30 кадров в секунду и пауза вне экрана</li><li><strong>Анимации на requestAnimationFrame и IntersectionObserver</strong> — в main.js свыше тридцати вызовов requestAnimationFrame и около десяти конструкторов IntersectionObserver, собственный планировщик подписчиков; поиск по всем скриптам не нашёл ни GSAP, ни Lenis, ни three.js, ни anime.js, ни Swiper, ни Lottie</li><li><strong>Отказ от библиотеки плавного скролла</strong> — версия скриптов в разметке помечена как no-lenis, в шапке main.js стоит комментарий про нативный скролл; плавность осталась только у переходов по якорям через ручной твининг в requestAnimationFrame</li><li><strong>Шрифты Pangram Pangram самохостом</strong> — правила @font-face на PP Neue Montreal и PP Editorial New с локальными файлами и font-display: swap; Google Fonts не подключён, иконки — собственные SVG</li><li><strong>Токены дизайна из Figma в CSS-переменных</strong> — комментарий в стилях «Colour tokens are pulled directly from Figma — do not eyeball» и корневые переменные цвета, шрифтов, ширины контента и кривых анимации</li><li><strong>Бэкенд формы на отдельном поддомене</strong> — запрос POST на api.getflect.app/p/early-access с полем почты и адресом страницы; проверка показала, что адрес жив и отвечает 405 на GET; при успехе переход на страницу благодарности</li><li><strong>Микроразметка JSON-LD</strong> — граф из Organization, WebSite, WebPage с частями, SoftwareApplication с категорией health, нулевой ценой и доступностью PreOrder, а также SiteNavigationElement</li><li><strong>Ленивая загрузка изображений</strong> — отдельный lazyload.js на IntersectionObserver с классами плавного появления; в первом экране, наоборот, высокий приоритет загрузки</li><li><strong>Аналитика</strong> — Google Tag Manager, Google Analytics 4 и Vercel Web Analytics со Speed Insights — подтверждено тегами и скриптами в разметке</li>
+      <li><strong>Статический сайт на чистом HTML, CSS и JavaScript</strong></li><li><strong>Vercel</strong></li><li><strong>Собственный WebGL-шейдер без three.js</strong></li><li><strong>Анимации на requestAnimationFrame и IntersectionObserver</strong></li><li><strong>Отказ от библиотеки плавного скролла</strong></li><li><strong>Шрифты Pangram Pangram самохостом</strong></li><li><strong>Токены дизайна из Figma в CSS-переменных</strong></li><li><strong>Бэкенд формы на отдельном поддомене</strong></li><li><strong>Микроразметка JSON-LD</strong></li><li><strong>Ленивая загрузка изображений</strong></li><li><strong>Аналитика</strong></li>
     </ul>
   </section>
 </article>
 
 <section class="feedback" aria-label="Связаться с автором коллекции">
-  <div class="container container--narrow">
+  <div class="container">
     <h2 class="feedback__name">Артём Хмелёв</h2>
     <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
     <p class="feedback__contacts">

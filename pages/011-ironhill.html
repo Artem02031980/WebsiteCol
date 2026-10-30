@@ -116,15 +116,15 @@
   </div>
 
   <section class="site-section">
-    <h2>Технологии с доказательствами</h2>
+    <h2>Технологии</h2>
     <ul>
-      <li><strong>Nuxt 3 (Vue 3, Vite)</strong> — div#__nuxt, ассеты /_nuxt/, data-nuxt-data с data-ssr=&quot;false&quot;, window.__NUXT__.config.buildId, scoped-стили data-v-*</li><li><strong>Рендеринг только на клиенте</strong> — data-ssr=&quot;false&quot;; сервер отдаёт один и тот же каркас 2559 байт для всех восьми маршрутов, содержимое появляется после загрузки 1 МБ JS</li><li><strong>three.js</strong> — в основном бандле THREE (180 совпадений), WebGLRenderer, ShaderMaterial, GLTFLoader, PerspectiveCamera, PlaneGeometry</li><li><strong>Собственный GLSL-шейдер перехода</strong> — инлайновый фрагментный шейдер с uniform time/progress/texture1/texture2/displacement и картой /3d/displacement.jpg — растворение одной картинки в другую по прогрессу скролла</li><li><strong>GSAP 3.13.0 + ScrollTrigger + ScrollToPlugin</strong> — баннер лицензии GSAP 3.13.0 в бандле, ScrollTrigger.create({… scrub: 1}), динамический импорт ScrollToPlugin в чанке /produce/</li><li><strong>Самописный инерционный скролл</strong> — rAF-цикл с window.easingBase и формулой y = k*(scrollY - y) + y, затем gsap.set с y и skewY как «резинкой»; Lenis и ScrollSmoother не используются</li><li><strong>Рисованная SVG-линия</strong> — инлайновый svg viewBox=&quot;0 0 734 10083&quot; с одним длинным путём и анимацией stroke-dashoffset</li><li><strong>PP Woodland и GT America</strong> — @font-face в entry.css, файлы отдаются из /fonts/*.woff2; два файла помечены как Trial-версии GT America</li><li><strong>Formspree</strong> — форма подписки отправляет данные на formspree.io/f/mblnappy (POST → 302)</li><li><strong>nginx 1.26.0 на Ubuntu</strong> — заголовок Server: nginx/1.26.0 (Ubuntu); хостинг DigitalOcean назван в политике конфиденциальности</li><li><strong>Google Analytics 4</strong> — gtag.js с идентификатором G-NVZ1XE0RTK и send_page_view: false для ручных переходов</li>
+      <li><strong>Nuxt 3 (Vue 3, Vite)</strong></li><li><strong>Рендеринг только на клиенте</strong></li><li><strong>three.js</strong></li><li><strong>Собственный GLSL-шейдер перехода</strong></li><li><strong>GSAP 3.13.0 + ScrollTrigger + ScrollToPlugin</strong></li><li><strong>Самописный инерционный скролл</strong></li><li><strong>Рисованная SVG-линия</strong></li><li><strong>PP Woodland и GT America</strong></li><li><strong>Formspree</strong></li><li><strong>nginx 1.26.0 на Ubuntu</strong></li><li><strong>Google Analytics 4</strong></li>
     </ul>
   </section>
 </article>
 
 <section class="feedback" aria-label="Связаться с автором коллекции">
-  <div class="container container--narrow">
+  <div class="container">
     <h2 class="feedback__name">Артём Хмелёв</h2>
     <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
     <p class="feedback__contacts">

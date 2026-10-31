@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premotio — сайт в коллекции</title>
+<meta name="description" content="Редактор, который превращает готовый дизайн в зацикленное видео">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Premotio — сайт в коллекции">
+<meta property="og:description" content="Редактор, который превращает готовый дизайн в зацикленное видео">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Premotio</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Premotio</h1>
+    <ul class="taglist">
+      <li><span class="tag">Сервисы и приложения</span></li>
+      <li><span class="tag tag--muted">Продуктивность</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Игривый</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://premotio.com/" target="_blank" rel="noopener noreferrer">https://premotio.com/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/045.webp" alt="Скриншот главной страницы Premotio"
+           width="1896" height="1286" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Онлайн-редактор, который превращает готовый дизайн — постер, карусель, подборку кадров — в короткое зацикленное видео по готовому пресету. Для дизайнеров и студий: сотни движений в библиотеке, замена картинок и текста, экспорт до 4K, а ещё управление через ИИ-агента. Начать можно без аккаунта. Живой вдохновляющий лендинг библиотеки анимаций для сайтов с собственным редактором.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть первый экран: заголовок «Designed already. Now make it (move)» и разлетающиеся постеры. Дальше — плёнка пресетов с линейкой времени и демо редактора с перепиской ИИ-агента.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Скриншот владельца совпадает с живой версией: те же пункты меню (Library, How it works, MCP, Pricing, Contact), тот же заголовок и подпись «No account required». В кадре заголовок пойман в движении — буквы «(move)» разъехались, на живой странице они собираются в слово.</li><li>Это одна длинная страница: блоки сменяют друг друга в одной «залипшей» рамке, пока посетитель прокручивает (в коде — story__stage с position: sticky и комнаты высотой в несколько экранов).</li><li>Перед первым экраном работает прелоадер: логотип рисуется на canvas, рядом бегут цифры счётчика, набранные собственным шрифтом Loader Digits, потом логотип «улетает» и открывает страницу.</li><li>Библиотеку пресетов показали как плёнку с линейкой времени: карточки с подписями Deck 6.00s, Bloom 5.20s и Wall 8.00s едут по шкале — в коде эта деталь называется ruler.</li><li>Редактор демонстрируют прямо на странице: ползунок Amount, эффекты Off / Flare / Prism / Bend, замена картинок и текста в 1 900+ шрифтах — всё это без регистрации, в браузере.</li><li>Отдельный блок про MCP (способ, которым ИИ-приложение подключается к сервису): показана переписка с Claude, который добавляет кадры, переходы и саундтрек, пока человек задаёт направление.</li><li>Юридический раздел не формальный: шесть документов, владелец — ФОП Леонид Костецкий из Кривого Рога, оплата через Paddle, отдельная лицензия на шаблоны; в подвале — «website by emotion» со ссылкой на студию.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">premotio.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Продуктивность</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Маркетологам, Продуктовым командам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Игривый</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Украина, Кривой Рог</dd></div>
+        <div><dt>Автор</dt><dd>Leonid Kostetskyi — частный предприниматель (ФОП)</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>31.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F6F5F8"></span><span class="swatch" style="background:#0C0A09"></span><span class="swatch" style="background:#D5CFCC"></span><span class="swatch" style="background:#651610"></span><span class="swatch" style="background:#ACA8AA"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#F6F5F8, #0C0A09, #D5CFCC, #651610, #ACA8AA">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#F6F5F8" aria-hidden="true"></span>
+          <code>#F6F5F8</code> — 80% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#0C0A09" aria-hidden="true"></span>
+          <code>#0C0A09</code> — 6% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#D5CFCC" aria-hidden="true"></span>
+          <code>#D5CFCC</code> — 3% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#651610" aria-hidden="true"></span>
+          <code>#651610</code> — 2% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#ACA8AA" aria-hidden="true"></span>
+          <code>#ACA8AA</code> — 2% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>Nuxt</strong></li><li><strong>Vercel</strong></li><li><strong>Lenis</strong></li><li><strong>Inter Tight</strong></li><li><strong>Canvas 2D</strong></li><li><strong>Google Analytics 4</strong></li><li><strong>Schema.org JSON-LD</strong></li><li><strong>Paddle</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>47 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

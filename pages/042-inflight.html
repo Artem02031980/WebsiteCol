@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inflight — сайт в коллекции</title>
+<meta name="description" content="Обратная связь по клику на живой прототип и задачи для ИИ-агента">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inflight — сайт в коллекции">
+<meta property="og:description" content="Обратная связь по клику на живой прототип и задачи для ИИ-агента">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Inflight</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Inflight</h1>
+    <ul class="taglist">
+      <li><span class="tag">Сервисы и приложения</span></li>
+      <li><span class="tag tag--muted">Инструменты разработчика</span></li>
+      <li><span class="tag tag--muted">Командная работа</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Строгий B2B</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://inflight.co/" target="_blank" rel="noopener noreferrer">https://inflight.co/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/042.webp" alt="Скриншот главной страницы Inflight"
+           width="1873" height="1277" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Сервис обратной связи для прототипов: коллеги открывают работающий прототип и кликают прямо по элементам интерфейса — оставляют комментарии, записывают видео, отвечают на вопросы. Из этого собирается список следующих шагов для ИИ-агента. Для продуктовых команд, дизайнеров и разработчиков. Свежий информативный сайт сервиса для сбора обратной связи прямо в работающем прототипе сайта или интерфейса.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть первый экран с видео-демо и панелью активности, затем страницу MCP: она написана как инструкция ИИ-агенту. Отдельно интересен приём с markdown-версиями страниц и llms.txt.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Скриншот владельца — более ранняя версия: первый экран тёмный, в меню только Pricing, MCP, FAQs и Log in; живая главная по коду сейчас светлая (фон #ffffff), а в меню разметки уже есть Home, About и Sign up.</li><li>У каждой страницы есть текстовая версия в формате Markdown (index.md, pricing.md, mcp.md, faqs.md, about.md), а в корне — llms.txt и llms-full.txt: так ИИ-помощники и поисковые роботы читают сайт без браузера, скриптов и вёрстки.</li><li>robots.txt не закрывает сайт от ИИ, а наоборот разрешает: десятки ботов вроде GPTBot и ClaudeBot перечислены с Allow, плюс строка Content-Signal: search=yes, ai-input=yes.</li><li>Страница MCP написана как инструкция для ИИ-агента: адрес сервера, команды установки для Claude Code, Codex и Cursor и правила, как не сломать уже настроенное. MCP — общий протокол, через который ИИ-помощник подключается к внешнему сервису.</li><li>Сайт показывает собственный продукт: в шапку страницы вставлен их же виджет widget.js с номером рабочего пространства — тот самый слой обратной связи, который они продают.</li><li>Тёмная тема осталась только для кабинета и страницы /trust, а маркетинговые страницы скрипт theme-boot.js переключает на светлую ещё до отрисовки, чтобы не было тёмной вспышки.</li><li>Сайт закрыт Cloudflare: браузер получает проверку «Один момент…», а скриптовый запрос — 403; поэтому текст читался через релей translate.goog и markdown-версии, sitemap.xml из этой сети тоже 403, хотя robots.txt на него ссылается.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">inflight.co</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Инструменты разработчика, Командная работа</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Продуктовым командам, Разработчикам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Строгий B2B</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Автор</dt><dd>Inflight Inc.</dd></div>
+        <div><dt>Год</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>31.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#090C0E"></span><span class="swatch" style="background:#2D322C"></span><span class="swatch" style="background:#687068"></span><span class="swatch" style="background:#A8B1A2"></span><span class="swatch" style="background:#8C9480"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#090C0E, #2D322C, #687068, #A8B1A2, #8C9480">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#090C0E" aria-hidden="true"></span>
+          <code>#090C0E</code> — 66% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#2D322C" aria-hidden="true"></span>
+          <code>#2D322C</code> — 12% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#687068" aria-hidden="true"></span>
+          <code>#687068</code> — 8% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#A8B1A2" aria-hidden="true"></span>
+          <code>#A8B1A2</code> — 5% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#8C9480" aria-hidden="true"></span>
+          <code>#8C9480</code> — 3% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Тёмная</dd></div>
+         <div><dt>Цвет фона</dt><dd>Синий</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>React</strong></li><li><strong>Vite (сборка)</strong></li><li><strong>Inter Variable</strong></li><li><strong>Geist Mono</strong></li><li><strong>PostHog</strong></li><li><strong>Sentry</strong></li><li><strong>Supabase</strong></li><li><strong>Cloudflare</strong></li><li><strong>Собственный виджет Inflight</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>47 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

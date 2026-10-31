@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gil Huybrecht — сайт в коллекции</title>
+<meta name="description" content="Чёрное портфолио арт-директора: проекты рядами пронумерованных кадров">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gil Huybrecht — сайт в коллекции">
+<meta property="og:description" content="Чёрное портфолио арт-директора: проекты рядами пронумерованных кадров">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Gil Huybrecht</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Gil Huybrecht</h1>
+    <ul class="taglist">
+      <li><span class="tag">Личные сайты и портфолио</span></li>
+      <li><span class="tag tag--muted">Дизайнер</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Монохром</span></li>
+      <li><span class="tag tag--muted">Утилитарный техно</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://gilhuybrecht.com/" target="_blank" rel="noopener noreferrer">https://gilhuybrecht.com/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/046.webp" alt="Скриншот главной страницы Gil Huybrecht"
+           width="1440" height="900" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Портфолио бельгийского арт-директора Гила Хёйбрехта, специалиста по редакционным сайтам, интернет-магазинам и «погружающим» онлайн-проектам. Чёрный экран, в шапке — услуги, награды и статус доступности, ниже — работы Studio DADO, The Lookback, DoThings и Ray®, каждая рядом пронумерованных кадров. Утилитарный наглядный сайт-портфолио Гила Хёйбрехта — арт-директора из Бельгии.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Начать с шапки: имя, срок доступности, услуги и награды — вся суть на одном экране. Дальше — сетка работ с пронумерованными кадрами вместо привычных больших обложек.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Скриншот владельца похож на живую версию: тот же чёрный экран и та же сетка работ с номерами кадров; в кадре шапки — имя, строка «Available September 2026», услуги, награды, ссылки Profile и Email me. Текст строки доступности на живой странице не сверен.</li><li>Главная — один длинный экран-каталог: у каждой работы слева название, справа ряд пронумерованных миниатюр, которые листаются как кадры плёнки. Кроме главной есть /profile, /gallery, /newsletter, /privacy-policy и отдельная страница на каждый проект (/projects/studio-dado и другие) — все они перечислены в sitemap.xml.</li><li>Сайт сделан на Nuxt (фреймворк поверх Vue): об этом говорят пометки «nuxt-robots» в robots.txt и подпись «@nuxtjs/sitemap v8.0.15» в sitemap.xml.</li><li>Картинки лежат не на самом сайте, а в медиахранилище DatoCMS — все адреса начинаются с www.datocms-assets.com/154012/ и содержат параметры сжатия и подгонки размера.</li><li>Хостинг — Netlify: сервер отвечает заголовками Server: Netlify, X-Nf-Request-Id и Cache-Status: «Netlify Edge».</li><li>В шапке раздел Recognition с числом наград: Awwwards SOTD (15×), FWA Site of the day (13×), Independent of the year Nominee (4×), Site of the Year Nominee (3×), Webby awards (3×), Lovie awards (2×), SiteInspire feature (6×).</li><li>При загрузке главной в разметке виден счётчик «0%» — типичный индикатор прогресса загрузки. С этой сети обычные запросы к главной и внутренним страницам зависали, поэтому текст читался через релей translate.goog и сервис метаданных api.microlink.io; robots.txt и sitemap.xml отдались напрямую.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">gilhuybrecht.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Портфолио</dd></div>
+        <div><dt>Категории</dt><dd>Личные сайты и портфолио</dd></div>
+        <div><dt>Подкатегории</dt><dd>Дизайнер</dd></div>
+        <div><dt>Для кого</dt><dd>Дизайнерам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Монохром, Утилитарный техно</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Бельгия</dd></div>
+        <div><dt>Автор</dt><dd>Gil Huybrecht — дизайнер и арт-директор</dd></div>
+        <div><dt>Год</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>31.10.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#FDFDFC"></span><span class="swatch" style="background:#C7C9C5"></span><span class="swatch" style="background:#3C342E"></span><span class="swatch" style="background:#958F8F"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#000000, #FDFDFC, #C7C9C5, #3C342E, #958F8F">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#000000" aria-hidden="true"></span>
+          <code>#000000</code> — 74% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#FDFDFC" aria-hidden="true"></span>
+          <code>#FDFDFC</code> — 15% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#C7C9C5" aria-hidden="true"></span>
+          <code>#C7C9C5</code> — 4% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#3C342E" aria-hidden="true"></span>
+          <code>#3C342E</code> — 2% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#958F8F" aria-hidden="true"></span>
+          <code>#958F8F</code> — 1% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Тёмная</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>Nuxt</strong></li><li><strong>Nuxtjs (@nuxtjs/sitemap)</strong></li><li><strong>DatoCMS</strong></li><li><strong>Netlify</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>47 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

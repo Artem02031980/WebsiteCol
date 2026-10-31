@@ -5477,6 +5477,694 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "042",
+      "slug": "inflight",
+      "name": "Inflight",
+      "url": "https://inflight.co/",
+      "domain": "inflight.co",
+      "screenshot": "042.webp",
+      "added": "2026-10-31",
+      "link_state": "alive",
+      "description_user": "Свежий информативный сайт сервиса для сбора обратной связи прямо в работающем прототипе сайта или интерфейса.",
+      "description_own": "Сервис обратной связи для прототипов: коллеги открывают работающий прототип и кликают прямо по элементам интерфейса — оставляют комментарии, записывают видео, отвечают на вопросы. Из этого собирается список следующих шагов для ИИ-агента. Для продуктовых команд, дизайнеров и разработчиков.",
+      "description_short": "Обратная связь по клику на живой прототип и задачи для ИИ-агента",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools",
+        "team-tools"
+      ],
+      "audience": [
+        "designers",
+        "product-teams",
+        "developers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "strict-b2b"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#090C0E",
+          "#2D322C",
+          "#687068",
+          "#A8B1A2",
+          "#8C9480"
+        ]
+      },
+      "tech": [
+        {
+          "name": "React",
+          "evidence": "в HTML контейнер <div id=\"root\">, в сборке /assets/index-LpSDCmPd.js — код react-dom"
+        },
+        {
+          "name": "Vite (сборка)",
+          "evidence": "хешированные /assets/index-LpSDCmPd.js и /assets/index-DivvPNv9.css подключаются как <script type=\"module\" crossorigin>"
+        },
+        {
+          "name": "Inter Variable",
+          "evidence": "@font-face font-family: Inter Variable, src url(/fonts/InterVariable.woff2), вес 100–900 (index-DivvPNv9.css)"
+        },
+        {
+          "name": "Geist Mono",
+          "evidence": "@font-face font-family: Geist Mono, src url(/fonts/GeistMono.woff2), size-adjust 103% (index-DivvPNv9.css)"
+        },
+        {
+          "name": "PostHog",
+          "evidence": "код posthog-js внутри /assets/index-LpSDCmPd.js, хосты us.i.posthog.com и app.posthog.com"
+        },
+        {
+          "name": "Sentry",
+          "evidence": "в сборке Sentry SDK: _sentryDebugIds, _sentryModuleMetadata, плагин сборки с ключом приложения"
+        },
+        {
+          "name": "Supabase",
+          "evidence": "theme-boot.js ищет сессию под ключом sb-<ref>-auth-token; картинки отдаёт auth.inflight.co/storage/v1/object/public/..."
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "прямой скриптовый запрос главной — 403 и страница проверки «Один момент…» с Ray ID; robots.txt и /assets/* при этом отдаются"
+        },
+        {
+          "name": "Собственный виджет Inflight",
+          "evidence": "в head главной: <script src=\"https://inflight.co/widget.js\" data-org=\"56y11c3f\" async>"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — более ранняя версия: первый экран тёмный, в меню только Pricing, MCP, FAQs и Log in; живая главная по коду сейчас светлая (фон #ffffff), а в меню разметки уже есть Home, About и Sign up.",
+        "У каждой страницы есть текстовая версия в формате Markdown (index.md, pricing.md, mcp.md, faqs.md, about.md), а в корне — llms.txt и llms-full.txt: так ИИ-помощники и поисковые роботы читают сайт без браузера, скриптов и вёрстки.",
+        "robots.txt не закрывает сайт от ИИ, а наоборот разрешает: десятки ботов вроде GPTBot и ClaudeBot перечислены с Allow, плюс строка Content-Signal: search=yes, ai-input=yes.",
+        "Страница MCP написана как инструкция для ИИ-агента: адрес сервера, команды установки для Claude Code, Codex и Cursor и правила, как не сломать уже настроенное. MCP — общий протокол, через который ИИ-помощник подключается к внешнему сервису.",
+        "Сайт показывает собственный продукт: в шапку страницы вставлен их же виджет widget.js с номером рабочего пространства — тот самый слой обратной связи, который они продают.",
+        "Тёмная тема осталась только для кабинета и страницы /trust, а маркетинговые страницы скрипт theme-boot.js переключает на светлую ещё до отрисовки, чтобы не было тёмной вспышки.",
+        "Сайт закрыт Cloudflare: браузер получает проверку «Один момент…», а скриптовый запрос — 403; поэтому текст читался через релей translate.goog и markdown-версии, sitemap.xml из этой сети тоже 403, хотя robots.txt на него ссылается."
+      ],
+      "notes": "Смотреть первый экран с видео-демо и панелью активности, затем страницу MCP: она написана как инструкция ИИ-агенту. Отдельно интересен приём с markdown-версиями страниц и llms.txt.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Inflight Inc.",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Inflight - The feedback layer for prototypes",
+          "title_len": 44,
+          "description": "Turn pinned comments and video replies into clear next steps for your coding agent.",
+          "description_len": 83,
+          "og": true,
+          "sitemap": "robots.txt ссылается на https://inflight.co/sitemap.xml, но файл из этой сети отдаёт 403 (проверка Cloudflare); содержимое не прочитано",
+          "robots": "есть, 988 байт: Allow /, перечислены ИИ-боты (GPTBot, ClaudeBot, PerplexityBot и др.), Content-Signal: search=yes, ai-input=yes, указан Sitemap",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 12,
+          "broken": []
+        },
+        "contacts": "hello@inflight.co (в about и в разметке Organization), X (Twitter) @inflight, обещание «book a demo»; телефона нет",
+        "legal": "есть: /privacy, /tos и /trust (безопасность, SOC 2 Type 2); тексты политики и условий лежат в сборке; года в копирайте на страницах не видно",
+        "analytics": [
+          "PostHog (posthog-js в сборке, us.i.posthog.com)",
+          "Sentry (мониторинг ошибок)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "043",
+      "slug": "pen-dev",
+      "name": "Pen.dev",
+      "url": "https://www.pen.dev/",
+      "domain": "pen.dev",
+      "screenshot": "043.webp",
+      "added": "2026-10-31",
+      "link_state": "alive",
+      "description_user": "Впечатляющий, насыщенный деталями сайт агентного графического редактора.",
+      "description_own": "Сайт настольного графического редактора, где дизайн собирают вместе с ИИ-агентами: задаёшь задачу словами, агенты раскладывают экраны на холсте, а готовое выгружается обратно в код. Для дизайнеров, разработчиков и продуктовых команд, которым нужен рабочий инструмент, а не генератор картинок.",
+      "description_short": "Графический редактор, где дизайн собирают вместе с ИИ-агентами",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "designers",
+        "developers",
+        "product-teams"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "utility-tech",
+        "minimal"
+      ],
+      "techniques": [
+        "dark-default",
+        "chat-ui",
+        "micro-interactions",
+        "drag-interaction"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#191B1C",
+          "#3D3B41",
+          "#636569",
+          "#F58BB7",
+          "#88898B"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "заголовок X-Nextjs-Prerender: 1, Vary: rsc, next-router-state-tree; чанк /_next/static/immutable/chunks/turbopack-1k94vihi4j9nh.js"
+        },
+        {
+          "name": "React (Server Components)",
+          "evidence": "Vary: rsc и заглушка <template data-dgst=\"BAILOUT_TO_CLIENT_SIDE_RENDERING\"> в разметке"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "Server: Vercel, X-Vercel-Cache: HIT, data-dpl-id=\"dpl_FBEkRMud33z8pnynENJtLE1CsvQn\", суффикс ?dpl= у ассетов"
+        },
+        {
+          "name": "next/font (Inter)",
+          "evidence": "класс inter_fe8b9d92-module__LINzvG__variable на <html> и preload /_next/static/immutable/media/83afe278b6a6bb3c-s.p.*.woff2"
+        },
+        {
+          "name": "next/image",
+          "evidence": "<img data-nimg=\"1\"> с src /_next/image?url=…&w=96&q=75 и srcSet"
+        },
+        {
+          "name": "GoatCounter",
+          "evidence": "<link rel=\"preload\" href=\"//gc.zgo.at/count.js\" as=\"script\"> в <head>"
+        }
+      ],
+      "observations": [
+        "Редактор раньше назывался pencil.dev: в шапке главной висит полоса «pencil.dev is now pen.dev», которую можно закрыть.",
+        "Первый экран — не картинка, а макет самого редактора: на тёмном холсте несколько экранов и цветные подписи агентов (Flare, Echo, Drift, Onyx, Nova), справа — панель со слоями, координатами и заливкой, как в настольной программе.",
+        "Кнопка скачивания подстраивается под систему: у владельца на скриншоте она «Download for Windows», а в отданной мне разметке — просто «Download» со ссылкой на /downloads, рядом «Try web version for free» на app.pen.dev.",
+        "Поле в центре — рабочий ввод задачи, а не украшение: в него пишут «Ask pen.dev to …», и подсказка меняется — на скриншоте про хеллоуинскую тему, в живой разметке про кофейню в Сан-Франциско.",
+        "Внутри страницы спрятаны отдельные игрушки: кончик пера, который можно крутить (мини-программа в iframe с подписью «Spin the pen.dev nib»), и площадка Goodies, по которой таскают мышью или ходят стрелками с клавиатуры.",
+        "Возможностей много и они разложены сеткой карточек: импорт Figma и HTML, шейдеры (маленькие программы, считающие цвет пикселей), переменные, встроенный браузер, расширение для Chrome, инструмент пера и удаление фона.",
+        "Скриншот и живая шапка расходятся: на снимке справа только значок меню и переключатель темы, а в коде главной — ссылки Downloads, Pricing, Docs и иконки X и Discord."
+      ],
+      "notes": "В первую очередь смотреть первый экран: он сам показывает продукт — холст с агентами и панель свойств. Дальше — демонстрации импорта и сетку карточек возможностей.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "High Agency Inc.",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "pen.dev – An agentic canvas for building bold software",
+          "title_len": 54,
+          "description": "Design with agents, refine every detail on canvas, and ship it back to code.",
+          "description_len": 76,
+          "og": true,
+          "sitemap": "есть: /sitemap.xml — 10 адресов (главная, /downloads, /pricing, /faq, /careers, /valiocon2026, /privacy-policy, /terms-of-use, /eula, /sub-processors)",
+          "robots": "есть: Allow /, Disallow /api/*, указан Sitemap: https://pen.dev/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 3,
+          "broken": []
+        },
+        "contacts": "X (@pendev), Discord и docs.pen.dev в шапке; почты и телефона в просмотренной части разметки нет",
+        "legal": "есть: /privacy-policy, /terms-of-use, /eula, /sub-processors; в JSON-LD Organization указана компания High Agency Inc.",
+        "analytics": [
+          "GoatCounter (//gc.zgo.at/count.js)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "044",
+      "slug": "runner",
+      "name": "Runner",
+      "url": "https://runner.now/",
+      "domain": "runner.now",
+      "screenshot": "044.webp",
+      "added": "2026-10-31",
+      "link_state": "alive",
+      "description_user": "Монолитный кирпичный сайт сервиса, предоставляющего ИИ-агентов для автоматизации рабочих процессов.",
+      "description_own": "Сайт компании ArgoNavis: она продаёт Runner — ИИ-агентов, которые ведут за клиента целые рабочие процессы, от взыскания долгов до онбординга водителей. Тёмно-кирпичный лонгрид с крупным шрифтом с засечками и жёсткой сеткой: вместо скриншотов — таблицы, цифры и кейсы. Не чат-помощник, а исполнитель процесса.",
+      "description_short": "ИИ-агенты, которые берут на себя целый рабочий процесс",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "product-teams",
+        "marketers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "brutalist",
+        "editorial",
+        "strict-b2b"
+      ],
+      "techniques": [
+        "dark-default",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#532A1C",
+          "#FAF3EC",
+          "#7E5C51",
+          "#DDCBC3",
+          "#9D837B"
+        ]
+      },
+      "tech": [
+        {
+          "name": "React",
+          "evidence": "корневой <div id=\"root\"> и чанки /assets/react-dom-CHwpVez5.js, jsx-runtime-BTND-Rlb.js"
+        },
+        {
+          "name": "TanStack Router",
+          "evidence": "чанки /assets/useRouter-und7kTdL.js, useRouterState-BNyQcTmz.js, matchContext-DzptHeCj.js и обёртка link-Bc6JNSuk.js"
+        },
+        {
+          "name": "Vite + Rolldown",
+          "evidence": "хешированные /assets/index-BiT6JOLi.js и modulepreload, отдельный чанк rolldown-runtime-DAXXjFlN.js"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "комментарий в <head>: «the rest of the app themes off the dark class on <html> (Tailwind's @custom-variant dark)»"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовки ответа главной: Server: cloudflare, CF-Cache-Status: HIT, CF-RAY, Cf-Placement: remote-ORD"
+        },
+        {
+          "name": "Шрифты Exposure и Geist Variable",
+          "evidence": "getComputedStyle: h1 — Exposure, Georgia, serif, 52 px; body — Geist Variable, 15 px"
+        },
+        {
+          "name": "PWA / service worker",
+          "evidence": "manifest.webmanifest (200), apple-touch-icon, theme-color #fcfcfa; комментарий в <head>: service worker регистрируется из main.tsx (src/lib/register-sw.ts)"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "script https://www.googletagmanager.com/gtag/js?id=G-RB2WG8WW9F, запросы к analytics.google.com"
+        },
+        {
+          "name": "Meta Pixel",
+          "evidence": "script https://connect.facebook.net/en_US/fbevents.js, запросы к connect.facebook.net"
+        }
+      ],
+      "observations": [
+        "Скриншот совпадает с живой главной: кирпичный фон, крупный заголовок с засечками «Give every customer 1:1 attention at any scale», левое меню Product / MCP / Pricing / Solutions / About / Login и три шага Train → Validate → Deploy.",
+        "Под оболочкой — React-приложение: страница высотой 26 718 пикселей собирается скриптами, без JavaScript остаётся пустой каркас. Поисковикам сервер отдаёт упрощённую версию, и она отстала от дизайна: в ней старое меню (Home, Workflows, Apps, Use cases, Pricing, FAQ, Blog, Changelog, Contact) и заголовок «Product | Runner».",
+        "Карта сайта — 276 адресов: 76 готовых сценариев, 59 интеграций (Gmail, Slack, Salesforce, Shopify и другие), 6 отраслевых решений, 2 кейса, блог и 103 записи журнала изменений; в шапке при этом всего шесть пунктов.",
+        "Картинок почти нет: на всей главной две SVG-иллюстрации (faq-art.svg и footer-mark.svg), остальное — типографика, тонкие линии и макеты таблиц с выдуманными данными вроде 54 сессий и клиента Caroline Ranch.",
+        "На 375 px горизонтальной прокрутки нет: меню прячется, заголовок уменьшается с 52 до 40 px.",
+        "Сайт продаёт не «чат-помощника», а агента на весь процесс: в кейсах — взыскание 500 счетов и онбординг 50 000 водителей с числами (первый платёж за 6 дней, отклик вырос с 2,6% до 12,6%)."
+      ],
+      "notes": "Смотреть первый экран: кирпичный фон, крупный шрифт с засечками и левое меню; дальше — блок с таблицей агентов и два кейса ближе к концу. Внутренние страницы About и Pricing держат тот же каркас и ту же палитру.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "ArgoNavis Inc.",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": false
+        },
+        "seo": {
+          "title": "Product | Runner",
+          "title_len": 16,
+          "description": "Show Runner how your team handles a process. Train agents against a simulation of your past cases until they pass, then deploy one for every customer.",
+          "description_len": 150,
+          "og": true,
+          "sitemap": "есть: /sitemap.xml — 276 адресов (workflows, apps, solutions, use-cases, case-studies, blog, changelog, legal)",
+          "robots": "есть: User-agent: * / Allow: / / Sitemap: https://runner.now/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 13,
+          "broken": []
+        },
+        "contacts": "только страница /contact со ссылкой «Talk to us» и соцсети LinkedIn и X в подвале; почты, телефона и мессенджеров в разметке не найдено",
+        "legal": "Terms of Service, Privacy Policy, DPA и Trust and Security; в подвале © 2026 ArgoNavis Inc.",
+        "analytics": [
+          "Google Analytics 4 (gtag.js, G-RB2WG8WW9F)",
+          "Meta Pixel (fbevents.js)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "045",
+      "slug": "premotio",
+      "name": "Premotio",
+      "url": "https://premotio.com/",
+      "domain": "premotio.com",
+      "screenshot": "045.webp",
+      "added": "2026-10-31",
+      "link_state": "alive",
+      "description_user": "Живой вдохновляющий лендинг библиотеки анимаций для сайтов с собственным редактором.",
+      "description_own": "Онлайн-редактор, который превращает готовый дизайн — постер, карусель, подборку кадров — в короткое зацикленное видео по готовому пресету. Для дизайнеров и студий: сотни движений в библиотеке, замена картинок и текста, экспорт до 4K, а ещё управление через ИИ-агента. Начать можно без аккаунта.",
+      "description_short": "Редактор, который превращает готовый дизайн в зацикленное видео",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "productivity"
+      ],
+      "audience": [
+        "designers",
+        "marketers",
+        "product-teams",
+        "agencies"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "playful"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "sticky-sections",
+        "preloader",
+        "type-animation",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F6F5F8",
+          "#0C0A09",
+          "#D5CFCC",
+          "#651610",
+          "#ACA8AA"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Nuxt",
+          "evidence": "importmap {\"#entry\":\"/_nuxt/DJQUG5s7.js\"}, объект window.__NUXT__ с buildId и appUrl, стили со scoped-атрибутами data-v-…"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки ответа Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id"
+        },
+        {
+          "name": "Lenis",
+          "evidence": "классы html.lenis и .lenis-stopped в CSS, атрибуты data-lenis у контейнеров, правило html.lenis, html.lenis body{height:auto}"
+        },
+        {
+          "name": "Inter Tight",
+          "evidence": "--font-sans: \"Inter Tight\" и @font-face с fallback-метриками Inter Tight Fallback: Segoe UI и другие"
+        },
+        {
+          "name": "Canvas 2D",
+          "evidence": "<canvas class=\"app-loader__canvas\">, два <canvas class=\"app-ruler__canvas\"> и <canvas class=\"logo-carousel__canvas\">"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "в window.__NUXT__.config: gtag {enabled:true, initMode:\"manual\", id:\"G-LJ95LGHHKP\"} и загрузчик googletagmanager.com/gtag/js"
+        },
+        {
+          "name": "Schema.org JSON-LD",
+          "evidence": "script type=application/ld+json с @graph: Organization (support@premotio.com), WebSite и WebApplication (app.premotio.com, WebGL 2)"
+        },
+        {
+          "name": "Paddle",
+          "evidence": "Terms of Service: Paddle.com — Merchant of Record для всех заказов; в блоке цен «Payments are handled by Paddle»"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца совпадает с живой версией: те же пункты меню (Library, How it works, MCP, Pricing, Contact), тот же заголовок и подпись «No account required». В кадре заголовок пойман в движении — буквы «(move)» разъехались, на живой странице они собираются в слово.",
+        "Это одна длинная страница: блоки сменяют друг друга в одной «залипшей» рамке, пока посетитель прокручивает (в коде — story__stage с position: sticky и комнаты высотой в несколько экранов).",
+        "Перед первым экраном работает прелоадер: логотип рисуется на canvas, рядом бегут цифры счётчика, набранные собственным шрифтом Loader Digits, потом логотип «улетает» и открывает страницу.",
+        "Библиотеку пресетов показали как плёнку с линейкой времени: карточки с подписями Deck 6.00s, Bloom 5.20s и Wall 8.00s едут по шкале — в коде эта деталь называется ruler.",
+        "Редактор демонстрируют прямо на странице: ползунок Amount, эффекты Off / Flare / Prism / Bend, замена картинок и текста в 1 900+ шрифтах — всё это без регистрации, в браузере.",
+        "Отдельный блок про MCP (способ, которым ИИ-приложение подключается к сервису): показана переписка с Claude, который добавляет кадры, переходы и саундтрек, пока человек задаёт направление.",
+        "Юридический раздел не формальный: шесть документов, владелец — ФОП Леонид Костецкий из Кривого Рога, оплата через Paddle, отдельная лицензия на шаблоны; в подвале — «website by emotion» со ссылкой на студию."
+      ],
+      "notes": "Смотреть первый экран: заголовок «Designed already. Now make it (move)» и разлетающиеся постеры. Дальше — плёнка пресетов с линейкой времени и демо редактора с перепиской ИИ-агента.",
+      "facts": {
+        "https": true,
+        "country": "Украина, Кривой Рог",
+        "author": "Leonid Kostetskyi — частный предприниматель (ФОП)",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "premotio — finished design into polished motion",
+          "title_len": 47,
+          "description": "premotio turns finished design into polished motion without sending you into a video editor. Pick a preset, drop in your work and export a looping video.",
+          "description_len": 153,
+          "og": true,
+          "sitemap": "есть: /sitemap.xml — один адрес (главная), lastmod 2026-10-13",
+          "robots": "есть: User-agent: *, Allow: /, Sitemap: https://premotio.com/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 8,
+          "broken": []
+        },
+        "contacts": "support@premotio.com — почта в подвале и в юридических документах; X и Instagram @premotiohq; телефона и формы на сайте нет",
+        "legal": "Terms of Service, Privacy Policy, Cookie Policy, Refund Policy, Template License, Acceptable Use Policy (все от 21.10.2026); продавец — Paddle как Merchant of Record; владелец — Leonid Kostetskyi, ФОП, Украина; © 2026",
+        "analytics": [
+          "Google Analytics 4 (G-LJ95LGHHKP, включается только после согласия в cookie-баннере)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "046",
+      "slug": "gil-huybrecht",
+      "name": "Gil Huybrecht",
+      "url": "https://gilhuybrecht.com/",
+      "domain": "gilhuybrecht.com",
+      "screenshot": "046.webp",
+      "added": "2026-10-31",
+      "link_state": "alive",
+      "description_user": "Утилитарный наглядный сайт-портфолио Гила Хёйбрехта — арт-директора из Бельгии.",
+      "description_own": "Портфолио бельгийского арт-директора Гила Хёйбрехта, специалиста по редакционным сайтам, интернет-магазинам и «погружающим» онлайн-проектам. Чёрный экран, в шапке — услуги, награды и статус доступности, ниже — работы Studio DADO, The Lookback, DoThings и Ray®, каждая рядом пронумерованных кадров.",
+      "description_short": "Чёрное портфолио арт-директора: проекты рядами пронумерованных кадров",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "designer"
+      ],
+      "audience": [
+        "designers",
+        "agencies"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "minimal",
+        "monochrome",
+        "utility-tech"
+      ],
+      "techniques": [
+        "dark-default",
+        "preloader"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#000000",
+          "#FDFDFC",
+          "#C7C9C5",
+          "#3C342E",
+          "#958F8F"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Nuxt",
+          "evidence": "robots.txt размечен комментариями «START/END nuxt-robots», sitemap.xml ссылается на служебный /__sitemap__/style.xsl, контент отдаётся DatoCMS"
+        },
+        {
+          "name": "@nuxtjs/sitemap",
+          "evidence": "в конце sitemap.xml строка «XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-09-22T09:13:07.166Z»"
+        },
+        {
+          "name": "DatoCMS",
+          "evidence": "все изображения главной грузятся с www.datocms-assets.com/154012/… с параметрами auto=format&fit=max&h=2000&w=1500"
+        },
+        {
+          "name": "Netlify",
+          "evidence": "заголовки ответа главной: Server: Netlify, X-Nf-Request-Id: 01M69AWPRV59ZFDVD8W84MBDDM, Cache-Status: \"Netlify Edge\""
+        }
+      ],
+      "observations": [
+        "Скриншот владельца похож на живую версию: тот же чёрный экран и та же сетка работ с номерами кадров; в кадре шапки — имя, строка «Available September 2026», услуги, награды, ссылки Profile и Email me. Текст строки доступности на живой странице не сверен.",
+        "Главная — один длинный экран-каталог: у каждой работы слева название, справа ряд пронумерованных миниатюр, которые листаются как кадры плёнки. Кроме главной есть /profile, /gallery, /newsletter, /privacy-policy и отдельная страница на каждый проект (/projects/studio-dado и другие) — все они перечислены в sitemap.xml.",
+        "Сайт сделан на Nuxt (фреймворк поверх Vue): об этом говорят пометки «nuxt-robots» в robots.txt и подпись «@nuxtjs/sitemap v8.0.15» в sitemap.xml.",
+        "Картинки лежат не на самом сайте, а в медиахранилище DatoCMS — все адреса начинаются с www.datocms-assets.com/154012/ и содержат параметры сжатия и подгонки размера.",
+        "Хостинг — Netlify: сервер отвечает заголовками Server: Netlify, X-Nf-Request-Id и Cache-Status: «Netlify Edge».",
+        "В шапке раздел Recognition с числом наград: Awwwards SOTD (15×), FWA Site of the day (13×), Independent of the year Nominee (4×), Site of the Year Nominee (3×), Webby awards (3×), Lovie awards (2×), SiteInspire feature (6×).",
+        "При загрузке главной в разметке виден счётчик «0%» — типичный индикатор прогресса загрузки. С этой сети обычные запросы к главной и внутренним страницам зависали, поэтому текст читался через релей translate.goog и сервис метаданных api.microlink.io; robots.txt и sitemap.xml отдались напрямую."
+      ],
+      "notes": "Начать с шапки: имя, срок доступности, услуги и награды — вся суть на одном экране. Дальше — сетка работ с пронумерованными кадрами вместо привычных больших обложек.",
+      "facts": {
+        "https": true,
+        "country": "Бельгия",
+        "author": "Gil Huybrecht — дизайнер и арт-директор",
+        "year": null,
+        "mobile": {
+          "viewport_meta": null,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Gil Huybrecht — Freelance designer & art director",
+          "title_len": 49,
+          "description": "Independent designer specialised in editorial websites, ecommerce and immersive online experiences.",
+          "description_len": 99,
+          "og": true,
+          "sitemap": "есть: /sitemap.xml — главная, gallery, newsletter, privacy-policy, profile и страницы проектов (studio-dado, the-lookback, rayr, 53-west-53 и др.), собран 22.09.2026",
+          "robots": "есть: User-agent: *, Disallow: (пусто), Sitemap: https://gilhuybrecht.com/sitemap.xml",
+          "structured_data": null
+        },
+        "links": {
+          "checked": 3,
+          "broken": []
+        },
+        "contacts": "ссылка «Email me» в шапке и страница /profile; сам адрес почты не прочитан — внутренние страницы из этой сети не открылись",
+        "legal": "есть страница /privacy-policy (указана в sitemap.xml); содержимое не прочитано",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "047",
+      "slug": "parker-studio",
+      "name": "Parker Studio",
+      "url": "https://www.parker.studio/",
+      "domain": "parker.studio",
+      "screenshot": "047.webp",
+      "added": "2026-10-31",
+      "link_state": "alive",
+      "description_user": "Оригинальный сайт брендингового бюро Parker Studio. Удачное сочетание анимаций и саунд-эффектов, которое добавляет сайту тактильности.",
+      "description_own": "Сайт брендингового бюро Parker Studio из США: студия придумывает айдентику, названия и упаковку для основателей компаний на переломных этапах роста. Помимо портфолио здесь есть собственный шрифт, звуковое «радио» в меню и раскрывающиеся сноски прямо в заголовке — сайт хочется трогать, а не только читать.",
+      "description_short": "Брендинговая студия с живым звуком и тактильной типографикой",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "branding",
+        "design-studio"
+      ],
+      "audience": [
+        "designers",
+        "marketers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "editorial",
+        "swiss-type",
+        "playful"
+      ],
+      "techniques": [
+        "sound",
+        "custom-cursor",
+        "micro-interactions",
+        "parallax"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FFFFFF",
+          "#181F20",
+          "#D8DFDB",
+          "#F5F19D",
+          "#FBC0E6"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "разметка строится на /_next/static/…, сервер отдаёт заголовок X-Powered-By: Next.js"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "ответ веб-сервера: Server: Vercel, X-Vercel-Cache: HIT, все ссылки на файлы с ?dpl=dpl_…"
+        },
+        {
+          "name": "Sanity CMS",
+          "evidence": "картинки и звуки грузятся с cdn.sanity.io, в данных страницы объекты с полями _type, _key"
+        },
+        {
+          "name": "Vimeo",
+          "evidence": "видео героя: player.vimeo.com/progressive_redirect/playback/1205874989/…mp4"
+        }
+      ],
+      "observations": [
+        "Звук — часть интерфейса: в меню спрятано «радио» с четырьмя звуковыми каналами и регулятором громкости на шесть ступеней, а при наведении на часы и кнопки срабатывают короткие звуки (в коде — data-hover-sound, файлы .wav лежат в CMS).",
+        "Главный приём — огромный серифный заголовок «for Ambitious Founders at Moments of Growth» на почти пустом белом листе; мелкие подписи набраны моноширинным шрифтом, как служебные пометки.",
+        "Заголовок разбит на части-подсказки: слова «Moments» и «of Growth» раскрывают карточки A, B, C — «Foundational Growth», «Growth for Scale», «Brand Pivot»; на скриншоте владельца они открыты.",
+        "Секции оформлены как листы блокнота с дырками и бумажными тенями, а «где мы работаем» показано шестью часами в часовых поясах: Нью-Йорк, Сиэтл, Лос-Анджелес, Детройт, Чикаго, Бордо.",
+        "Живой герой отличается от снимка владельца: по центру автоматически проигрывается видео-луп с Vimeo, которое раскрывается на весь экран по клику; в скриншоте — статичный кадр и другой перенос строк.",
+        "SEO почти не настроено: есть только title и description, а Open Graph, микроразметки и карты сайта нет — robots.txt и sitemap.xml отвечают 404.",
+        "Сайт сделан командой: дизайн — Parker, шрифт PS Times — Parker & Klim, разработка — Pretend; в подвале три адреса почты, включая type@parker.studio для вопросов о шрифте."
+      ],
+      "notes": "Начните с заголовка: раскройте сноски «Moments» и «of Growth», затем откройте меню и добавьте громкость — звук здесь такой же материал, как типографика.",
+      "facts": {
+        "https": true,
+        "country": "США",
+        "author": "Parker Creative, LLC; разработка — Pretend",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Parker Studio",
+          "title_len": 13,
+          "description": "Design for founders at key moments of growth.",
+          "description_len": 45,
+          "og": false,
+          "sitemap": "не найдено",
+          "robots": "не найдено",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 3,
+          "broken": []
+        },
+        "contacts": "hello@parker.studio (общие вопросы), work@parker.studio (вакансии), type@parker.studio (вопросы о шрифте), телефон +1 206 555 8980, Instagram и Are.na",
+        "legal": "в подвале только «Parker Creative, LLC 2026» и кредиты создателям; отдельной страницы политики конфиденциальности на проверенных страницах не встретилось",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

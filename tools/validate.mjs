@@ -112,9 +112,6 @@ const screens = existsSync(join(ROOT, 'screens'))
   : [];
 const usedscreens = new Set();
 
-/* Поля, которые бриф удалил: их присутствие — признак старой записи */
-const LEGACY_FIELDS = ['typography', 'design', 'unverified', 'personal'];
-
 const checkIds = (site, field, set, label) => {
   for (const id of site[field] || []) {
     if (!set.has(id)) error('data/sites.json', `${site.slot}: ${label} «${id}» нет в taxonomy.json`);
@@ -145,10 +142,6 @@ for (const site of sites) {
     if (/[.!?]$/.test(short)) warn(where, `${tag}: description_short заканчивается знаком — в списке он лишний`);
   }
 
-  for (const field of LEGACY_FIELDS) {
-    if (site[field] !== undefined) warn(where, `${tag}: осталось устаревшее поле «${field}» — удали его`);
-  }
-
   if (!site.categories || !site.categories.length) error(where, `${tag}: не указана ни одна категория`);
   checkIds(site, 'categories', CATS, 'категория');
   checkIds(site, 'subcategories', SUBS, 'подкатегория');
@@ -159,7 +152,6 @@ for (const site of sites) {
   if (!LINKS.has(site.link_state)) error(where, `${tag}: неизвестное состояние ссылки «${site.link_state}»`);
 
   const facts = site.facts || {};
-  if (facts.language !== undefined) error(where, `${tag}: старый формат языка — замени facts.language на массив facts.languages`);
   for (const lang of facts.languages || []) {
     if (!LANGS.has(lang)) error(where, `${tag}: язык «${lang}» нет в taxonomy.json`);
   }

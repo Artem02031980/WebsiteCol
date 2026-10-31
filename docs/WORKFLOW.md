@@ -162,8 +162,8 @@ data/SCHEMA.md, README.md и docs/WORKFLOW.md.
 ## Шаблон разбора нового сайта
 
 Один сайт — один фоновый субагент. Ниже текст задания: подставить `{СЛОТ}`, `{НАЗВАНИЕ}`,
-`{URL}`, `{ОПИСАНИЕ_ВЛАДЕЛЬЦА}`, `{СКРИНШОТ}` и отправить. Пять сайтов — пять таких
-заданий параллельно.
+`{URL}`, `{ОПИСАНИЕ_ВЛАДЕЛЬЦА}`, `{СКРИНШОТ}` и отправить. Для партии — по одному такому
+заданию на сайт, параллельно.
 
 Ключевое: субагент **не оценивает**, он приносит проверяемые факты.
 
@@ -177,24 +177,25 @@ data/SCHEMA.md, README.md и docs/WORKFLOW.md.
 Скриншот страницы: C:\Sites\WebsiteCol\screens\{СКРИНШОТ} (посмотри его инструментом read_image)
 
 Что сделать:
-1. Загрузи главную (web_fetch) и 1–3 внутренние страницы (продукт, тарифы, о проекте, контакты).
-   ВАЖНО: если домен недоступен (таймаут, обрыв TLS, 403 Cloudflare), действуй через архив:
+1. Загрузи главную (web_fetch); при необходимости — максимум 1–2 служебные страницы
+   (тарифы/контакты/о проекте). ВАЖНО: если домен недоступен (таймаут, обрыв TLS, 403 Cloudflare),
+   действуй через архив:
    https://archive.org/wayback/available?url=<домен> — затем https://web.archive.org/web/<timestamp>id_/<url>.
    Если архив заблокирован по сети, используй релей
    https://<домен-через-дефисы>.translate.goog/<путь>?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=en
    и https://api.microlink.io/?url=<url>. Способ добычи укажи в observations.
-2. Зафиксируй только то, что реально видно: title, meta description, lang, viewport, og-теги, h1,
-   структуру секций, robots.txt и sitemap.xml (запроси /robots.txt и /sitemap.xml), HTTPS, контакты,
-   юридическую информацию, счётчики аналитики.
+2. Зафиксируй только то, что реально видно: title, meta description, viewport, HTTPS, robots.txt
+   и sitemap.xml (запроси /robots.txt и /sitemap.xml), контакты, юридическую информацию, счётчики
+   аналитики. Отдельно h1 и структуру секций не перечисляй — они не хранятся в данных.
 3. Определи технологии по признакам в разметке (next/react, nuxt/vue, astro, svelte, webflow, framer,
    tilda, wordpress, gsap, lenis, three.js, lottie, rive, tailwind, CMS, аналитика, хостинг).
    Каждая технология — с коротким доказательством (имя файла, класс, заголовок ответа).
    ОСТОРОЖНО С ЛОЖНЫМИ СРАБАТЫВАНИЯМИ: «rive» внутри «driven», «THREE» внутри «three-digit»,
    «d3» внутри base64, «Howl» внутри «howLine», «react» внутри «reacting». Проверяй контекст.
    Имена пакетов пиши как есть: «@react-three/drei» допустимо — фильтры сами преобразуют.
-4. Опиши визуальный стиль и приёмы по скриншоту и разметке: палитра (hex из CSS-токенов),
-   анимации, курсор, звук. Если CSS недоступен — не выдумывай, оставь поле пустым.
-5. Проверь 5–10 внутренних ссылок на доступность, отметь битые.
+4. Опиши визуальный стиль и приёмы по скриншоту и разметке: анимации, курсор, звук. Палитру
+   не измеряй — она считается из скриншота. Если данных нет — не выдумывай.
+5. Проверь 3–5 внутренних ссылок на доступность, отметь битые.
 6. Если сайт многоязычный — перечисли языки, которые реально есть (сверяясь со справочником
    data/taxonomy.json → languages: en, fr, ru, de, it, ja, multi).
 
@@ -208,18 +209,16 @@ data/SCHEMA.md, README.md и docs/WORKFLOW.md.
 Формат ответа: один JSON-объект в блоке ```json, поля:
 {
   "slot": "{СЛОТ}", "name": "{НАЗВАНИЕ}", "url": "{URL}", "domain": "<домен без www>",
-  "http_status": "...", "https": true, "link_state": "alive",
+  "https": true, "link_state": "alive",
   "title": "...", "title_len": 0, "meta_description": "...", "meta_description_len": 0,
-  "lang": "...", "viewport_meta": true, "h1": ["..."],
-  "og": {"present": true, "title": "...", "image": "..."}, "structured_data": false,
+  "viewport_meta": true,
+  "og": true, "structured_data": false,
   "robots_txt": "...", "sitemap_xml": "...",
   "footer_contacts": "...", "legal_info": "...", "analytics": ["..."],
   "tech_stack": [{"name": "...", "evidence": "..."}],
-  "sections_on_page": ["..."],
   "country_hint": "коротко: «Австрия, Вена» — без пояснений, либо null",
   "author_or_studio": "коротко: «Edoardo Lunardi — частный разработчик», либо null",
   "year_hint": 2024,
-  "style_notes": "...", "palette_hex": ["#..."],
   "languages": ["en"],
   "techniques_seen": ["..."],
   "broken_links": ["..."], "checked_links_count": 0,

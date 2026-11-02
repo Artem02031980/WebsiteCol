@@ -6165,6 +6165,436 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "048",
+      "slug": "ghost",
+      "name": "Ghost",
+      "url": "https://ghost.ai/",
+      "domain": "ghost.ai",
+      "screenshot": "048.webp",
+      "added": "2026-11-02",
+      "link_state": "alive",
+      "description_user": "Необычный, насыщенный интересными деталями лендинг персонального ИИ-компьютера Core.",
+      "description_own": "Лендинг персонального ИИ-компьютера Core — коробки, которая запускает языковые модели прямо на устройстве, без облака. Сайт показывает железо в разборе, бытовые сценарии и цену 3499 долларов; первая партия уже распродана, идёт запись на следующую.",
+      "description_short": "Компьютер с ИИ, который живёт у вас дома, а не в облаке",
+      "categories": [
+        "shop"
+      ],
+      "subcategories": [
+        "electronics"
+      ],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "utility-tech",
+        "monochrome"
+      ],
+      "techniques": [
+        "dark-default",
+        "sticky-sections"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#0E1216",
+          "#D1D1D1",
+          "#AAB0B7",
+          "#2D353D",
+          "#5A656F"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "script src https://ghost.ai/_next/static/immutable/chunks/2r_dr4zzseqrs.js; заголовки x-nextjs-prerender: 1, vary: rsc, next-router-state-tree, next-router-prefetch"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовок ответа server: Vercel, x-vercel-cache: HIT"
+        },
+        {
+          "name": "Vercel Web Analytics",
+          "evidence": "политика конфиденциальности: «We use Vercel Web Analytics to count visitors and page views»"
+        },
+        {
+          "name": "PostHog",
+          "evidence": "политика конфиденциальности: «We use PostHog to measure website visits, referral sources…»; в подвале ссылка Analytics preferences"
+        }
+      ],
+      "observations": [
+        "Первый экран — тёмная комната: светлая коробка Core на подсвеченной поверхности, а над ней огромные полупрозрачные буквы, разнесённые по всей ширине кадра.",
+        "Сразу под картинкой — заголовок «The personal AI computer», четыре коротких обещания (без подписки, всё на устройстве, постоянный контекст, возврат 30 дней) и цена $3,499.",
+        "Скриншот владельца показывает более раннюю версию: там кнопка «RESERVE FOR BATCH 2» и только пункты ABOUT/PRIVACY, а в живой версии — «Register interest», пункты About/Careers/Privacy и плашка со ссылкой на видео о запуске.",
+        "Железо показано разобранным: картинка с подписью про детали Core (панели, корпус, графический чип, охлаждение, память, плата, вентиляторы, рама), а характеристики — видеокарта, процессор, память, диск — идут отдельными вкладками.",
+        "Политика конфиденциальности от 5 октября 2026 подробно объясняет, что остаётся на устройстве, а что уходит к сторонним сервисам, и обещает, что пересылаемое не хранится.",
+        "Сайт собран на Next.js и размещён на Vercel; в политике прямо названы счётчики Vercel Web Analytics и PostHog, а в подвале есть переключатель «Analytics preferences».",
+        "Служебных файлов для поисковиков нет: /robots.txt и /sitemap.xml отвечают 404, JSON-LD в разметке отсутствует. Главная с этой сети отдаётся медленно, поэтому текст и метаданные сверялись через translate.goog и api.microlink.io."
+      ],
+      "notes": "Смотреть первый экран с огромными буквами и подсвеченной коробкой и секцию с разобранным железом; в подвале — переключатель аналитики.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "ZMJ, Inc. (Ghost) — компания-производитель",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Ghost AI",
+          "title_len": 8,
+          "description": "Here at Ghost, we are building Core, the personal AI computer designed to keep intelligence and control in the hands of the people who use them.",
+          "description_len": 144,
+          "og": true,
+          "sitemap": "не найдено (404)",
+          "robots": "не найдено (404)",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 2,
+          "broken": []
+        },
+        "contacts": "support@ghost.ai, X @ghostai, LinkedIn (try-ghost-ai), страница /support",
+        "legal": "Политика конфиденциальности от 5 октября 2026: ZMJ, Inc. dba Ghost, 325 9th Street, San Francisco, CA 94103",
+        "analytics": [
+          "Vercel Web Analytics",
+          "PostHog"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "049",
+      "slug": "america-gov",
+      "name": "America.gov",
+      "url": "https://america.gov/",
+      "domain": "america.gov",
+      "screenshot": "049.webp",
+      "added": "2026-11-02",
+      "link_state": "alive",
+      "description_user": "Сдержанный функциональный сайт правительства США, который сводит 29 тысяч госсайтов в одну строку ИИ-поиска.",
+      "description_own": "Официальный сервис правительства США: вместо десятков сайтов ведомств — одно поле, куда вопрос пишут обычными словами. Поиск на ИИ отвечает по официальным источникам, со ссылками на первоисточник, без рекламы и регистрации. Сделан для жителей страны: паспорт, Medicare, смена фамилии, поиск работы.",
+      "description_short": "Один ИИ-поиск вместо 29 тысяч государственных сайтов США",
+      "categories": [
+        "saas",
+        "nonprofit"
+      ],
+      "subcategories": [
+        "ai",
+        "gov"
+      ],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "webapp",
+      "styles": [
+        "minimal"
+      ],
+      "techniques": [
+        "chat-ui",
+        "page-transitions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F2F3F3",
+          "#CCD3D2",
+          "#B0B2B2",
+          "#99948C",
+          "#10161C"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Astro",
+          "evidence": "разметка ссылается на /_astro/base-html.astro_astro_type_script_index_0_lang.BeSPCElw.js и хешированные ассеты /_astro/veteran-care.G_BGYd8h_Z27t2c7.webp — подпись сборки Astro"
+        },
+        {
+          "name": "View Transitions API",
+          "evidence": "инлайн-CSS страницы: @view-transition { navigation: auto } и ::view-transition-group(site-nav-logo) с animation-duration 300ms"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "/robots.txt содержит блок «BEGIN Cloudflare Managed content» с Content-Signal и списком закрытых ИИ-краулеров"
+        },
+        {
+          "name": "Микроразметка JSON-LD",
+          "evidence": "script type=application/ld+json с @graph: WebSite и GovernmentOrganization, parentOrganization — National Design Studio"
+        },
+        {
+          "name": "Самопостинг шрифтов",
+          "evidence": "preload .woff2 с собственного домена: helvetica-now-text-400.DgICZbSh.woff2, rhymes-text-regular.DRsO9i-l.woff2"
+        },
+        {
+          "name": "Своя дизайн-система",
+          "evidence": "комментарии в коде ссылаются на пакеты @america/ui/hooks/use-theme и @america/locale"
+        }
+      ],
+      "observations": [
+        "Главная — почти пустой лист: огромный заголовок «Hello, America», подпись «Whatever you need from government, start here» и единственное поле ввода; меню, темы и языки спрятаны за кнопкой «Menu» в правом верхнем углу.",
+        "Под полем — строка «29,000 websites into one»: сайт сам называет цифру 29 тысяч объединённых госсайтов; рядом обещания «Clear answers. Official sources.», «No app to download.» и «America.gov keeps your data private.».",
+        "Ищет ответы система, которую здесь называют SI (Super Intelligence): по странице «How it works» она объясняет информацию только с официальных госсайтов и даёт ссылку на первоисточник; подача заявлений и отслеживание статуса прямо в чате обещаны в 2027 году.",
+        "Под поиском крутится карусель из 10 бытовых примеров — Medicare, паспорт ребёнку, поиск работы, смена фамилии после свадьбы; у каждого своя фотография, а подписи «Example 9 of 10» читают экранные дикторы.",
+        "Скриншот владельца — тот же макет, но другая карточка: пример про ветерана (сейчас девятый из десяти) и подсказка внутри поля; в живой версии поле пустое, с текстом «Describe what you need», а пример вынесен под него.",
+        "Статус и авторство указаны прямо: сверху плашка «An official website of the United States government», в подвале — General Services Administration, National Design Studio и языки English/Français/Español; запуск — 29 сентября 2026 года после указа Executive Order 14338."
+      ],
+      "notes": "Начните с главного экрана: наберите свой вопрос или пролистайте примеры, затем откройте «How it works» — там коротко объяснено, откуда берутся ответы и почему им можно верить.",
+      "facts": {
+        "https": true,
+        "country": "США, Вашингтон",
+        "author": "National Design Studio (GSA)",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "America.gov",
+          "title_len": 11,
+          "description": "Find answers from official government sources and clear next steps for the services you need with America.gov.",
+          "description_len": 110,
+          "og": true,
+          "sitemap": "https://america.gov/sitemap.xml — 8 адресов (/, /privacy, /how-it-works, /about, /faq, /releases, /privacy-policy, /terms)",
+          "robots": "есть: Allow: / и указан Sitemap; ИИ-краулеры (GPTBot, ClaudeBot, CCBot, Google-Extended и др.) закрыты",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 6,
+          "broken": []
+        },
+        "contacts": "почты и телефона нет; обратная связь — кнопка «Submit feedback», плюс ссылки на GSA и National Design Studio в подвале",
+        "legal": "Privacy policy (/privacy-policy), Terms of use (/terms) и страница Privacy в подвале; оператор — U.S. General Services Administration",
+        "analytics": [],
+        "languages": [
+          "multi",
+          "en",
+          "fr"
+        ]
+      }
+    },
+    {
+      "slot": "050",
+      "slug": "lue-studio",
+      "name": "Lué Studio",
+      "url": "https://lue.studio/",
+      "domain": "lue.studio",
+      "screenshot": "050.webp",
+      "added": "2026-11-02",
+      "link_state": "alive",
+      "description_user": "Живописный оригинальный сайт студии, которая занимается разработкой сайтов, приложений и брендинга. Опыт команды из двух человек иронично представлен как тайное знание алхимиков.",
+      "description_own": "Сайт студии из двух человек: сайты, цифровые продукты и брендинг для стартапов и крупных брендов. Первый экран — небо с облаками и месяцем, а себя команда в шутку называет алхимиками интернета, превращающими обычное в золото. Интересен как образец дорогого студийного сайта, где история и детали важнее списка услуг.",
+      "description_short": "Студия из двух человек, которая в шутку называет себя алхимиками интернета",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "design-studio",
+        "dev-studio",
+        "branding"
+      ],
+      "audience": [
+        "designers",
+        "agencies",
+        "product-teams"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "editorial",
+        "luxury"
+      ],
+      "techniques": [
+        "webgl3d",
+        "video-bg",
+        "page-transitions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#EDF4FA",
+          "#7DA3D8",
+          "#2E6DB3",
+          "#B7CFEA",
+          "#5586C8"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "адреса /_next/static/chunks/*.js с параметром dpl, турбопак-чанк и данные в self.__next_f"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "в адресах ассетов deployment-id ?dpl=dpl_FJvt1Ncht4paB2rdQZrnmzmnQ3y2 и компонент SpeedInsights в данных страницы"
+        },
+        {
+          "name": "TailwindCSS",
+          "evidence": "утилитарные классы в разметке: max-w-360 lg:max-w-[800px] mx-auto mb-44 lg:mb-64, overflow-x-clip"
+        },
+        {
+          "name": "Pixi.js",
+          "evidence": "сцена на первом экране: canvas class=\"overlay hero-pixi\""
+        },
+        {
+          "name": "Motion",
+          "evidence": "переход между страницами описан spring-анимацией (type spring, stiffness 60, damping 10) в данных страницы"
+        }
+      ],
+      "observations": [
+        "Первый экран — небо с облаками и полумесяцем; в углах — координаты Нью-Йорка и Анкары, а крупный заголовок «The Lué Studio» нарисован на canvas (в разметке пустой элемент с классом hero-pixi), поэтому в тексте страницы его нет — только мелкий вводный абзац.",
+        "Тема алхимии держится через весь текст: студия сравнивает себя с алхимиками, которые превращают «базовый металл в чистое золото», то есть обычное — в необычное.",
+        "Разделы пронумерованы как главы (01–07) и подписаны короткими тезисами, почти в каждом — фоновое видео: в разметке девять тегов video с файлами mp4 и webm из /assets.",
+        "В CSS у навигации заготовлены четыре заливки — утро, полдень, вечер и ночь (--nav-fill-morning/midday/afternoon/night): оформление шапки меняется от времени суток.",
+        "О себе студия говорит без прикрас: команда из двух человек, дизайнер Oğuz Yağız Kara и инженер Necati Koçlu, без аутсорса и шаблонов, со ссылками на личные профили в X.",
+        "Юридических страниц нет: в карте сайта 18 адресов — главная, работы, философия и контакты, политики конфиденциальности и условий нет.",
+        "Контакты — не письмо в свободной форме, а пошаговый опрос: на /contact «Start», «press Enter» и «займёт 4+ минуты»."
+      ],
+      "notes": "Смотреть первый экран с облаками и то, как главы сменяют друг друга при прокрутке. Затем — страницу философии: там студия объясняет, почему остаётся командой из двух человек.",
+      "facts": {
+        "https": true,
+        "country": "Турция",
+        "author": "Oğuz Yağız Kara и Necati Koçlu — студия из двух человек",
+        "year": 2025,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Lué Studio® · Design & Development",
+          "title_len": 34,
+          "description": "Lué Studio® is an end-to-end, powerhouse in digital design, development and direction.",
+          "description_len": 86,
+          "og": true,
+          "sitemap": "https://lue.studio/sitemap.xml — 18 адресов: главная, /works, /philosophy, /contact и 14 страниц работ",
+          "robots": "есть: Disallow /assets, /assets-original, /fonts, /sfx; Sitemap: https://lue.studio/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 7,
+          "broken": []
+        },
+        "contacts": "hey@lue.studio (текстом, без mailto), Instagram theluestudio, X @luestudio, LinkedIn; заявка через пошаговый опрос на /contact",
+        "legal": "Не найдено: страниц с политикой конфиденциальности и условиями нет, в футере только «Lué Design & Development Studio © 2025»",
+        "analytics": [
+          "Vercel Speed Insights"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "051",
+      "slug": "driftime",
+      "name": "Driftime",
+      "url": "https://driftime.com/",
+      "domain": "driftime.com",
+      "screenshot": "051.webp",
+      "added": "2026-11-02",
+      "link_state": "alive",
+      "description_user": "Наглядный лаконичный сайт британского дизайн-агентства. Крупные заголовки и удобное деление на слайды по скроллу.",
+      "description_own": "Сайт британской дизайн-студии Driftime: помогает организациям в климате, здравоохранении и социальных проектах говорить о своей работе. Главная устроена как слайды: огромный заголовок, затем четыре направления — стратегия, бренд, диджитал, отчётность — с проектами в коротких видео. Полезен дизайнерам и агентствам.",
+      "description_short": "Сайт британской дизайн-студии: крупные заголовки и слайды по скроллу",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "design-studio"
+      ],
+      "audience": [
+        "designers",
+        "agencies",
+        "ngos"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "swiss-type"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "video-bg"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#000000",
+          "#F1EFE6",
+          "#1C1821",
+          "#DCE5AE",
+          "#4A492C"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "пути /_next/static/chunks/*.js в разметке, чанк turbopack-0r6uodsmpayc_.js"
+        },
+        {
+          "name": "Sanity",
+          "evidence": "preconnect к https://ai4peca6.api.sanity.io, картинки и видео с cdn.sanity.io"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "суффикс ?dpl=dpl_BHvcB7gmvbpQZaJZwF9khgFYecGi у всех ассетов"
+        },
+        {
+          "name": "Lenis",
+          "evidence": "служебные классы .lenis-smooth и .lenis-stopped во встроенных стилях"
+        },
+        {
+          "name": "Cabin",
+          "evidence": "<script async defer src=\"https://scripts.withcabin.com/hello.js\"> и preload этого файла"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца совпадает с живой разметкой: тот же заголовок «The Guide to your Hero™» и четыре плитки проектов под ним.",
+        "Главная читается как набор слайдов: после первого экрана идут четыре блока услуг — стратегия, бренд, диджитал, отчётность, — и в каждом свои работы и одна и та же кнопка Contact Us.",
+        "Плитки проектов — это видео: в разметке 27 ссылок на mp4 с сайта Sanity, с зацикливанием (loop) и картинкой-заглушкой, поэтому карточки выглядят живыми до клика.",
+        "Прокрутка сделана «тягучей» библиотекой Lenis — в стилях остались её служебные классы .lenis-smooth и .lenis-stopped.",
+        "Сайт закрыт от поисковиков: в robots.txt стоит Disallow: / для всех, а в sitemap.xml всего три адреса, и у двух вместо ссылки остался шаблон https://driftime.com/[slug].",
+        "Счётчик один и приватный — Cabin: скрипт scripts.withcabin.com/hello.js, а в политике прямо написано «No cookies».",
+        "Прямые запросы к driftime.com из этой сети обрывались по таймауту, поэтому страницы читались через релей translate.goog; контакты — почты hello@, newbusiness@, press@, futures@ и два офиса, Лондон и Брайтон."
+      ],
+      "notes": "Смотреть первый экран с заголовком «The Guide to your Hero™» и то, как четыре услуги разложены по слайдам; из технического интересно, что сайт целиком закрыт в robots.txt.",
+      "facts": {
+        "https": true,
+        "country": "Великобритания, Лондон",
+        "author": "Driftime Media Ltd. — дизайн-студия",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Home | Driftime® - The Guide to your Hero™",
+          "title_len": 42,
+          "description": "Driftime® are an impact-first strategic and creative partner with a policy-adjacent focus, working with organisations to build credibility, trust and leverage that drives social and environmental progress.",
+          "description_len": 205,
+          "og": true,
+          "sitemap": "https://driftime.com/sitemap.xml — 3 адреса, у двух в loc остался шаблон [slug]",
+          "robots": "User-agent: * / Disallow: /",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "Почты hello@, newbusiness@, press@, futures@driftime.com; два офиса — The Conduit, 6 Langley Street, Лондон и Брайтон; LinkedIn",
+        "legal": "Страница /policies: политика конфиденциальности Driftime Media Ltd., пункт об отсутствии cookie",
+        "analytics": [
+          "Cabin"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

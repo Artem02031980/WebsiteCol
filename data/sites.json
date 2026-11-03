@@ -6595,6 +6595,428 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "052",
+      "slug": "conductor",
+      "name": "Conductor",
+      "url": "https://www.conductor.build/",
+      "domain": "conductor.build",
+      "screenshot": "052.webp",
+      "added": "2026-11-03",
+      "link_state": "alive",
+      "description_user": "Лёгкий, воздушный сайт приложения для работы с кодинг-агентами.",
+      "description_own": "Приложение для macOS, в котором несколько кодинг-агентов работают над одним проектом: Claude Code, Codex и Cursor получают отдельные рабочие копии, а вы видите, кто что делает, и сливаете правки. Сайт подаёт это легко и воздушно — синий градиент с пиксельной рябью и снимок приложения вместо абстрактных иллюстраций.",
+      "description_short": "Рабочее место для нескольких кодинг-агентов: локально и в облаке",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools",
+        "ai"
+      ],
+      "audience": [
+        "developers",
+        "product-teams"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "chat-ui"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FDFDFD",
+          "#369DEE",
+          "#69BFF4",
+          "#9BD6F5",
+          "#D0D1D1"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "заголовок ответа x-nextjs-prerender: 1 и vary: rsc, next-router-state-tree; картинки отдаются через /_next/image"
+        },
+        {
+          "name": "React",
+          "evidence": "в vary перечислен rsc — сервер отдаёт React Server Components"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "x-vercel-cache: HIT, x-vercel-id: iad1::…, в адресах ассетов параметр dpl=dpl_…"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "ответы приходят с server: cloudflare, cf-ray и cf-cache-status; из этой сети на любой адрес 403"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — более ранняя версия: на нём заголовок «Run a team of coding agents on your Mac», а живой сайт сейчас обещает то же «in the cloud»; в шапке прибавились Changelog, Docs и вход в приложение.",
+        "Первый экран держится на одном приёме: синяя заливка с мелкой пиксельной рябью, пиксельный логотип и сразу под ним окно приложения — не абстрактная иллюстрация, а сам продукт.",
+        "Доверие собирают без цифр и графиков: цитата дизайнера из Thinking Machines и строка «Trusted by 100k+ builders» с логотипами Linear, Vercel, Notion, Spotify и Y Combinator.",
+        "Для тёмной темы заготовлены отдельные картинки — «ночное небо» вместо синего фона и тёмный снимок приложения; отдельной кнопки переключения темы в первом экране не видно.",
+        "Из этой сети Cloudflare отдаёт 403 на любой адрес, поэтому данные собраны через релей api.microlink.io и архивные снимки web.archive.org от 3 ноября 2026 года; robots.txt и sitemap.xml проверить не удалось — в архиве они пустые.",
+        "В разметке лежат четыре блока JSON-LD (Organization, SoftwareApplication, WebPage, BreadcrumbList) — поисковик получает карточку приложения с описанием и ссылкой на Y Combinator."
+      ],
+      "notes": "Смотреть первый экран: пиксельная рябь по синему и логотип из точек. Дальше — блок с «перепиской» агентов, там показан сам продукт.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "Melty Labs",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Conductor - Run a team of coding agents in the cloud",
+          "title_len": 52,
+          "description": "Run coding agents in isolated cloud sandboxes with Conductor Cloud.",
+          "description_len": 67,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": true
+        },
+        "links": {
+          "checked": 3,
+          "broken": []
+        },
+        "contacts": "Подвал: X, YouTube, Reddit, Discord; почта — только на странице Privacy, скрыта защитой от спама",
+        "legal": "Privacy Notice от 12 июня 2026 и Terms; оператор — Melty, Inc.; отчёт SOC 2 Type II на trust.conductor.build",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "053",
+      "slug": "prime-intellect",
+      "name": "Prime Intellect",
+      "url": "https://www.primeintellect.ai/",
+      "domain": "primeintellect.ai",
+      "screenshot": "053.webp",
+      "added": "2026-11-03",
+      "link_state": "alive",
+      "description_user": "Брутальный технологичный сайт платформы для обучения и развёртывания собственных ИИ-моделей.",
+      "description_own": "Сайт компании Prime Intellect — платформы, где можно обучить и развернуть собственную ИИ-модель: вычисления, тренировка, ответы модели и изолированные песочницы собраны в одном месте. Для разработчиков и продуктовых команд, которым нужна своя модель, а не чужая.",
+      "description_short": "Платформа для обучения и запуска собственных ИИ-моделей",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "developers",
+        "product-teams"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "brutalist",
+        "utility-tech"
+      ],
+      "techniques": [
+        "dark-default",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#121312",
+          "#31393C",
+          "#566161",
+          "#595829",
+          "#7C817A"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "пути /_next/static/chunks/*.js и /_next/static/css/*.css, заголовок x-powered-by: Next.js, атрибут data-dpl-id у <html>"
+        },
+        {
+          "name": "React",
+          "evidence": "клиентские чанки app/page-9dbe19eb3960d337.js и app/layout-8d8f3b18754ca143.js, RSC-дерево в разметке"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки server: Vercel и x-vercel-cache: HIT, суффикс ?dpl=dpl_6SzhUVYg3GWA6qGE71TuNaNAREkH у всех ассетов"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "утилитарные классы: body class=\"antialiased\", div class=\"absolute inset-0 flex items-center justify-center transition-opacity duration-200 group-hover:translate-x-0\""
+        },
+        {
+          "name": "next/font",
+          "evidence": "preload шрифта /_next/static/media/22a5144ee8d83bca-s.p.woff2 и CSS-переменная __variable_ab3177 у body"
+        },
+        {
+          "name": "Google Tag Manager",
+          "evidence": "noscript-iframe https://www.googletagmanager.com/ns.html?id=GTM-MDCS5S2X"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — более ранняя версия: на нём первый экран с фотографией стеклянного монолита в джунглях и надписью «THE OPEN SUPERINTELLIGENCE STACK», а в живой разметке этого текста на экране уже нет — он остался только в title и тегах для соцсетей.",
+        "Первый экран теперь строит тонкое SVG-кольцо вокруг заголовка «Own Your Intelligence»: по кругу подписи TRAIN, DEPLOY, IMPROVE и стрелка, которая вращается средствами CSS (класс refactor-ring-orbit).",
+        "Шапка сменилась: на снимке TRAINING 01 / INFERENCE 02 / COMPUTE 03 / RESEARCH 04 и вакансий 24, в живой версии — model factory, inference, compute, research и 39 вакансий; верхней плашки «Introducing Prime Agent» с командой установки тоже больше нет.",
+        "Подзаголовок сократили, а описание для поиска осталось прежним: на экране «Train and deploy custom AI models…», в meta description — старая длинная фраза про непрерывное улучшение моделей на стеке из вычислений, обучения, инференса и песочниц.",
+        "Сетка логотипов клиентов (Ramp, NVIDIA, Zapier, Character.AI, Goodfire, Inception, Arcee, Browserbase) собрана из обычных ссылок-ячеек, а у части поверх угла ярлык CASE STUDY или READ MORE.",
+        "Типографика техничная и брутальная: Favorit Sans подключён локально, кнопки квадратные и капсом, а стрелка в них на наведении выезжает из-за края (CSS-переход по классам group-hover).",
+        "Счётчик всего один — Google Tag Manager (GTM-MDCS5S2X), а картинка для соцсетей до сих пор лежит на старом CDN Webflow (cdn.prod.website-files.com), хотя сайт давно собирается на Next.js и живёт на Vercel."
+      ],
+      "notes": "Смотреть первый экран с кольцом TRAIN / DEPLOY / IMPROVE и сетку логотипов с ярлыками CASE STUDY. Главная отдаётся потоком — HTTP 200 приходит сразу, но соединение не закрывается, поэтому полный HTML не скачивается и факты собраны по началу страницы и служебным адресам.",
+      "facts": {
+        "https": true,
+        "country": "США, Довер",
+        "author": "Prime Intellect, Inc. — компания",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Prime Intellect - The Open Superintelligence Stack",
+          "title_len": 50,
+          "description": "Train, deploy, and continuously improve your own models on an integrated compute, training, inference, and sandbox stack.",
+          "description_len": 121,
+          "og": true,
+          "sitemap": "https://www.primeintellect.ai/sitemap.xml — 200, 71 адрес: продукты, блог, кейсы, юридические страницы",
+          "robots": "User-Agent: * / Allow: / / Sitemap: https://primeintellect.ai/sitemap.xml и https://primeintellect.ai/rl-glossary/sitemap.xml",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 8,
+          "broken": []
+        },
+        "contacts": "Почта contact@primeintellect.ai, телефон (415) 697-2424 и адрес в /imprint; форма «Talk to our team»; X, LinkedIn, Discord, Luma",
+        "legal": "Imprint с реквизитами Prime Intellect, Inc. (1111b South Governors Avenue, Довер, Делавэр, США), Terms of Service, Privacy Policy, Security Policy",
+        "analytics": [
+          "Google Tag Manager (GTM-MDCS5S2X)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "054",
+      "slug": "oqoqo",
+      "name": "Oqoqo",
+      "url": "https://oqoqo.ai/",
+      "domain": "oqoqo.ai",
+      "screenshot": "054.webp",
+      "added": "2026-11-03",
+      "link_state": "alive",
+      "description_user": "Аккуратный, в меру утилитарный сайт платформы с эвалами и приватными бенчмарками, которые позволяют измерить, насколько хорошо ИИ-агенты справляются с реальными задачами.",
+      "description_own": "Платформа для проверки ИИ-агентов на реальных задачах: команда собирает свой набор задач с понятными критериями, запускает на нём разных агентов и модели и смотрит, где именно они спотыкаются и сколько это стоит. Нужна продуктовым командам, которые выпускают ИИ-функции и хотят измерять их пользу, а не гадать.",
+      "description_short": "Платформа для проверки ИИ-агентов на реальных задачах и своих бенчмарках",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai",
+        "dev-tools"
+      ],
+      "audience": [
+        "product-teams",
+        "developers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "utility-tech",
+        "strict-b2b"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FCFBF9",
+          "#2E2B29",
+          "#878684",
+          "#D3D2D0",
+          "#B0AFAD"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "пути /_next/static/chunks/*.js и /_next/image в разметке, заголовок ответа X-Nextjs-Prerender: 1"
+        },
+        {
+          "name": "Turbopack",
+          "evidence": "чанк /_next/static/chunks/turbopack-3-ry682tkyiqk.js в списке скриптов"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "утилитарные классы вида max-w-[1200px], text-muted-foreground, bg-background/25, data-[active=true]:"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки ответа Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id"
+        },
+        {
+          "name": "Cal.com",
+          "evidence": "кнопка Book a demo ведёт на https://cal.com/oqoqo-founders"
+        }
+      ],
+      "observations": [
+        "Эвал (evaluation) — это проверка ИИ-агента на наборе задач с заранее описанными критериями: агент выполняет задачу, а система отмечает, сколько требований выполнено. «Приватные бенчмарки» — свои наборы задач вместо публичных тестов, чтобы мерить агента на реальных сценариях продукта и не раскрывать их.",
+        "Первый экран обещает «самый простой способ собирать эвалы», следом — демонстрация дашборда, где задают задачи, агентов, рубрики и запуски. Подпись на самой странице честная: это упрощённая реконструкция, а не запись настоящего продукта.",
+        "Скриншот владельца снят с более ранней версии: на нём кнопка «Get started», на живой странице — «Get started for free» с подписью «No credit card required». Заголовок, подзаголовок, набор кнопок и бейдж Product Hunt «#1 Product of the Day» совпадают.",
+        "Сайт подготовлен к чтению ИИ-агентами: в /llms.txt у каждой страницы указана markdown-версия (.md), index.md реально отдаётся и содержит тот же текст без вёрстки.",
+        "Оформление сдержанное: тёплый светлый фон #faf9f7, контент в колонке 1200 px с тонкой рамкой, чёрные кнопки, почти монохром. Тёмная тема включается по системной настройке — в коде есть переключатель light/dark и theme-color, который меняется на #121111.",
+        "Шапка ведёт в три отдельных сервиса: приложение app.oqoqo.ai (Sign in), документация docs.oqoqo.ai, запись на демо через Cal.com; кнопка «Get started for free» тоже уводит в приложение.",
+        "Готовых счётчиков в полученной разметке не встретилось: PostHog и Google Tag Manager с пикселями LinkedIn и X описаны в политике конфиденциальности — они включаются по согласию (в США по умолчанию, вне США только после разрешения)."
+      ],
+      "notes": "Смотреть главную: как тезис про эвалы разложен на блоки «что можно делать», шаги эксперимента и FAQ, и честную подпись под демо-роликом. Из технического интереснее markdown-версии страниц и /llms.txt — сайт сам подготовлен к чтению ИИ-агентами.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "Oqoqo, Inc. — разработчик платформы",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Oqoqo - The easiest way to build evals and custom benchmarks for real-world agentic tasks",
+          "title_len": 89,
+          "description": "Run eval experiments at scale in realistic environments on fully managed cloud infrastructure. Define custom task sets to build your private benchmarks, measure how well agents can use any product, and find the best agent-model combinations for your use cases. Generate insights on the fly, such as product interface friction, token inefficiencies, performance differences, and so much more.",
+          "description_len": 391,
+          "og": false,
+          "sitemap": "https://oqoqo.ai/sitemap.xml — 32 адреса: главная, тарифы, блог, гайды, сравнения, приваси и условия",
+          "robots": "User-agent: * / Allow: / / Sitemap: https://oqoqo.ai/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 4,
+          "broken": []
+        },
+        "contacts": "support@oqoqo.ai; запись на демо через cal.com/oqoqo-founders; X @oqoqo_ai; LinkedIn /company/oqoqoai",
+        "legal": "Privacy Policy (обновлена 26.10.2026) и Terms of Service; Oqoqo, Inc., 1301 Sansome Street, Сан-Франциско, США",
+        "analytics": [
+          "PostHog",
+          "Google Tag Manager (LinkedIn Insight Tag и X Pixel)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "055",
+      "slug": "flighty",
+      "name": "Flighty",
+      "url": "https://flighty.com/",
+      "domain": "flighty.com",
+      "screenshot": "055.webp",
+      "added": "2026-11-03",
+      "link_state": "alive",
+      "description_user": "Эстетичный сайт приложения для отслеживания информации об авиарейсах. Оформление выполнено в лучших традициях Apple: аккуратная выверенная вёрстка, качественные визуализации и приятные мелкие детали.",
+      "description_own": "Сайт приложения Flighty, которое следит за авиарейсами: задержки, смену гейта и посадку оно сообщает раньше авиакомпаний. Главный экран — телефон в руке с живыми карточками уведомлений, награды Apple и отзывы пассажиров, а внутренние страницы объясняют тарифы и отличие от других трекеров.",
+      "description_short": "Трекер авиарейсов в духе Apple: задержки, гейты, перелёты",
+      "categories": [
+        "saas",
+        "travel"
+      ],
+      "subcategories": [
+        "productivity"
+      ],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FFFFFF",
+          "#372521",
+          "#0A0706",
+          "#B4E68F",
+          "#D1D1CF"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Framer",
+          "evidence": "meta generator «Framer b7e356e», классы framer-*, ассеты framerusercontent.com, бандл script_main.6JSeFOBV.mjs"
+        },
+        {
+          "name": "Google Tag Manager",
+          "evidence": "контейнер GTM-TKFRNQFT и iframe googletagmanager.com/ns.html?id=GTM-TKFRNQFT"
+        },
+        {
+          "name": "Framer Analytics",
+          "evidence": "скрипт events.framer.com/script?v=2 в head"
+        },
+        {
+          "name": "Cloudflare Insights",
+          "evidence": "static.cloudflareinsights.com/beacon.min.js"
+        },
+        {
+          "name": "Google Fonts",
+          "evidence": "подключение fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        }
+      ],
+      "observations": [
+        "Скриншот владельца — более ранняя версия: заголовок «Your ticket to stress-free flying» уже заменён на «Get the truth when you travel», а в меню появились Gift Cards, Businesses и «NEW! Flighty Airports».",
+        "Заголовок набран системным шрифтом (system-ui / -apple-system) кеглем 65 px с плотным межбуквенным интервалом −1 px — поэтому страница и читается как экран Apple, хотя своего шрифта у сайта нет.",
+        "Сайт собран в конструкторе Framer: в коде остались метка генератора, классы framer-* и анимации появления блоков; тяжёлых 3D-сцен нет.",
+        "Вместо GIF-демонстраций — короткие беззвучные видео с интерфейсом приложения (зациклены, preload=none, поэтому не тормозят первую загрузку); несколько роликов повторяются в разных секциях.",
+        "Главная — не только лендинг: в карте сайта 53 адреса, среди них тарифы, подарочные карты, аэропорты, «паспорт путешественника» и сравнения с FlightRadar24, TripIt и Google.",
+        "Google Tag Manager подключён с согласием по умолчанию «запрещено»: до клика по cookie-баннеру аналитика не включается."
+      ],
+      "notes": "Смотреть главный экран: системный шрифт, телефон в руке и всплывающие уведомления вокруг — именно они делают страницу похожей на экран iOS. Дальше — вкладки Preflight / At the airport / After landing и сравнения с конкурентами.",
+      "facts": {
+        "https": true,
+        "country": "США, Остин",
+        "author": null,
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Flighty — Live Flight Tracker: Get flight alerts faster than the airlines",
+          "title_len": 73,
+          "description": "The only app that tells you everything about your flight and tracks your lifetime of travel. Get real-time updates, the fastest alerts, and delay predictions, so you're always the first to know and rebook.",
+          "description_len": 205,
+          "og": true,
+          "sitemap": "https://flighty.com/sitemap.xml — 200, 53 адреса (тарифы, сравнения, справка)",
+          "robots": "есть: Allow: / и ссылка на sitemap.xml",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "Help Center (/help) и раздел Businesses; email и телефона на главной нет",
+        "legal": "Privacy Policy (/legal/privacy), Terms of Service (/legal/terms) и Cookie Settings в футере; юрлица и адреса нет",
+        "analytics": [
+          "Google Tag Manager (GTM-TKFRNQFT)",
+          "Framer Analytics",
+          "Cloudflare Insights"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

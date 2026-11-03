@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oqoqo — сайт в коллекции</title>
+<meta name="description" content="Платформа для проверки ИИ-агентов на реальных задачах и своих бенчмарках">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oqoqo — сайт в коллекции">
+<meta property="og:description" content="Платформа для проверки ИИ-агентов на реальных задачах и своих бенчмарках">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Oqoqo</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Oqoqo</h1>
+    <ul class="taglist">
+      <li><span class="tag">Сервисы и приложения</span></li>
+      <li><span class="tag tag--muted">ИИ-сервисы</span></li>
+      <li><span class="tag tag--muted">Инструменты разработчика</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Утилитарный техно</span></li>
+      <li><span class="tag tag--muted">Строгий B2B</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://oqoqo.ai/" target="_blank" rel="noopener noreferrer">https://oqoqo.ai/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/054.webp" alt="Скриншот главной страницы Oqoqo"
+           width="1695" height="1279" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Платформа для проверки ИИ-агентов на реальных задачах: команда собирает свой набор задач с понятными критериями, запускает на нём разных агентов и модели и смотрит, где именно они спотыкаются и сколько это стоит. Нужна продуктовым командам, которые выпускают ИИ-функции и хотят измерять их пользу, а не гадать. Аккуратный, в меру утилитарный сайт платформы с эвалами и приватными бенчмарками, которые позволяют измерить, насколько хорошо ИИ-агенты справляются с реальными задачами.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть главную: как тезис про эвалы разложен на блоки «что можно делать», шаги эксперимента и FAQ, и честную подпись под демо-роликом. Из технического интереснее markdown-версии страниц и /llms.txt — сайт сам подготовлен к чтению ИИ-агентами.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Эвал (evaluation) — это проверка ИИ-агента на наборе задач с заранее описанными критериями: агент выполняет задачу, а система отмечает, сколько требований выполнено. «Приватные бенчмарки» — свои наборы задач вместо публичных тестов, чтобы мерить агента на реальных сценариях продукта и не раскрывать их.</li><li>Первый экран обещает «самый простой способ собирать эвалы», следом — демонстрация дашборда, где задают задачи, агентов, рубрики и запуски. Подпись на самой странице честная: это упрощённая реконструкция, а не запись настоящего продукта.</li><li>Скриншот владельца снят с более ранней версии: на нём кнопка «Get started», на живой странице — «Get started for free» с подписью «No credit card required». Заголовок, подзаголовок, набор кнопок и бейдж Product Hunt «#1 Product of the Day» совпадают.</li><li>Сайт подготовлен к чтению ИИ-агентами: в /llms.txt у каждой страницы указана markdown-версия (.md), index.md реально отдаётся и содержит тот же текст без вёрстки.</li><li>Оформление сдержанное: тёплый светлый фон #faf9f7, контент в колонке 1200 px с тонкой рамкой, чёрные кнопки, почти монохром. Тёмная тема включается по системной настройке — в коде есть переключатель light/dark и theme-color, который меняется на #121111.</li><li>Шапка ведёт в три отдельных сервиса: приложение app.oqoqo.ai (Sign in), документация docs.oqoqo.ai, запись на демо через Cal.com; кнопка «Get started for free» тоже уводит в приложение.</li><li>Готовых счётчиков в полученной разметке не встретилось: PostHog и Google Tag Manager с пикселями LinkedIn и X описаны в политике конфиденциальности — они включаются по согласию (в США по умолчанию, вне США только после разрешения).</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">oqoqo.ai</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>ИИ-сервисы, Инструменты разработчика</dd></div>
+        <div><dt>Для кого</dt><dd>Продуктовым командам, Разработчикам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно, Строгий B2B</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>США, Сан-Франциско</dd></div>
+        <div><dt>Автор</dt><dd>Oqoqo, Inc. — разработчик платформы</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>03.11.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FCFBF9"></span><span class="swatch" style="background:#2E2B29"></span><span class="swatch" style="background:#878684"></span><span class="swatch" style="background:#D3D2D0"></span><span class="swatch" style="background:#B0AFAD"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FCFBF9, #2E2B29, #878684, #D3D2D0, #B0AFAD">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#FCFBF9" aria-hidden="true"></span>
+          <code>#FCFBF9</code> — 95% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#2E2B29" aria-hidden="true"></span>
+          <code>#2E2B29</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#878684" aria-hidden="true"></span>
+          <code>#878684</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#D3D2D0" aria-hidden="true"></span>
+          <code>#D3D2D0</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#B0AFAD" aria-hidden="true"></span>
+          <code>#B0AFAD</code> — 1% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>Next.js</strong></li><li><strong>Turbopack</strong></li><li><strong>Tailwind CSS</strong></li><li><strong>Vercel</strong></li><li><strong>Cal.com</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>55 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

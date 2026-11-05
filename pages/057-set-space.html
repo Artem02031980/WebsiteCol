@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Set Space — сайт в коллекции</title>
+<meta name="description" content="Личная база съёмочных локаций: карта, фото, контакты и заметки">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Set Space — сайт в коллекции">
+<meta property="og:description" content="Личная база съёмочных локаций: карта, фото, контакты и заметки">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Set Space</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Set Space</h1>
+    <ul class="taglist">
+      <li><span class="tag">Сервисы и приложения</span></li>
+      <li><span class="tag tag--muted">Продуктивность</span></li>
+      <li><span class="tag tag--muted">Монохром</span></li>
+      <li><span class="tag tag--muted">Минимализм</span></li>
+      <li><span class="tag tag--muted">Утилитарный техно</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://set.space/" target="_blank" rel="noopener noreferrer">https://set.space/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/057.webp" alt="Скриншот главной страницы Set Space"
+           width="1682" height="1059" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Сайт сервиса, в котором специалисты по съёмочным локациям хранят личную базу мест: фотографии, контакты, заметки и файлы в одном месте. Оболочка тёмная и монохромная, крупные кадры пустынь и городов, плотный интерфейс с моноширинным шрифтом — всё выглядит как рабочий инструмент, а не рекламный проспект. Стильный сайт приложения для хранения личной базы съёмочных локаций. Монохромная оболочка, большие фотографии и плотный интерфейс с моноширинным шрифтом.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть первый экран с заголовком «All your locations, together at last» и разделы 01–04: в них крупные снимки приложения с картой, карточкой локации и погодой.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Тёмная монохромная оболочка: чёрный фон, светло-серый текст и единственный оранжевый акцент — кнопка «create account» в шапке. Живой сайт совпадает со скриншотом.</li><li>Типографика держится на двух фирменных шрифтах: моноширинном GT Pressura Mono для меню, подписей и цифр и засечном Quadrant для крупных заголовков — это видно по CSS.</li><li>Публичная часть — оболочка вокруг приложения: самого приложения на страницах нет, вход по логину, а его экраны показаны крупными снимками в разделах 01–04.</li><li>В шапке идут часы: время подставляет скрипт по Мельбурну, поэтому на скриншоте 7:21am, а при проверке сайт показывал 3:50am.</li><li>Сайт собран на Ruby on Rails (серверный каркас для веб-приложений) с Hotwire; за движение отвечают GSAP — библиотека анимаций — и переходы между страницами Barba.js; карты — Mapbox, подсказки адресов — Google, видео — Mux, загрузка файлов — Uppy.</li><li>В head три meta description подряд, canonical нет, title — только «Set Space» (9 символов); /sitemap.xml отдаёт 404, а robots.txt состоит из одного комментария без правил. При этом есть Open Graph, HSTS и manifest для установки на телефон.</li><li>Счётчики: Google Analytics 4 (G-G9BXP2X125) и Cloudflare Web Analytics; сайт идёт через Cloudflare.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">set.space</dd></div>
+        <div><dt>Тип сайта</dt><dd>Многостраничный</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Продуктивность</dd></div>
+        <div><dt>Для кого</dt><dd>Фотографам, Агентствам</dd></div>
+        <div><dt>Стиль</dt><dd>Монохром, Минимализм, Утилитарный техно</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Австралия, Мельбурн</dd></div>
+        <div><dt>Автор</dt><dd>James Meadowcroft и Sam Soh — команда Set Space</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>05.11.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#000000"></span><span class="swatch" style="background:#191B1E"></span><span class="swatch" style="background:#3A4247"></span><span class="swatch" style="background:#5A9FE2"></span><span class="swatch" style="background:#5F615C"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#000000, #191B1E, #3A4247, #5A9FE2, #5F615C">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#000000" aria-hidden="true"></span>
+          <code>#000000</code> — 53% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#191B1E" aria-hidden="true"></span>
+          <code>#191B1E</code> — 22% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#3A4247" aria-hidden="true"></span>
+          <code>#3A4247</code> — 11% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#5A9FE2" aria-hidden="true"></span>
+          <code>#5A9FE2</code> — 7% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#5F615C" aria-hidden="true"></span>
+          <code>#5F615C</code> — 3% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Тёмная</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>Ruby on Rails</strong></li><li><strong>Hotwire (Turbo + Stimulus)</strong></li><li><strong>GSAP</strong></li><li><strong>Barba.js</strong></li><li><strong>Mapbox GL JS 3.9.1</strong></li><li><strong>Google Maps Places</strong></li><li><strong>Mux</strong></li><li><strong>Uppy</strong></li><li><strong>Pace.js</strong></li><li><strong>Google Analytics 4</strong></li><li><strong>Cloudflare</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>58 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

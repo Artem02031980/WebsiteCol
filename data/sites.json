@@ -7017,6 +7017,357 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "056",
+      "slug": "octolane",
+      "name": "Octolane",
+      "url": "https://www.octolane.com/",
+      "domain": "octolane.com",
+      "screenshot": "056.webp",
+      "added": "2026-11-05",
+      "link_state": "alive",
+      "description_user": "Технологичный сайт сервиса с ИИ-агентами для отделов продаж. Красивые сложные градиенты и микроанимации.",
+      "description_own": "Сайт сервиса, который заменяет обычную CRM: ИИ-агенты сами находят сделки в почте, пишут письма после встреч и обновляют карточки клиентов. Подано как витрина технологии — светлая монохромная страница, радужный световой блик за заголовком, мелкие технические подписи по краям и очень тихие анимации.",
+      "description_short": "ИИ-агенты, которые ведут сделки в почте и календаре вместо CRM",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "marketers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "micro-interactions",
+        "sticky-sections"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#E3E5E8",
+          "#C2BEC0",
+          "#B29F9F",
+          "#FDFEFC",
+          "#1D1918"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/immutable/chunks/… и заголовок x-nextjs-prerender: 1"
+        },
+        {
+          "name": "React",
+          "evidence": "заголовок Vary: rsc, next-router-state-tree — страница отдаётся потоком React Server Components"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки x-vercel-cache: HIT, x-vercel-id: arn1::…"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "Server: cloudflare и cf-ray в ответе"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "утилитарные классы в футере: whitespace-nowrap text-white-a9 transition-colors duration-150"
+        },
+        {
+          "name": "Turbopack",
+          "evidence": "чанк /_next/static/immutable/chunks/turbopack-2_04ewhudzrza.js"
+        }
+      ],
+      "observations": [
+        "Главный экран — один цветной световой блик на сером фоне, проходящий через заголовок «Superintelligence for human judgment». Это не картинка: внутри липкой секции на всю высоту экрана (hero-canvas, sticky top-0, h-[100svh]) лежит canvas-слой с радиальной маской.",
+        "По краям экрана — крошечные моноширинные подписи вроде «// OCTOLANE AGENT · LIVE RUN» и «RESEARCHED 412 ACCOUNTS»: они имитируют телеметрию работающего агента и добавляют ощущение живого продукта.",
+        "Кнопки «Schedule demo» и «Login» отличаются только заливкой (чёрная и белая) при одинаковой форме; наведение задано короткой анимацией цвета (transition-colors duration-150) — микроанимации здесь тихие, а не декоративные.",
+        "В <title> стоит короткое «Octolane», а в соцсетях и Open Graph страница подписана «Octolane · Revenue Superintelligence» — заголовки расходятся.",
+        "HTML отдаётся потоком и качается очень медленно: заголовки приходят сразу, тело — десятками секунд, поэтому часть метаданных подтверждена внешним сниффером (microlink); сама страница при этом живая (HTTP 200).",
+        "Счётчиков аналитики в прочитанной разметке не видно, хотя заголовок Content-Security-Policy разрешает PostHog и Decipher — похоже, они подключаются из скриптов приложения, а не из HTML."
+      ],
+      "notes": "Смотреть главный экран: световой блик за заголовком и мелкие подписи-телеметрия по краям. Дальше — как та же сдержанная типографика держит длинный лендинг.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "Octolane AI, Inc.",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Octolane",
+          "title_len": 8,
+          "description": "Octolane runs an AI agent on every account, trained on how your best revenue teams think and act. Human judgment, deployed at scale, and it's yours to keep.",
+          "description_len": 156,
+          "og": true,
+          "sitemap": "sitemap.xml — индекс из двух карт, в sitemap-0.xml 26 адресов",
+          "robots": "Allow: / для всех, указаны sitemap.xml и server-sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "sales@octolane.com и help@octolane.com, запись на демо через cal.com/octolane/demo, LinkedIn, X, GitHub",
+        "legal": "Privacy Policy, Terms, Security и Subprocessor; в футере «© Octolane AI, Inc. 2026», юридический адрес в Сан-Франциско указан в schema.org",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "057",
+      "slug": "set-space",
+      "name": "Set Space",
+      "url": "https://set.space/",
+      "domain": "set.space",
+      "screenshot": "057.webp",
+      "added": "2026-11-05",
+      "link_state": "alive",
+      "description_user": "Стильный сайт приложения для хранения личной базы съёмочных локаций. Монохромная оболочка, большие фотографии и плотный интерфейс с моноширинным шрифтом.",
+      "description_own": "Сайт сервиса, в котором специалисты по съёмочным локациям хранят личную базу мест: фотографии, контакты, заметки и файлы в одном месте. Оболочка тёмная и монохромная, крупные кадры пустынь и городов, плотный интерфейс с моноширинным шрифтом — всё выглядит как рабочий инструмент, а не рекламный проспект.",
+      "description_short": "Личная база съёмочных локаций: карта, фото, контакты и заметки",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "productivity"
+      ],
+      "audience": [
+        "photographers",
+        "agencies"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "monochrome",
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "dark-default",
+        "page-transitions",
+        "preloader",
+        "type-animation",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#000000",
+          "#191B1E",
+          "#3A4247",
+          "#5A9FE2",
+          "#5F615C"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Ruby on Rails",
+          "evidence": "заголовок x-runtime в ответе, meta name=\"rails-env\" content=\"production\", csrf-token, хешированные /assets/*"
+        },
+        {
+          "name": "Hotwire (Turbo + Stimulus)",
+          "evidence": "importmap: @hotwired/turbo-rails, @hotwired/stimulus; turbo-frame и data-controller в разметке"
+        },
+        {
+          "name": "GSAP",
+          "evidence": "importmap: gsap, gsap/ScrollTrigger, gsap/SplitText, gsap/Observer"
+        },
+        {
+          "name": "Barba.js",
+          "evidence": "importmap: @barba/core; data-barba=\"wrapper\" на body и data-barba=\"container\" в main"
+        },
+        {
+          "name": "Mapbox GL JS 3.9.1",
+          "evidence": "script api.mapbox.com/mapbox-gl-js/v3.9.1/mapbox-gl.js и window.MAPBOX_TOKEN"
+        },
+        {
+          "name": "Google Maps Places",
+          "evidence": "script maps.googleapis.com/maps/api/js?libraries=places&callback=initMap"
+        },
+        {
+          "name": "Mux",
+          "evidence": "importmap: @mux/upchunk; controllers/mux_player_controller"
+        },
+        {
+          "name": "Uppy",
+          "evidence": "importmap: releases.transloadit.com/uppy/v4.18.2/uppy.min.mjs и shims/uppy-core-shim"
+        },
+        {
+          "name": "Pace.js",
+          "evidence": "cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js и pace-theme-default.min.css"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "googletagmanager.com/gtag/js?id=G-G9BXP2X125"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовок Server: cloudflare, cf-cache-status, beacon.min.js/cloudflareinsights"
+        }
+      ],
+      "observations": [
+        "Тёмная монохромная оболочка: чёрный фон, светло-серый текст и единственный оранжевый акцент — кнопка «create account» в шапке. Живой сайт совпадает со скриншотом.",
+        "Типографика держится на двух фирменных шрифтах: моноширинном GT Pressura Mono для меню, подписей и цифр и засечном Quadrant для крупных заголовков — это видно по CSS.",
+        "Публичная часть — оболочка вокруг приложения: самого приложения на страницах нет, вход по логину, а его экраны показаны крупными снимками в разделах 01–04.",
+        "В шапке идут часы: время подставляет скрипт по Мельбурну, поэтому на скриншоте 7:21am, а при проверке сайт показывал 3:50am.",
+        "Сайт собран на Ruby on Rails (серверный каркас для веб-приложений) с Hotwire; за движение отвечают GSAP — библиотека анимаций — и переходы между страницами Barba.js; карты — Mapbox, подсказки адресов — Google, видео — Mux, загрузка файлов — Uppy.",
+        "В head три meta description подряд, canonical нет, title — только «Set Space» (9 символов); /sitemap.xml отдаёт 404, а robots.txt состоит из одного комментария без правил. При этом есть Open Graph, HSTS и manifest для установки на телефон.",
+        "Счётчики: Google Analytics 4 (G-G9BXP2X125) и Cloudflare Web Analytics; сайт идёт через Cloudflare."
+      ],
+      "notes": "Смотреть первый экран с заголовком «All your locations, together at last» и разделы 01–04: в них крупные снимки приложения с картой, карточкой локации и погодой.",
+      "facts": {
+        "https": true,
+        "country": "Австралия, Мельбурн",
+        "author": "James Meadowcroft и Sam Soh — команда Set Space",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Set Space",
+          "title_len": 9,
+          "description": "A location management platform for the screen industry. Store locations, build collections and manage projects — all in one private database.",
+          "description_len": 141,
+          "og": true,
+          "sitemap": "не найдено (404)",
+          "robots": "есть, но содержит только комментарий-ссылку, без директив и Sitemap",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 6,
+          "broken": []
+        },
+        "contacts": "hey@set.space; Instagram @set___space, LinkedIn; адрес в футере: Balam Balam Place, 15 Phoenix St, Brunswick VIC 3056",
+        "legal": "Terms and conditions (/terms-and-conditions) и Privacy policy (/privacy-policy) в футере; юрлица и регистрационных данных нет",
+        "analytics": [
+          "Google Analytics 4 (gtag, G-G9BXP2X125)",
+          "Cloudflare Web Analytics"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "058",
+      "slug": "lassie",
+      "name": "Lassie",
+      "url": "https://www.lassie.ai/",
+      "domain": "lassie.ai",
+      "screenshot": "058.webp",
+      "added": "2026-11-05",
+      "link_state": "alive",
+      "description_user": "Светлый дружелюбный сайт ИИ-помощника для врачей.",
+      "description_own": "ИИ-помощник для медицинских и стоматологических клиник: Lassie оформляет электронные платежи страховых, разносит оплаты и сверяет суммы, чтобы врач занимался пациентами, а не бумагами. Светлый лендинг с фото врача и серифным заголовком «You're a doctor. Not a machine» — без техно-глянца, обычного для ИИ-сервисов.",
+      "description_short": "ИИ-помощник для клиник: страховые платежи и сверка без бумаг",
+      "categories": [
+        "saas",
+        "health"
+      ],
+      "subcategories": [
+        "ai",
+        "clinic"
+      ],
+      "audience": [
+        "doctors"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#111519",
+          "#5D584F",
+          "#3E3826",
+          "#8B7D71",
+          "#AEA294"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "пути /_next/static/immutable/chunks/*.js и /_next/image в разметке, заголовок ответа X-Nextjs-Prerender: 1, поток RSC с маркерами <!--$-->"
+        },
+        {
+          "name": "React",
+          "evidence": "RSC-payload с $L-ссылками и маркеры <!--$--> в HTML — серверный рендер React"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "инлайн-CSS с @layer properties, переменными --tw-* и утилитарными классами bg-background-primary, text-label-lg"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки ответа Server: Vercel, X-Vercel-Cache: HIT, X-Vercel-Id"
+        },
+        {
+          "name": "Google Tag Manager",
+          "evidence": "контейнер GTM-TWQQNQVK и noscript-iframe googletagmanager.com/ns.html?id=GTM-TWQQNQVK"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "preload https://www.googletagmanager.com/gtag/js?id=G-9777D2K4WR и параметр gaId в RSC"
+        }
+      ],
+      "observations": [
+        "Первый экран — фотография врача со спины и крупный серифный заголовок «You're a doctor. Not a machine», под ним бегущая строка действий: «Pulled 7 EOBs from the Dentrix portal», «Posted $1,408 in payments». EOB — это объяснение выплат от страховой, Dentrix — программа, в которой стоматологии ведут карты и счета.",
+        "Скриншот владельца — более ранняя версия: там в строке статуса «Confirmed 42 appointments» (запись на приём), а сейчас сайт показывает страховые выплаты, сверку и закрытие книг; в меню добавился пункт Stories. Заголовок и общий светлый вид совпадают.",
+        "Обещание подано цифрой: «98% of posting is handled autonomously». В FAQ — подключение за 1–2 недели, если клиника уже на электронных платежах, до 8 недель при бумажных чеках, и договор HIPAA BAA (соглашение о работе с медицинскими данными).",
+        "Шапка — плавающая капсула по центру с пунктами Stories, Company, Login, Demo; на узком экране она сворачивается в «Menu».",
+        "Типографика на контрасте: серифный ABC Marist для заголовков (курсив в «Not a machine.») и нейтральный DM Sans для текста; шрифты лежат на своём домене в woff2.",
+        "Счётчики подключены сразу: Google Tag Manager GTM-TWQQNQVK и GA4 G-9777D2K4WR, gtag предзагружается; cookie-баннера в разметке нет."
+      ],
+      "notes": "Смотреть первый экран: фотография врача, серифный заголовок и бегущая строка реальных действий вместо абстрактного «ИИ». Дальше — блок с цифрой 98% и FAQ, где честно расписаны сроки подключения.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "Go Lassie, Inc. — разработчик продукта",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Lassie — AI That Runs the Doctor's Office",
+          "title_len": 41,
+          "description": "Lassie automates your admin — enrollments, payment posting, EFT reconciliation — so your team can focus on patients.",
+          "description_len": 116,
+          "og": true,
+          "sitemap": "https://www.lassie.ai/sitemap.xml — 44 адреса: главная, /company, /stories, /book-a-demo, /get-started, /legal/*, страницы историй клиник",
+          "robots": "есть, только для Googlebot-Image: Disallow /_next/image, /api/media/file/, /_next/static/media/, /images/customers/; правил для остальных агентов и ссылки на sitemap нет",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "телефон +1 650 405 0509 (ссылка tel:), Instagram @lassieai, X @lassieai, LinkedIn /company/lassie; e-mail на странице нет",
+        "legal": "Privacy Policy (/legal/privacy) и Terms of Service (/legal/terms-of-service), в карте сайта ещё BAA, services agreement и referral program; © 2026 Go Lassie, Inc., Сан-Франциско",
+        "analytics": [
+          "Google Tag Manager (GTM-TWQQNQVK)",
+          "Google Analytics 4 (G-9777D2K4WR)"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

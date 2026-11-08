@@ -206,6 +206,63 @@ function countryFacet(site) {
   return raw ? { id: slugify(raw), title: raw } : { id: 'unknown', title: 'Не определено' };
 }
 
+/* Теги на странице сайта. Это ровно то, что человек видит в фильтрах каталога,
+   но сгруппированное и в постоянном порядке: группа → свой серый оттенок.
+   Порядок групп зафиксирован в брифе (AGENTS.md, «Требования брифа»); в
+   data/sites.json отдельных полей для тегов нет — они выводятся из данных. */
+const TAG_GROUPS = [
+  'type', 'category', 'subcategory', 'audience', 'style',
+  'mode', 'hue', 'technique', 'tech', 'lang', 'country'
+];
+
+function siteTags(site) {
+  const palette = paletteFor(site);
+  const country = countryFacet(site);
+  const langs = (site.facts && site.facts.languages) || [];
+
+  const techNames = [];
+  const seenTech = new Set();
+  for (const item of site.tech || []) {
+    const name = techFilterName(item.name);
+    // Как и в фильтре «Технологии»: только названия с латиницей, без дублей.
+    if (!name || !/[A-Za-z]/.test(name)) continue;
+    const id = slugify(name);
+    if (seenTech.has(id)) continue;
+    seenTech.add(id);
+    techNames.push(displayTechName(name));
+  }
+
+  const byGroup = {
+    type: site.site_type ? [title(TYPES, site.site_type)] : [],
+    category: titles(CATS, site.categories || []),
+    subcategory: titles(SUBS, site.subcategories || []),
+    audience: titles(AUD, site.audience || []),
+    style: titles(STYLES, site.styles || []),
+    mode: palette.mode ? [`${title(MODES, palette.mode)} тема`] : [],
+    hue: palette.hue ? [`${HUE_TITLES[palette.hue] || palette.hue} фон`] : [],
+    technique: titles(TECHS, site.techniques || []),
+    tech: techNames,
+    lang: langs.includes('multi')
+      ? ['Мультиязычный сайт']
+      : titles(LANGS, langs).map((name) => `${name} язык`),
+    country: country.id === 'unknown' ? [] : [country.title]
+  };
+
+  /* У «Темы палитры» и «Цвета фона» чип красится по значению, а не по группе:
+     тёмная тема — чёрная, светлая — светло-серая, цветная — фиолетовый градиент;
+     фон — в названный цвет (жёлтый фон жёлтый и т. д.). Поэтому тегу нужен kind. */
+  const kinds = {
+    mode: palette.mode,
+    hue: palette.hue
+  };
+
+  return TAG_GROUPS.flatMap((group) => (byGroup[group] || []).map((label) => ({
+    group,
+    label,
+    kind: kinds[group] || null
+  })));
+}
+
 function searchIndex(site) {
   const parts = [
     site.name, site.domain, site.url, site.slot,
@@ -597,9 +654,7 @@ function renderSite(site) {
   <header class="site-head">
     <h1>${esc(site.name)}</h1>
     <ul class="taglist">
-      ${(site.categories || []).map((id) => `<li><span class="tag">${esc(title(CATS, id))}</span></li>`).join('\n      ')}
-      ${(site.subcategories || []).map((id) => `<li><span class="tag tag--muted">${esc(title(SUBS, id))}</span></li>`).join('\n      ')}
-      ${(site.styles || []).map((id) => `<li><span class="tag tag--muted">${esc(title(STYLES, id))}</span></li>`).join('\n      ')}
+      ${siteTags(site).map((tag) => `<li><span class="tag tag--g-${tag.group}${tag.kind ? ` tag--${tag.group}-${esc(tag.kind)}` : ''}">${esc(tag.label)}</span></li>`).join('\n      ')}
       <li><span class="tag tag--status ${site.link_state === 'alive' ? 'tag--active' : 'tag--inactive'}">${site.link_state === 'alive' ? 'Действующий сайт' : 'Недействующий сайт'}</span></li>
     </ul>
     <p class="site-head__url"><a href="${esc(site.url)}" target="_blank" rel="noopener noreferrer">${esc(site.url)}</a></p>
@@ -618,6 +673,13 @@ function renderSite(site) {
       <p>${notes ? esc(notes) : '<span class="placeholder">заметок пока нет</span>'}</p>
     </section>
   </div>
+
+  ${(site.techniques || []).length ? `<section class="site-section site-section--techniques">
+    <h2>Приёмы</h2>
+    <ul class="tech-list">
+      ${site.techniques.map((id) => `<li><strong>${esc(title(TECHS, id))}</strong></li>`).join('')}
+    </ul>
+  </section>` : ''}
 
   ${site.observations && site.observations.length ? `<section class="site-section site-section--observations">
     <h2>Интересные факты</h2>

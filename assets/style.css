@@ -37,6 +37,35 @@
   --shadow-sm: 0 1px 2px rgba(26, 26, 26, 0.05);
   --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.10);
 
+  /* Теги на странице сайта: одиннадцать групп, у каждой свой оттенок из голубой
+     палитры — от почти белого до глубокого синего. Оттенки нарочно перемешаны,
+     а не идут по градиенту: цвет закреплён за группой, но соседние группы
+     в строке контрастны. Без чистых #000 и #fff.
+     Пары bg/fg проверяет validate.mjs (≥ 4.5:1). */
+  --tag-type-bg:        #16324F; --tag-type-fg:        #F5F9FF;
+  --tag-category-bg:    #C9DCF0; --tag-category-fg:    #0F1E36;
+  --tag-subcategory-bg: #2C5282; --tag-subcategory-fg: #F5F9FF;
+  --tag-audience-bg:    #DCE9F7; --tag-audience-fg:    #0F1E36;
+  --tag-style-bg:       #1F5AA0; --tag-style-fg:       #F5F9FF;
+  --tag-mode-bg:        #7FA8D4; --tag-mode-fg:        #0F1E36;
+  --tag-hue-bg:         #1E3A5F; --tag-hue-fg:         #F5F9FF;
+  --tag-technique-bg:   #A8C4E4; --tag-technique-fg:   #0F1E36;
+  --tag-tech-bg:        #35618F; --tag-tech-fg:        #F5F9FF;
+  --tag-lang-bg:        #46719F; --tag-lang-fg:        #F5F9FF;
+  --tag-country-bg:     #24466F; --tag-country-fg:     #F5F9FF;
+
+  /* «Тема палитры»: цвет зависит от значения, а не от группы */
+  --tag-mode-light-bg:     #E6E6E3; --tag-mode-light-fg:     #1A1A1A;
+  --tag-mode-dark-bg:      #111111; --tag-mode-dark-fg:      #F7F7F5;
+  --tag-mode-colorful-a:   #4C1D95; --tag-mode-colorful-b:   #6D28D9;
+  --tag-mode-colorful-fg:  #FFE066;
+
+  /* «Цвет фона»: чип красится в тот цвет, который называет; нейтральный — серый */
+  --tag-hue-red-bg:    #F0B6B0; --tag-hue-orange-bg: #F3C9A0;
+  --tag-hue-yellow-bg: #F2E3A0; --tag-hue-green-bg:  #BBD9B8;
+  --tag-hue-blue-bg:   #B7CDE8; --tag-hue-purple-bg: #D3BEE8;
+  --tag-hue-mono-bg:   #E6E6E3; --tag-hue-tint-fg:   #1A1A1A;
+
   /* Форма и фокус: скруглений в проекте нет — все углы прямые */
   --focus-ring:    2px solid var(--accent-hover);
 
@@ -350,7 +379,45 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .tag--muted { color: var(--text-muted); }
 .tag--active { background: var(--ok); border-color: var(--ok); color: var(--on-accent); font-weight: 600; }
 .tag--inactive { background: var(--danger); border-color: var(--danger); color: var(--on-accent); font-weight: 600; }
-.taglist { display: flex; flex-wrap: wrap; gap: 0.3rem; list-style: none; margin: 0; padding: 0; }
+
+/* Группы тегов: цвет закреплён за группой, а не за порядком в строке */
+.tag--g-type { background: var(--tag-type-bg); border-color: var(--tag-type-bg); color: var(--tag-type-fg); }
+.tag--g-category { background: var(--tag-category-bg); border-color: var(--tag-category-bg); color: var(--tag-category-fg); }
+.tag--g-subcategory { background: var(--tag-subcategory-bg); border-color: var(--tag-subcategory-bg); color: var(--tag-subcategory-fg); }
+.tag--g-audience { background: var(--tag-audience-bg); border-color: var(--tag-audience-bg); color: var(--tag-audience-fg); }
+.tag--g-style { background: var(--tag-style-bg); border-color: var(--tag-style-bg); color: var(--tag-style-fg); }
+.tag--g-mode { background: var(--tag-mode-bg); border-color: var(--tag-mode-bg); color: var(--tag-mode-fg); }
+.tag--g-hue { background: var(--tag-hue-bg); border-color: var(--tag-hue-bg); color: var(--tag-hue-fg); }
+.tag--g-technique { background: var(--tag-technique-bg); border-color: var(--tag-technique-bg); color: var(--tag-technique-fg); }
+.tag--g-tech { background: var(--tag-tech-bg); border-color: var(--tag-tech-bg); color: var(--tag-tech-fg); }
+.tag--g-lang { background: var(--tag-lang-bg); border-color: var(--tag-lang-bg); color: var(--tag-lang-fg); }
+.tag--g-country { background: var(--tag-country-bg); border-color: var(--tag-country-bg); color: var(--tag-country-fg); }
+/* Тонкая обводка, чтобы самые светлые чипы не растворялись на белом фоне;
+   на тёмных чипах она не видна */
+.tag[class*="tag--g-"] { border-color: rgba(15, 30, 54, 0.18); }
+
+/* «Тема палитры»: чип показывает саму тему, а не группу.
+   Светлая — светло-серая с тёмным текстом, тёмная — чёрная с белым,
+   цветная — фиолетовый градиент с жёлтым текстом. */
+.tag.tag--mode-light { background: var(--tag-mode-light-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-mode-light-fg); }
+.tag.tag--mode-dark,
+.tag.tag--mode-contrast { background: var(--tag-mode-dark-bg); border-color: var(--tag-mode-dark-bg); color: var(--tag-mode-dark-fg); }
+.tag.tag--mode-colorful {
+  background: linear-gradient(135deg, var(--tag-mode-colorful-a), var(--tag-mode-colorful-b));
+  border-color: var(--tag-mode-colorful-a); color: var(--tag-mode-colorful-fg);
+}
+
+/* «Цвет фона»: чип красится в цвет, который называет; нейтральный — светло-серый */
+.tag.tag--hue-red { background: var(--tag-hue-red-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+.tag.tag--hue-orange { background: var(--tag-hue-orange-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+.tag.tag--hue-yellow { background: var(--tag-hue-yellow-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+.tag.tag--hue-green { background: var(--tag-hue-green-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+.tag.tag--hue-blue { background: var(--tag-hue-blue-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+.tag.tag--hue-purple { background: var(--tag-hue-purple-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+.tag.tag--hue-mono { background: var(--tag-hue-mono-bg); border-color: rgba(26, 26, 26, 0.18); color: var(--tag-hue-tint-fg); }
+
+/* Чипы центрированы, переносятся по строке; зазор один и тот же в строке и между строками */
+.taglist { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
 
 /* Палитра */
 .swatches { display: inline-flex; gap: 4px; align-items: center; }
@@ -389,10 +456,14 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .site-section--observations { max-width: 800px; margin: 0 0 150px; }
 .site-section--observations h2,
 .site-cards .panel h2,
-.site-section--tech h2 { margin-bottom: 35px; }
+.site-section--tech h2,
+.site-section--techniques h2 { margin-bottom: 35px; }
 .site-section li + li { margin-top: 1rem; }
+/* Приёмы стоят сразу после вводных колонок, технологии — последний раздел перед feedback */
+.site-section--techniques { margin-bottom: 150px; }
 .site-section--tech { margin-bottom: 0; }
-.site-section--tech li + li { margin-top: 0; }
+.site-section--tech li + li,
+.site-section--techniques li + li { margin-top: 0; }
 .site-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); align-items: stretch; margin: 0 0 150px; }
 .site-cards .panel { margin: 0; padding-block: 50px; }
 /* Технологии — четыре равные колонки по всей ширине контейнера */
@@ -469,6 +540,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
   .site-head { padding-block: 48px 64px; }
   .site-intro { grid-template-columns: 1fr; gap: var(--space-3); margin-bottom: var(--space-5); }
   .site-section--observations { margin-top: 0; margin-bottom: var(--space-5); }
+  .site-section--techniques { margin-bottom: var(--space-5); }
   .site-cards { margin-bottom: var(--space-5); }
   .feedback { margin-top: var(--space-5); }
   .tech-list { grid-template-columns: 1fr; }

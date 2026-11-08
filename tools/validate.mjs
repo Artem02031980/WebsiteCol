@@ -332,6 +332,21 @@ if (css) {
       ['--danger', '--danger-soft', 4.5], ['--warn', '--warn-soft', 4.5],
       ['--border-strong', '--bg', 3], ['--border-strong', '--bg-elevated', 3], ['--border-strong', '--bg-sunken', 3]
     ];
+    /* Теги на странице сайта: у каждой группы свой оттенок, текст
+       должен читаться на своей подложке. */
+    for (const group of ['type', 'category', 'subcategory', 'audience', 'style', 'mode', 'hue', 'technique', 'tech', 'lang', 'country']) {
+      pairs.push([`--tag-${group}-fg`, `--tag-${group}-bg`, 4.5]);
+    }
+    /* «Тема палитры» и «Цвет фона» красятся по значению, а не по группе. */
+    pairs.push(
+      ['--tag-mode-light-fg', '--tag-mode-light-bg', 4.5],
+      ['--tag-mode-dark-fg', '--tag-mode-dark-bg', 4.5],
+      ['--tag-mode-colorful-fg', '--tag-mode-colorful-a', 4.5],
+      ['--tag-mode-colorful-fg', '--tag-mode-colorful-b', 4.5]
+    );
+    for (const hue of ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'mono']) {
+      pairs.push(['--tag-hue-tint-fg', `--tag-hue-${hue}-bg`, 4.5]);
+    }
     for (const [fg, bg, min] of pairs) {
       const fgColor = parseColor(vars[fg]);
       const bgColor = parseColor(vars[bg]);

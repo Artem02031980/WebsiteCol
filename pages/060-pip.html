@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pip — сайт в коллекции</title>
+<meta name="description" content="Спокойный список задач и заметки в одном приложении для iPhone, Mac и Windows">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pip — сайт в коллекции">
+<meta property="og:description" content="Спокойный список задач и заметки в одном приложении для iPhone, Mac и Windows">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Pip</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Pip</h1>
+    <ul class="taglist">
+      <li><span class="tag tag--g-type">Лендинг</span></li>
+      <li><span class="tag tag--g-category">Сервисы и приложения</span></li>
+      <li><span class="tag tag--g-subcategory">Продуктивность</span></li>
+      <li><span class="tag tag--g-audience">Обычным пользователям</span></li>
+      <li><span class="tag tag--g-style">Минимализм</span></li>
+      <li><span class="tag tag--g-style">Швейцарская типографика</span></li>
+      <li><span class="tag tag--g-style">Игривый</span></li>
+      <li><span class="tag tag--g-mode tag--mode-light">Светлая тема</span></li>
+      <li><span class="tag tag--g-hue tag--hue-mono">Нейтральный фон</span></li>
+      <li><span class="tag tag--g-technique">Скроллителлинг</span></li>
+      <li><span class="tag tag--g-technique">Липкие секции</span></li>
+      <li><span class="tag tag--g-technique">Микроанимации</span></li>
+      <li><span class="tag tag--g-tech">GSAP</span></li>
+      <li><span class="tag tag--g-tech">ScrollTrigger</span></li>
+      <li><span class="tag tag--g-tech">Lenis</span></li>
+      <li><span class="tag tag--g-tech">Supabase</span></li>
+      <li><span class="tag tag--g-tech">Cloudflare</span></li>
+      <li><span class="tag tag--g-tech">Switzer</span></li>
+      <li><span class="tag tag--g-tech">Lemon Squeezy</span></li>
+      <li><span class="tag tag--g-lang">Английский язык</span></li>
+      <li><span class="tag tag--g-country">Великобритания</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://pipdot.app/" target="_blank" rel="noopener noreferrer">https://pipdot.app/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/060.webp" alt="Скриншот главной страницы Pip"
+           width="1627" height="1187" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Лендинг приложения Pip — задачи и заметки в одном спокойном месте. Фразу «позвонить в гараж завтра утром» приложение само раскладывает на завтрашний список, а заметки хранит обычными файлами в папке, которую выбирает человек. Бесплатно на iPhone, Mac и Windows. Продуманный цепляющий лендинг приложения для ведения задач и заметок. Хорошие анимации по скроллу с оранжевым шариком-маскотом и наглядная демонстрация продукта.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть прокрутку от заголовка вниз: шарик ведёт по четырём шагам, а в секции про iPhone оживает собранный из кода телефон.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--techniques">
+    <h2>Приёмы</h2>
+    <ul class="tech-list">
+      <li><strong>Скроллителлинг</strong></li><li><strong>Липкие секции</strong></li><li><strong>Микроанимации</strong></li>
+    </ul>
+  </section>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Главная — один длинный сценарий: оранжевый шарик с глазами висит в центре, текст сменяется четырьмя шагами, а вокруг шарика постепенно достраивается интерфейс приложения. По коду каждый шаг — отдельная анимация, привязанная к прокрутке, а сцена держится на месте, пока идёт её часть.</li><li>Сцена с iPhone собрана из обычных HTML и CSS, без видео: внутри нарисованного телефона по сценарию отвечает «островок» у верхней кромки, появляется задача и раскрывается список.</li><li>Движение можно отключить: на экранах уже 720 px и при системной настройке «уменьшить движение» вместо сценария показываются статичные кадры — так написано в комментариях к коду.</li><li>Заметки устроены как обычные файлы Markdown в папке, которую человек выбирает сам; на сайте этому посвящена отдельная секция — данные лежат открыто, их можно читать чем угодно.</li><li>Счётчик посещений — Cloudflare Web Analytics: без cookie и без профилирования посетителей, поэтому баннера о согласии на сайте нет.</li><li>Есть тёмная тема: переключатель в шапке, цвета фона для светлой и тёмной системной темы прописаны в разметке сразу.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">pipdot.app</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Продуктивность</dd></div>
+        <div><dt>Для кого</dt><dd>Обычным пользователям</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Швейцарская типографика, Игривый</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>Великобритания</dd></div>
+        <div><dt>Автор</dt><dd>Catalin Vintila — частный разработчик</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>08.11.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#F2EEEA"></span><span class="swatch" style="background:#0D0C0B"></span><span class="swatch" style="background:#F35609"></span><span class="swatch" style="background:#C9C5C0"></span><span class="swatch" style="background:#9C9A97"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#F2EEEA, #0D0C0B, #F35609, #C9C5C0, #9C9A97">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#F2EEEA" aria-hidden="true"></span>
+          <code>#F2EEEA</code> — 93% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#0D0C0B" aria-hidden="true"></span>
+          <code>#0D0C0B</code> — 4% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#F35609" aria-hidden="true"></span>
+          <code>#F35609</code> — 2% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#C9C5C0" aria-hidden="true"></span>
+          <code>#C9C5C0</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#9C9A97" aria-hidden="true"></span>
+          <code>#9C9A97</code> — 1% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>GSAP</strong></li><li><strong>ScrollTrigger</strong></li><li><strong>Lenis</strong></li><li><strong>Supabase</strong></li><li><strong>Cloudflare</strong></li><li><strong>Cloudflare Web Analytics</strong></li><li><strong>Switzer и Geist Mono</strong></li><li><strong>Lemon Squeezy</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>63 сайта в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

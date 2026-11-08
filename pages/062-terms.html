@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms — сайт в коллекции</title>
+<meta name="description" content="Сервис для черновиков, комментариев и электронной подписи договоров">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Terms — сайт в коллекции">
+<meta property="og:description" content="Сервис для черновиков, комментариев и электронной подписи договоров">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Terms</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Terms</h1>
+    <ul class="taglist">
+      <li><span class="tag tag--g-type">Лендинг</span></li>
+      <li><span class="tag tag--g-category">Сервисы и приложения</span></li>
+      <li><span class="tag tag--g-subcategory">Командная работа</span></li>
+      <li><span class="tag tag--g-audience">Агентствам</span></li>
+      <li><span class="tag tag--g-audience">Юристам</span></li>
+      <li><span class="tag tag--g-audience">Продуктовым командам</span></li>
+      <li><span class="tag tag--g-style">Минимализм</span></li>
+      <li><span class="tag tag--g-style">Утилитарный техно</span></li>
+      <li><span class="tag tag--g-mode tag--mode-light">Светлая тема</span></li>
+      <li><span class="tag tag--g-hue tag--hue-mono">Нейтральный фон</span></li>
+      <li><span class="tag tag--g-technique">Микроанимации</span></li>
+      <li><span class="tag tag--g-tech">Next.js</span></li>
+      <li><span class="tag tag--g-tech">Vercel</span></li>
+      <li><span class="tag tag--g-tech">Clerk</span></li>
+      <li><span class="tag tag--g-tech">CSS Modules</span></li>
+      <li><span class="tag tag--g-lang">Английский язык</span></li>
+      <li><span class="tag tag--g-country">США</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://terms.so/" target="_blank" rel="noopener noreferrer">https://terms.so/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/062.webp" alt="Скриншот главной страницы Terms"
+           width="1632" height="1185" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Сервис для работы с договорами: текст договора пишется в браузере в markdown, вторая сторона открывает ссылку, комментирует пункты и подписывает. На главной — короткие анимированные сцены: как из одной фразы собирается черновик, как сервис находит нужный пункт в ответ на вопрос и как согласуются правки. Утилитарный сайт сервиса для подписания договоров. Наглядная демонстрация продукта и нетривиальный сочный градиент на главной.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть градиент первого экрана и анимированные сцены: черновик из одной фразы, цитата нужного пункта в ответ на вопрос, комментарии к пункту и подпись. Заголовок обещает, что DocuSign больше не понадобится.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--techniques">
+    <h2>Приёмы</h2>
+    <ul class="tech-list">
+      <li><strong>Микроанимации</strong></li>
+    </ul>
+  </section>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Главная — витрина сервиса: крупный заголовок, кнопки регистрации и демонстрации, ниже три сцены, показывающие продукт в работе.</li><li>Первый экран залит градиентом от почти чёрного через оранжевый к белому; по краям мелким шрифтом рассыпаны обрывки примеров договора вроде «$12,000, six weeks, 50% upfront».</li><li>Сцены анимированы: внутри двигается нарисованный курсор и по шагам показывается, как набирают запрос, правят пункт и подписывают — это видно по разметке (класс demoCursor, атрибуты data-show и data-arrived).</li><li>Работает сервис с обычным markdown: договор — простой текстовый файл, который правится прямо в браузере, а вторая сторона открывает ссылку без установки программ.</li><li>Вход и регистрация отданы стороннему сервису Clerk — в разметке его скрипт с clerk.terms.so и заголовок X-Clerk-Auth-Status; сам кабинет открывается только после входа.</li><li>Сайт собран на Next.js и размещён на Vercel, стили разбиты на CSS-модули; robots.txt и sitemap.xml на домене отдают 404, счётчиков аналитики в коде не нашлось.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">terms.so</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Командная работа</dd></div>
+        <div><dt>Для кого</dt><dd>Агентствам, Юристам, Продуктовым командам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd>США</dd></div>
+        <div><dt>Автор</dt><dd>The Office of Diego Segura LLC</dd></div>
+        <div><dt>Год</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>08.11.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FEFDFD"></span><span class="swatch" style="background:#4A0903"></span><span class="swatch" style="background:#891E02"></span><span class="swatch" style="background:#C83604"></span><span class="swatch" style="background:#F8D5C7"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FEFDFD, #4A0903, #891E02, #C83604, #F8D5C7">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#FEFDFD" aria-hidden="true"></span>
+          <code>#FEFDFD</code> — 41% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#4A0903" aria-hidden="true"></span>
+          <code>#4A0903</code> — 37% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#891E02" aria-hidden="true"></span>
+          <code>#891E02</code> — 10% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#C83604" aria-hidden="true"></span>
+          <code>#C83604</code> — 4% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#F8D5C7" aria-hidden="true"></span>
+          <code>#F8D5C7</code> — 2% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>Next.js</strong></li><li><strong>Vercel</strong></li><li><strong>Clerk</strong></li><li><strong>CSS Modules</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>63 сайта в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

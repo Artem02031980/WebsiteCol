@@ -7343,6 +7343,546 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "059",
+      "slug": "billdr",
+      "name": "Billdr",
+      "url": "https://www.billdr.ai/",
+      "domain": "billdr.ai",
+      "screenshot": "059.webp",
+      "added": "2026-11-08",
+      "link_state": "alive",
+      "description_user": "Современный аккуратный сайт ИИ-платформы для строительных подрядчиков.",
+      "description_own": "Платформа Billdr PRO ведёт дела строительного подрядчика в одной программе: заявки и клиенты, сметы, графики, бригады, счета и отчёты с площадки. Сайт объясняет продукт спокойно и по делу: крупный заголовок, фотографии настоящих строек, чертёж вместо декоративной графики и три ИИ-помощника с именами и лицами.",
+      "description_short": "Платформа для строительных подрядчиков с ИИ-помощниками",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "architects"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "strict-b2b"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "sticky-sections",
+        "marquee",
+        "micro-interactions",
+        "chat-ui"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#333340",
+          "#9E6E45",
+          "#505367",
+          "#C49964",
+          "#6A6C7F"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Webflow",
+          "evidence": "meta name=\"generator\" content=\"Webflow\", атрибуты data-wf-site/data-wf-page, картинки с cdn.prod.website-files.com"
+        },
+        {
+          "name": "GSAP",
+          "evidence": "cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js и ScrollTrigger.min.js в <script src>"
+        },
+        {
+          "name": "jQuery 3.5.1",
+          "evidence": "d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js"
+        },
+        {
+          "name": "WebFont Loader",
+          "evidence": "ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+        }
+      ],
+      "observations": [
+        "Первый экран — видео, которое не проигрывается само: кадры сменяются ровно на столько, на сколько человек прокрутил страницу, а ролик остаётся на месте, пока идёт прокрутка.",
+        "Три «ИИ-сотрудника» выведены как персонажи с именами и аватарами — копилот Боб, сметчик Бруно, администратор Билли; разговор с Билли показан перепиской в мессенджере: вопросы клиента, ответы, уточнение адреса объекта.",
+        "Под первым экраном логотипы клиентов едут бесконечной лентой, хотя их всего одиннадцать; движение включается отдельным скриптом, а не зацикленной гифкой.",
+        "Сайт живёт на трёх языках — английский, французский (канадский) и испанский (мексиканский): у версий свои адреса /fr и /es, а в карте сайта для каждой указано, каким языкам она соответствует.",
+        "Карта сайта в sitemap.xml перечисляет 833 адреса, а robots.txt открыт всем — включая ИИ-краулеров вроде GPTBot и ClaudeBot.",
+        "В разметке есть структурированные данные schema.org: организация, приложение с ценами от 200 до 1400 долларов и блок «вопрос — ответ» для поисковой выдачи.",
+        "Привычных счётчиков аналитики (Google Analytics, пикселя Facebook) в коде главной нет: если статистика и собирается, то не этими вставками."
+      ],
+      "notes": "Смотреть первый экран с проматываемым видео и блок с тремя ИИ-сотрудниками — на них держится вся подача. Дальше стоит открыть тарифы: там цены и состав пакетов.",
+      "facts": {
+        "https": true,
+        "country": "Канада, Монреаль",
+        "author": "Billdr Inc.",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "AI Operating System for General Contractors | Billdr",
+          "title_len": 52,
+          "description": "Run jobs, crews & AI workforce from one platform. Track leads, build quotes, manage projects, schedule teams & invoice clients. Trusted by 1000+ contractors.",
+          "description_len": 157,
+          "og": true,
+          "sitemap": "https://www.billdr.ai/sitemap.xml — 833 адреса",
+          "robots": "есть: Allow: / для всех, включая AI-краулеров (GPTBot, ClaudeBot, PerplexityBot); ссылка на sitemap",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "support@billdr.ai; телефоны +1 786 400-2881 (США) и +1 438 795-7085 (Канада); запись на демо через Calendly; LinkedIn, Instagram, X; страница поддержки",
+        "legal": "политика конфиденциальности, условия обслуживания и политика cookie в разделе /legal/; в политике указан адрес Billdr Inc. — 1751 Rue Richardson, Монреаль, Канада",
+        "analytics": [],
+        "languages": [
+          "multi",
+          "en",
+          "fr"
+        ]
+      }
+    },
+    {
+      "slot": "060",
+      "slug": "pip",
+      "name": "Pip",
+      "url": "https://pipdot.app/",
+      "domain": "pipdot.app",
+      "screenshot": "060.webp",
+      "added": "2026-11-08",
+      "link_state": "alive",
+      "description_user": "Продуманный цепляющий лендинг приложения для ведения задач и заметок. Хорошие анимации по скроллу с оранжевым шариком-маскотом и наглядная демонстрация продукта.",
+      "description_own": "Лендинг приложения Pip — задачи и заметки в одном спокойном месте. Фразу «позвонить в гараж завтра утром» приложение само раскладывает на завтрашний список, а заметки хранит обычными файлами в папке, которую выбирает человек. Бесплатно на iPhone, Mac и Windows.",
+      "description_short": "Спокойный список задач и заметки в одном приложении для iPhone, Mac и Windows",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "productivity"
+      ],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "swiss-type",
+        "playful"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "sticky-sections",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F2EEEA",
+          "#0D0C0B",
+          "#F35609",
+          "#C9C5C0",
+          "#9C9A97"
+        ]
+      },
+      "tech": [
+        {
+          "name": "GSAP",
+          "evidence": "в head подключены gsap.min.js 3.13.0 и ScrollTrigger.min.js с cdnjs; в main.js комментарий «each a scrubbed GSAP timeline on its own ScrollTrigger»"
+        },
+        {
+          "name": "ScrollTrigger",
+          "evidence": "cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js, в scenes.js 15 упоминаний и pin-сцены"
+        },
+        {
+          "name": "Lenis",
+          "evidence": "cdn.jsdelivr.net/npm/lenis@1.3.26/dist/lenis.min.js в head страницы"
+        },
+        {
+          "name": "Supabase",
+          "evidence": "в CSP-заголовке connect-src https://gyihomefmfnrvoxoxznz.supabase.co; на главной «your tasks are also stored with Supabase in Frankfurt»"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовки ответа: Server: cloudflare, CF-Cache-Status: HIT"
+        },
+        {
+          "name": "Cloudflare Web Analytics",
+          "evidence": "script type=module beacon.min.js с data-cf-beacon и токеном f566f1bf3ea34d509e8d9ba26145ecf1 в конце страницы"
+        },
+        {
+          "name": "Switzer и Geist Mono",
+          "evidence": "preload fonts/Switzer-400.woff2, fonts/Switzer-500.woff2, fonts/GeistMono-latin.woff2; в CSP font-src 'self'"
+        },
+        {
+          "name": "Lemon Squeezy",
+          "evidence": "текст тарифов: «on the Mac and PC, in Pip through Lemon Squeezy»"
+        }
+      ],
+      "observations": [
+        "Главная — один длинный сценарий: оранжевый шарик с глазами висит в центре, текст сменяется четырьмя шагами, а вокруг шарика постепенно достраивается интерфейс приложения. По коду каждый шаг — отдельная анимация, привязанная к прокрутке, а сцена держится на месте, пока идёт её часть.",
+        "Сцена с iPhone собрана из обычных HTML и CSS, без видео: внутри нарисованного телефона по сценарию отвечает «островок» у верхней кромки, появляется задача и раскрывается список.",
+        "Движение можно отключить: на экранах уже 720 px и при системной настройке «уменьшить движение» вместо сценария показываются статичные кадры — так написано в комментариях к коду.",
+        "Заметки устроены как обычные файлы Markdown в папке, которую человек выбирает сам; на сайте этому посвящена отдельная секция — данные лежат открыто, их можно читать чем угодно.",
+        "Счётчик посещений — Cloudflare Web Analytics: без cookie и без профилирования посетителей, поэтому баннера о согласии на сайте нет.",
+        "Есть тёмная тема: переключатель в шапке, цвета фона для светлой и тёмной системной темы прописаны в разметке сразу."
+      ],
+      "notes": "Смотреть прокрутку от заголовка вниз: шарик ведёт по четырём шагам, а в секции про iPhone оживает собранный из кода телефон.",
+      "facts": {
+        "https": true,
+        "country": "Великобритания",
+        "author": "Catalin Vintila — частный разработчик",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Pip · a calm to-do list and notes app for iPhone, Mac and Windows",
+          "title_len": 65,
+          "description": "Pip is a calm to-do list and notes app, free on the App Store for iPhone, on the Microsoft Store for Windows, as a download for Mac, and in the browser. Notes are plain Markdown files you own.",
+          "description_len": 192,
+          "og": true,
+          "sitemap": "https://pipdot.app/sitemap.xml — 11 адресов: главная, /blog и пять постов, /terms, /privacy, /refunds, /support",
+          "robots": "есть: закрыт только /social/, остальное разрешено, указан sitemap.xml",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "hello@pipdot.app в футере; Instagram, TikTok, X и Facebook; телефона на странице нет",
+        "legal": "Terms (/terms), Privacy (/privacy) и Refunds (/refunds) в футере, есть /support; в политике ответственным за данные назван Catalin Vintila",
+        "analytics": [
+          "Cloudflare Web Analytics"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "061",
+      "slug": "synaptrix",
+      "name": "Synaptrix",
+      "url": "https://www.synaptrix-labs.com/",
+      "domain": "synaptrix-labs.com",
+      "screenshot": "061.webp",
+      "added": "2026-11-08",
+      "link_state": "alive",
+      "description_user": "Сайт компании, которая разрабатывает нейроинтерфейсы для управления устройствами с помощью сигналов мозга без вживления имплантов.",
+      "description_own": "Сайт нью-йоркской лаборатории Synaptrix, которая делает неинвазивные нейроинтерфейсы: считывает сигналы мозга через ЭЭГ-ободок и переводит их в управление компьютером, коляской или протезом. Здесь рассказ о платформе, клинические исследования и набор участников.",
+      "description_short": "Лаборатория неинвазивных нейроинтерфейсов: сигналы мозга управляют техникой",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "consumers",
+        "investors"
+      ],
+      "site_type": "corporate",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "video-bg",
+        "dark-default"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#000000",
+          "#252934",
+          "#F8F8F8",
+          "#4C4B54",
+          "#6E6975"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Webflow",
+          "evidence": "стили synaptrix-dev.webflow.shared.5d5aa0179.min.css и скрипт webflow.d24778d3…js с cdn.prod.website-files.com; классы w-mod-js и w-mod-touch"
+        },
+        {
+          "name": "Lenis",
+          "evidence": "lenis@1.2.3 с cdn.jsdelivr.net: lenis.css и lenis.min.js подключены в <head>"
+        },
+        {
+          "name": "Swiper",
+          "evidence": "swiper@12 с cdn.jsdelivr.net: swiper-bundle.min.css и swiper-bundle.min.js"
+        },
+        {
+          "name": "Bunny CDN",
+          "evidence": "видео и картинки грузятся с synaptrix-assets.b-cdn.net (например, /webm/home/Home%20Hero%20Animation.webm)"
+        }
+      ],
+      "observations": [
+        "Главный экран — чёрное поле, поверх которого крутится видео: светящиеся точки и нули-единицы сплетаются в подобие нейронной сети, а под ними крупным шрифтом набрана фраза о будущем нейроинтерфейсов.",
+        "Вместо 3D-сцены, которая считалась бы в браузере, здесь восемь коротких фоновых видео в формате WebM: они запускаются сами, без звука и по кругу.",
+        "Сайт собран в Webflow — визуальном конструкторе, который выдаёт готовую вёрстку; на это указывают адреса стилей и скриптов на cdn.prod.website-files.com и служебные классы вроде w-mod-js.",
+        "Плавную прокрутку делает библиотека Lenis, подключённая напрямую с cdn.jsdelivr.net, а слайдеры собраны на Swiper 12.",
+        "Продукт объясняют как платформу из четырёх частей: ЭЭГ-устройство Portal, модель очистки сигналов NeuroDiffusion, набор данных Cortex и исследовательский подход Generative Neuroscience.",
+        "Клиническое исследование EMPOWER — про управление коляской силой мысли; рядом набор здоровых добровольцев для записи ЭЭГ, заявки принимают через формы Typeform.",
+        "В футере указаны офис в Нью-Йорке и почта info@synaptrixlabs.com, а ссылки Privacy Policy и Terms of Use ведут на заглушку #."
+      ],
+      "notes": "Смотреть главный экран с видео-анимацией и заголовком, затем раздел Technology с четырьмя продуктами платформы и страницу клинических исследований.",
+      "facts": {
+        "https": true,
+        "country": "США, Нью-Йорк",
+        "author": "Synaptrix Labs Inc.",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Synaptrix | Advancing the Future of Neural Interfaces",
+          "title_len": 53,
+          "description": "Introducing Atlas™ by Synaptrix, the first device that allows you to use your computer, wheelchair, prosthetics, and to communicate through brain activity alone.",
+          "description_len": 161,
+          "og": true,
+          "sitemap": "не найдено (404)",
+          "robots": "200, пустой файл (0 байт)",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "info@synaptrixlabs.com, адрес в Нью-Йорке; заявки через формы Typeform, вакансии на Greenhouse",
+        "legal": "Privacy Policy и Terms of Use в футере, обе ссылки — заглушка #",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "062",
+      "slug": "terms",
+      "name": "Terms",
+      "url": "https://terms.so/",
+      "domain": "terms.so",
+      "screenshot": "062.webp",
+      "added": "2026-11-08",
+      "link_state": "alive",
+      "description_user": "Утилитарный сайт сервиса для подписания договоров. Наглядная демонстрация продукта и нетривиальный сочный градиент на главной.",
+      "description_own": "Сервис для работы с договорами: текст договора пишется в браузере в markdown, вторая сторона открывает ссылку, комментирует пункты и подписывает. На главной — короткие анимированные сцены: как из одной фразы собирается черновик, как сервис находит нужный пункт в ответ на вопрос и как согласуются правки.",
+      "description_short": "Сервис для черновиков, комментариев и электронной подписи договоров",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "team-tools"
+      ],
+      "audience": [
+        "agencies",
+        "lawyers",
+        "product-teams"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FEFDFD",
+          "#4A0903",
+          "#891E02",
+          "#C83604",
+          "#F8D5C7"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "заголовок X-Powered-By: Next.js и скрипты /_next/static/immutable/chunks/…"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки Server: Vercel, X-Vercel-Cache: MISS, X-Vercel-Id"
+        },
+        {
+          "name": "Clerk",
+          "evidence": "скрипт https://clerk.terms.so/npm/@clerk/clerk-js@6/dist/clerk.browser.js и заголовок X-Clerk-Auth-Status: signed-out"
+        },
+        {
+          "name": "CSS Modules",
+          "evidence": "классы вида review-module__aN7EWG__demoCursor и diatype_81649e75-module__kyoPyq__variable"
+        }
+      ],
+      "observations": [
+        "Главная — витрина сервиса: крупный заголовок, кнопки регистрации и демонстрации, ниже три сцены, показывающие продукт в работе.",
+        "Первый экран залит градиентом от почти чёрного через оранжевый к белому; по краям мелким шрифтом рассыпаны обрывки примеров договора вроде «$12,000, six weeks, 50% upfront».",
+        "Сцены анимированы: внутри двигается нарисованный курсор и по шагам показывается, как набирают запрос, правят пункт и подписывают — это видно по разметке (класс demoCursor, атрибуты data-show и data-arrived).",
+        "Работает сервис с обычным markdown: договор — простой текстовый файл, который правится прямо в браузере, а вторая сторона открывает ссылку без установки программ.",
+        "Вход и регистрация отданы стороннему сервису Clerk — в разметке его скрипт с clerk.terms.so и заголовок X-Clerk-Auth-Status; сам кабинет открывается только после входа.",
+        "Сайт собран на Next.js и размещён на Vercel, стили разбиты на CSS-модули; robots.txt и sitemap.xml на домене отдают 404, счётчиков аналитики в коде не нашлось."
+      ],
+      "notes": "Смотреть градиент первого экрана и анимированные сцены: черновик из одной фразы, цитата нужного пункта в ответ на вопрос, комментарии к пункту и подпись. Заголовок обещает, что DocuSign больше не понадобится.",
+      "facts": {
+        "https": true,
+        "country": "США",
+        "author": "The Office of Diego Segura LLC",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Terms.so: Never touch DocuSign again.",
+          "title_len": 37,
+          "description": "Terms is a minimal document signing tool. Contracts are markdown you write and edit in the browser; counterparties open a link, comment inline, and sign with a typed e-signature.",
+          "description_len": 178,
+          "og": true,
+          "sitemap": "не найдено",
+          "robots": "не найдено",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "support@terms.so — почта в футере",
+        "legal": "Privacy Policy и Terms of Service; оператор — The Office of Diego Segura LLC d/b/a Family Office",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "063",
+      "slug": "square-kiosk",
+      "name": "Square Kiosk",
+      "url": "https://squareup.com/us/en/hardware/kiosk",
+      "domain": "squareup.com",
+      "screenshot": "063.webp",
+      "added": "2026-11-08",
+      "link_state": "alive",
+      "description_user": "Стильный лендинг терминала самообслуживания с функцией заказа голосом. Хорошие анимации и рендеры.",
+      "description_own": "Лендинг Square Kiosk — терминала самообслуживания для кафе и ресторанов: экран 21,5 дюйма, заказ голосом или касанием, оплата на месте и подсказки на основе данных о продажах. Страница показывает, как киоск встраивается в кассу и кухню, и сколько стоит: 1 999 долларов за устройство или 97 долларов в месяц.",
+      "description_short": "Терминал самообслуживания Square с заказом голосом",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "restaurants"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "playful"
+      ],
+      "techniques": [
+        "video-bg",
+        "type-animation",
+        "parallax",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F7F7F5",
+          "#004BFF",
+          "#202020",
+          "#AF784D",
+          "#5C432C"
+        ]
+      },
+      "tech": [
+        {
+          "name": "SvelteKit",
+          "evidence": "заголовок ответа x-sveltekit-page: true и пути /_svelte/_app/immutable/... в modulepreload"
+        },
+        {
+          "name": "Contentful",
+          "evidence": "изображения и видео с images.ctfassets.net и videos.ctfassets.net"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовки server: cloudflare, cf-ray и cookie __cf_bm"
+        },
+        {
+          "name": "Lenis",
+          "evidence": "атрибут data-lenis-prevent на диалоге с видео"
+        },
+        {
+          "name": "Datadog RUM",
+          "evidence": "datadog_rum_application_id в конфиге страницы и чанк datadogRumHelper.js"
+        },
+        {
+          "name": "OneTrust",
+          "evidence": "one_trust_data_domain_script в конфиге и скрипт cdn.cookielaw.org"
+        },
+        {
+          "name": "Google Analytics (Universal Analytics)",
+          "evidence": "UA-9517040-46 в конфиге страницы"
+        }
+      ],
+      "observations": [
+        "Киоск с экраном 21,5 дюйма просыпается, когда гость подходит: заказать можно голосом или касанием, а оплатить — картой прямо на экране.",
+        "Голосовой заказ понимает обычную речь: гость спрашивает, что в блюде или что подойдёт детям, и меню фильтруется; в устройстве три направленных микрофона с шумоподавлением.",
+        "Подсказки в заказе строятся на данных о продажах: что чаще берут в это время дня или вместе с выбранным блюдом.",
+        "Надпись KIOSK на первом экране собрана из отдельных частей: в стилях есть переменные, которые двигают буквы при появлении и прокрутке.",
+        "Демонстрационные ролики заказа — рамен, бабл-ти, греческая кухня, аэропорт — встроены без звука, зациклены и подключаются скриптом, а не сразу.",
+        "Страница собрана на SvelteKit: об этом говорит заголовок ответа x-sveltekit-page и служебные классы вида svelte-qcszr4.",
+        "Из этой сети сайт отвечает 403 Cloudflare, поэтому разметку читали из веб-архива, а заголовки и метаданные — через microlink."
+      ],
+      "notes": "Начать с первого экрана: гигантская надпись KIOSK, видео-фон и рендер устройства. Дальше — блок «How kiosk works» про голосовой заказ и подсказки.",
+      "facts": {
+        "https": true,
+        "country": "США",
+        "author": "Square (Block, Inc.)",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "AI-powered self-service ordering | Square Kiosk",
+          "title_len": 47,
+          "description": "Square Kiosk pairs a large 21.5-inch display with conversational AI, voice ordering, and integrated payments. Explore our self-service solution.",
+          "description_len": 144,
+          "og": true,
+          "sitemap": "https://squareup.com/sitemap.xml — индекс карт сайта по странам и разделам",
+          "robots": "есть, индексация открыта, перечислены карты сайта по странам",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "телефоны поддержки 1 (855) 700-6000 и отдела продаж 1 (833) 959-5325, форма Contact sales",
+        "legal": "Privacy Notice, Terms of Service, Security, Trust Center, Government Licenses, Consumer Health Privacy, Hardware Compliance Certifications, Cookie Preferences; © 2026 Block, Inc.",
+        "analytics": [
+          "Google Analytics (UA-9517040-46)",
+          "Datadog RUM",
+          "Sentry"
+        ],
+        "languages": [
+          "multi",
+          "en",
+          "fr",
+          "ja"
+        ]
+      }
     }
   ]
 }

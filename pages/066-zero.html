@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero — сайт в коллекции</title>
+<meta name="description" content="Учат профессии на симуляциях реальной работы и выводят на работодателей">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zero — сайт в коллекции">
+<meta property="og:description" content="Учат профессии на симуляциях реальной работы и выводят на работодателей">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>Zero</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>Zero</h1>
+    <ul class="taglist">
+      <li><span class="tag tag--g-type">Лендинг</span></li>
+      <li><span class="tag tag--g-category">Образование</span></li>
+      <li><span class="tag tag--g-subcategory">Курсы</span></li>
+      <li><span class="tag tag--g-audience">Студентам</span></li>
+      <li><span class="tag tag--g-style">Редакционный</span></li>
+      <li><span class="tag tag--g-style">Игривый</span></li>
+      <li><span class="tag tag--g-mode tag--mode-light">Светлая тема</span></li>
+      <li><span class="tag tag--g-hue tag--hue-mono">Нейтральный фон</span></li>
+      <li><span class="tag tag--g-technique">Скроллителлинг</span></li>
+      <li><span class="tag tag--g-technique">Липкие секции</span></li>
+      <li><span class="tag tag--g-technique">Горизонтальный скролл</span></li>
+      <li><span class="tag tag--g-technique">Анимация типографики</span></li>
+      <li><span class="tag tag--g-technique">Интерфейс-диалог</span></li>
+      <li><span class="tag tag--g-technique">Микроанимации</span></li>
+      <li><span class="tag tag--g-tech">GSAP</span></li>
+      <li><span class="tag tag--g-tech">ScrollTrigger</span></li>
+      <li><span class="tag tag--g-tech">Canvas</span></li>
+      <li><span class="tag tag--g-tech">Amazon S3</span></li>
+      <li><span class="tag tag--g-tech">Google Sans Flex</span></li>
+      <li><span class="tag tag--g-lang">Английский язык</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://learnwithzero.com/" target="_blank" rel="noopener noreferrer">https://learnwithzero.com/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/066.webp" alt="Скриншот главной страницы Zero"
+           width="1754" height="1066" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Платформа, где профессию осваивают на выдуманных проектах: внутри симулированной компании есть менеджер, команда и коуч, а готовые работы складываются в портфолио. Потом Zero подбирает вакансии в своей сети из более чем 5000 компаний. Для тех, кто начинает с нуля. Захватывающий сайт обучающей платформы, повествование которого построено на череде сложных последовательных анимаций.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Смотреть первую сцену с картой города и финал: в строке «Built to get you hired» между словами выезжает письмо о приёме на работу.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--techniques">
+    <h2>Приёмы</h2>
+    <ul class="tech-list">
+      <li><strong>Скроллителлинг</strong></li><li><strong>Липкие секции</strong></li><li><strong>Горизонтальный скролл</strong></li><li><strong>Анимация типографики</strong></li><li><strong>Интерфейс-диалог</strong></li><li><strong>Микроанимации</strong></li>
+    </ul>
+  </section>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Главная — один длинный сценарий: экран замирает, пока прокрутка проигрывает сцену, и только потом страница едет дальше.</li><li>В первой сцене камера влетает в карту города, и та превращается в знак Zero; город нарисован в canvas из обычной картинки и карты высот, без видео.</li><li>Заголовок читается как «Get hired with zero experience», хотя слово zero нарисовано контурами: рядом спрятана обычная надпись для поисковиков и скринридеров.</li><li>Постоянной навигации сверху нет: Start, меню и знак вопроса собраны внизу, а знак вопроса открывает Ask Zero — чат с ответами на частые вопросы.</li><li>Карточки профессий едут вбок, пока экран стоит на месте; в финале уровень растёт, а цифра крутится как счётчик одометра.</li><li>В коде сохранён архив из 106 версий дизайна — от «первого прохода» до текущей сборки, каждая со своей ссылкой.</li><li>Сайт честно предупреждает: компании, менеджеры и коллеги внутри — симуляция, а гарантии трудоустройства нет.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">learnwithzero.com</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Образование</dd></div>
+        <div><dt>Подкатегории</dt><dd>Курсы</dd></div>
+        <div><dt>Для кого</dt><dd>Студентам</dd></div>
+        <div><dt>Стиль</dt><dd>Редакционный, Игривый</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Автор</dt><dd>Navid Nathoo — основатель Zero</dd></div>
+        <div><dt>Год</dt><dd>2026</dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>10.11.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#E8E4E6"></span><span class="swatch" style="background:#1B5848"></span><span class="swatch" style="background:#25312D"></span><span class="swatch" style="background:#D0C5C0"></span><span class="swatch" style="background:#DDBA84"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#E8E4E6, #1B5848, #25312D, #D0C5C0, #DDBA84">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#E8E4E6" aria-hidden="true"></span>
+          <code>#E8E4E6</code> — 27% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#1B5848" aria-hidden="true"></span>
+          <code>#1B5848</code> — 17% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#25312D" aria-hidden="true"></span>
+          <code>#25312D</code> — 11% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#D0C5C0" aria-hidden="true"></span>
+          <code>#D0C5C0</code> — 10% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#DDBA84" aria-hidden="true"></span>
+          <code>#DDBA84</code> — 8% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><strong>GSAP 3.15.0</strong></li><li><strong>ScrollTrigger</strong></li><li><strong>Canvas (HTML5)</strong></li><li><strong>Amazon S3 + CloudFront</strong></li><li><strong>Google Sans Flex</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
+      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
+      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>66 сайтов в подборке · Личная коллекция Хмелёва Артёма</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

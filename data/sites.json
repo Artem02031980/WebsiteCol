@@ -7883,6 +7883,345 @@
           "ja"
         ]
       }
+    },
+    {
+      "slot": "064",
+      "slug": "attio",
+      "name": "Attio",
+      "url": "https://attio.com/",
+      "domain": "attio.com",
+      "screenshot": "064.webp",
+      "added": "2026-11-10",
+      "link_state": "alive",
+      "description_user": "Аккуратный, внимательно свёрстанный сайт умной CRM с ИИ-агентами под капотом. Много приятной глазу мелкой графики и микроанимаций.",
+      "description_own": "Сайт CRM-сервиса Attio для команд продаж: клиенты, сделки и переписка собраны в одном месте, а ИИ-агенты сами строят воронку и подсказывают следующие шаги. Продукт показан через живой интерфейс с отчётами и графиками, без стоковых картинок.",
+      "description_short": "CRM для команд продаж с ИИ-агентами и живыми отчётами",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "team-tools",
+        "ai"
+      ],
+      "audience": [
+        "product-teams",
+        "marketers"
+      ],
+      "site_type": "multipage",
+      "styles": [
+        "minimal",
+        "strict-b2b"
+      ],
+      "techniques": [
+        "micro-interactions",
+        "chat-ui"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FCFEFE",
+          "#D0D1D1",
+          "#212323",
+          "#B1B1B2",
+          "#F65385"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "пути /_next/static/immutable/chunks/…, атрибут data-precedence=\"next\" у CSS, payload self.__next_f, заголовок ответа x-nextjs-prerender: 1"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "утилитарные классы в разметке: bg-(--color-page-background), dark:bg-primary-background, duration-250, max-md:justify-start"
+        },
+        {
+          "name": "Storyblok",
+          "evidence": "изображения и og:image с a.storyblok.com/f/234930/…, CMS в CSP frame-src app.storyblok.com"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "заголовки ответа x-vercel-cache: HIT и x-vercel-id: iad1::…"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовки ответа server: cloudflare, свой cf-ray у каждого запроса"
+        },
+        {
+          "name": "Google Tag Manager",
+          "evidence": "в payload страницы есть модуль GoogleTagManager, googletagmanager.com разрешён в CSP"
+        },
+        {
+          "name": "Mixpanel",
+          "evidence": "модуль Mixpanel в payload страницы, cdn.mxpnl.com в CSP script-src"
+        },
+        {
+          "name": "Intercom",
+          "evidence": "компонент IntercomProvider в payload, api.intercom.io в CSP connect-src"
+        }
+      ],
+      "observations": [
+        "Первый экран держится на одном очень крупном заголовке и двух кнопках; остальное место отдано окну продукта с отчётами, графиками и панелью Ask Attio.",
+        "Мелкие анимации сдержанные: у ссылок и кнопок в разметке прописаны короткие переходы (transition, duration-150 и 250) и подчёркивание, которое появляется при наведении.",
+        "Светлая и тёмная темы переключаются классом theme на странице; если тему не выбрали вручную, скрипт берёт системную настройку.",
+        "В консоли браузера оставлена пасхалка: в коде страницы есть отдельный модуль ConsoleEasterEggClient.",
+        "Сайт собран на Next.js: сервер отдаёт готовую разметку, а интерактивные части подгружает кусками из /_next/static.",
+        "Контент хранится в CMS Storyblok — картинки и обложка для соцсетей приходят с a.storyblok.com, а сама CMS разрешена в политике безопасности страницы.",
+        "В robots.txt открыты ИИ-краулеры (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot), но закрыты CCBot, Bytespider, YouBot и Cohere — видимость в ответах ИИ настраивали осознанно."
+      ],
+      "notes": "Смотреть первый экран и окно демо: отчёты, круговая диаграмма и панель Ask Attio показывают продукт без скриншотов. Дальше — тарифы и страницу про «архитектуру агентной выручки» (/architecture).",
+      "facts": {
+        "https": true,
+        "country": "Великобритания, Лондон",
+        "author": "Attio Ltd",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Attio: The CRM for agentic revenue",
+          "title_len": 34,
+          "description": "The system for revenue teams to build pipeline, accelerate deals, and grow accounts around the clock.",
+          "description_len": 101,
+          "og": true,
+          "sitemap": "https://attio.com/sitemap.xml — 985 адресов",
+          "robots": "Allow: / для всех; ИИ-краулеры (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot) разрешены, CCBot, Bytespider, YouBot и Cohere-ai закрыты; Sitemap: https://attio.com/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 4,
+          "broken": []
+        },
+        "contacts": "Почта support@attio.com (в политике конфиденциальности), формы «Talk to sales» и «Send me a demo», чат Intercom, профили LinkedIn, X, YouTube и Dribbble",
+        "legal": "Privacy Policy (/legal/privacy), Services Agreement (/legal/services-agreement), Your Privacy Choices (/privacy-preferences), Trust Center; Attio Limited — Англия и Уэльс, офис в Лондоне",
+        "analytics": [
+          "Google Tag Manager",
+          "Mixpanel"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "065",
+      "slug": "billow",
+      "name": "Billow",
+      "url": "https://www.billow.so/",
+      "domain": "billow.so",
+      "screenshot": "065.webp",
+      "added": "2026-11-10",
+      "link_state": "alive",
+      "description_user": "Чистый наглядный сайт операционной платформы для фрилансеров и небольших студий.",
+      "description_own": "Billow — операционная платформа для фрилансеров и небольших студий: заявки, сметы, проекты, счета и деньги клиентов собраны в одном месте. Вместо таблиц и заметок — один экран «Cockpit» с графиком выручки, где видно, кто приносит прибыль и кто задерживает оплату. Первые 14 дней бесплатно.",
+      "description_short": "Единый экран для заявок, счетов и денег небольшой студии",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "productivity"
+      ],
+      "audience": [
+        "agencies"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "micro-interactions",
+        "data-viz"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FCFDFE",
+          "#86E4FE",
+          "#017FFE",
+          "#07BAFE",
+          "#C3EEFC"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Framer",
+          "evidence": "meta name=generator: Framer e25bc73; скрипты и шрифты с framerusercontent.com/sites/6qfOCKo5QbYDPqKob0hJa6/"
+        },
+        {
+          "name": "React",
+          "evidence": "modulepreload react.C-sCSfvK.mjs в head"
+        },
+        {
+          "name": "Framer Motion",
+          "evidence": "modulepreload motion.B2j44E5i.mjs в head"
+        },
+        {
+          "name": "Cloudflare",
+          "evidence": "заголовок ответа сервера: server: cloudflare, cf-ray"
+        },
+        {
+          "name": "Viral Loops",
+          "evidence": "script src app.viral-loops.com/widgetsV2/core/loader.js, id=viral-loops-loader"
+        },
+        {
+          "name": "Google Fonts",
+          "evidence": "link href fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        }
+      ],
+      "observations": [
+        "Сайт собран во Framer: в разметке указан генератор «Framer», а картинки, шрифты и скрипты приходят с framerusercontent.com.",
+        "Прямо в первом экране стоит интерактивное демо панели «Cockpit» — с графиком выручки, неоплаченными счетами и списком клиентов; подпись «Go on, play with it ;-)» приглашает потрогать его вживую.",
+        "Заголовки набраны крупным шрифтом с засечками Gveret Levin, основной текст — Inter; иконки берутся из набора Material Symbols в Google Fonts.",
+        "Продукт делает студия Trueform: в футере «A product by Trueform» со ссылкой на trueform.agency и копирайт 2026 года, а в условиях использования оператором назван Trueform GmbH.",
+        "На странице тарифов три плана — Solo, Grow и Scale: от 29 до 179 долларов в месяц, при годовой оплате дешевле, пробный период 14 дней.",
+        "Из счётчиков в коде только Cloudflare Web Analytics и собственный скрипт Framer events; Google Analytics, пикселей соцсетей и систем A/B-тестов нет.",
+        "Разметку главной удалось прочитать через релей translate.goog: прямой запрос из этой сети не уложился в таймаут, а robots.txt и sitemap.xml отдались напрямую."
+      ],
+      "notes": "Смотреть интерактивное демо Cockpit в первом экране: на нём видно, как заявки, счета и оплаты сходятся в одну картину. Дальше — тарифы с тремя планами и 14-дневным пробным периодом.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Trueform GmbH — студия",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Billow ⋅ From lead to paid. All in one place.",
+          "title_len": 45,
+          "description": "Billow runs your whole client business: Leads, offers, projects, invoices, CRM, and finances, and shows you who's profitable and what's working. One platform, no more guessing.",
+          "description_len": 176,
+          "og": true,
+          "sitemap": "есть, https://www.billow.so/sitemap.xml",
+          "robots": "User-agent: * / Allow: / / Sitemap: https://www.billow.so/sitemap.xml",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "Почта ping@billow.so (в условиях использования), раздел Help и X (Twitter) @billow_app",
+        "legal": "Privacy и Terms (/legals/privacy, /legals/terms); оператор — Trueform GmbH, швейцарское право, суды кантона Санкт-Галлен",
+        "analytics": [
+          "Cloudflare Web Analytics",
+          "Framer events"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "066",
+      "slug": "zero",
+      "name": "Zero",
+      "url": "https://learnwithzero.com/",
+      "domain": "learnwithzero.com",
+      "screenshot": "066.webp",
+      "added": "2026-11-10",
+      "link_state": "alive",
+      "description_user": "Захватывающий сайт обучающей платформы, повествование которого построено на череде сложных последовательных анимаций.",
+      "description_own": "Платформа, где профессию осваивают на выдуманных проектах: внутри симулированной компании есть менеджер, команда и коуч, а готовые работы складываются в портфолио. Потом Zero подбирает вакансии в своей сети из более чем 5000 компаний. Для тех, кто начинает с нуля.",
+      "description_short": "Учат профессии на симуляциях реальной работы и выводят на работодателей",
+      "categories": [
+        "education"
+      ],
+      "subcategories": [
+        "course"
+      ],
+      "audience": [
+        "students"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "editorial",
+        "playful"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "sticky-sections",
+        "horizontal-scroll",
+        "type-animation",
+        "chat-ui",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#E8E4E6",
+          "#1B5848",
+          "#25312D",
+          "#D0C5C0",
+          "#DDBA84"
+        ]
+      },
+      "tech": [
+        {
+          "name": "GSAP 3.15.0",
+          "evidence": "баннер в js/vendor/zero-vendor.8a57821822.js: «/*! * GSAP 3.15.0 »"
+        },
+        {
+          "name": "ScrollTrigger",
+          "evidence": "в том же бандле развернут плагин ScrollTrigger (24 упоминания) — анимации, привязанные к прокрутке"
+        },
+        {
+          "name": "Canvas (HTML5)",
+          "evidence": "четыре <canvas> (hero131__gl, start__gl, foot66__gl, zd72__cv); для первой сцены предзагружаются city-2880.avif и карта высот city-depth.webp"
+        },
+        {
+          "name": "Amazon S3 + CloudFront",
+          "evidence": "заголовки ответа: Server: AmazonS3, X-Cache: Hit from cloudfront"
+        },
+        {
+          "name": "Google Sans Flex",
+          "evidence": "@font-face «Zero Sans» → assets/fonts/GoogleSansFlex-wght-ROND.woff2 (variable-шрифт, ось ROND)"
+        }
+      ],
+      "observations": [
+        "Главная — один длинный сценарий: экран замирает, пока прокрутка проигрывает сцену, и только потом страница едет дальше.",
+        "В первой сцене камера влетает в карту города, и та превращается в знак Zero; город нарисован в canvas из обычной картинки и карты высот, без видео.",
+        "Заголовок читается как «Get hired with zero experience», хотя слово zero нарисовано контурами: рядом спрятана обычная надпись для поисковиков и скринридеров.",
+        "Постоянной навигации сверху нет: Start, меню и знак вопроса собраны внизу, а знак вопроса открывает Ask Zero — чат с ответами на частые вопросы.",
+        "Карточки профессий едут вбок, пока экран стоит на месте; в финале уровень растёт, а цифра крутится как счётчик одометра.",
+        "В коде сохранён архив из 106 версий дизайна — от «первого прохода» до текущей сборки, каждая со своей ссылкой.",
+        "Сайт честно предупреждает: компании, менеджеры и коллеги внутри — симуляция, а гарантии трудоустройства нет."
+      ],
+      "notes": "Смотреть первую сцену с картой города и финал: в строке «Built to get you hired» между словами выезжает письмо о приёме на работу.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Navid Nathoo — основатель Zero",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Zero. Get hired with zero experience.",
+          "title_len": 37,
+          "description": "Get hired with zero experience. Learn the job by doing it in Zero World, with a manager, a coach and a team, then get matched through the Zero talent network.",
+          "description_len": 158,
+          "og": true,
+          "sitemap": "есть, 22 адреса",
+          "robots": "есть: User-agent: *, Allow: /, Sitemap: https://learnwithzero.com/sitemap.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "Почта team@zero.university; профили LinkedIn, Instagram и X в разметке организации; телефона и адреса нет",
+        "legal": "Privacy Policy и Terms and Conditions; политика помечена как «Draft, under legal review», обновлена 5 октября 2026",
+        "analytics": [
+          "Meta Pixel (Facebook), пиксель 1445791510490801"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

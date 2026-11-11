@@ -8222,6 +8222,235 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "067",
+      "slug": "foulplay",
+      "name": "Foulplay",
+      "url": "https://www.usefoulplay.com/",
+      "domain": "usefoulplay.com",
+      "screenshot": "067.webp",
+      "added": "2026-11-11",
+      "link_state": "alive",
+      "description_user": "Пафосный сайт премиального производителя креатина для спортсменов. Незаурядная вёрстка и качественная 3D-графика.",
+      "description_own": "Магазин премиального спортивного питания: креатин в саше и жевательных «байтах», наборы и немного мерча. Подача — как у люксового бренда: чёрно-белые крупные планы, видео вместо баннеров, минимум текста. Добавка выглядит дорогим аксессуаром, а не спортивным порошком.",
+      "description_short": "Премиальный креатин для спортсменов в эстетике люксового бренда",
+      "categories": [
+        "shop"
+      ],
+      "subcategories": [],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "shop",
+      "styles": [
+        "luxury",
+        "minimal",
+        "monochrome"
+      ],
+      "techniques": [
+        "video-bg",
+        "micro-interactions",
+        "page-transitions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#3C3B40",
+          "#6C696B",
+          "#BDB8BA",
+          "#1F2227",
+          "#918E90"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Shopify",
+          "evidence": "заголовок ответа x-powered-by: Shopify, ассеты /cdn/shop/t/4/assets/…, форма shopify-localization-form"
+        },
+        {
+          "name": "Judge.me",
+          "evidence": "cdn.shopify.com/extensions/…/judgeme-856/assets/loader.js и shopify_v2.css"
+        },
+        {
+          "name": "Loop Subscriptions",
+          "evidence": "cdn.shopify.com/extensions/…/loop-subscriptions-313/assets/loop_referral_banner.js, selling_plan в ссылках товаров"
+        },
+        {
+          "name": "Secomapp Affiliate",
+          "evidence": "cdn.shopify.com/extensions/…/affliate-by-secomapp-140/assets/core.min.js"
+        },
+        {
+          "name": "Google tag (gtag)",
+          "evidence": "конфигурация web pixel с google_tag_ids: AW-17796518777, GT-KTPKXJRG"
+        }
+      ],
+      "observations": [
+        "Первый экран держится на видео во всю ширину окна: в разметке главной больше десяти зацикленных видеофонов, и каждый подключается только при подходе к нему, а до этого показывается статичная картинка-заглушка.",
+        "Раздел про науку сделан как четыре кнопки-преимущества (мышцы, восстановление, концентрация, возраст): выбор меняет и короткий фильм, и пояснение к нему. Все четыре варианта лежат в разметке сразу, а переключение помечено для экранных дикторов.",
+        "У карточек товаров в каталоге есть собственные короткие видео с пометкой hover — по коду они включаются при наведении, то есть витрина «оживает» ещё до захода в карточку.",
+        "Магазин работает на Shopify: корзина открывается боковой панелью, есть подписка на регулярную доставку и отзывы сторонним сервисом Judge.me.",
+        "В подвале — переключатель из 36 стран и валют, по умолчанию выставлены Сингапур и сингапурский доллар; там же мелким шрифтом предупреждение, что товары продаются как пищевые добавки.",
+        "robots.txt закрывает сайт от всех роботов: «User-agent: *» и «Disallow: /».",
+        "Прямые запросы к сайту из этой сети отдают 403, поэтому страницы читались через перевод-релей translate.goog, а заголовки и метаданные — через api.microlink.io."
+      ],
+      "notes": "Смотреть первый экран с видеофоном и раздел Science, где четыре преимущества переключают фильм и текст. Дальше — каталог с видео-превью карточек.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Luke Hoban и студия Subject Matter",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "PERFORMANCE YOU CAN TASTE. – FOULPLAY PERFORMANCE NUTRITION",
+          "title_len": 59,
+          "description": "FOULPLAY is a performance nutrition company built on taste.",
+          "description_len": 59,
+          "og": true,
+          "sitemap": null,
+          "robots": "User-agent: * / Disallow: /",
+          "structured_data": false
+        },
+        "links": {
+          "checked": 4,
+          "broken": []
+        },
+        "contacts": "Почта hi@usefoulplay.com (общие вопросы) и ryan@usefoulplay.com (партнёрства и опт), форма на /pages/contact, Instagram @usefoulplay",
+        "legal": "Политика конфиденциальности (обновлена 30 октября 2026), Условия и положения, политики возврата и доставки; в футере предупреждение о пищевых добавках",
+        "analytics": [
+          "Shopify Web Pixels (Trekkie)",
+          "Meta Pixel — 2027271828049619",
+          "Google tag / Google Ads — AW-17796518777, GT-KTPKXJRG"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "068",
+      "slug": "diego",
+      "name": "Diego",
+      "url": "https://diegovz.com/",
+      "domain": "diegovz.com",
+      "screenshot": "068.webp",
+      "added": "2026-11-11",
+      "link_state": "alive",
+      "description_user": "Стильный персональный сайт Диего Вильяроэля — продуктового дизайнера из Мадрида. Продуманная в мелочах вёрстка и необычный интерактивный блок, рассказывающий об опыте.",
+      "description_own": "Персональный сайт Диего Вильяроэля — дизайн-лидера из Мадрида. Главная — одна длинная страница: крупное приветствие, избранные проекты (Rappi, Clash Royale, Roostfy), статьи, список книг и награды. Самое интересное — блок «Fragments of me»: семь плиток-историй о карьере, у каждой свой маленький интерактив.",
+      "description_short": "Портфолио дизайн-лидера из Мадрида с интерактивными плитками о карьере",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "designer"
+      ],
+      "audience": [
+        "designers"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "minimal",
+        "monochrome"
+      ],
+      "techniques": [
+        "preloader",
+        "custom-cursor",
+        "micro-interactions",
+        "game",
+        "sound"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#000000",
+          "#E4E4E4",
+          "#353434",
+          "#5F5F5F",
+          "#BFBFBF"
+        ]
+      },
+      "tech": [
+        {
+          "name": "WordPress",
+          "evidence": "разметка на /wp-content/ и /wp-includes/, в RSS-ленте <generator>https://wordpress.org/?v=7.1.4</generator>"
+        },
+        {
+          "name": "Elementor",
+          "evidence": "meta name=generator: Elementor 4.4.0; /wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.4.0"
+        },
+        {
+          "name": "Wavo (тема)",
+          "evidence": "/wp-content/themes/wavo-child/style.css?ver=1.0.3, body class wp-theme-wavo wp-child-theme-wavo-child"
+        },
+        {
+          "name": "Royal Elementor Addons",
+          "evidence": "/wp-content/plugins/royal-elementor-addons/assets/js/frontend.min.js?ver=1.7.1068"
+        },
+        {
+          "name": "Lottie",
+          "evidence": "классы wpr-lottie-animations с data-json-url в разметке и royal-elementor-addons/assets/js/lib/lottie/lottie.min.js"
+        },
+        {
+          "name": "jQuery",
+          "evidence": "/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        },
+        {
+          "name": "Swiper",
+          "evidence": "/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5"
+        },
+        {
+          "name": "Yoast SEO",
+          "evidence": "комментарий «optimized with the Yoast SEO plugin v28.5», sitemap_index.xml сгенерирован Yoast"
+        },
+        {
+          "name": "W3 Total Cache",
+          "evidence": "комментарий в конце страницы «Performance optimized by W3 Total Cache»"
+        }
+      ],
+      "observations": [
+        "Приветствие на первом экране набрано не текстом, а пятью отдельными SVG-картинками — по слову в каждой: hi, there, i, am, diego.",
+        "Блок «Fragments of me» — сетка из семи плиток, у каждой свой отдельный скрипт: в одной печатается мини-терминал с командами вроде pnpm diegovz@skills init, в другой стоит плеер с любимым треком автора, ещё одна рассказывает, как он начинал иллюстратором.",
+        "В подвале встроены крестики-нолики с приглашением «Can you beat me?» и тремя звуками: на ход, на победу и на поражение.",
+        "Указатель мыши заменён своим набором курсоров, а подсказки вроде «My fav song of my fav game :)» следуют за мышью.",
+        "В шапке идут живые данные о Мадриде: часы по часовому поясу Europe/Madrid и температура из открытого сервиса open-meteo.",
+        "Внизу страницы — счётчик посетителей (567 058) и пометка, что это пятая версия портфолио.",
+        "Раздел Readings — длинный список книг, следом блок наград и упоминаний: Awwwards, CSS Design Awards, Mobbin, Save Design и другие площадки."
+      ],
+      "notes": "Смотреть первый экран с приветствием и блок «Fragments of me»: семь плиток со своими мини-интерактивами — терминал, плеер, история о начале карьеры. Внизу можно сыграть с автором партию в крестики-нолики.",
+      "facts": {
+        "https": true,
+        "country": "Испания, Мадрид",
+        "author": "Диего Вильяроэль — продуктовый дизайнер",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Home — Diegovz",
+          "title_len": 14,
+          "description": "Hi, I’m Diego — Senior Design Leader with 15+ years crafting global digital products. Discover more at diegovz.com.",
+          "description_len": 115,
+          "og": true,
+          "sitemap": "https://diegovz.com/sitemap_index.xml — пять карт: записи, страницы, проекты, рубрики, авторы",
+          "robots": "есть: User-agent: *, Disallow: (пусто, индексация открыта), Sitemap: https://diegovz.com/sitemap_index.xml",
+          "structured_data": true
+        },
+        "links": {
+          "checked": 5,
+          "broken": []
+        },
+        "contacts": "Почты и телефона на главной нет; связи — профили Instagram (diegovzcom), LinkedIn, X (diegovz_com) и Medium (@diegovz)",
+        "legal": "Нет: ни политики конфиденциальности, ни условий использования, ни строки копирайта в подвале",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

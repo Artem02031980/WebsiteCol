@@ -396,7 +396,23 @@ function card(site) {
   </article>`;
 }
 
+const FACET_ICONS = {
+  cat: 'fa-layer-group',
+  sub: 'fa-sitemap',
+  aud: 'fa-users',
+  type: 'fa-window-maximize',
+  style: 'fa-palette',
+  tech: 'fa-magic',
+  stack: 'fa-code',
+  mode: 'fa-adjust',
+  hue: 'fa-tint',
+  lang: 'fa-language',
+  country: 'fa-globe',
+  link: 'fa-link'
+};
+
 function facetGroup({ group, title: groupTitle, values }) {
+  const icon = FACET_ICONS[group] || 'fa-filter';
   const items = values
     .map((value) => `<label class="check${value.swatch ? ' check--swatch' : ''}">
           <input type="checkbox" data-group="${group}" data-group-title="${esc(groupTitle)}" data-label="${esc(value.title)}" value="${esc(value.id)}">
@@ -407,7 +423,7 @@ function facetGroup({ group, title: groupTitle, values }) {
 
   if (!items) return '';
   return `<details class="facet">
-      <summary>${esc(groupTitle)}</summary>
+      <summary><i class="fas ${icon} fa-fw facet__icon" aria-hidden="true"></i><span>${esc(groupTitle)}</span></summary>
       <div class="facet__body">
         ${items}
       </div>

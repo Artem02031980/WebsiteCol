@@ -411,6 +411,147 @@ const FACET_ICONS = {
   link: 'fa-link'
 };
 
+/* Иконка каждому приёму: подбирается вручную, по смыслу приёма */
+const TECHNIQUE_ICONS = {
+  'scroll-telling': 'fas fa-scroll',
+  'sticky-sections': 'fas fa-thumbtack',
+  parallax: 'fas fa-layer-group',
+  'horizontal-scroll': 'fas fa-arrows-alt-h',
+  webgl3d: 'fas fa-cube',
+  'custom-cursor': 'fas fa-mouse-pointer',
+  preloader: 'fas fa-spinner',
+  'page-transitions': 'fas fa-exchange-alt',
+  sound: 'fas fa-volume-up',
+  'video-bg': 'fas fa-video',
+  'type-animation': 'fas fa-keyboard',
+  'broken-grid': 'fas fa-th',
+  game: 'fas fa-gamepad',
+  'drag-interaction': 'fas fa-arrows-alt',
+  marquee: 'fas fa-infinity',
+  'micro-interactions': 'fas fa-bolt',
+  'dark-default': 'fas fa-moon',
+  generative: 'fas fa-random',
+  'chat-ui': 'fas fa-comments',
+  'illustration-hand': 'fas fa-pencil-alt',
+  'data-viz': 'fas fa-chart-bar',
+  'click-reveal': 'fas fa-eye',
+  'shader-text': 'fas fa-magic',
+  'vector-animation': 'fas fa-film'
+};
+
+/* Служебные записи в списке технологий без собственной иконки */
+const TECH_ICON_EXACT = {
+  'не подтверждено': 'fas fa-question-circle',
+  'чего нет': 'fas fa-ban',
+  'библиотек анимации нет': 'fas fa-ban',
+  'разрешено политикой, но не подтверждено запросами': 'fas fa-question-circle',
+  'внешние сервисы': 'fas fa-puzzle-piece',
+  'видео и шрифты': 'fas fa-video'
+};
+
+/* Правила иконок для технологий: первое совпадение побеждает.
+   Бренды Font Awesome — где есть настоящий логотип, иначе образ по смыслу. */
+const TECH_ICON_RULES = [
+  [/sentry/i, 'fas fa-bug'],
+  [/yoast|seo|sitemap|json-ld|schema\.org|микроразметка|машиночитаем|\bjson\b/i, 'fas fa-tags'],
+  [/elementor/i, 'fab fa-elementor'],
+  [/wordpress|wpgraphql|wpforms|wp-beginner|woocommerce|w3 total cache/i, 'fab fa-wordpress'],
+  [/shopify/i, 'fab fa-shopify'],
+  [/sass|scss\b/i, 'fab fa-sass'],
+  [/css3\b|css\b|css-маски|css-пружина|токены в css|css variables|css-перемен/i, 'fab fa-css3'],
+  [/html5\b|\bhtml\b|html, css/i, 'fab fa-html5'],
+  [/изображени|lazysizes|ленив/i, 'fas fa-image'],
+  [/шрифт|шрифты|гарнитур|глиф|typeface|\bfonts?\b|\bfont\b|geist|\binter\b|switzer|suisse|söhne|soehne|self-hosted|самохост|webfont|web font|season mix|proxima|oracle|woodland|america|neue|grotesk|sans\b|mono\b/i, 'fas fa-font'],
+  [/иконки|icons|phosphor|material symbols/i, 'fas fa-icons'],
+  [/бандл|сборка сжаты|сжатых ассетов/i, 'fas fa-box-open'],
+  [/рукописн|без фреймворка|свои стили/i, 'fas fa-file-code'],
+  [/react-three|three\.js|threejs|\bthree\b|webgl|glsl|\bogl\b|gltf|draco|ktx2|meshopt|postprocessing|шейдер|сплаты|splat/i, 'fas fa-cube'],
+  [/framer motion|motion \(/i, 'fab fa-react'],
+  [/react|next\.js|next\/|\bnext\b|turbopack/i, 'fab fa-react'],
+  [/vue|nuxt|pinia|vue-router/i, 'fab fa-vuejs'],
+  [/angular/i, 'fab fa-angular'],
+  [/svelte/i, 'fas fa-bolt'],
+  [/astro/i, 'fas fa-rocket'],
+  [/vite|rolldown/i, 'fas fa-bolt'],
+  [/tailwind/i, 'fas fa-wind'],
+  [/figma/i, 'fab fa-figma'],
+  [/dribbble/i, 'fab fa-dribbble'],
+  [/sketch\b/i, 'fab fa-sketch'],
+  [/unity/i, 'fas fa-gamepad'],
+  [/matter\.js|physics/i, 'fas fa-atom'],
+  [/blender|spline|playcanvas|pixi|canvas/i, 'fas fa-cubes'],
+  [/lottie|rive/i, 'fas fa-film'],
+  [/gsap|\bmotion\b|requestanimationframe|intersectionobserver|анимаци/i, 'fas fa-bolt'],
+  [/lenis|scrolltrigger|scroll\b|swiper|embla|barba|pace\.js|taxi\.js|locomotive|скролл|инерцион/i, 'fas fa-arrows-alt-v'],
+  [/vimeo/i, 'fab fa-vimeo-v'],
+  [/video|mux|hls\.js|\bhls\b|av1|h\.264|hevc|\bmp4\b|livekit|видео/i, 'fas fa-video'],
+  [/audio|sound|howler|web audio|звук|аудио/i, 'fas fa-volume-up'],
+  [/аналитика|analytics|ga4|google analytics|gtm|google tag|plausible|posthog|mixpanel|clarity|umami|goatcounter|datadog|hotjar|vwo/i, 'fas fa-chart-line'],
+  [/cookie|consent|onetrust|osano|cookiebot|vanilla-cookieconsent/i, 'fas fa-cookie'],
+  [/pixel|пиксель|viral|affiliate|маркетинг/i, 'fas fa-bullhorn'],
+  [/okendo|judge\.me|отзыв|review/i, 'fas fa-star'],
+  [/klaviyo|mailchimp|email/i, 'fas fa-envelope-open-text'],
+  [/cal\.com/i, 'fas fa-calendar-check'],
+  [/gorgias|zendesk|support/i, 'fas fa-headset'],
+  [/intercom|hubspot|chat|whatsapp|telegram|мессенджер/i, 'fas fa-comments'],
+  [/algolia|elasticsearch|search\b|поиск/i, 'fas fa-search'],
+  [/framer|webflow|tilda|сайт-конструктор/i, 'fas fa-pencil-ruler'],
+  [/mapbox|google maps|places|карт/i, 'fas fa-map-marked-alt'],
+  [/graphql|apollo/i, 'fas fa-project-diagram'],
+  [/supabase|postgres|database|\bredis\b|\bsql\b|basehub/i, 'fas fa-database'],
+  [/cms|sanity|contentful|prismic|datocms|storyblok|craft cms|surface cms/i, 'fas fa-database'],
+  [/firebase/i, 'fas fa-fire'],
+  [/aws|\bs3\b|cloudfront|\bec2\b|amazon/i, 'fab fa-aws'],
+  [/digitalocean|digital ocean/i, 'fab fa-digital-ocean'],
+  [/vercel|netlify|bunny|imgix|cloudinary|cdnjs|cloudflare|google cloud|\bcdn\b/i, 'fas fa-cloud'],
+  [/nginx|apache|openresty|litespeed|hostinger|bluehost|хостинг|hosting|\bserver\b/i, 'fas fa-server'],
+  [/обновлен|update/i, 'fas fa-sync-alt'],
+  [/stripe|paddle|lemon|rewardful|polar|подписк|оплат|subscription|credit/i, 'fas fa-credit-card'],
+  [/formspree|typeform|uppy|filepond|form|форм/i, 'fas fa-clipboard-list'],
+  [/clerk|recaptcha|captcha|auth/i, 'fas fa-user-shield'],
+  [/pwa|service worker/i, 'fas fa-mobile-alt'],
+  [/view transitions/i, 'fas fa-exchange-alt'],
+  [/webhook|rest api|\bapi\b/i, 'fas fa-plug'],
+  [/svg|vector\b/i, 'fas fa-vector-square'],
+  [/shoelace|web components|declarative shadow dom|base ui|design system|дизайн-систем/i, 'fas fa-th-large'],
+  [/openai|gpt|llm|machine learning|ии|агент|yuka/i, 'fas fa-robot'],
+  [/безопасност|security|hsts/i, 'fas fa-shield-alt'],
+  [/жидкост|navier|fluid/i, 'fas fa-water'],
+  [/токены|токен|\(тема\)/i, 'fas fa-palette'],
+  [/рендер/i, 'fas fa-desktop'],
+  [/router/i, 'fas fa-route'],
+  [/node\.js|nodejs|\bnode\b|\bnpm\b/i, 'fab fa-node-js'],
+  [/javascript|\bjs\b|jquery|typescript/i, 'fab fa-js'],
+  [/python/i, 'fab fa-python'],
+  [/\bphp\b/i, 'fab fa-php'],
+  [/\bjava\b/i, 'fab fa-java'],
+  [/ruby|rails/i, 'fas fa-gem'],
+  [/laravel/i, 'fab fa-laravel'],
+  [/drupal/i, 'fab fa-drupal'],
+  [/joomla/i, 'fab fa-joomla'],
+  [/magento/i, 'fab fa-magento'],
+  [/typo3/i, 'fab fa-typo3'],
+  [/tweakpane/i, 'fas fa-sliders-h'],
+  [/fern\b|документац|docs\b/i, 'fas fa-book-open'],
+  [/shiki|syntax/i, 'fas fa-code'],
+  [/github/i, 'fab fa-github'],
+  [/\bgit\b/i, 'fab fa-git'],
+  [/slack/i, 'fab fa-slack']
+];
+
+function techniqueIcon(id) {
+  return TECHNIQUE_ICONS[id] || 'fas fa-magic';
+}
+
+function techIcon(name) {
+  const key = String(name).trim().toLowerCase();
+  if (TECH_ICON_EXACT[key]) return TECH_ICON_EXACT[key];
+  for (const [pattern, icon] of TECH_ICON_RULES) {
+    if (pattern.test(name)) return icon;
+  }
+  return 'fas fa-microchip';
+}
+
 function facetGroup({ group, title: groupTitle, values }) {
   const icon = FACET_ICONS[group] || 'fa-filter';
   const items = values
@@ -696,7 +837,7 @@ function renderSite(site) {
   ${(site.techniques || []).length ? `<section class="site-section site-section--techniques">
     <h2>Приёмы</h2>
     <ul class="tech-list">
-      ${site.techniques.map((id) => `<li><strong>${esc(title(TECHS, id))}</strong></li>`).join('')}
+      ${site.techniques.map((id) => `<li><i class="${techniqueIcon(id)} fa-fw" aria-hidden="true"></i><strong>${esc(title(TECHS, id))}</strong></li>`).join('')}
     </ul>
   </section>` : ''}
 
@@ -732,7 +873,7 @@ function renderSite(site) {
   ${(site.tech || []).length ? `<section class="site-section site-section--tech">
     <h2>Технологии</h2>
     <ul class="tech-list">
-      ${site.tech.map((item) => `<li><strong>${esc(displayTechName(item.name))}</strong></li>`).join('')}
+      ${site.tech.map((item) => `<li><i class="${techIcon(item.name)} fa-fw" aria-hidden="true"></i><strong>${esc(displayTechName(item.name))}</strong></li>`).join('')}
     </ul>
   </section>` : ''}
 </article>

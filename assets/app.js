@@ -558,6 +558,63 @@
     });
   });
 
+  /* ---------- Плавное раскрытие фильтров ---------- */
+
+  function setupFacetAccordions() {
+    var facets = Array.prototype.slice.call(document.querySelectorAll('.facet'));
+    if (!facets.length) return;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    facets.forEach(function (facet) {
+      var summary = facet.querySelector('summary');
+      var body = facet.querySelector('.facet__body');
+      if (!summary || !body) return;
+
+      summary.addEventListener('click', function (event) {
+        event.preventDefault();
+        if (reduceMotion) {
+          facet.open = !facet.open;
+          return;
+        }
+        if (facet.getAttribute('data-facet-animating') === 'true') return;
+
+        var opening = !facet.open;
+        facet.setAttribute('data-facet-animating', 'true');
+
+        if (opening) {
+          facet.open = true;
+          body.classList.add('facet__body--animating');
+          body.style.height = '0px';
+          // Принудительный reflow: без него height: 0 → auto не анимируется.
+          void body.offsetHeight;
+          body.style.height = body.scrollHeight + 'px';
+        } else {
+          body.style.height = body.getBoundingClientRect().height + 'px';
+          body.classList.add('facet__body--animating');
+          void body.offsetHeight;
+          body.style.height = '0px';
+        }
+
+        var finished = false;
+        var timer = window.setTimeout(finish, 450);
+        function finish() {
+          if (finished) return;
+          finished = true;
+          window.clearTimeout(timer);
+          body.removeEventListener('transitionend', onTransitionEnd);
+          body.classList.remove('facet__body--animating');
+          body.style.height = '';
+          facet.removeAttribute('data-facet-animating');
+          if (!opening) facet.open = false;
+        }
+        function onTransitionEnd(transitionEvent) {
+          if (transitionEvent.propertyName === 'height') finish();
+        }
+        body.addEventListener('transitionend', onTransitionEnd);
+      });
+    });
+  }
+
   /* ---------- Горячие клавиши ---------- */
 
   document.addEventListener('keydown', function (event) {
@@ -580,6 +637,7 @@
 
   /* ---------- Старт ---------- */
 
+  setupFacetAccordions();
   customSort = setupSort(sortSelect);
   readUrl();
   setView(state.view);

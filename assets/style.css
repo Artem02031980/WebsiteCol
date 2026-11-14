@@ -478,9 +478,9 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .site-section--techniques li + li { margin-top: 0; }
 .site-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); align-items: stretch; margin: 0 0 150px; }
 .site-cards .panel { margin: 0; padding-block: 50px; }
-/* Технологии — четыре равные колонки по всей ширине контейнера */
+/* Технологии — три равные колонки по всей ширине контейнера */
 .tech-list {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem 1.5rem; margin: 0; padding: 0; list-style: none;
 }
 .tech-list li { display: flex; align-items: baseline; gap: 0.5rem; margin-top: 0; }

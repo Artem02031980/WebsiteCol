@@ -1,6 +1,14 @@
 # Временное и служебное — не коммитим
 /.tmp/
 
+# Секреты и ключи — в репозиторий не попадают
+.env
+.env.*
+!.env.example
+secrets.*
+*.pem
+*.key
+
 # OS-мусор
 Thumbs.db
 desktop.ini

@@ -541,8 +541,8 @@ function renderCatalog() {
       <div class="search__row">
         <input class="search__input" id="q" type="search" autocomplete="off"
                placeholder="Название, домен, описание, приём, технология…">
-        <button class="btn btn--ghost" type="button" id="copy-link">Скопировать подборку</button>
-        <button class="btn btn--ghost" type="button" id="reset">Сбросить всё</button>
+        <button class="btn btn--ghost" type="button" id="copy-link"><i class="fas fa-link fa-fw" aria-hidden="true"></i><span class="btn__label">Скопировать подборку</span></button>
+        <button class="btn btn--ghost" type="button" id="reset"><i class="fas fa-undo fa-fw" aria-hidden="true"></i><span class="btn__label">Сбросить всё</span></button>
       </div>
     </div>
     <div class="toolbar__row">

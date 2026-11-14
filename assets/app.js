@@ -524,12 +524,13 @@
   });
 
   if (copyButton) {
+    var copyLabel = copyButton.querySelector('.btn__label') || copyButton;
     copyButton.addEventListener('click', function () {
       var url = location.href;
       var done = function () {
-        var old = copyButton.textContent;
-        copyButton.textContent = 'Ссылка скопирована';
-        setTimeout(function () { copyButton.textContent = old; }, 2000);
+        var old = copyLabel.textContent;
+        copyLabel.textContent = 'Ссылка скопирована';
+        setTimeout(function () { copyLabel.textContent = old; }, 2000);
       };
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(url).then(done, function () { window.prompt('Скопируйте ссылку:', url); });

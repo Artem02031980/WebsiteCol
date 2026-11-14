@@ -88,7 +88,7 @@
   актуальный `main` — https://github.com/Artem02031980/WebsiteCol/commits/main.
   Локальный `main` и `origin/main` синхронизированы; точный HEAD — по ссылке.
   После каждой законченной партии — коммит и `git push origin main`.
-- **Git:** последний содержательный коммит — `ec45ff0` (локальный Font Awesome);
+- **Git:** последний содержательный коммит — `afdf48a` (иконки Font Awesome у фильтров);
   снимок состояния — отдельным коммитом после него.
 - **Проверка ссылок (30.10–11.11.2026):** 62 ответа 200; xAI, Inflight, Conductor, Square Kiosk
   и Attio — 403 Cloudflare, Sasha Martynchuk — Cloudflare challenge/fetch error. Все 68 сайтов

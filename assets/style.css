@@ -517,7 +517,8 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .feedback__name { margin: 0 0 var(--space-1); }
 .feedback__about { margin: 0 0 var(--space-2); color: var(--text-muted); }
 .feedback__contacts { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; margin: 0; }
-.feedback__contacts a { font-weight: 600; }
+.feedback__contacts a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; text-decoration: none; }
+.feedback__contacts a:hover { text-decoration: none; }
 
 /* ===== Подвал: одна строка ===== */
 .footer {

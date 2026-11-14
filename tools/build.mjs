@@ -299,7 +299,7 @@ function header(prefix) {
 function footer() {
   return `<footer class="footer">
   <div class="container">
-    <p>${sites.length} ${plural(sites.length, ['сайт', 'сайта', 'сайтов'])} в подборке · Личная коллекция Хмелёва Артёма</p>
+    <p>${sites.length} ${plural(sites.length, ['сайт', 'сайта', 'сайтов'])} в подборке · Личная коллекция Артёма Хмелёва</p>
   </div>
 </footer>`;
 }
@@ -613,9 +613,7 @@ function feedbackSection() {
     <h2 class="feedback__name">Артём Хмелёв</h2>
     <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
     <p class="feedback__contacts">
-      <a href="tel:+79312079086">+7 (931) 207-90-86</a>
-      <a href="mailto:artem0203@yandex.ru">artem0203@yandex.ru</a>
-      <a href="https://t.me/artem0203" target="_blank" rel="noopener noreferrer">@artem0203 (Telegram)</a>
+      <a href="mailto:artem0203@yandex.ru"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i>artem0203@yandex.ru</a>
     </p>
   </div>
 </section>`;

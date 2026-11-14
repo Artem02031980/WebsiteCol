@@ -304,7 +304,7 @@ function footer() {
 </footer>`;
 }
 
-function pageShell({ prefix, title: pageTitle, description, body }) {
+function pageShell({ prefix, title: pageTitle, description, body, bodyClass }) {
   return `<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -321,7 +321,7 @@ function pageShell({ prefix, title: pageTitle, description, body }) {
 <meta property="og:description" content="${esc(description)}">
 <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body${bodyClass ? ` class="${esc(bodyClass)}"` : ''}>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
 ${header(prefix)}
 <main id="main">
@@ -598,6 +598,7 @@ function renderCatalog() {
     prefix: '.',
     title: 'Коллекция сайтов — каталог референсов',
     description: `Личная коллекция сайтов с разбором каждого: ${sites.length} сайтов, поиск по категориям, стилям, приёмам, технологиям и палитрам, отдельная страница на каждый сайт.`,
+    bodyClass: 'page--catalog',
     body
   });
 }

@@ -267,6 +267,9 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 
 /* ===== Раскладка каталога ===== */
 .layout { display: grid; grid-template-columns: 300px 1fr; gap: var(--space-4); align-items: start; margin-top: var(--space-5); }
+/* На главной — большой воздушный отступ от каталога до подвала */
+.page--catalog main { padding-bottom: 400px; }
+.page--catalog main > .section:last-child { padding-bottom: 0; }
 
 /* ===== Фасеты ===== */
 .facets {

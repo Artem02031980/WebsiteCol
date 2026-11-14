@@ -297,7 +297,7 @@ select:focus, .field__input:focus { border-color: var(--accent); }
 .facet__body { padding: 0 0.7rem var(--space-2); display: grid; gap: 0.15rem; }
 .facet__body--animating {
   overflow: hidden;
-  transition: height 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: height 500ms cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 @media (prefers-reduced-motion: reduce) {
   .facet__body--animating { transition: none; }

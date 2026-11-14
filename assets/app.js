@@ -576,41 +576,46 @@
           facet.open = !facet.open;
           return;
         }
-        if (facet.getAttribute('data-facet-animating') === 'true') return;
 
-        var opening = !facet.open;
-        facet.setAttribute('data-facet-animating', 'true');
+        var previous = facet._facetAnim;
+        var currentlyOpen = previous ? previous.target === 'open' : facet.open;
+        var desiredOpen = !currentlyOpen;
+        var startHeight = previous
+          ? body.getBoundingClientRect().height
+          : (facet.open ? body.getBoundingClientRect().height : 0);
 
-        if (opening) {
-          facet.open = true;
-          body.classList.add('facet__body--animating');
-          body.style.height = '0px';
-          // Принудительный reflow: без него height: 0 → auto не анимируется.
-          void body.offsetHeight;
-          body.style.height = body.scrollHeight + 'px';
-        } else {
-          body.style.height = body.getBoundingClientRect().height + 'px';
-          body.classList.add('facet__body--animating');
-          void body.offsetHeight;
-          body.style.height = '0px';
+        /* Прерывание не сбрасывает высоту в ноль: новый переход начинается
+           с текущей видимой высоты и поэтому не даёт рывка. */
+        if (previous) {
+          window.clearTimeout(previous.timer);
+          body.removeEventListener('transitionend', previous.onEnd);
+          facet._facetAnim = null;
         }
 
-        var finished = false;
-        var timer = window.setTimeout(finish, 450);
+        if (desiredOpen) facet.open = true;
+        body.classList.add('facet__body--animating');
+        body.style.height = startHeight + 'px';
+        // Принудительный reflow: без него height не анимируется.
+        void body.offsetHeight;
+        body.style.height = (desiredOpen ? body.scrollHeight : 0) + 'px';
+
+        var animation = { target: desiredOpen ? 'open' : 'closed', timer: 0, onEnd: null };
         function finish() {
-          if (finished) return;
-          finished = true;
-          window.clearTimeout(timer);
-          body.removeEventListener('transitionend', onTransitionEnd);
+          if (facet._facetAnim !== animation) return;
+          window.clearTimeout(animation.timer);
+          body.removeEventListener('transitionend', onEnd);
+          facet._facetAnim = null;
           body.classList.remove('facet__body--animating');
           body.style.height = '';
-          facet.removeAttribute('data-facet-animating');
-          if (!opening) facet.open = false;
+          facet.open = desiredOpen;
         }
-        function onTransitionEnd(transitionEvent) {
+        function onEnd(transitionEvent) {
           if (transitionEvent.propertyName === 'height') finish();
         }
-        body.addEventListener('transitionend', onTransitionEnd);
+        animation.onEnd = onEnd;
+        facet._facetAnim = animation;
+        body.addEventListener('transitionend', onEnd);
+        animation.timer = window.setTimeout(finish, 650);
       });
     });
   }

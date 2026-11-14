@@ -10,6 +10,8 @@
   в `screens/`; каталог `index.html` и 68 страниц-разборов в `pages/`.
 - **Документация**: `AGENTS.md`, `README.md`, `STATE.md`; роли сессий, передача работы
   и шаблон разбора нового сайта — в `docs/WORKFLOW.md`.
+- **Font Awesome 5.15.3 Free** лежит локально: `assets/fontawesome.css`, OTF в
+  `assets/fonts/fontawesome/` (шрифты SIL OFL 1.1); классы `.fas`, `.far`, `.fab`.
 - **Дизайн**: светлая тема, адаптивность 360–1920 px, крупный логотип 430 px в шапке,
   свёрнутые фильтры, сортировка «по номеру с конца» по умолчанию, «Список» с изображением
   в половину карточки, лаконичный футер
@@ -86,7 +88,7 @@
   актуальный `main` — https://github.com/Artem02031980/WebsiteCol/commits/main.
   Локальный `main` и `origin/main` синхронизированы; точный HEAD — по ссылке.
   После каждой законченной партии — коммит и `git push origin main`.
-- **Git:** последний содержательный коммит — `d5e0854` (розовый акцент в палитре Diego);
+- **Git:** последний содержательный коммит — `ec45ff0` (локальный Font Awesome);
   снимок состояния — отдельным коммитом после него.
 - **Проверка ссылок (30.10–11.11.2026):** 62 ответа 200; xAI, Inflight, Conductor, Square Kiosk
   и Attio — 403 Cloudflare, Sasha Martynchuk — Cloudflare challenge/fetch error. Все 68 сайтов

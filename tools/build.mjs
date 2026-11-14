@@ -592,7 +592,8 @@ function renderCatalog() {
       </div>
     </div>
   </div>
-</section>`;
+</section>
+${feedbackSection()}`;
 
   return pageShell({
     prefix: '.',

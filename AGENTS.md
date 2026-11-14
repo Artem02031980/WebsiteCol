@@ -19,6 +19,8 @@ data/taxonomy.json                        справочники: категор
 data/palette.json                         палитры из скриншотов (генерируется)
 data/SCHEMA.md                            описание всех полей данных
 assets/style.css, assets/app.js           оформление и логика каталога (правятся руками)
+assets/fontawesome.css                    локальные иконки Font Awesome (классы .fa*)
+assets/fonts/fontawesome/                 OTF-шрифты Font Awesome 5.15.3 Free + лицензия
 assets/logo.svg, assets/favicon.svg       логотип (обязателен на каждой странице)
 tools/*.mjs                               сборка, проверки, замеры
 README.md                                 описание проекта для человека
@@ -114,6 +116,10 @@ docs/WORKFLOW.md                          пять сессий и шаблон 
 - **Скруглений нет.** `border-radius` в CSS и атрибут `rx` в SVG запрещены — все углы прямые.
   Новых скруглений не добавлять: кнопки, карточки, панели, чипы, бейджи, поля и логотип
   остаются квадратными.
+- **Font Awesome — локально.** `assets/fontawesome.css` и OTF-файлы в `assets/fonts/fontawesome/`
+  (Font Awesome Free 5.15.3, шрифты SIL OFL 1.1). Внешние CDN и сетевые подключения шрифтов
+  запрещены. Иконки: `<i class="fas fa-heart" aria-hidden="true"></i>`; для обычных —
+  `.far`, для брендов — `.fab`.
 
 ## Команды
 

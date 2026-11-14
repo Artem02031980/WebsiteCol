@@ -46,6 +46,11 @@ const readJsonFile = (rel) => {
 const REQUIRED = [
   'index.html',
   'assets/style.css', 'assets/app.js', 'assets/favicon.svg', 'assets/logo.svg',
+  'assets/fontawesome.css',
+  'assets/fonts/fontawesome/fa-brands-400.otf',
+  'assets/fonts/fontawesome/fa-regular-400.otf',
+  'assets/fonts/fontawesome/fa-solid-900.otf',
+  'assets/fonts/fontawesome/LICENSE.txt',
   'data/sites.json', 'data/taxonomy.json', 'data/palette.json', 'data/SCHEMA.md',
   'tools/build.mjs', 'tools/validate.mjs', 'screens'
 ];

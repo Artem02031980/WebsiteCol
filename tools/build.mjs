@@ -315,6 +315,7 @@ function pageShell({ prefix, title: pageTitle, description, body }) {
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="${prefix}/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${prefix}/assets/style.css">
+<link rel="stylesheet" href="${prefix}/assets/fontawesome.css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(pageTitle)}">
 <meta property="og:description" content="${esc(description)}">

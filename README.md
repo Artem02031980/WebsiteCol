@@ -40,6 +40,8 @@ data/taxonomy.json                        справочники категор�
 data/palette.json                         палитры, измеренные из скриншотов (генерируется)
 data/SCHEMA.md                            описание всех полей
 assets/style.css                          токены и вёрстка: светлая тема, адаптивность
+assets/fontawesome.css                    локальные иконки Font Awesome
+assets/fonts/fontawesome/                 Font Awesome 5.15.3 Free: OTF и лицензия
 assets/app.js                             поиск, фильтры, сортировка, состояние в адресе
 assets/logo.svg, assets/favicon.svg       логотип и иконка
 tools/build.mjs                           data/*.json → страницы

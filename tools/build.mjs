@@ -425,7 +425,9 @@ function facetGroup({ group, title: groupTitle, values }) {
   return `<details class="facet">
       <summary><i class="fas ${icon} fa-fw facet__icon" aria-hidden="true"></i><span>${esc(groupTitle)}</span></summary>
       <div class="facet__body">
-        ${items}
+        <div class="facet__list">
+          ${items}
+        </div>
       </div>
     </details>`;
 }

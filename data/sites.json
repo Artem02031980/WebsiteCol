@@ -8458,6 +8458,400 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "069",
+      "slug": "rodina",
+      "name": "Rodina",
+      "url": "https://rodinahotels.ru/",
+      "domain": "rodinahotels.ru",
+      "screenshot": "069.webp",
+      "added": "2026-11-15",
+      "link_state": "alive",
+      "description_user": "Люксовый изящный сайт альянса российских отелей. Плавные анимации, красочные снимки и динамичная вёрстка.",
+      "description_own": "Сайт альянса RODINA Hotels Resorts — отелей, клубов здоровья, спа и ресторанов по России. Главная построена как история в главах: гигантский логотип на первом экране, философия гостеприимства, каталог объектов и контакты.",
+      "description_short": "Сайт альянса отелей и клубов здоровья RODINA",
+      "categories": [
+        "travel"
+      ],
+      "subcategories": [
+        "hotel"
+      ],
+      "audience": [
+        "hotels",
+        "consumers"
+      ],
+      "site_type": "corporate",
+      "styles": [
+        "luxury",
+        "editorial"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "micro-interactions",
+        "video-bg"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#80A3C4",
+          "#F8F4EC",
+          "#796B56",
+          "#A9A496",
+          "#B3BEC3",
+          "#5B4B30"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Tilda",
+          "evidence": "разметка и скрипты static.tildacdn.com, tilda-cms-1.0.min.js"
+        },
+        {
+          "name": "Tilda Animation",
+          "evidence": "tilda-animation-2.0.min.js; в разметке 568 элементов с data-animate"
+        },
+        {
+          "name": "Tilda Zero",
+          "evidence": "tilda-zero-1.2.min.js"
+        },
+        {
+          "name": "Tilda Slider",
+          "evidence": "tilda-slds-1.4.min.js и разметка слайдера Tilda"
+        },
+        {
+          "name": "jQuery",
+          "evidence": "static.tildacdn.com/js/jquery-1.10.2.min.js"
+        },
+        {
+          "name": "Hammer.js",
+          "evidence": "static.tildacdn.com/js/hammer.min.js"
+        }
+      ],
+      "observations": [
+        "Первый экран — гигантское слово RODINA, выходящее за края, поверх фотографии дома с колоннами и синего неба.",
+        "Шапка минимальная: MENU, переключатель РУ / ENG / 中文, логотип по центру и телефон справа.",
+        "Текст разбит на главы: «Искусство открывать Родину заново», «Культура заботы», «Собрание впечатлений».",
+        "Альянс перечисляет 6 клубов здоровья, 12 ресторанов и 9 отелей — от Сочи и Владивостока до Москвы и Кызыла.",
+        "Собрано на Tilda: в разметке больше 500 анимируемых блоков, подключены Tilda Animation, Tilda Zero и слайдер Tilda.",
+        "Есть фоновое видео и cookie-баннер; контакты — почта, телефон и адрес в Москве."
+      ],
+      "notes": "Смотреть первый экран с огромным RODINA и главы о философии; затем — каталог объектов альянса.",
+      "facts": {
+        "https": true,
+        "country": "Россия, Москва",
+        "author": "RODINA Hotels Resorts",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "RODINA Альянс Отелей и Клубов Здоровья - официальный сайт",
+          "title_len": 56,
+          "description": "Эксклюзивные условия для отдыха и восстановления в лучших отелях и клубах здоровья страны. Забронируйте идеальное место для отдыха уже сегодня",
+          "description_len": 137,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": false
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "sales@rodinahotels.ru, +7 (495) 221-24-20, Москва, ул. Щепкина, 3",
+        "legal": "Политика конфиденциальности и cookie-баннер; реквизитов ООО на главной нет",
+        "analytics": [],
+        "languages": [
+          "multi",
+          "ru",
+          "en",
+          "zh"
+        ]
+      }
+    },
+    {
+      "slot": "070",
+      "slug": "vendredi-society",
+      "name": "Vendredi Society",
+      "url": "https://vendredi-society.com/",
+      "domain": "vendredi-society.com",
+      "screenshot": "070.webp",
+      "added": "2026-11-15",
+      "link_state": "alive",
+      "description_user": "Эффектный красочный сайт французской дизайн-студии. При запуске страницы на весь экран воспроизводится шоурил с таймлайном и кнопками управления.",
+      "description_own": "Сайт французской дизайн-студии Vendredi Society. Главная начинается с полноэкранного шоурила: поверх объёмной скульптурной формы идёт крупный заголовок о синхронизации брендов и аудиторий; видео можно поставить на паузу и промотать по таймлайну.",
+      "description_short": "Сайт французской студии с полноэкранным шоурилом",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "design-studio"
+      ],
+      "audience": [
+        "designers",
+        "agencies",
+        "marketers"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "editorial",
+        "collage",
+        "playful"
+      ],
+      "techniques": [
+        "video-bg",
+        "preloader",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#807D67",
+          "#030301",
+          "#A29E89",
+          "#545240",
+          "#323113",
+          "#676609"
+        ]
+      },
+      "tech": [],
+      "observations": [
+        "Первый экран занимает шоурил: поверх объёмной скульптуры из светлого камня идёт крупный заголовок «Syncing fast-moving brands with fast-moving audiences.»",
+        "В шапке только логотип Vendredi Society, кнопки Menu и Book a call — навигация спрятана.",
+        "У шоурила есть таймлайн и кнопки управления: его можно поставить на паузу и перемотать, не уходя со страницы.",
+        "Палитра сдержанная: оливково-жёлтая сцена, тёмная тень и почти чёрные акценты.",
+        "Сайт французской студии; на первом экране — английский текст."
+      ],
+      "notes": "Смотреть полноэкранный шоурил с таймлайном и управлением, затем — кейсы студии.",
+      "facts": {
+        "https": true,
+        "country": "Франция",
+        "author": "Vendredi Society",
+        "year": null,
+        "mobile": {
+          "viewport_meta": null,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": null,
+          "title_len": null,
+          "description": null,
+          "description_len": null,
+          "og": null,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "071",
+      "slug": "oura-ring-5",
+      "name": "Oura Ring 5",
+      "url": "https://ouraring.com/store/rings/oura-ring-5",
+      "domain": "ouraring.com",
+      "screenshot": "071.webp",
+      "added": "2026-11-15",
+      "link_state": "alive",
+      "description_user": "Сдержанный презентабельный сайт умного кольца.",
+      "description_own": "Страница умного кольца Oura Ring 5 в официальном магазине Oura. Почти пустой первый экран с крупным рендером кольца, минимальная шапка и сдержанная товарная подача.",
+      "description_short": "Товарная страница умного кольца Oura Ring 5",
+      "categories": [
+        "shop"
+      ],
+      "subcategories": [
+        "electronics"
+      ],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "shop",
+      "styles": [
+        "minimal",
+        "luxury"
+      ],
+      "techniques": [
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F4F2F0",
+          "#D0CDCE",
+          "#B3B0B0",
+          "#939090",
+          "#0C0C0C",
+          "#696868"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/chunks/main-app и ecom-website/v1.147.0"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static/chunks"
+        }
+      ],
+      "observations": [
+        "Первый экран — почти пустое тёпло-серое поле, в центре только кольцо Oura Ring 5 в чёрном и серебристом исполнении.",
+        "Шапка минимальная: логотип Oura Ring слева и синяя кнопка Shop Now справа.",
+        "Страница сделана как карточка товара: кольцо показано крупным предметным рендером без декораций.",
+        "Под капотом — Next.js; страница живёт в локализованном разделе /store/rings/oura-ring-5.",
+        "Оформление строит презентабельность на воздухе и сдержанной палитре, а не на ярких блоках."
+      ],
+      "notes": "Смотреть первый экран с крупным рендером кольца и минималистичную подачу товара.",
+      "facts": {
+        "https": true,
+        "country": "Финляндия, Хельсинки",
+        "author": "Oura Health Oy",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Meet Oura Ring 5: Smart Ring for Sleep, Fitness, Health & Recovery | Oura",
+          "title_len": 71,
+          "description": "Meet Oura Ring 5. Now 40% smaller with a titanium design and up to 9 days of battery for sleep, activity, stress, heart health, and recovery. Explore the collection.",
+          "description_len": 156,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "072",
+      "slug": "town",
+      "name": "Town",
+      "url": "https://www.town.com/",
+      "domain": "town.com",
+      "screenshot": "072.webp",
+      "added": "2026-11-15",
+      "link_state": "alive",
+      "description_user": "Тёплый сайт ИИ-ассистента, оформленный умилительными иллюстрациями и хаотичной вёрсткой.",
+      "description_own": "Сайт ИИ-ассистента Town. Главная встречает рукописной иллюстрацией календаря, огромным обрезанным заголовком и тёплой палитрой; дальше — рассказ о том, как Townie работает в почте, календарях, чатах и приложениях.",
+      "description_short": "Сайт ИИ-ассистента с рукописными иллюстрациями",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "consumers",
+        "product-teams"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "collage",
+        "playful"
+      ],
+      "techniques": [
+        "illustration-hand",
+        "broken-grid",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FBFAF8",
+          "#D8BFD0",
+          "#EF9763",
+          "#B4866B",
+          "#D5E2F3",
+          "#8A5F4A"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/immutable/chunks и App Router"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static"
+        },
+        {
+          "name": "Turbopack",
+          "evidence": "чанк turbopack-2_04ewhudzrza.js"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "gtag в разметке страницы"
+        },
+        {
+          "name": "Sentry",
+          "evidence": "упоминания Sentry SDK в скриптах и разметке"
+        }
+      ],
+      "observations": [
+        "Первый экран — рукописная иллюстрация календаря на декабрь: оранжевая шапка, кремовые страницы и лиловая дверца.",
+        "Гигантский обрезанный заголовок «to wo...» выглядит как надпись, вылезающая за экран; рядом — строка запроса «Prepare analytics review for 2pm meeting».",
+        "Меню обычное, но собрано в две группы: Features, Solutions, Routines, Integrations, Pricing.",
+        "Ниже — крупный serif-текст о том, что работа размазана по почте, календарям, чатам и приложениям, а Townie работает во всех них.",
+        "Палитра тёплая: кремовый фон, оранжевый, лиловый и пыльно-розовый в иллюстрации.",
+        "В коде — Next.js с Turbopack, Sentry и Google Analytics 4."
+      ],
+      "notes": "Смотреть первый экран с календарём-иллюстрацией и обрезанным заголовком, затем — рассказ о работе Townie.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Town",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Town | Learns how you work, then gets to work.",
+          "title_len": 45,
+          "description": "The unusually helpful AI work assistant. Your Townie works across inboxes, calendars, chats, and apps, learning your people, projects, and voice.",
+          "description_len": 142,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [
+          "Google Analytics 4",
+          "Sentry"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

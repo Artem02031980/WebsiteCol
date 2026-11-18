@@ -8957,6 +8957,199 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "074",
+      "slug": "evil-martians",
+      "name": "Evil Martians",
+      "url": "https://evilmartians.com/",
+      "domain": "evilmartians.com",
+      "screenshot": "074.webp",
+      "added": "2026-11-18",
+      "link_state": "alive",
+      "description_user": "Вдохновляющий тёмный сайт консалтинговой студии, которая помогает стартапам делать сложные технологические продукты: инструменты для разработчиков, ИИ-сервисы и многое другое. Интересный калькулятор Product Market Fit, который решает сразу две задачи: с одной стороны, вовлекает потенциальных клиентов во взаимодействие, а с другой — наглядно показывает экспертизу студии.",
+      "description_own": "Сайт консалтинговой студии Evil Martians: тёмный первый экран с радаром, огромным названием и оранжевыми акцентами. Отдельная страница PMF Compass — калькулятор продуктового рынка для разработчиков: девять вводных, оценка продуктовых и денежных сигналов, стадия product-market fit и приоритетные рекомендации.",
+      "description_short": "Тёмный сайт консалтинговой студии с PMF-калькулятором",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "dev-studio"
+      ],
+      "audience": [
+        "developers",
+        "product-teams",
+        "agencies"
+      ],
+      "site_type": "corporate",
+      "styles": [
+        "utility-tech",
+        "editorial"
+      ],
+      "techniques": [
+        "custom-cursor",
+        "micro-interactions",
+        "data-viz"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#1A0210",
+          "#47231F",
+          "#FEFAF0",
+          "#6D3821",
+          "#8D6882",
+          "#FA2106"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Astro",
+          "evidence": "скрипт /_astro/page.B0yHtiQY.js и astro-island в разметке"
+        },
+        {
+          "name": "imgproxy",
+          "evidence": "изображения отдаются с imgproxy.evilmartians.com"
+        }
+      ],
+      "observations": [
+        "Первый экран почти чёрный, с фиолетовым отливом: огромное EVIL MARTIANS, оранжевый подзаголовок и кнопка Hire Martians.",
+        "За заголовком — радар с подписями целей: сократить time to first value, улучшить конверсию в платных, поднять net revenue retention, улучшить квалификацию лидов и органический приток.",
+        "PMF Compass — отдельная страница: девять вводных (категория, go-to-market, ARR, time to first value, D7 retention, annual logo retention, organic signup, free-to-paid, NRR).",
+        "Калькулятор отдельно оценивает продуктовые и денежные сигналы, определяет стадию product-market fit и выдаёт приоритетные рекомендации.",
+        "Слева — SERVICES, CLIENTS, PRODUCTS, OPEN SOURCE, BLOG, EVENTS, PODCAST, CAREERS; справа — соцсети и поиск.",
+        "Собрано на Astro, картинки идут через imgproxy, аналитика — Google Tag Manager."
+      ],
+      "notes": "Смотреть тёмный первый экран с радаром и пройти PMF Compass: девять вводных, стадия и рекомендации.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Evil Martians",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Evil Martians — product development consultancy for developer tools",
+          "title_len": 67,
+          "description": "Evil Martians is a developer tools consultancy that helps startups build AI agents, AI-native products, scale infrastructure, and reach product-market fit",
+          "description_len": 154,
+          "og": true,
+          "sitemap": "https://evilmartians.com/sitemap-index.xml",
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [
+          "Google Tag Manager"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "075",
+      "slug": "spoony-vu",
+      "name": "Spoony Vu",
+      "url": "https://spoony.work/",
+      "domain": "spoony.work",
+      "screenshot": "075.png",
+      "added": "2026-11-18",
+      "link_state": "alive",
+      "description_user": "Лаконичное информативное портфолио продуктового и бренд-дизайнера Ву Минь Хиеу. Невероятное количество внимания к деталям, микроанимациям, скорости и плавности. Очень приятная работа.",
+      "description_own": "Портфолио Ву Минь Хиеу — продуктового и бренд-дизайнера из Праги. Главная показывает работу как поле свободно разложенных карточек-проектов, а разделы Work, Play и Life дают три разных взгляда: кейсы, эксперименты и заметки. Всё построено на спокойной типографике, точных отступах и мягких микроанимациях.",
+      "description_short": "Портфолио дизайнера Ву Минь Хиеу из Праги",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "designer"
+      ],
+      "audience": [
+        "designers",
+        "agencies"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "micro-interactions",
+        "custom-cursor",
+        "page-transitions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FAFAFA",
+          "#1B1B1D",
+          "#D3D3D3",
+          "#414646",
+          "#6B6F6D",
+          "#B2B1B2"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/chunks/main-app и app/(portfolio)/page"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static/chunks"
+        },
+        {
+          "name": "Vercel Blob",
+          "evidence": "изображения с vljm9tai51cdnvhl.public.blob.vercel-storage.com"
+        }
+      ],
+      "observations": [
+        "Верхняя строка почти пустая: SPOONY.VU слева, WORK / ▲ PLAY / LIFE по центру и «PRAGUE, CZ, — 07:12 PM» справа.",
+        "Проекты разложены как свободное поле карточек: скриншоты интерфейсов, тёмные и светлые плоскости, рядом — макет телефона.",
+        "В работе девять проектов: Avast, Rossum, Wrike, Anchovi, Marinade, OWNIT, MatMat, Attena и Breakout — от веба и AI до крипты и еды.",
+        "В разделе About — короткий рассказ от первого лица: бренд, продукт и системы, которые их связывают; услуги Brand Identity, Product Design, Website Design, AI Development, Art Direction.",
+        "Внизу — почта vu@spoony.work, соцсети, подпись © 2026 и тот же адрес; локация — Прага.",
+        "Собрано на Next.js; изображения отдаются из Vercel Blob."
+      ],
+      "notes": "Смотреть поле карточек на главной и раздел Play: лёгкие микроанимации, точная типографика и плавные переходы.",
+      "facts": {
+        "https": true,
+        "country": "Чехия, Прага",
+        "author": "Ву Минь Хиеу",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Spoony.vu — Brand and product design across crypto and AI",
+          "title_len": 57,
+          "description": "Spoony Vu's portfolio of brand and product design work across crypto and AI — case studies, playground experiments, and notes from life off-screen.",
+          "description_len": 147,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": true
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "vu@spoony.work; X, LinkedIn, Substack, Instagram",
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

@@ -104,6 +104,108 @@
         }
       ]
     },
+    "073.png": {
+      "width": 1492,
+      "height": 905,
+      "meanLum": 0.055,
+      "meanSat": 0.131,
+      "mode": "dark",
+      "hue": "blue",
+      "colors": [
+        {
+          "hex": "#050509",
+          "share": 0.811
+        },
+        {
+          "hex": "#2F3138",
+          "share": 0.074
+        },
+        {
+          "hex": "#C6C6C7",
+          "share": 0.034
+        },
+        {
+          "hex": "#EEEEEF",
+          "share": 0.022
+        },
+        {
+          "hex": "#A09F9F",
+          "share": 0.015
+        },
+        {
+          "hex": "#515458",
+          "share": 0.014
+        }
+      ]
+    },
+    "074.webp": {
+      "width": 1725,
+      "height": 1280,
+      "meanLum": 0.035,
+      "meanSat": 0.87,
+      "mode": "dark",
+      "hue": "purple",
+      "colors": [
+        {
+          "hex": "#1A0210",
+          "share": 0.916
+        },
+        {
+          "hex": "#47231F",
+          "share": 0.03
+        },
+        {
+          "hex": "#FEFAF0",
+          "share": 0.028
+        },
+        {
+          "hex": "#6D3821",
+          "share": 0.01
+        },
+        {
+          "hex": "#8D6882",
+          "share": 0.003
+        },
+        {
+          "hex": "#FA2106",
+          "share": 0.002
+        }
+      ]
+    },
+    "075.png": {
+      "width": 1915,
+      "height": 918,
+      "meanLum": 0.639,
+      "meanSat": 0.026,
+      "mode": "light",
+      "hue": "mono",
+      "colors": [
+        {
+          "hex": "#FAFAFA",
+          "share": 0.634
+        },
+        {
+          "hex": "#1B1B1D",
+          "share": 0.295
+        },
+        {
+          "hex": "#D3D3D3",
+          "share": 0.035
+        },
+        {
+          "hex": "#414646",
+          "share": 0.01
+        },
+        {
+          "hex": "#6B6F6D",
+          "share": 0.008
+        },
+        {
+          "hex": "#B2B1B2",
+          "share": 0.008
+        }
+      ]
+    },
     "004.webp": {
       "width": 1440,
       "height": 900,
@@ -2447,40 +2549,6 @@
         {
           "hex": "#8A5F4A",
           "share": 0.013
-        }
-      ]
-    },
-    "073.png": {
-      "width": 1492,
-      "height": 905,
-      "meanLum": 0.055,
-      "meanSat": 0.131,
-      "mode": "dark",
-      "hue": "blue",
-      "colors": [
-        {
-          "hex": "#050509",
-          "share": 0.811
-        },
-        {
-          "hex": "#2F3138",
-          "share": 0.074
-        },
-        {
-          "hex": "#C6C6C7",
-          "share": 0.034
-        },
-        {
-          "hex": "#EEEEEF",
-          "share": 0.022
-        },
-        {
-          "hex": "#A09F9F",
-          "share": 0.015
-        },
-        {
-          "hex": "#515458",
-          "share": 0.014
         }
       ]
     }

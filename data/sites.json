@@ -8887,6 +8887,7 @@
       ],
       "palette": {
         "mode": "dark",
+        "hue": "mono",
         "colors": [
           "#050509",
           "#2F3138",

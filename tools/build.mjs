@@ -187,7 +187,7 @@ function paletteFor(site) {
   return {
     colors: colors.slice(0, 5),
     mode: (site.palette && site.palette.mode) || (image && image.mode) || null,
-    hue: (image && image.hue) || null,
+    hue: (site.palette && site.palette.hue) || (image && image.hue) || null,
     width: image && image.width,
     height: image && image.height,
     share: image && image.colors ? image.colors.map((c) => c.share) : []

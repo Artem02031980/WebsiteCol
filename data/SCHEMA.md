@@ -30,7 +30,7 @@
 | `site_type` | string | id из `taxonomy.site_types` | да |
 | `styles` | string[] | id из `taxonomy.styles` | да |
 | `techniques` | string[] | id из `taxonomy.techniques` — то, ради чего сайт сохранён (в фильтрах, но не в паспорте) | да |
-| `palette` | object | `{ "mode": "light\|dark\|contrast\|colorful", "colors": ["#RRGGBB"] }` | да |
+| `palette` | object | `{ "mode": "light\|dark\|contrast\|colorful", "hue": "red\|orange\|yellow\|green\|blue\|purple\|mono", "colors": ["#RRGGBB"] }`. `hue` можно указать вручную, если измеренный акцент перекрывает настоящий фон (например, чёрный фон с синей кнопкой) | да |
 | `tech` | array | `[{ "name": "Next.js", "evidence": "файл /_next/static/…" }]` — без доказательства не пишем. Имена пакетов можно писать как есть (`@react-three/drei`): в фильтрах build.mjs сам преобразует их к виду «React (@react-three/drei)». Версии и хвостовые уточнения в фильтре схлопываются: «Astro v6.1.6» и «Astro» — один пункт, на странице название остаётся полным. `evidence` хранится в данных для проверки, но на странице выводится только `name` | нет |
 | `observations` | string[] | 3–7 наблюдений, чем сайт интересен технически или визуально. Писать простым человеческим языком; термины объяснять при первом упоминании | да |
 | `notes` | string | Заметка: что смотреть в этом сайте в первую очередь | да |

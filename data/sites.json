@@ -8852,6 +8852,111 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "073",
+      "slug": "prime-ui",
+      "name": "Prime UI",
+      "url": "https://primeui.com/",
+      "domain": "primeui.com",
+      "screenshot": "073.png",
+      "added": "2026-11-18",
+      "link_state": "alive",
+      "description_user": "Стильный лендинг ИИ-конструктора сайтов. Очень необычный, привлекающий внимание блок с демо-видео.",
+      "description_own": "Лендинг Prime UI — ИИ-конструктора сайтов. Почти чёрный первый экран с рамкой монитора, из которой в разные стороны вылезают руки, и синей кнопкой Play; дальше — демо и объяснение пути от sitemap до готового кода Next.js и Tailwind CSS.",
+      "description_short": "Лендинг ИИ-конструктора сайтов с демо-видео",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools"
+      ],
+      "audience": [
+        "developers",
+        "designers",
+        "agencies"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "utility-tech",
+        "minimal"
+      ],
+      "techniques": [
+        "video-bg",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#050509",
+          "#2F3138",
+          "#C6C6C7",
+          "#EEEEEF",
+          "#A09F9F",
+          "#515458"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/chunks и App Router"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static/chunks"
+        },
+        {
+          "name": "Turbopack",
+          "evidence": "чанк turbopack-0ee_u.3z1q5ep.js"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "Tailwind упоминается в описании страницы и классах разметки"
+        },
+        {
+          "name": "Vercel",
+          "evidence": "URL ассетов содержит параметр ?dpl= — признак деплоя Vercel"
+        }
+      ],
+      "observations": [
+        "Первый экран почти чёрный: в центре — рамка монитора, из которой в разные стороны вылезают руки, а поверх — синяя кнопка Play.",
+        "В шапке только логотип primeui, ссылки Live Demo и Get Started; больше ничего не отвлекает.",
+        "На странице несколько видео: маленькое 190×190, большое 1920×1580 для первого экрана и отдельные ролики для блоков функций.",
+        "Лендинг объясняет продукт по шагам: sitemap → варианты лейаутов → экспорт в Next.js и Tailwind CSS.",
+        "Внизу — FAQ, тарифы и лицензия, ссылки Privacy Policy и Terms of Service, подпись Toolcraft.",
+        "Собран на Next.js с Turbopack и Tailwind CSS."
+      ],
+      "notes": "Смотреть первый экран с монитором и руками, затем — демо-видео и шаги sitemap → layout → экспорт.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Toolcraft",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Prime UI - Build sites fast. Fear no code.",
+          "title_len": 42,
+          "description": "Prime UI is the missing foundation for AI-generated websites. Go from sitemaps and wireframes to production-ready Next.js and Tailwind CSS code in minutes.",
+          "description_len": 155,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": "Privacy Policy и Terms of Service; реквизитов компании на главной нет",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

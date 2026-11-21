@@ -486,7 +486,7 @@ const TECH_ICON_RULES = [
   [/vimeo/i, 'fab fa-vimeo-v'],
   [/video|mux|hls\.js|\bhls\b|av1|h\.264|hevc|\bmp4\b|livekit|видео/i, 'fas fa-video'],
   [/audio|sound|howler|web audio|звук|аудио/i, 'fas fa-volume-up'],
-  [/аналитика|analytics|ga4|google analytics|gtm|google tag|plausible|posthog|mixpanel|clarity|umami|goatcounter|datadog|hotjar|vwo/i, 'fas fa-chart-line'],
+  [/аналитика|analytics|ga4|google analytics|gtm|google tag|plausible|posthog|mixpanel|clarity|umami|goatcounter|datadog|hotjar|vwo|fathom/i, 'fas fa-chart-line'],
   [/cookie|consent|onetrust|osano|cookiebot|vanilla-cookieconsent/i, 'fas fa-cookie'],
   [/pixel|пиксель|viral|affiliate|маркетинг/i, 'fas fa-bullhorn'],
   [/okendo|judge\.me|отзыв|review/i, 'fas fa-star'],

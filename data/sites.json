@@ -9151,6 +9151,296 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "076",
+      "slug": "departure-mono",
+      "name": "Departure Mono",
+      "url": "https://departuremono.com/",
+      "domain": "departuremono.com",
+      "screenshot": "076.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Вдохновляющий сайт моноширинного пиксельного шрифта, который умело подчёркивает его технологичную эстетику. В футере сайта — приятный бонус в виде мини-игры.",
+      "description_own": "Сайт моноширинного пиксельного шрифта Departure Mono от Хелены Чжан. Вместо обычной страницы-презентации — досье из писем, машинных распечаток и прикреплённых карточек, где сам шрифт показывает свой характер. В футере спрятана мини-игра DEPARKANOID.",
+      "description_short": "Сайт пиксельного шрифта Departure Mono с мини-игрой",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "designer"
+      ],
+      "audience": [
+        "designers",
+        "developers"
+      ],
+      "site_type": "promo",
+      "styles": [
+        "retro",
+        "utility-tech",
+        "minimal"
+      ],
+      "techniques": [
+        "game",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F3F3F3",
+          "#D3CABF",
+          "#3F3F3F",
+          "#86817C",
+          "#A6A39C",
+          "#64615E"
+        ]
+      },
+      "tech": [
+        {
+          "name": "p5.js",
+          "evidence": "бандл p5.js v1.10.0 внутри /assets/index-DdPid4ey.js; мини-игра на canvas"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "gtag/js?id=G-1LK1GTNH4X"
+        }
+      ],
+      "observations": [
+        "Заголовок набран гигантскими пиксельными буквами на серой плашке; рядом — версия v1.500 и ссылки DOWNLOAD, GITHUB, DONATE.",
+        "Страница выглядит как научное досье: письмо из Mercury Research Labs, прикреплённая карточка «Evidence of geothermal activity on newly discovered KBOS» и панель доступа к компьютеру.",
+        "Сам шрифт — главный герой: письмо, подписи и мелкие детали набраны Departure Mono, поэтому видно, как он работает в реальном тексте.",
+        "В футере — мини-игра DEPARKANOID на p5.js: отдельная секция с canvas, управление клавиатурой и мышью.",
+        "Шрифт сделан Хеленой Чжан и открыт по лицензии SIL OFL; на сайте есть скачивание, GitHub и донат.",
+        "Собрано как небольшое приложение с p5.js 1.10 и Google Analytics 4."
+      ],
+      "notes": "Смотреть, как шрифт работает в письме-досье, и сыграть в DEPARKANOID в футере.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Хелена Чжан",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Departure Mono",
+          "title_len": 14,
+          "description": "Departure Mono is a monospaced pixel font by Helena Zhang, licensed under the SIL OFL.",
+          "description_len": 86,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "GitHub rektdeckard/departure-mono, донат через Buy Me a Coffee",
+        "legal": "Шрифт — SIL Open Font License; отдельной политики на главной нет",
+        "analytics": [
+          "Google Analytics 4"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "077",
+      "slug": "quest",
+      "name": "Quest",
+      "url": "https://read.quest/",
+      "domain": "read.quest",
+      "screenshot": "077.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Брутальный сайт журнала о научной фантастике и фэнтези.",
+      "description_own": "Сайт онлайн-журнала QUEST о научной фантастике и фэнтези. Первый экран — огромное синее слово POWER поверх фотографии колючего объекта; дальше содержание второго выпуска, статьи и игровая шкала LVL1 / 2/5 QUESTS, которая делает чтение похожим на прохождение квеста.",
+      "description_short": "Брутальный сайт журнала о фантастике QUEST",
+      "categories": [
+        "media"
+      ],
+      "subcategories": [
+        "magazine"
+      ],
+      "audience": [
+        "consumers",
+        "designers"
+      ],
+      "site_type": "media-blog",
+      "styles": [
+        "brutalist",
+        "editorial"
+      ],
+      "techniques": [
+        "micro-interactions",
+        "type-animation"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F0F0F0",
+          "#3B2B20",
+          "#120D0A",
+          "#5F4733",
+          "#0201F8",
+          "#A8A8A8"
+        ]
+      },
+      "tech": [
+        {
+          "name": "SvelteKit",
+          "evidence": "ассеты /_app/immutable/assets и разметка Svelte"
+        },
+        {
+          "name": "Sanity",
+          "evidence": "изображения и иконка с cdn.sanity.io/projects/bjktahug"
+        },
+        {
+          "name": "Adobe Fonts (Typekit)",
+          "evidence": "подключение use.typekit.net/hbt…"
+        },
+        {
+          "name": "Tailwind CSS",
+          "evidence": "утилитарные классы в разметке"
+        }
+      ],
+      "observations": [
+        "В шапке — чёрный блок с логотипом QUEST, приветствие с именем читателя и счётчик LVL1 2/5 QUESTS.",
+        "Первый экран — огромное синее слово POWER поверх фотографии колючего скульптурного объекта; над ним подпись ISSUE NO. 2.",
+        "Содержание набрано антиквой с орнаментами: Weapon of Choice, The Big Switcheroo, The Apotheosis of Aminah, A Canvas Unending и другие материалы.",
+        "Внизу — приглашение «Another bite of the forbidden fruit?» и блок ONLINE с числом читателей.",
+        "QUEST — журнал, который использует научную фантастику и фэнтези, чтобы говорить о политике, культуре и обществе.",
+        "Чтение превращено в квест: уровень, прогресс и задания; контент приходит из Sanity, сайт собран на SvelteKit."
+      ],
+      "notes": "Смотреть огромное синее POWER, набор материалов второго выпуска и игровую шкалу LVL / QUESTS.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "QUEST",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "QUEST",
+          "title_len": 5,
+          "description": "An online magazine using sci-fi and fantasy to investigate politics, culture, and society. We publish literary, visual, and critical work that uses sci-fi and fantasy to reflect the world around us.",
+          "description_len": 198,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "078",
+      "slug": "404s",
+      "name": "404s",
+      "url": "https://404s.design/",
+      "domain": "404s.design",
+      "screenshot": "078.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Онлайн-галерея с оригинальными примерами оформления страницы ошибки 404.",
+      "description_own": "404s — тёмная галерея дизайнерских страниц ошибки 404. Сверху поиск и кнопка Submit a 404, ниже — карточки реальных сайтов с фильтрами по стилю, взаимодействию и индустрии. Можно листать последние, лучшие и случайные примеры; у каждой карточки указан автор и ссылка на живую страницу.",
+      "description_short": "Галерея дизайнерских страниц ошибки 404",
+      "categories": [
+        "archive"
+      ],
+      "subcategories": [
+        "interactive"
+      ],
+      "audience": [
+        "designers",
+        "developers"
+      ],
+      "site_type": "catalog",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "broken-grid",
+        "dark-default",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#1C1C1C",
+          "#F8F7F5",
+          "#3D3D3D",
+          "#D2D2D1",
+          "#B0B0AE",
+          "#8F8F8D"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Astro",
+          "evidence": "скрипты /_astro/page.BsuiZEAU.js и Base.astro"
+        },
+        {
+          "name": "Fathom Analytics",
+          "evidence": "скрипт cdn.usefathom.com/script.js"
+        }
+      ],
+      "observations": [
+        "Тёмная галерея открывается заголовком «The best of the 404» и строкой поиска с подсказкой ⌘K.",
+        "Сверху — кнопка Submit a 404; рядом переключатели Latest, Top 4 и Shuffle.",
+        "Карточки показывают реальные страницы ошибок: Spiral, The Spinoza Journal, Mobbin и десятки других, с именем автора и ссылкой.",
+        "Архив большой: записи с 2024 по 2026 год, фильтры по стилю, взаимодействию и индустрии.",
+        "Внизу — шутливое «New 404s, who dis?» и форма отправки новой страницы с полями сайта, URL, дизайнера и контактов.",
+        "Собрано на Astro, аналитика — Fathom; у карточек есть клавиатурная навигация и горячие клавиши."
+      ],
+      "notes": "Смотреть карточки Spiral и The Spinoza Journal, переключатель Shuffle и форму Submit a 404.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": null,
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "404s — A Curated Gallery of Creative Error Page Designs",
+          "title_len": 55,
+          "description": "A curated gallery of creative 404 error page designs. Browse by style, interaction and industry for inspiration for your next error page.",
+          "description_len": 137,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": "Privacy by FS; отдельной политики на главной нет",
+        "analytics": [
+          "Fathom Analytics"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

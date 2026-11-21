@@ -9441,6 +9441,481 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "079",
+      "slug": "blokdots",
+      "name": "blokdots",
+      "url": "https://blokdots.com/",
+      "domain": "blokdots.com",
+      "screenshot": "079.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Интерактивный лендинг приложения для прототипирования железа без кода. Все можно потрогать, перенастроить и сразу увидеть, как система реагирует на ваши действия.",
+      "description_own": "Лендинг blokdots — приложения, в котором дизайнеры собирают интерактивные прототипы из физических компонентов без программирования. На первом экране плата, провода, сервопривод и телефон разложены как живая схема; рядом плавают панели со значениями датчика и правилами «когда кнопка нажата — серво поворачивается».",
+      "description_short": "Лендинг приложения для прототипов железа без кода",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools"
+      ],
+      "audience": [
+        "designers",
+        "product-teams"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "drag-interaction",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F8FAF9",
+          "#B2C3CC",
+          "#2A2B2A",
+          "#767674",
+          "#DADAD7",
+          "#9465AF"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/chunks/pages/index и __NEXT_DATA__"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js Pages Router и react-рантайм в /_next/static/chunks"
+        }
+      ],
+      "observations": [
+        "Первый экран — живая схема на светлом фоне: плата, провода, сервопривод, кнопка и наклонённый телефон на точечной сетке.",
+        "Поверх схемы плавают панели: «A0 Slide Potentiometer — 11 mm», правило «When Button is pressed 2 times…» и карта значений от 5 до 25 мм.",
+        "Компоненты можно двигать и перенастраивать; значения и правила обновляются прямо на странице.",
+        "Внизу — Download blokdots для macOS и Windows, версия v3.2.2, Figma-плагин и логотипы Google, Breville, Sage, Bosch, IDEO, Designit.",
+        "Сайт собран на Next.js; есть cookie-баннер и отдельная страница Legal and Privacy."
+      ],
+      "notes": "Потянуть компоненты на первом экране и посмотреть, как меняются значения датчика и правила для сервопривода.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "blokdots",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "blokdots",
+          "title_len": 8,
+          "description": "blokdots is a simple to use software to build interactive hardware prototypes without a line of code.",
+          "description_len": 101,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": "Legal and Privacy; cookie-баннер",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "080",
+      "slug": "heerich-js",
+      "name": "heerich.js",
+      "url": "https://meodai.github.io/heerich/",
+      "domain": "meodai.github.io",
+      "screenshot": "080.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Сайт-документация движка, рендерящего воксельные сцены в чистый SVG.",
+      "description_own": "Интерактивная документация heerich.js — маленького движка, который собирает трёхмерные воксельные сцены и превращает их в чистый SVG. Слева — панель камеры и стиля, в центре — большая изометрическая сетка, снизу — пояснения и примеры кода.",
+      "description_short": "Документация движка воксельных сцен heerich.js",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools"
+      ],
+      "audience": [
+        "developers",
+        "designers"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "generative",
+        "data-viz",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FBF4EA",
+          "#CFCBC3",
+          "#A49F98",
+          "#86827A",
+          "#10100F",
+          "#63605B"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Vite",
+          "evidence": "модульные хешированные ассеты /heerich/assets/main-DMAvPoIk.js и modulepreload"
+        },
+        {
+          "name": "Google Fonts",
+          "evidence": "подключение Aboreto и Work Sans через fonts.googleapis.com"
+        }
+      ],
+      "observations": [
+        "Первый экран — огромная изометрическая сетка на кремовом фоне; внизу слева крупно HEERICH.JS и версия 0.14.0.",
+        "Слева панель настроек: камера (oblique, perspective, orthographic, isometric), угол, дистанция, рамка и вращение.",
+        "Вторая панель отвечает за стиль: заливка, обводка, толщина, зазор, контур и цвет обводки.",
+        "Движок строит воксельные объёмы, вырезает пустоты и применяет булевы операции, а результат отдаёт как SVG.",
+        "Вдохновение — геометрические картонные скульптуры Эрвина Хериха; на странице есть примеры кода и пояснения по API.",
+        "Страница собрана как небольшое приложение с Vite и Google Fonts; зависимостей у самого движка нет."
+      ],
+      "notes": "Покрутить камеру и стиль в левой панели, затем прочитать, как воксели превращаются в SVG.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "meodai",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "heerich.js — Interactive Guide",
+          "title_len": 30,
+          "description": "A tiny engine for 3D voxel scenes rendered to SVG. Boolean ops, oblique/perspective cameras, zero dependencies. Inspired by the geometric cardboard sculptures of Erwin Heerich.",
+          "description_len": 176,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "081",
+      "slug": "tinker",
+      "name": "Tinker",
+      "url": "https://www.tinker.com/",
+      "domain": "tinker.com",
+      "screenshot": "081.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Бодрый сайт мобильного приложения с генеративными инструментами. Отличная работа со скролл-анимациями, которые складываются в понятную и наглядную историю.",
+      "description_own": "Лендинг Tinker — мобильного приложения с генеративными инструментами. Огромный заголовок «Siga a inspiração» и телефон с лентой инструментов сразу показывают суть: видео, изображения, 3D-модели и комиксы доступны всем, бесплатно и без опыта. Дальше страница раскладывает инструменты в понятную историю.",
+      "description_short": "Сайт приложения Tinker с генеративными инструментами",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "ai"
+      ],
+      "audience": [
+        "consumers",
+        "designers"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "playful",
+        "minimal"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FCFCFC",
+          "#080605",
+          "#405F4A",
+          "#243127",
+          "#DCD5CD",
+          "#89857F"
+        ]
+      },
+      "tech": [
+        {
+          "name": "React Router",
+          "evidence": "window.__reactRouterContext и SSR-разметка React Router"
+        },
+        {
+          "name": "React",
+          "evidence": "React Router и React-рантайм в разметке"
+        },
+        {
+          "name": "Shopify",
+          "evidence": "ассеты с shopify-assets.shopifycdn.com и вход через Shopify-аккаунт"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "gtag/js?id=G-ZWGY1ZLNR4"
+        }
+      ],
+      "observations": [
+        "Первый экран — огромное «Siga a inspiração» на белом, мини-шапка Tinker и кнопка Obter a app.",
+        "Ниже — телефон с лентой инструментов и зелёная плитка на фоне; рядом клавиатура, блокнот и ремешок.",
+        "Приложение обещает всем бесплатные инструменты для видео, изображений, 3D-моделей, комиксов и других идей.",
+        "В списке инструментов — Product Morph, Concept Explainer, Virtual Try-on, 3D Floor Plan, Selfie Vlog и Product Editorial Shot.",
+        "Внизу — Terms of Service, Privacy Policy, © 2026 Tinker USA и длинный список стран и языков.",
+        "Сайт работает как React Router-приложение на Shopify-инфраструктуре; аналитика — Google Analytics 4."
+      ],
+      "notes": "Смотреть, как огромный заголовок и телефон складываются в историю, затем пролистать список генеративных инструментов.",
+      "facts": {
+        "https": true,
+        "country": "США",
+        "author": "Tinker",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Tinker — Play with AI, bring your ideas to life",
+          "title_len": 47,
+          "description": "Make videos, images, 3D models, comics, and more with AI. Free creative tools to learn by playing. Download on iOS and Android.",
+          "description_len": 127,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "Поддержка через приложение; вход по email или Shopify-аккаунту",
+        "legal": "Terms of Service и Privacy Policy",
+        "analytics": [
+          "Google Analytics 4"
+        ],
+        "languages": [
+          "multi",
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "082",
+      "slug": "forge",
+      "name": "Forge",
+      "url": "https://ui8.ai/forge/",
+      "domain": "ui8.ai",
+      "screenshot": "082.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Лендинг нового веб-конструктора от платформы UI8, заявленного как альтернатива Framer, но с полным владением: сайт и код остаются у автора, без привязки к платформе. Инструмент будет работать с агентами Codex, Claude, Cursor и Gemini. Примечательный приём — зацикленный скролл, из-за которого сайт можно листать по кругу вечно.",
+      "description_own": "Лендинг Forge — визуального слоя для кодирующих агентов от UI8. Вместо обещаний показан сам рабочий интерфейс: окно проекта, список страниц, canvas с макетом и чат с агентом. Forge собирает компоненты и страницы, отдаёт их в проект на диске и позволяет переиспользовать в ChatGPT и Claude; страница листается по кругу.",
+      "description_short": "Лендинг веб-конструктора Forge от UI8",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools"
+      ],
+      "audience": [
+        "developers",
+        "designers",
+        "agencies"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "utility-tech",
+        "minimal"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "sticky-sections",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#1C1C1C",
+          "#E2420C",
+          "#423B3A",
+          "#5D2B1A",
+          "#813F1F",
+          "#615D5B"
+        ]
+      },
+      "tech": [
+        {
+          "name": "React",
+          "evidence": "modulepreload /forge/assets/react-BSVYPvfT.js"
+        },
+        {
+          "name": "Three.js",
+          "evidence": "модули /forge/assets/three.core-C23PchM3.js и three.module-BeKzk-L7.js"
+        },
+        {
+          "name": "Vite",
+          "evidence": "хешированные ассеты /forge/assets/* и modulepreload"
+        }
+      ],
+      "observations": [
+        "Первый экран выглядит как окно настольного приложения: тёмный title bar, вкладки Forge, Dashboard-v1, Dark kit и Test v4.",
+        "Слева Pages и Components, выбран /dashboard; справа — чат New POC Exploration, в центре — тёмный макет «Design, build, ship, repeat.» с оранжевой сферой.",
+        "Forge описывается как визуальный слой для Claude Code, Codex и Cursor: компоненты и инструменты собираются вместе с агентами.",
+        "Проект остаётся на диске и в репозитории, а готовые компоненты можно переиспользовать в ChatGPT и Claude.",
+        "Страница листается по кругу: после последнего блока скролл возвращает к началу, поэтому лендинг можно смотреть бесконечно.",
+        "В разметке подключены React, Three.js и Vite-ассеты; сам интерфейс показан как настоящий продукт, а не как набор скриншотов."
+      ],
+      "notes": "Смотреть окно Forge с /dashboard и оранжевой сферой, затем оценить зацикленный скролл: страница возвращается к началу.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "UI8",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Forge: the visual layer for your coding agents",
+          "title_len": 46,
+          "description": "The visual layer for Claude Code, Codex and Cursor. Build components and tools with your agents, share them with your team and reuse them in ChatGPT.",
+          "description_len": 149,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "083",
+      "slug": "squarespace",
+      "name": "Squarespace",
+      "url": "https://www.squarespace.com/",
+      "domain": "squarespace.com",
+      "screenshot": "083.webp",
+      "added": "2026-11-21",
+      "link_state": "alive",
+      "description_user": "Обновлённый сайт крупного конструктора сайтов. Аккуратная вёрстка, выверенный дизайн, чёткий и внятный рассказ о продукте.",
+      "description_own": "Обновлённый сайт Squarespace — конструктора сайтов для бизнеса, портфолио и магазинов. На первом экране фотография мастерской, заросшей растениями, и крупное «A website makes it real»; ниже плавают примеры готовых сайтов — от цветочного магазина Capsula до мебельной студии. Дальше — продукты, шаблоны, AI-конструктор и истории клиентов.",
+      "description_short": "Обновлённый сайт конструктора Squarespace",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools"
+      ],
+      "audience": [
+        "consumers",
+        "agencies"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "video-bg",
+        "scroll-telling",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#12110D",
+          "#2F2F27",
+          "#4F5140",
+          "#D2CDC0",
+          "#969287",
+          "#737161"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Squarespace",
+          "evidence": "платформа Squarespace: ассеты assets.squarespace.com и разметка конструктора"
+        }
+      ],
+      "observations": [
+        "Первый экран — полноэкранное фото мастерской с растениями и крупное «A website makes it real» по центру.",
+        "Сверху — логотип Squarespace, Products / Solutions / Resources, Log In и белая кнопка Get Started.",
+        "Поверх фото плавают примеры сайтов: цветочный Capsula с PLANTS, FLOWERS & COFFEE, тёмная музыкальная страница, мебельная студия.",
+        "Сайт рассказывает о конструкторе для сайтов, магазинов, портфолио и бизнеса; обещает бесплатный старт без карты.",
+        "В футере — переключатели языка и валюты, юридические документы и © 2003–2026 Squarespace, Inc.",
+        "Страница собрана на платформе Squarespace; в разметке много контента о шаблонах, AI-конструкторе и инструментах для бизнеса."
+      ],
+      "notes": "Смотреть первый экран с фотографией мастерской и плавающими примерами сайтов, затем — рассказ о продуктах и шаблонах.",
+      "facts": {
+        "https": true,
+        "country": "США, Нью-Йорк",
+        "author": "Squarespace, Inc.",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Website Builder – Easily Create Your Own Website — Squarespace",
+          "title_len": 62,
+          "description": "Create a website and grow your business with a free Squarespace trial. Start with customizable website templates, AI website builder tools, or a domain name.",
+          "description_len": 157,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": "Terms, Privacy, Data Privacy, EU Legal, SCTA Disclosure и другие документы в футере",
+        "analytics": [],
+        "languages": [
+          "multi",
+          "en"
+        ]
+      }
     }
   ]
 }

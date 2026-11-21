@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>heerich.js — сайт в коллекции</title>
+<meta name="description" content="Документация движка воксельных сцен heerich.js">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/fontawesome.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="heerich.js — сайт в коллекции">
+<meta property="og:description" content="Документация движка воксельных сцен heerich.js">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="../index.html" aria-label="Коллекция сайтов — на главную">
+      <img src="../assets/logo.svg" alt="Коллекция сайтов" width="430" height="86" fetchpriority="high">
+    </a>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs container container--narrow" aria-label="Хлебные крошки">
+  <ol>
+    <li><a href="../index.html">Главная</a></li>
+    <li>heerich.js</li>
+  </ol>
+</nav>
+
+<article class="container container--narrow">
+  <header class="site-head">
+    <h1>heerich.js</h1>
+    <ul class="taglist">
+      <li><span class="tag tag--g-type">Лендинг</span></li>
+      <li><span class="tag tag--g-category">Сервисы и приложения</span></li>
+      <li><span class="tag tag--g-subcategory">Инструменты разработчика</span></li>
+      <li><span class="tag tag--g-audience">Разработчикам</span></li>
+      <li><span class="tag tag--g-audience">Дизайнерам</span></li>
+      <li><span class="tag tag--g-style">Минимализм</span></li>
+      <li><span class="tag tag--g-style">Утилитарный техно</span></li>
+      <li><span class="tag tag--g-mode tag--mode-light">Светлая тема</span></li>
+      <li><span class="tag tag--g-hue tag--hue-mono">Нейтральный фон</span></li>
+      <li><span class="tag tag--g-technique">Генеративная графика</span></li>
+      <li><span class="tag tag--g-technique">Визуализация данных</span></li>
+      <li><span class="tag tag--g-technique">Микроанимации</span></li>
+      <li><span class="tag tag--g-tech">Vite</span></li>
+      <li><span class="tag tag--g-tech">Google Fonts</span></li>
+      <li><span class="tag tag--g-lang">Английский язык</span></li>
+      <li><span class="tag tag--status tag--active">Действующий сайт</span></li>
+    </ul>
+    <p class="site-head__url"><a href="https://meodai.github.io/heerich/" target="_blank" rel="noopener noreferrer">https://meodai.github.io/heerich/</a></p>
+  </header>
+
+  <figure class="shot">
+      <img src="../screens/080.webp" alt="Скриншот главной страницы heerich.js"
+           width="1606" height="1097" decoding="async" fetchpriority="high">
+    </figure>
+
+  <div class="site-intro">
+    <section class="site-section">
+      <h2>Что это</h2>
+      <p>Интерактивная документация heerich.js — маленького движка, который собирает трёхмерные воксельные сцены и превращает их в чистый SVG. Слева — панель камеры и стиля, в центре — большая изометрическая сетка, снизу — пояснения и примеры кода. Сайт-документация движка, рендерящего воксельные сцены в чистый SVG.</p>
+    </section>
+
+    <section class="site-section">
+      <h2>Что смотреть в первую очередь</h2>
+      <p>Покрутить камеру и стиль в левой панели, затем прочитать, как воксели превращаются в SVG.</p>
+    </section>
+  </div>
+
+  <section class="site-section site-section--techniques">
+    <h2>Приёмы</h2>
+    <ul class="tech-list">
+      <li><i class="fas fa-random fa-fw" aria-hidden="true"></i><strong>Генеративная графика</strong></li><li><i class="fas fa-chart-bar fa-fw" aria-hidden="true"></i><strong>Визуализация данных</strong></li><li><i class="fas fa-bolt fa-fw" aria-hidden="true"></i><strong>Микроанимации</strong></li>
+    </ul>
+  </section>
+
+  <section class="site-section site-section--observations">
+    <h2>Интересные факты</h2>
+    <ol><li>Первый экран — огромная изометрическая сетка на кремовом фоне; внизу слева крупно HEERICH.JS и версия 0.14.0.</li><li>Слева панель настроек: камера (oblique, perspective, orthographic, isometric), угол, дистанция, рамка и вращение.</li><li>Вторая панель отвечает за стиль: заливка, обводка, толщина, зазор, контур и цвет обводки.</li><li>Движок строит воксельные объёмы, вырезает пустоты и применяет булевы операции, а результат отдаёт как SVG.</li><li>Вдохновение — геометрические картонные скульптуры Эрвина Хериха; на странице есть примеры кода и пояснения по API.</li><li>Страница собрана как небольшое приложение с Vite и Google Fonts; зависимостей у самого движка нет.</li></ol>
+  </section>
+
+  <div class="site-cards">
+    <section class="panel">
+      <h2>Паспорт</h2>
+      <dl class="specs">
+        <div><dt>Домен</dt><dd class="mono">meodai.github.io</dd></div>
+        <div><dt>Тип сайта</dt><dd>Лендинг</dd></div>
+        <div><dt>Категории</dt><dd>Сервисы и приложения</dd></div>
+        <div><dt>Подкатегории</dt><dd>Инструменты разработчика</dd></div>
+        <div><dt>Для кого</dt><dd>Разработчикам, Дизайнерам</dd></div>
+        <div><dt>Стиль</dt><dd>Минимализм, Утилитарный техно</dd></div>
+        <div><dt>Язык</dt><dd>Английский</dd></div>
+        <div><dt>Страна</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Автор</dt><dd>meodai</dd></div>
+        <div><dt>Год</dt><dd><span class="placeholder">не указано</span></dd></div>
+        <div><dt>Добавлен в коллекцию</dt><dd>21.11.2026</dd></div>
+      </dl>
+    </section>
+
+    <section class="panel">
+      <h2>Палитра</h2>
+      <div class="swatches swatches--big" aria-hidden="true"><span class="swatch" style="background:#FBF4EA"></span><span class="swatch" style="background:#CFCBC3"></span><span class="swatch" style="background:#A49F98"></span><span class="swatch" style="background:#86827A"></span><span class="swatch" style="background:#10100F"></span></div>
+       <p class="palette-actions"><button class="btn btn--ghost btn--small" type="button" data-copy-palette="#FBF4EA, #CFCBC3, #A49F98, #86827A, #10100F">Скопировать палитру</button></p>
+       <ul class="palette-list">
+        <li class="palette-row">
+          <span class="swatch" style="background:#FBF4EA" aria-hidden="true"></span>
+          <code>#FBF4EA</code> — 91% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#CFCBC3" aria-hidden="true"></span>
+          <code>#CFCBC3</code> — 4% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#A49F98" aria-hidden="true"></span>
+          <code>#A49F98</code> — 4% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#86827A" aria-hidden="true"></span>
+          <code>#86827A</code> — 1% кадра
+        </li>
+        <li class="palette-row">
+          <span class="swatch" style="background:#10100F" aria-hidden="true"></span>
+          <code>#10100F</code> — 0% кадра
+        </li>
+       </ul>
+       <dl class="specs" style="margin-top:var(--space-2)">
+         <div><dt>Режим</dt><dd>Светлая</dd></div>
+         <div><dt>Цвет фона</dt><dd>Нейтральный</dd></div>
+       </dl>
+    </section>
+  </div>
+
+  <section class="site-section site-section--tech">
+    <h2>Технологии</h2>
+    <ul class="tech-list">
+      <li><i class="fas fa-bolt fa-fw" aria-hidden="true"></i><strong>Vite</strong></li><li><i class="fas fa-font fa-fw" aria-hidden="true"></i><strong>Google Fonts</strong></li>
+    </ul>
+  </section>
+</article>
+
+<section class="feedback" aria-label="Связаться с автором коллекции">
+  <div class="container">
+    <h2 class="feedback__name">Артём Хмелёв</h2>
+    <p class="feedback__about">Веб-дизайн, разработка сайтов и сопровождение бизнеса онлайн: от прототипа до запуска и ведения соцсетей</p>
+    <p class="feedback__contacts">
+      <a href="mailto:artem0203@yandex.ru"><i class="fas fa-envelope fa-fw" aria-hidden="true"></i>artem0203@yandex.ru</a>
+    </p>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>83 сайта в подборке · Личная коллекция Артёма Хмелёва</p>
+  </div>
+</footer>
+<script src="../assets/app.js"></script>
+</body>
+</html>

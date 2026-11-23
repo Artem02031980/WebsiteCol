@@ -9916,6 +9916,386 @@
           "en"
         ]
       }
+    },
+    {
+      "slot": "084",
+      "slug": "monolog",
+      "name": "Monolog",
+      "url": "https://bymonolog.com/",
+      "domain": "bymonolog.com",
+      "screenshot": "084.webp",
+      "added": "2026-11-23",
+      "link_state": "alive",
+      "description_user": "Тёмный эстетичный сайт дизайн-студии из Мельбурна и Ханоя. Приятное сочетание ховер-эффектов с саунд-дизайном.",
+      "description_own": "Сайт студии Monolog, основанной Хуем: брендинг и сайты для B2B-компаний. Тёмный зернистый фон, огромное слово MONOLOG, выходящее за нижний край, маленький глобус в центре и короткий манифест. Студия работает из Мельбурна и Ханоя; на сайте есть переключатель звука.",
+      "description_short": "Тёмный сайт студии Monolog из Мельбурна и Ханоя",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "design-studio",
+        "branding"
+      ],
+      "audience": [
+        "designers",
+        "agencies",
+        "marketers"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "editorial",
+        "minimal"
+      ],
+      "techniques": [
+        "custom-cursor",
+        "micro-interactions",
+        "sound"
+      ],
+      "palette": {
+        "mode": "dark",
+        "hue": "mono",
+        "colors": [
+          "#191815",
+          "#4A5050",
+          "#898984",
+          "#373835",
+          "#D6D9D6",
+          "#686A68"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Astro",
+          "evidence": "meta name=generator: Astro v7.4.0"
+        },
+        {
+          "name": "Umami",
+          "evidence": "cloud.umami.is/script.js с data-website-id"
+        }
+      ],
+      "observations": [
+        "Первый экран почти чёрный, с зернистой фактурой; в центре маленький глобус и абзац о брендинге и сайтах для B2B-компаний.",
+        "Огромное MONOLOG внизу обрезано краем экрана — буквы работают как графический якорь страницы.",
+        "Сверху минимальная навигация About, Work, Services, Process, кнопка Start a project и переключатель звука.",
+        "Студия называет себя Monolog и работает из Мельбурна и Ханоя; основатель — Хуй.",
+        "На сайте обещаны ховер-эффекты и саунд-дизайн; в коде подключены Astro и Umami Analytics.",
+        "Контакты — hello@bymonolog.com; в structured data указаны два адреса: Мельбурн и Ханой."
+      ],
+      "notes": "Провести курсором по навигации и послушать звуковые ховеры; затем посмотреть на огромное MONOLOG внизу.",
+      "facts": {
+        "https": true,
+        "country": "Австралия, Мельбурн",
+        "author": "Хуй — основатель Monolog",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "MONOLOG | Brand and Web Design Studio founded By Huy",
+          "title_len": 52,
+          "description": "We build brand identities and websites for ambitious B2B companies whose presence hasn’t caught up to their reputation. Trusted by Vinamilk, Shortscut, OH Architecture.",
+          "description_len": 168,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": true
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "hello@bymonolog.com",
+        "legal": null,
+        "analytics": [
+          "Umami"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "085",
+      "slug": "polar",
+      "name": "Polar",
+      "url": "https://polar.sh/",
+      "domain": "polar.sh",
+      "screenshot": "085.webp",
+      "added": "2026-11-23",
+      "link_state": "alive",
+      "description_user": "Чистый тёмный лендинг биллинг-платформы для ИИ-продуктов.",
+      "description_own": "Лендинг Polar — Merchant of Record для разработчиков ИИ-продуктов. На чёрном фоне огромное «Turn Usage Into Revenue», под ним — описание биллинга и расхода токенов, логотипы клиентов и три тонких линейных иллюстрации. Дальше — продукт: приём событий, метры, usage-биллинг, кредиты и анализ затрат.",
+      "description_short": "Тёмный лендинг биллинг-платформы Polar",
+      "categories": [
+        "saas",
+        "finance"
+      ],
+      "subcategories": [
+        "fintech",
+        "dev-tools"
+      ],
+      "audience": [
+        "developers",
+        "product-teams"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "utility-tech"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "micro-interactions",
+        "data-viz"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#0A0A0A",
+          "#FBFBFB",
+          "#2D2E2F",
+          "#666667",
+          "#D1D1D1",
+          "#AFAFAF"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/immutable/chunks и App Router"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static"
+        },
+        {
+          "name": "Turbopack",
+          "evidence": "чанк turbopack-0l1ukkt8h7dio.js"
+        }
+      ],
+      "observations": [
+        "Сверху узкая полоса Polar Startup Program, затем минимальная шапка с Features, Docs, Pricing, Blog, Company и кнопкой Get Started.",
+        "Первый экран — огромное «Turn Usage Into Revenue» на чёрном; подзаголовок «A billing platform for the intelligence era».",
+        "Ниже логотипы клиентов tailwindcss, speakeasy, Stilla и midday, а под ними три тонкие линейные фигуры — звезда, вспышка и спираль.",
+        "Дальше лендинг показывает продукт: входящие события, метры, usage-биллинг, кредиты и анализ затрат.",
+        "Отдельно упомянуто, что ИИ-агенты могут сами зарегистрироваться в Polar по инструкции в auth.md.",
+        "Собрано на Next.js с Turbopack; в structured data указан офис Polar Software, Inc. в Сан-Франциско."
+      ],
+      "notes": "Смотреть огромный заголовок и тонкие линейные иллюстрации, затем — блоки про метры, usage-биллинг и кредиты.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "Polar Software, Inc.",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Polar — A billing platform for the intelligence era | Polar",
+          "title_len": 59,
+          "description": "Polar is the Merchant of Record for developers building AI-era software: payments, subscriptions, and usage-based billing, with global tax handled for you.",
+          "description_len": 155,
+          "og": true,
+          "sitemap": "https://polar.sh/sitemap.xml",
+          "robots": null,
+          "structured_data": true
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "support@polar.sh",
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "086",
+      "slug": "on-energy",
+      "name": "ON.energy",
+      "url": "https://www.on.energy/",
+      "domain": "on.energy",
+      "screenshot": "086.webp",
+      "added": "2026-11-23",
+      "link_state": "alive",
+      "description_user": "Брутальный, хорошо продуманный сайт компании, которая строит энергосистемы для ИИ-дата-центров. Качественные 3D-визуализации, яркий акцентный цвет и свежая вёрстка.",
+      "description_own": "Сайт ON.energy — компании, которая строит энергосистемы для ИИ-фабрик и дата-центров. Почти весь первый экран занимает фотореалистичный 3D-рендер промышленных силовых блоков; поверх — сдержанный заголовок «Perfect Power for AI Factories» и жёлтые акценты навигации.",
+      "description_short": "Сайт энергосистем ON.energy для ИИ-дата-центров",
+      "categories": [
+        "realty"
+      ],
+      "subcategories": [
+        "estate"
+      ],
+      "audience": [
+        "investors",
+        "product-teams"
+      ],
+      "site_type": "corporate",
+      "styles": [
+        "brutalist",
+        "utility-tech"
+      ],
+      "techniques": [
+        "webgl3d",
+        "scroll-telling",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "hue": "mono",
+        "colors": [
+          "#080808",
+          "#363639",
+          "#B5B6BD",
+          "#5C5D62",
+          "#FFF314",
+          "#D9DADD"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Vue",
+          "evidence": "scoped-атрибуты data-v-* и Vue-стили в разметке"
+        }
+      ],
+      "observations": [
+        "Верхняя панель почти чёрная: логотип ON, разделы Expertise, Solutions, Financing, About, News и жёлтая кнопка Get in touch.",
+        "Первый экран — фотореалистичный 3D-рендер массивных силовых блоков с рёбрами, креплениями и металлическими поверхностями.",
+        "Слева поверх рендера — сдержанное «Perfect Power for AI Factories», набранное крупным светлым шрифтом.",
+        "Внизу слева коротко: ON.energy строит и обслуживает гипермасштабные энергосистемы для сложных задач устойчивости.",
+        "Внизу справа — карточка DISCOVER AI UPS с обещанием первого medium voltage UPS для grid-safe дата-центров.",
+        "Жёлтый — единственный яркий акцент: логотип, кнопка и небольшие детали; остальное — чёрный, серый металл и свет.",
+        "Свёрстано как Vue-приложение со scoped-стилями; страница собрана из крупных 3D-сцен и лаконичных текстовых блоков."
+      ],
+      "notes": "Смотреть 3D-рендер силовых блоков на первом экране и жёлтые акценты; затем — карточку про AI UPS.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "ON.energy",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "ON.energy | The Race is ON for Grid-Safe AI Power",
+          "title_len": 49,
+          "description": null,
+          "description_len": null,
+          "og": false,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "087",
+      "slug": "samuel-lo",
+      "name": "Samuel's Desktop",
+      "url": "https://www.samuello.me/",
+      "domain": "samuello.me",
+      "screenshot": "087.webp",
+      "added": "2026-11-23",
+      "link_state": "alive",
+      "description_user": "Необычный сайт дизайнера Сэмюэла Ло, стилизованный под macOS. Каждый проект открывается по клику на иконку в виде перетаскиваемого окна прямо на главной странице, имитируя работу операционной системы.",
+      "description_own": "Портфолио Сэмюэла Ло, сделанное как рабочий стол macOS. Слева открыто окно About с фотографией и рассказом, рядом — окна проектов и папки на рабочем столе; всё можно перетаскивать. Среди иконок — Intelligent File Browser, Generative Textures, Generative SVGs, Digital Garden, Model Behavior, Library и Status.",
+      "description_short": "Портфолио Сэмюэла Ло в виде рабочего стола macOS",
+      "categories": [
+        "portfolio"
+      ],
+      "subcategories": [
+        "designer"
+      ],
+      "audience": [
+        "designers",
+        "product-teams"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "minimal",
+        "playful"
+      ],
+      "techniques": [
+        "drag-interaction",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#2A252B",
+          "#F9F9F9",
+          "#554E42",
+          "#796C5F",
+          "#A38163",
+          "#D0D2D1"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/chunks/main-app и app/page"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static/chunks"
+        }
+      ],
+      "observations": [
+        "Экран выглядит как macOS: строка меню Samuel Lo слева, дата и время справа, тёмные обои с мягкими пятнами света.",
+        "Поверх рабочего стола открыты перетаскиваемые окна: About, Generic SVGs и Intelligent File Browser.",
+        "Справа — иконки-папки и документы: Intelligent File Browser, About, Library, Generative Textures, Generative SVGs, Status, Digital Garden, Listen и Model Behavior.",
+        "В About — фото, имя Samuel Lo, подпись Product Designer in SF и ссылки Are.na, Email, LinkedIn, Curius, Goodreads.",
+        "Окно проекта показывает кейс Poly: обложку, заголовок, проблему и текстовые блоки; окна можно двигать и складывать.",
+        "Внизу страницы — переключатель Desktop 1 / Desktop 2 и статус-бар; сайт собран на Next.js."
+      ],
+      "notes": "Перетащить окна About и Intelligent File Browser, открыть папки на рабочем столе и переключить Desktop 1 / Desktop 2.",
+      "facts": {
+        "https": true,
+        "country": "США, Сан-Франциско",
+        "author": "Сэмюэл Ло",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Samuel's Desktop",
+          "title_len": 16,
+          "description": null,
+          "description_len": null,
+          "og": false,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "Email, LinkedIn, Are.na, Curius, Goodreads",
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
     }
   ]
 }

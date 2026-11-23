@@ -2823,6 +2823,142 @@
           "share": 0.044
         }
       ]
+    },
+    "084.webp": {
+      "width": 1600,
+      "height": 1136,
+      "meanLum": 0.072,
+      "meanSat": 0.09,
+      "mode": "dark",
+      "hue": "yellow",
+      "colors": [
+        {
+          "hex": "#191815",
+          "share": 0.446
+        },
+        {
+          "hex": "#4A5050",
+          "share": 0.33
+        },
+        {
+          "hex": "#898984",
+          "share": 0.142
+        },
+        {
+          "hex": "#373835",
+          "share": 0.074
+        },
+        {
+          "hex": "#D6D9D6",
+          "share": 0.004
+        },
+        {
+          "hex": "#686A68",
+          "share": 0.002
+        }
+      ]
+    },
+    "085.webp": {
+      "width": 1783,
+      "height": 1274,
+      "meanLum": 0.029,
+      "meanSat": 0.003,
+      "mode": "dark",
+      "hue": "mono",
+      "colors": [
+        {
+          "hex": "#0A0A0A",
+          "share": 0.961
+        },
+        {
+          "hex": "#FBFBFB",
+          "share": 0.023
+        },
+        {
+          "hex": "#2D2E2F",
+          "share": 0.004
+        },
+        {
+          "hex": "#666667",
+          "share": 0.004
+        },
+        {
+          "hex": "#D1D1D1",
+          "share": 0.003
+        },
+        {
+          "hex": "#AFAFAF",
+          "share": 0.002
+        }
+      ]
+    },
+    "086.webp": {
+      "width": 1806,
+      "height": 1278,
+      "meanLum": 0.14,
+      "meanSat": 0.05,
+      "mode": "dark",
+      "hue": "mono",
+      "colors": [
+        {
+          "hex": "#080808",
+          "share": 0.404
+        },
+        {
+          "hex": "#363639",
+          "share": 0.201
+        },
+        {
+          "hex": "#B5B6BD",
+          "share": 0.156
+        },
+        {
+          "hex": "#5C5D62",
+          "share": 0.108
+        },
+        {
+          "hex": "#83848B",
+          "share": 0.09
+        },
+        {
+          "hex": "#D9DADD",
+          "share": 0.023
+        }
+      ]
+    },
+    "087.webp": {
+      "width": 1600,
+      "height": 1129,
+      "meanLum": 0.383,
+      "meanSat": 0.167,
+      "mode": "dark",
+      "hue": "purple",
+      "colors": [
+        {
+          "hex": "#2A252B",
+          "share": 0.403
+        },
+        {
+          "hex": "#F9F9F9",
+          "share": 0.337
+        },
+        {
+          "hex": "#554E42",
+          "share": 0.074
+        },
+        {
+          "hex": "#796C5F",
+          "share": 0.048
+        },
+        {
+          "hex": "#A38163",
+          "share": 0.043
+        },
+        {
+          "hex": "#D0D2D1",
+          "share": 0.024
+        }
+      ]
     }
   }
 }

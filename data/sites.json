@@ -9927,7 +9927,7 @@
       "added": "2026-11-23",
       "link_state": "alive",
       "description_user": "Тёмный эстетичный сайт дизайн-студии из Мельбурна и Ханоя. Приятное сочетание ховер-эффектов с саунд-дизайном.",
-      "description_own": "Сайт студии Monolog, основанной Хуем: брендинг и сайты для B2B-компаний. Тёмный зернистый фон, огромное слово MONOLOG, выходящее за нижний край, маленький глобус в центре и короткий манифест. Студия работает из Мельбурна и Ханоя; на сайте есть переключатель звука.",
+      "description_own": "Сайт студии Monolog, основанной Huy: брендинг и сайты для B2B-компаний. Тёмный зернистый фон, огромное слово MONOLOG, выходящее за нижний край, маленький глобус в центре и короткий манифест. Студия работает из Мельбурна и Ханоя; на сайте есть переключатель звука.",
       "description_short": "Тёмный сайт студии Monolog из Мельбурна и Ханоя",
       "categories": [
         "agency"
@@ -9977,7 +9977,7 @@
         "Первый экран почти чёрный, с зернистой фактурой; в центре маленький глобус и абзац о брендинге и сайтах для B2B-компаний.",
         "Огромное MONOLOG внизу обрезано краем экрана — буквы работают как графический якорь страницы.",
         "Сверху минимальная навигация About, Work, Services, Process, кнопка Start a project и переключатель звука.",
-        "Студия называет себя Monolog и работает из Мельбурна и Ханоя; основатель — Хуй.",
+        "Студия называет себя Monolog и работает из Мельбурна и Ханоя; основатель — Huy.",
         "На сайте обещаны ховер-эффекты и саунд-дизайн; в коде подключены Astro и Umami Analytics.",
         "Контакты — hello@bymonolog.com; в structured data указаны два адреса: Мельбурн и Ханой."
       ],
@@ -9985,7 +9985,7 @@
       "facts": {
         "https": true,
         "country": "Австралия, Мельбурн",
-        "author": "Хуй — основатель Monolog",
+        "author": "Huy — основатель Monolog",
         "year": null,
         "mobile": {
           "viewport_meta": true,
@@ -10294,6 +10294,554 @@
         "analytics": [],
         "languages": [
           "en"
+        ]
+      }
+    },
+    {
+      "slot": "088",
+      "slug": "maximage",
+      "name": "Maximage",
+      "url": "https://maximage.biz/",
+      "domain": "maximage.biz",
+      "screenshot": "088.png",
+      "added": "2026-11-24",
+      "link_state": "alive",
+      "description_user": "Вдохновляющий сайт-портфолио швейцарской дизайн-студии. Нетривиальное оформление галереи и страниц проектов.",
+      "description_own": "Портфолио швейцарской студии Maximage: визуальные идентичности, книги, постеры, шрифты, интерфейсы и художественные проекты. Главная начинается с крупного текста о студии и клиентах, а ниже открывается необычная галерея работ — от книги о Ли «Скрэтче» Перри до предложения для серии швейцарских банкнот.",
+      "description_short": "Портфолио швейцарской студии Maximage",
+      "categories": [
+        "agency"
+      ],
+      "subcategories": [
+        "design-studio",
+        "branding"
+      ],
+      "audience": [
+        "designers",
+        "agencies"
+      ],
+      "site_type": "portfolio",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "click-reveal",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FFFFFF",
+          "#1E1E1E",
+          "#64C65F",
+          "#8FD78F",
+          "#C6DAC9",
+          "#42A643"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Modernizr",
+          "evidence": "assets/js/build/vendor/modernizr-bundle.js"
+        }
+      ],
+      "observations": [
+        "Первый экран — крупный чёрный текст на белом: кто такая студия, что делает и какие недавние заказы у неё были.",
+        "В тексте упомянуты книга о Ли «Скрэтче» Перри и дизайн-предложение для новой серии швейцарских банкнот.",
+        "Ниже — необычная галерея: зелёная карта с топографией и книжный объект на чёрном фоне; работы открываются как отдельные проекты.",
+        "В шапке — Maximage, Projects и меню категорий: Visual Identities, Digital, Books, Posters, Typefaces, Artworks.",
+        "Студия находится в Швейцарии и преподаёт в HEAD, ZHdK и ECAL; в подвале — контакты и подписка.",
+        "Сайт собрано на старом кастомном фронтенде с Modernizr; в коде нет тяжёлого фреймворка."
+      ],
+      "notes": "Смотреть вступительный текст и необычную галерею работ; отдельно открыть книгу о Ли «Скрэтче» Перри.",
+      "facts": {
+        "https": true,
+        "country": "Швейцария",
+        "author": "Maximage",
+        "year": 2023,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Maximage",
+          "title_len": 8,
+          "description": null,
+          "description_len": null,
+          "og": false,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "Форма подписки и контакты на сайте; отдельного email на главной нет",
+        "legal": "© 2020–2023 Maxitype Sàrl и авторы",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "089",
+      "slug": "fora",
+      "name": "Fora",
+      "url": "https://fora.so/",
+      "domain": "fora.so",
+      "screenshot": "089.png",
+      "added": "2026-11-24",
+      "link_state": "alive",
+      "description_user": "Тёмный элегантный лендинг платформы для создания онлайн-сообществ. Аккуратная вёрстка и очень удачная передача живописной атмосферы заката.",
+      "description_own": "Лендинг Fora — платформы, на которой авторы, преподаватели и коучи собирают собственные сообщества с курсами, событиями и обсуждениями. Тёмный градиентный фон переходит в фотографию холмов на закате, а поверх открыт интерфейс сообщества с разделами Overview, Chat, Courses, Events и Members.",
+      "description_short": "Тёмный лендинг платформы сообществ Fora",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "team-tools"
+      ],
+      "audience": [
+        "marketers",
+        "consumers"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#2B3335",
+          "#120E0B",
+          "#535053",
+          "#ECFDFD",
+          "#5D352A",
+          "#C4E1DF"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Next.js",
+          "evidence": "скрипты /_next/static/immutable/chunks и App Router"
+        },
+        {
+          "name": "React",
+          "evidence": "Next.js App Router и react-рантайм в /_next/static"
+        },
+        {
+          "name": "Turbopack",
+          "evidence": "чанк turbopack-22ubqoa8h4vb_.js"
+        }
+      ],
+      "observations": [
+        "Верх страницы — тёмный градиент, который к первому экрану становится фотографией холмов в сумерках.",
+        "Заголовок «Your community deserves its own home.» набран крупно по центру; над ним бейдж Community platform for creators.",
+        "Ниже — кнопка Get started free и окно сообщества: слева Overview, Chat, Courses, Events, Members, Leaderboard, справа — страница Strong By Ava с кнопкой Join now.",
+        "Fora обещает авторам, преподавателям и коучам полностью брендированное пространство с курсами, событиями, обсуждениями и участниками.",
+        "В шапке — About, Features, What you get, Pricing; справа Login и Get started.",
+        "Собрано на Next.js с Turbopack; в футере — Terms, Privacy и © 2026 Fora."
+      ],
+      "notes": "Смотреть, как тёмный градиент переходит в закатный пейзаж, и окно сообщества Strong By Ava.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Fora",
+        "year": 2026,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Fora · Learn from creators",
+          "title_len": 26,
+          "description": "Find creators selling courses, coaching calls and downloads, and ask their assistant anything.",
+          "description_len": 94,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": "Terms и Privacy в футере",
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "090",
+      "slug": "stm-coffee",
+      "name": "СТМ кофе",
+      "url": "https://ctm.coffee/",
+      "domain": "ctm.coffee",
+      "screenshot": "090.png",
+      "added": "2026-11-24",
+      "link_state": "alive",
+      "description_user": "Наглядный функциональный сайт компании, которая обжаривает и упаковывает кофе для различных брендов. Чёрно-белая гамма, блочная вёрстка и простые иллюстрации.",
+      "description_own": "Сайт компании СТМ Кофе, которая производит кофе под чужими брендами: в зёрнах, дрип-пакетах и капсулах. Главная строится на крупной типографике и простых чёрно-белых иллюстрациях упаковки; рядом — блок о том, что бренд занимается продажами, а производство берёт на себя СТМ.",
+      "description_short": "Сайт производства кофе под брендом заказчика",
+      "categories": [
+        "food"
+      ],
+      "subcategories": [
+        "coffee"
+      ],
+      "audience": [
+        "restaurants",
+        "retail"
+      ],
+      "site_type": "corporate",
+      "styles": [
+        "brutalist",
+        "minimal"
+      ],
+      "techniques": [
+        "illustration-hand",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#F5F5F7",
+          "#050505",
+          "#383838",
+          "#5D5D5D",
+          "#7E7E7E",
+          "#CAC9CB"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Nuxt",
+          "evidence": "скрипт /_nuxt/B-3-nwgg.js и разметка Nuxt"
+        },
+        {
+          "name": "Yandex Metrica",
+          "evidence": "mc.yandex.ru/metrika/tag.js"
+        }
+      ],
+      "observations": [
+        "Первый экран — огромное «Производим под вашим брендом» и три направления: кофе в зёрнах, дрип-пакеты и капсулы.",
+        "Под каждым направлением — простая линейная иллюстрация упаковки: пакет, стопка дрип-пакетов и капсула.",
+        "Блок «Вы о бренде, мы — о кофе» объясняет разделение: заказчик занимается продажами, СТМ — сырьём, обжаркой, упаковкой и логистикой.",
+        "На сайте указаны производственные мощности больше 30 тонн в день, шесть сортов на складе и обжарка на Brambati BR3000 и Loring S70 Peregrine.",
+        "Контакты — 8 800 500-34-18, sales@ctm.coffee и ул. Баранова, 26; есть Telegram, VK, YouTube, 2ГИС и карты.",
+        "Собрано на Nuxt; аналитика — Яндекс.Метрика; вся графика — чёрно-белая, без фотографий продукта на первом экране."
+      ],
+      "notes": "Смотреть крупную типографику и три иллюстрации упаковки, затем — блок о разделении бренда и производства.",
+      "facts": {
+        "https": true,
+        "country": "Россия",
+        "author": "СТМ Кофе",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Кофе под вашим брендом – СТМ Кофе",
+          "title_len": 33,
+          "description": "Производим кофе под вашим брендом: в зернах, дрип-пакетах и капсулах. Поможем в разработке дизайна, упакуем и доставим вам.",
+          "description_len": 123,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": "8 800 500-34-18, sales@ctm.coffee, ул. Баранова, 26; Telegram, VK, YouTube, 2ГИС",
+        "legal": null,
+        "analytics": [
+          "Яндекс.Метрика"
+        ],
+        "languages": [
+          "ru"
+        ]
+      }
+    },
+    {
+      "slot": "091",
+      "slug": "defined",
+      "name": "Defined",
+      "url": "https://definedvc.com/",
+      "domain": "definedvc.com",
+      "screenshot": "091.png",
+      "added": "2026-11-24",
+      "link_state": "alive",
+      "description_user": "Вдохновляющий сайт венчурного фонда, который инвестирует в ИИ-технологии. В шапке сайта красочная интерактивная анимация, которая дополняется ховер-эффектом с кляксами.",
+      "description_own": "Сайт венчурного фонда Defined, который инвестирует в ИИ с 2014 года. Первый экран занимает текучая цветная анимация — синие, жёлтые, розовые и оранжевые потоки, похожие на краску в воде. Поверх — меню и чёрный блок с текстом «First believers in founders building the AI Frontier™».",
+      "description_short": "Сайт венчурного фонда Defined об ИИ",
+      "categories": [
+        "finance"
+      ],
+      "subcategories": [
+        "fintech"
+      ],
+      "audience": [
+        "investors",
+        "product-teams"
+      ],
+      "site_type": "corporate",
+      "styles": [
+        "immersive-3d",
+        "editorial"
+      ],
+      "techniques": [
+        "generative",
+        "micro-interactions",
+        "custom-cursor"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#00010D",
+          "#05A2F8",
+          "#036CDE",
+          "#011749",
+          "#EAC10B",
+          "#02387A"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Framer",
+          "evidence": "framerusercontent.com и разметка Framer"
+        },
+        {
+          "name": "Google Analytics 4",
+          "evidence": "gtag/js?id=G-HD1RQJ821G"
+        }
+      ],
+      "observations": [
+        "Первый экран — абстрактная цветная анимация: синие, жёлтые, розовые и оранжевые потоки, похожие на краску в воде.",
+        "Сверху — маленькое логотип `defined`, меню Portfolio, Team, Network, Manifesto, Principles, Insights.",
+        "Справа внизу — чёрный блок с крупным «First believers in founders building the AI Frontier™» и кнопкой See the Portfolio.",
+        "Фонд пишет, что инвестирует в ИИ с 2014 года и помогает основателям на границах науки и вычислений.",
+        "Анимация дополняется ховер-эффектом с кляксами; на мобильных, вероятно, показывается статичный кадр.",
+        "Сайт собран на Framer; аналитика — Google Analytics 4."
+      ],
+      "notes": "Провести курсором по цветной анимации и посмотреть на кляксы; затем прочитать манифест в чёрном блоке.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Defined",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Defined | Build the AI Frontier®",
+          "title_len": 32,
+          "description": "Defined is a Thesis-First venture capital firm empowering founders building the AI Frontier®. Investing in AI since 2014, our companies have defined what’s possible across the frontiers of science and compute.",
+          "description_len": 209,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [
+          "Google Analytics 4"
+        ],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "092",
+      "slug": "rig",
+      "name": "Rig",
+      "url": "https://rig.ai/",
+      "domain": "rig.ai",
+      "screenshot": "092.png",
+      "added": "2026-11-24",
+      "link_state": "alive",
+      "description_user": "Эффектный сайт локального ИИ-ассистента для кодинга. Очень удачная технологичная стилизация с ШИМ-эффектом, геометричными шрифтами и тонкими рамками.",
+      "description_own": "Сайт Rig — локального ИИ-ассистента для кодинга, который ищет уязвимости прямо во время работы агента. Верхняя половина страницы залита красным с тонкой горизонтальной штриховкой, поверх — крупное «On-device AI coding. No cloud. No limits.» и кнопки Join Waitlist / Our Approach.",
+      "description_short": "Сайт локального ИИ-ассистента Rig",
+      "categories": [
+        "saas"
+      ],
+      "subcategories": [
+        "dev-tools"
+      ],
+      "audience": [
+        "developers",
+        "product-teams"
+      ],
+      "site_type": "landing",
+      "styles": [
+        "utility-tech",
+        "brutalist"
+      ],
+      "techniques": [
+        "scroll-telling",
+        "micro-interactions",
+        "type-animation"
+      ],
+      "palette": {
+        "mode": "dark",
+        "colors": [
+          "#151415",
+          "#E24E39",
+          "#E2DED9",
+          "#903529",
+          "#56251F",
+          "#A09F9A"
+        ]
+      },
+      "tech": [
+        {
+          "name": "Astro",
+          "evidence": "скрипт /_astro/page.sJrt8mpm.js и Astro-разметка"
+        }
+      ],
+      "observations": [
+        "Верх страницы — насыщенный красный с тонкой горизонтальной штриховкой, как экран старого монитора.",
+        "Крупный геометричный заголовок «On-device AI coding. No cloud. No limits.» и подпись: агент работает целиком на машине, без API-вызовов и лимитов.",
+        "Ниже — бегущая строка с преимуществами: NATIVE INFERENCE, 100% OFFLINE, YOUR HARDWARE YOUR RULES, NO TOKENS NO LIMITS, SPECIALIZED SLM.",
+        "Вторая половина — чёрная секция «THE PROBLEM» с крупным «You don’t own your AI. And you’re being watched.»",
+        "Четыре карточки проблем: Data Extraction, Artificial Scarcity, Silent Downgrades и Cloud Dependency.",
+        "Сайт собран на Astro; красный и чёрный — два основных цвета, поверх — тонкие линии, рамки и техническая типографика."
+      ],
+      "notes": "Смотреть красный ШИМ-экран с крупным заголовком, бегущую строку преимуществ и чёрный блок THE PROBLEM.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "Rig",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "Rig | Security Verification for AI Coding Agents",
+          "title_len": 48,
+          "description": "Find vulnerabilities as coding agents work, guide them through fixes, and verify the results. Rig brings automated security inside the coding loop.",
+          "description_len": 147,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "en"
+        ]
+      }
+    },
+    {
+      "slot": "093",
+      "slug": "activehop",
+      "name": "ActiveHop",
+      "url": "https://www.active-hop.com/",
+      "domain": "active-hop.com",
+      "screenshot": "093.png",
+      "added": "2026-11-24",
+      "link_state": "alive",
+      "description_user": "Выразительный сайт безалкогольного газированного напитка. Мелкая утилитарная вёрстка, 3D-графика и нестандартная навигация.",
+      "description_own": "Сайт безалкогольного хмелевого напитка ActiveHop. Первый экран — светлое облако, в центре которого висит трёхмерная бутылка Drop; поверх неё плавает полупрозрачная панель навигации Products, About us, Subscribe и переключатель EN / IT. Ниже — мелкий технический текст о вкусе и составе.",
+      "description_short": "Сайт безалкогольного напитка ActiveHop",
+      "categories": [
+        "shop"
+      ],
+      "subcategories": [
+        "food-shop"
+      ],
+      "audience": [
+        "consumers"
+      ],
+      "site_type": "shop",
+      "styles": [
+        "minimal",
+        "playful"
+      ],
+      "techniques": [
+        "webgl3d",
+        "scroll-telling",
+        "micro-interactions"
+      ],
+      "palette": {
+        "mode": "light",
+        "colors": [
+          "#FAFAFA",
+          "#DDD8D0",
+          "#B2B0B0",
+          "#716355",
+          "#010101",
+          "#8D8276"
+        ]
+      },
+      "tech": [],
+      "observations": [
+        "Первый экран — светлое облако, в центре которого висит объёмная бутылка Drop с крупной надписью на этикетке.",
+        "Навигация плавает прямо поверх бутылки: Products, About us, Subscribe, переключатель EN / IT и счётчик (0).",
+        "Под бутылкой — мелкий технический текст о натуральном составе, хмелевой горечи и ощущении весенней воды.",
+        "На сайте три вкуса — Drop, Trail и Rad; для каждого есть короткое описание и кнопка Discover.",
+        "Есть блок «Explore. Research. Taste.» с Discovery Box и подписка на новости с формой имени и email.",
+        "Вёрстка утилитарная и мелкая, но 3D-бутылка и полупрозрачная панель делают первый экран запоминающимся."
+      ],
+      "notes": "Смотреть 3D-бутылку Drop, плавающую панель навигации и переключение EN / IT; затем — три вкуса и Discovery Box.",
+      "facts": {
+        "https": true,
+        "country": null,
+        "author": "ActiveHop",
+        "year": null,
+        "mobile": {
+          "viewport_meta": true,
+          "overflow_375": null
+        },
+        "seo": {
+          "title": "ActiveHop - Sparkling Hop Water | Outdoor Inside",
+          "title_len": 48,
+          "description": "Experience ActiveHop premium sparkling hop water. Three unique flavors: Drop, Rad, and Trail. Zero calories, natural ingredients, and functional benefits designed for outdoor enthusiasts and active lifestyles.",
+          "description_len": 209,
+          "og": true,
+          "sitemap": null,
+          "robots": null,
+          "structured_data": null
+        },
+        "links": {
+          "checked": 0,
+          "broken": []
+        },
+        "contacts": null,
+        "legal": null,
+        "analytics": [],
+        "languages": [
+          "multi",
+          "en",
+          "it"
         ]
       }
     }
